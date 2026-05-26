@@ -129,7 +129,7 @@
   <div class="daily-quote">唯一不變的，就是變化本身。</div>
   <div class="section-rule"><span class="accent">今日總結</span> Briefing</div>
   <div class="briefing"><p>【今日總結】
-今天是 2026年5月26日 星期二。AI 本地化記帳與工作記憶創新同步，企業忙堵混沌失效；Tech 的 Google 搜尋 AI 代理成形、Laravel 套件被植入竊資、Android 17 滾動動畫與 ChromaDB RCE 值得關注；Gaming 推出心理恐怖《戰爭幻想》與超寫實射擊《Red Light On》；General 中美軍伊朗襲擊、寮國洞穴救援、印度 Gymkhana 接管與阿爾伯塔分離公投升溫，UN 氣候決議獲 141 國背書；Finance 見雄師 AI 配息新高、日經首破 65,000、尹衍樑逝世、SpaceX IPO 引發美股集中度警告；Sports</p></div>
+AI：Qwen3.7‑Max 实现 35 小时自主运行，0.12 % 参数插件提升代理记忆，治理工具与“AI 技术债”成焦点；Tech：FCC 征集《The View》是否属新闻节目，Google Pixel 全 3D Emoji 抢先曝光，企业私有云加速液冷升级；Gaming：《Forgery Craft》及《Rocket League》将采用 Unreal Engine 6，东京神保町二手书店仍为打卡热点；General：以色列占领地图引发争议，纽约重返 NBA 总决赛，台湾碳盘查启动，大乐透开奖号码出炉；Finance：台灣高鐵史上最嚴重延誤源於轉轍器電源異常，美超微合規受</p></div>
 
   <div class="audio-player-container">
     <button class="play-btn-circle" id="play-btn" onclick="toggleSpeech()">
@@ -145,7 +145,22 @@
   <div class="section-rule"><span class="accent">熱門趨勢</span> Trending</div>
   <div class="trending"><ol>
   <li>
+    <span class="term">tech</span>
+    <span class="count">8 則相關</span>
+  </li>
+
+  <li>
+    <span class="term">gaming</span>
+    <span class="count">8 則相關</span>
+  </li>
+
+  <li>
     <span class="term">general</span>
+    <span class="count">8 則相關</span>
+  </li>
+
+  <li>
+    <span class="term">finance</span>
     <span class="count">8 則相關</span>
   </li>
 
@@ -156,21 +171,6 @@
 
   <li>
     <span class="term">health</span>
-    <span class="count">8 則相關</span>
-  </li>
-
-  <li>
-    <span class="term">entertainment</span>
-    <span class="count">8 則相關</span>
-  </li>
-
-  <li>
-    <span class="term">food</span>
-    <span class="count">8 則相關</span>
-  </li>
-
-  <li>
-    <span class="term">travel</span>
     <span class="count">8 則相關</span>
   </li>
 </ol></div>
@@ -186,120 +186,119 @@
   <div class="empty" id="empty-state">找不到符合的文章，請嘗試其他關鍵字或主題。</div>
 
   
-  <div class="section-rule cat-heading" style="--cat: #8b1a1a"><span class="accent">今日焦點推薦</span> Spotlight</div>
-  <div class="hero" style="--cat: #8b1a1a" data-topic="Tech" data-search="向量資料庫chromadb存在嚴重漏洞，未驗證請求可藉惡意模型觸發rce 開源向量資料庫 chromadb 發現遠程程式碼執行漏洞，未授權請求即可觸發。 chromadb 向量資料庫 漏洞 rce 資安">
-    <div class="kicker">iThome [Tech]</div>
-    <div class="hook"><span class="q">Q</span>使用 ChromaDB 的組織該如何快速修補遠端程式碼執行漏洞？</div>
-    <h2><a href="https://www.ithome.com.tw/news/176107" target="_blank">向量資料庫ChromaDB存在嚴重漏洞，未驗證請求可藉惡意模型觸發RCE</a></h2>
-    <div class="takeaway">開源向量資料庫 ChromaDB 發現遠程程式碼執行漏洞，未授權請求即可觸發。</div>
-    <div class="byline"><b>FOCUS SCORE</b> <span>9/10</span></div>
+  <div class="section-rule cat-heading" style="--cat: #2351c5"><span class="accent">今日焦點推薦</span> Spotlight</div>
+  <div class="hero" style="--cat: #2351c5" data-topic="AI" data-search="your ai agents need a terminal, not just a vector database ... ...">
+    <div class="kicker">VentureBeat AI [AI]</div>
+    <div class="hook"><span class="q">Q</span>...</div>
+    <h2><a href="https://venturebeat.com/orchestration/your-ai-agents-need-a-terminal-not-just-a-vector-database" target="_blank">Your AI agents need a terminal, not just a vector database</a></h2>
+    <div class="takeaway">...</div>
+    <div class="byline"><b>FOCUS SCORE</b> <span>8/10</span></div>
   </div>
   
   <section class="cat" id="cat-ai" data-topic="AI">
     <div class="section-rule cat-heading" style="--cat: #2351c5"><span class="accent">AI 趨勢深度解析</span> AI Deep Dive</div>
     <div class="cards" style="--cat: #2351c5">
       
-    <article class="card" data-topic="AI" data-search="neo-capital – local-first ai bookkeeping that runs on your own machine neocapital 是一款本地優先的 ai 記帳系統，可在個人機器上運行，強調資料隱私與自主掌控。 ai 本地端 記帳 隱私 開源">
-      <div class="kicker">Hacker News AI [AI]</div>
-      <div class="hook"><span class="q">Q</span>這款本地AI記帳系統能否在保護隱私的前提下取代雲端方案？</div>
-      <h3 class="title"><a href="https://neocapital.app/" target="_blank">Neo-Capital – local-first AI bookkeeping that runs on your own machine</a></h3>
-      <div class="ai-takeaway">NeoCapital 是一款本地優先的 AI 記帳系統，可在個人機器上運行，強調資料隱私與自主掌控。</div>
-      <div class="terms">
-        <span class="term">AI</span><span class="term">本地端</span><span class="term">記帳</span><span class="term">隱私</span><span class="term">開源</span>
-      </div>
-      <div class="byline">
-        <b>SCORE</b><span class="score">8/10</span>
-      </div>
-    </article>
-  
-    <article class="card" data-topic="AI" data-search="a 0.12% parameter add-on gives ai agents the working memory rag can't 研究顯示，僅佔模型參數 0.12% 的額外元件，能為 ai 代理提供 rag 缺乏的工作記憶。 ai代理 工作記憶 參數微調 rag">
+    <article class="card" data-topic="AI" data-search="a 0.12% parameter add-on gives ai agents the working memory rag can't ai agents forget. every time a coding assistant loses track of a debugging thread, or a data analysis agent re-ingests the same context it already processed, the team pays in latency, token costs, and ai">
       <div class="kicker">VentureBeat AI [AI]</div>
-      <div class="hook"><span class="q">Q</span>這項區區0.12%參數的技術，究竟如何在代理工作記憶上取得突破？</div>
+      <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
       <h3 class="title"><a href="https://venturebeat.com/orchestration/a-0-12-parameter-add-on-gives-ai-agents-the-working-memory-rag-cant" target="_blank">A 0.12% parameter add-on gives AI agents the working memory RAG can't</a></h3>
-      <div class="ai-takeaway">研究顯示，僅佔模型參數 0.12% 的額外元件，能為 AI 代理提供 RAG 缺乏的工作記憶。</div>
+      <div class="ai-takeaway">AI agents forget. Every time a coding assistant loses track of a debugging thread, or a data analysis agent re-ingests the same context it already processed, the team pays in latency, token costs, and</div>
       <div class="terms">
-        <span class="term">AI代理</span><span class="term">工作記憶</span><span class="term">參數微調</span><span class="term">RAG</span>
+        <span class="term">AI</span>
       </div>
       <div class="byline">
-        <b>SCORE</b><span class="score">8/10</span>
+        <b>SCORE</b><span class="score">5/10</span>
       </div>
     </article>
   
-    <article class="card" data-topic="AI" data-search="the ai era is creating a bug hunting arms race ai 時代正把漏洞搜尋變成一場軍備競賽，防守方必須加速自動化。 ai 漏洞搜尋 資安 軍備競賽">
+    <article class="card" data-topic="AI" data-search="ai agent governance toolkit article url: https://github.com/microsoft/agent-governance-toolkit
+comments url: https://news.ycombinator.com/item?id=48278336
+points: 2
+# comments: 0 ai">
+      <div class="kicker">Hacker News AI [AI]</div>
+      <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
+      <h3 class="title"><a href="https://github.com/microsoft/agent-governance-toolkit" target="_blank">AI Agent Governance Toolkit</a></h3>
+      <div class="ai-takeaway">Article URL: https://github.com/microsoft/agent-governance-toolkit
+Comments URL: https://news.ycombinator.com/item?id=48278336
+Points: 2
+# Comments: 0</div>
+      <div class="terms">
+        <span class="term">AI</span>
+      </div>
+      <div class="byline">
+        <b>SCORE</b><span class="score">5/10</span>
+      </div>
+    </article>
+  
+    <article class="card" data-topic="AI" data-search="7 ways to get so good at ai, people will think you are ai ... 問句：... 評分：... 標籤：... ...">
       <div class="kicker">Wired AI [AI]</div>
-      <div class="hook"><span class="q">Q</span>在AI加速漏洞開發的環境下，安全團隊該如何保持領先？</div>
-      <h3 class="title"><a href="https://www.wired.com/story/the-ai-era-is-creating-a-bug-hunting-arms-race/" target="_blank">The AI Era Is Creating a Bug Hunting Arms Race</a></h3>
-      <div class="ai-takeaway">AI 時代正把漏洞搜尋變成一場軍備競賽，防守方必須加速自動化。</div>
+      <div class="hook"><span class="q">Q</span>... 評分：... 標籤：...</div>
+      <h3 class="title"><a href="https://www.wired.com/story/7-ways-to-get-so-good-at-ai-people-will-think-you-are-ai/" target="_blank">7 Ways to Get So Good at AI, People Will Think You Are AI</a></h3>
+      <div class="ai-takeaway">... 問句：... 評分：... 標籤：...</div>
       <div class="terms">
-        <span class="term">AI</span><span class="term">漏洞搜尋</span><span class="term">資安</span><span class="term">軍備競賽</span>
+        <span class="term">...</span>
       </div>
       <div class="byline">
-        <b>SCORE</b><span class="score">8/10</span>
+        <b>SCORE</b><span class="score">5/10</span>
       </div>
     </article>
   
-    <article class="card" data-topic="AI" data-search="ai agents are quietly generating chaos engineering failures enterprises don’t track yet ai 代理在生產環境中悄然引發尚未被企業追蹤的混沌工程失效。 ai代理 混沌工程 企業風險 自動化">
+    <article class="card" data-topic="AI" data-search="neo-capital – local-first ai bookkeeping that runs on your own machine ... ...">
+      <div class="kicker">Hacker News AI [AI]</div>
+      <div class="hook"><span class="q">Q</span>...</div>
+      <h3 class="title"><a href="https://neocapital.app/" target="_blank">Neo-Capital – local-first AI bookkeeping that runs on your own machine</a></h3>
+      <div class="ai-takeaway">...</div>
+      <div class="terms">
+        <span class="term">...</span>
+      </div>
+      <div class="byline">
+        <b>SCORE</b><span class="score">5/10</span>
+      </div>
+    </article>
+  
+    <article class="card" data-topic="AI" data-search="alibaba's proprietary qwen3.7-max can run for 35 hours autonomously and supports external harnesses like anthropic's claude code the ai industry has fully entered the &amp;quot;agent era,&amp;quot; a paradigm where ai models do far more than generate text — they now actively plan, execute, and course-correct complex tasks over days rat ai">
       <div class="kicker">VentureBeat AI [AI]</div>
-      <div class="hook"><span class="q">Q</span>企業要如何才能有效監控 AI 代理導致的混沌工程失效？</div>
-      <h3 class="title"><a href="https://venturebeat.com/orchestration/ai-agents-are-quietly-generating-chaos-engineering-failures-enterprises-dont-track-yet" target="_blank">AI agents are quietly generating chaos engineering failures enterprises don’t track yet</a></h3>
-      <div class="ai-takeaway">AI 代理在生產環境中悄然引發尚未被企業追蹤的混沌工程失效。</div>
+      <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
+      <h3 class="title"><a href="https://venturebeat.com/technology/alibabas-proprietary-qwen3-7-max-can-run-for-35-hours-autonomously-and-supports-external-harnesses-like-anthropics-claude-code" target="_blank">Alibaba's proprietary Qwen3.7-Max can run for 35 hours autonomously and supports external harnesses like Anthropic's Claude Code</a></h3>
+      <div class="ai-takeaway">The AI industry has fully entered the &amp;quot;agent era,&amp;quot; a paradigm where AI models do far more than generate text — they now actively plan, execute, and course-correct complex tasks over days rat</div>
       <div class="terms">
-        <span class="term">AI代理</span><span class="term">混沌工程</span><span class="term">企業風險</span><span class="term">自動化</span>
+        <span class="term">AI</span>
       </div>
       <div class="byline">
-        <b>SCORE</b><span class="score">7/10</span>
+        <b>SCORE</b><span class="score">5/10</span>
       </div>
     </article>
   
-    <article class="card" data-topic="AI" data-search="d&amp;b's database of 642 million businesses was built for humans, not ai agents. so they rebuilt it. dun &amp; bradstreet 把原本給人類使用的 6.42 億企業資料庫重新建構，以支援 ai 代理的語義查詢。 資料庫 ai代理 商業圖譜 d&amp;b 資料重構">
-      <div class="kicker">VentureBeat AI [AI]</div>
-      <div class="hook"><span class="q">Q</span>重新建構商業資料庫後，AI 代理能獲得哪些新的語義搜尋能力？</div>
-      <h3 class="title"><a href="https://venturebeat.com/data/d-and-bs-database-of-642-million-businesses-was-built-for-humans-not-ai-agents-so-they-rebuilt-it" target="_blank">D&amp;B's database of 642 million businesses was built for humans, not AI agents. So they rebuilt it.</a></h3>
-      <div class="ai-takeaway">Dun &amp; Bradstreet 把原本給人類使用的 6.42 億企業資料庫重新建構，以支援 AI 代理的語義查詢。</div>
-      <div class="terms">
-        <span class="term">資料庫</span><span class="term">AI代理</span><span class="term">商業圖譜</span><span class="term">D&amp;B</span><span class="term">資料重構</span>
-      </div>
-      <div class="byline">
-        <b>SCORE</b><span class="score">7/10</span>
-      </div>
-    </article>
-  
-    <article class="card" data-topic="AI" data-search="will ai cause a job apocalypse? 3 ais answer 三位 ai 系統對「ai 是否會導致就業末日」給出不同觀點。 ai就業 技術失業 經濟影響 職業前景">
+    <article class="card" data-topic="AI" data-search="ai agents as explicit state machines article url: https://arizenai.com/state-machine-pattern-agentic-ai/
+comments url: https://news.ycombinator.com/item?id=48278840
+points: 1
+# comments: 0 ai">
       <div class="kicker">Hacker News AI [AI]</div>
-      <div class="hook"><span class="q">Q</span>AI 是否真的會引發大規模失業，三位AI的回答有何不同？</div>
-      <h3 class="title"><a href="https://bwanaerp.medium.com/will-ai-actually-cause-a-job-apocalypse-3-ais-answer-b32ab742d9f8" target="_blank">Will AI cause a job apocalypse? 3 AIs Answer</a></h3>
-      <div class="ai-takeaway">三位 AI 系統對「AI 是否會導致就業末日」給出不同觀點。</div>
+      <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
+      <h3 class="title"><a href="https://arizenai.com/state-machine-pattern-agentic-ai/" target="_blank">AI agents as explicit state machines</a></h3>
+      <div class="ai-takeaway">Article URL: https://arizenai.com/state-machine-pattern-agentic-ai/
+Comments URL: https://news.ycombinator.com/item?id=48278840
+Points: 1
+# Comments: 0</div>
       <div class="terms">
-        <span class="term">AI就業</span><span class="term">技術失業</span><span class="term">經濟影響</span><span class="term">職業前景</span>
+        <span class="term">AI</span>
       </div>
       <div class="byline">
-        <b>SCORE</b><span class="score">7/10</span>
+        <b>SCORE</b><span class="score">5/10</span>
       </div>
     </article>
   
-    <article class="card" data-topic="AI" data-search="show hn: ai agents that audit your metabase instance and find what's broken 開發團隊展示可自動審計 metabase 實例的 ai 代理，快速找出故障。 ai代理 metabase 自動化審計 開源">
-      <div class="kicker">Hacker News AI [AI]</div>
-      <div class="hook"><span class="q">Q</span>AI 審計 Metabase 能為資料平台帶來哪些實際改善？</div>
-      <h3 class="title"><a href="https://metalens.it" target="_blank">Show HN: AI agents that audit your Metabase instance and find what's broken</a></h3>
-      <div class="ai-takeaway">開發團隊展示可自動審計 Metabase 實例的 AI 代理，快速找出故障。</div>
+    <article class="card" data-topic="AI" data-search="i’m a professional fact-checker. ai is wrong more often than you think can ai do fact-checking? a wired fact-checker fact-checks. ai">
+      <div class="kicker">Wired AI [AI]</div>
+      <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
+      <h3 class="title"><a href="https://www.wired.com/story/fact-checking-ai/" target="_blank">I’m a Professional Fact-Checker. AI Is Wrong More Often Than You Think</a></h3>
+      <div class="ai-takeaway">Can AI do fact-checking? A WIRED fact-checker fact-checks.</div>
       <div class="terms">
-        <span class="term">AI代理</span><span class="term">Metabase</span><span class="term">自動化審計</span><span class="term">開源</span>
+        <span class="term">AI</span>
       </div>
       <div class="byline">
-        <b>SCORE</b><span class="score">7/10</span>
-      </div>
-    </article>
-  
-    <article class="card" data-topic="AI" data-search="reverse centaurs and the failure of ai (2021) 文章探討「逆向人馬」概念，並列舉 2021 年 ai 失敗的具體案例。 ai失敗 逆向人馬 人機合作 案例分析">
-      <div class="kicker">Hacker News AI [AI]</div>
-      <div class="hook"><span class="q">Q</span>逆向人馬概念能如何幫助我們理解 AI 系統的失敗模式？</div>
-      <h3 class="title"><a href="https://pluralistic.net/2021/02/17/reverse-centaur/#reverse-centaur" target="_blank">Reverse centaurs and the failure of AI (2021)</a></h3>
-      <div class="ai-takeaway">文章探討「逆向人馬」概念，並列舉 2021 年 AI 失敗的具體案例。</div>
-      <div class="terms">
-        <span class="term">AI失敗</span><span class="term">逆向人馬</span><span class="term">人機合作</span><span class="term">案例分析</span>
-      </div>
-      <div class="byline">
-        <b>SCORE</b><span class="score">6/10</span>
+        <b>SCORE</b><span class="score">5/10</span>
       </div>
     </article>
   
@@ -309,91 +308,146 @@
     <div class="section-rule cat-heading" style="--cat: #8b1a1a"><span class="accent">科技綜合精選</span> Tech Highlights</div>
     <div class="cards" style="--cat: #8b1a1a">
       
-    <article class="card" data-topic="Tech" data-search="google search is becoming something fundamentally different. here&amp;#039;s what that looks like google 正以 ai 技術重塑搜尋，加入能代為找公寓的 ai 代理。 google搜尋 ai 智慧助理 公寓搜尋">
+    <article class="card" data-topic="Tech" data-search="today&amp;#039;s nyt connections: sports edition hints and answers for may 26, #610 here are hints and the answers for the nyt connections: sports edition puzzle for may 26, no. 610. tech">
       <div class="kicker">CNET News [Tech]</div>
-      <div class="hook"><span class="q">Q</span>AI 驅動的 Google 搜尋將如何改變我們找公寓的方式？</div>
-      <h3 class="title"><a href="https://www.cnet.com/tech/services-and-software/google-search-is-becoming-something-fundamentally-different-heres-what-that-looks-like/" target="_blank">Google Search Is Becoming Something Fundamentally Different. Here&amp;#039;s What That Looks Like</a></h3>
-      <div class="ai-takeaway">Google 正以 AI 技術重塑搜尋，加入能代為找公寓的 AI 代理。</div>
+      <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
+      <h3 class="title"><a href="https://www.cnet.com/tech/gaming/todays-nyt-connections-sports-edition-hints-and-answers-for-may-26-610/" target="_blank">Today&amp;#039;s NYT Connections: Sports Edition Hints and Answers for May 26, #610</a></h3>
+      <div class="ai-takeaway">Here are hints and the answers for the NYT Connections: Sports Edition puzzle for May 26, No. 610.</div>
       <div class="terms">
-        <span class="term">Google搜尋</span><span class="term">AI</span><span class="term">智慧助理</span><span class="term">公寓搜尋</span>
+        <span class="term">Tech</span>
       </div>
       <div class="byline">
-        <b>SCORE</b><span class="score">8/10</span>
+        <b>SCORE</b><span class="score">5/10</span>
       </div>
     </article>
   
-    <article class="card" data-topic="Tech" data-search="php開發框架laravel的語言套件遭挾持，駭客植入竊資軟體 laravel 的第三方語言套件遭駭客植入竊取 ssh 憑證的惡意程式碼。 laravel 供應鏈攻擊 資安 php 惡意程式">
+    <article class="card" data-topic="Tech" data-search="當提示詞變成義大利麵程式碼：難察覺的「ai 技術債」來襲，企業如何跨越治理盲點？ 《venturebeat》報導，隨著 ai 快速導入企業營運，ai 技術債正逐漸成為企業數位轉型中的隱形危機。過去二十年間，技術債通常指的是過時架構、混亂程式碼與維護不善的文件，但在 ai 時代，這樣的定義已不足以涵蓋新型態風險。業界專家指出，ai 系統的失效模式更加複雜且難以察覺，相關問題不僅存在於程式碼本身，更橫跨提示詞、模型與資料依賴關係之間，使 ai 債務比傳統技術債更難管理，也更具破壞性 tech">
+      <div class="kicker">TechOrange 科技報橘 [Tech]</div>
+      <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
+      <h3 class="title"><a href="https://techorange.com/2026/05/26/prompt-debt-retrieval-debt-and-evaluation-debt-quietly-reshaping-enterprise-ai-risk/?utm_source=rss&amp;amp;utm_medium=feed&amp;amp;utm_campaign=techorange_rss" target="_blank">當提示詞變成義大利麵程式碼：難察覺的「AI 技術債」來襲，企業如何跨越治理盲點？</a></h3>
+      <div class="ai-takeaway">《VentureBeat》報導，隨著 AI 快速導入企業營運，AI 技術債正逐漸成為企業數位轉型中的隱形危機。過去二十年間，技術債通常指的是過時架構、混亂程式碼與維護不善的文件，但在 AI 時代，這樣的定義已不足以涵蓋新型態風險。業界專家指出，AI 系統的失效模式更加複雜且難以察覺，相關問題不僅存在於程式碼本身，更橫跨提示詞、模型與資料依賴關係之間，使 AI 債務比傳統技術債更難管理，也更具破壞性</div>
+      <div class="terms">
+        <span class="term">Tech</span>
+      </div>
+      <div class="byline">
+        <b>SCORE</b><span class="score">5/10</span>
+      </div>
+    </article>
+  
+    <article class="card" data-topic="Tech" data-search="trump fcc asks public to comment on whether abc's the view is a news show the federal communications commission is escalating its attack on abc’s the view with a proceeding that seeks public comment on whether the talk show is a &quot;bona fide news interview program.&quot;
+the fcc m tech">
+      <div class="kicker">Ars Technica [Tech]</div>
+      <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
+      <h3 class="title"><a href="https://arstechnica.com/tech-policy/2026/05/trump-fcc-asks-public-to-comment-on-whether-abcs-the-view-is-a-news-show/" target="_blank">Trump FCC asks public to comment on whether ABC's The View is a news show</a></h3>
+      <div class="ai-takeaway">The Federal Communications Commission is escalating its attack on ABC’s The View with a proceeding that seeks public comment on whether the talk show is a &quot;bona fide news interview program.&quot;
+The FCC M</div>
+      <div class="terms">
+        <span class="term">Tech</span>
+      </div>
+      <div class="byline">
+        <b>SCORE</b><span class="score">5/10</span>
+      </div>
+    </article>
+  
+    <article class="card" data-topic="Tech" data-search="more of google pixel&amp;#8217;s new 3d emoji for android 17 have leaked, here&amp;#8217;s a quick look [gallery] earlier this week, google revealed a first look at some new 3d redesigns for the emoji found on google pixel phones and other google products, and now we’re getting a closer look at all of the changes tech">
+      <div class="kicker">9to5Google [Tech]</div>
+      <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
+      <h3 class="title"><a href="https://9to5google.com/2026/05/17/google-pixel-android-17-3d-emoji-leak/" target="_blank">More of Google Pixel&amp;#8217;s new 3D emoji for Android 17 have leaked, here&amp;#8217;s a quick look [Gallery]</a></h3>
+      <div class="ai-takeaway">Earlier this week, Google revealed a first look at some new 3D redesigns for the emoji found on Google Pixel phones and other Google products, and now we’re getting a closer look at all of the changes</div>
+      <div class="terms">
+        <span class="term">Tech</span>
+      </div>
+      <div class="byline">
+        <b>SCORE</b><span class="score">5/10</span>
+      </div>
+    </article>
+  
+    <article class="card" data-topic="Tech" data-search="ai 時代下，企業私有雲也需要超進化：dell private cloud 打造兼具彈性與效率的現代化架構 ai 浪潮來襲，企業基礎架構迎來決定性時刻
+
+
+
+ai 正在重塑一切－從基礎架構到服務交付。對於企業而言，訊號相當清楚：現在就行動，否則將面臨被淘汰的風險。
+
+
+
+許多企業過去導入超融合架構（hci），原本期待能以更簡單的方式完成虛擬化與資源管理，但隨著資料量、應用場景與 ai 工作負載持續增加，架構限制也逐漸浮現－當企業只想擴充儲存容量時，卻必須連同運算節點一起增加；不同部門對運算與儲存需求不一 tech">
+      <div class="kicker">TechOrange 科技報橘 [Tech]</div>
+      <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
+      <h3 class="title"><a href="https://techorange.com/2026/05/26/delltechnologies-private-cloud-automation-platform-powerstore/?utm_source=rss&amp;amp;utm_medium=feed&amp;amp;utm_campaign=techorange_rss" target="_blank">AI 時代下，企業私有雲也需要超進化：Dell Private Cloud 打造兼具彈性與效率的現代化架構</a></h3>
+      <div class="ai-takeaway">AI 浪潮來襲，企業基礎架構迎來決定性時刻
+
+
+
+AI 正在重塑一切－從基礎架構到服務交付。對於企業而言，訊號相當清楚：現在就行動，否則將面臨被淘汰的風險。
+
+
+
+許多企業過去導入超融合架構（HCI），原本期待能以更簡單的方式完成虛擬化與資源管理，但隨著資料量、應用場景與 AI 工作負載持續增加，架構限制也逐漸浮現－當企業只想擴充儲存容量時，卻必須連同運算節點一起增加；不同部門對運算與儲存需求不一</div>
+      <div class="terms">
+        <span class="term">Tech</span>
+      </div>
+      <div class="byline">
+        <b>SCORE</b><span class="score">5/10</span>
+      </div>
+    </article>
+  
+    <article class="card" data-topic="Tech" data-search="歐洲想擺脫「數位美元化」，37 家銀行推歐元穩定幣反攻：為何歐洲央行反而踩煞車？ 在全球高達 3,220 億美元的穩定幣流通量中，大約 99% 都與美元掛鉤；相較之下，包含 circle 的 eurc 在內的所有歐元穩定幣，加總起來僅占全球供應量的 0.3%。如此懸殊的差距，正讓歐洲面臨嚴峻的「數位美元化」（digital dollarisation）危機與金融主權焦慮。
+
+
+
+歐洲在日常支付基礎設施上，早已高度依賴 visa、mastercard、apple 與 google tech">
+      <div class="kicker">TechOrange 科技報橘 [Tech]</div>
+      <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
+      <h3 class="title"><a href="https://techorange.com/2026/05/25/ecb-rejects-euro-stablecoin-rule-easing/?utm_source=rss&amp;amp;utm_medium=feed&amp;amp;utm_campaign=techorange_rss" target="_blank">歐洲想擺脫「數位美元化」，37 家銀行推歐元穩定幣反攻：為何歐洲央行反而踩煞車？</a></h3>
+      <div class="ai-takeaway">在全球高達 3,220 億美元的穩定幣流通量中，大約 99% 都與美元掛鉤；相較之下，包含 Circle 的 EURC 在內的所有歐元穩定幣，加總起來僅占全球供應量的 0.3%。如此懸殊的差距，正讓歐洲面臨嚴峻的「數位美元化」（digital dollarisation）危機與金融主權焦慮。
+
+
+
+歐洲在日常支付基礎設施上，早已高度依賴 Visa、Mastercard、Apple 與 Google</div>
+      <div class="terms">
+        <span class="term">Tech</span>
+      </div>
+      <div class="byline">
+        <b>SCORE</b><span class="score">5/10</span>
+      </div>
+    </article>
+  
+    <article class="card" data-topic="Tech" data-search="ai agent 進入企業的最大挑戰是 roi！appier 共同創辦人暨執行長游直翰：別只看燒了多少 token 專訪：沈貝怡撰稿：李昀蔚
+
+
+
+現在，無論是新創、成熟企業，或是正在尋找轉型方向的傳統產業，都開始思考如何把 ai 放進產品、服務與內部流程之中。然而，對台灣產業來說，如何把握 ai 帶來的新機會？挑戰又有哪些？本集《全新一週》邀請到 appier 沛星互動科技共同創辦人暨執行長游直翰，深入剖析企業導入 ai agent 的具體路徑，以及未來 ai 競爭重點。
+
+
+
+作為台灣少數很早就投入 ai  tech">
+      <div class="kicker">TechOrange 科技報橘 [Tech]</div>
+      <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
+      <h3 class="title"><a href="https://techorange.com/2026/05/26/appier-chih-han-yu-podcast/?utm_source=rss&amp;amp;utm_medium=feed&amp;amp;utm_campaign=techorange_rss" target="_blank">AI Agent 進入企業的最大挑戰是 ROI！Appier 共同創辦人暨執行長游直翰：別只看燒了多少 Token</a></h3>
+      <div class="ai-takeaway">專訪：沈貝怡撰稿：李昀蔚
+
+
+
+現在，無論是新創、成熟企業，或是正在尋找轉型方向的傳統產業，都開始思考如何把 AI 放進產品、服務與內部流程之中。然而，對台灣產業來說，如何把握 AI 帶來的新機會？挑戰又有哪些？本集《全新一週》邀請到 Appier 沛星互動科技共同創辦人暨執行長游直翰，深入剖析企業導入 AI Agent 的具體路徑，以及未來 AI 競爭重點。
+
+
+
+作為台灣少數很早就投入 AI </div>
+      <div class="terms">
+        <span class="term">Tech</span>
+      </div>
+      <div class="byline">
+        <b>SCORE</b><span class="score">5/10</span>
+      </div>
+    </article>
+  
+    <article class="card" data-topic="Tech" data-search="nist發布製造業資安實務指南草案，聚焦ics網路攻擊事件應變與復原 為了強化製造業資安，在5月21日，美國國家標準暨技術研究院（nist）國家網路安全卓越中心（nccoe）公開 tech">
       <div class="kicker">iThome [Tech]</div>
-      <div class="hook"><span class="q">Q</span>開發者應該怎麼防範類似 Laravel 語言套件供應鏈的攻擊？</div>
-      <h3 class="title"><a href="https://www.ithome.com.tw/news/176082" target="_blank">PHP開發框架Laravel的語言套件遭挾持，駭客植入竊資軟體</a></h3>
-      <div class="ai-takeaway">Laravel 的第三方語言套件遭駭客植入竊取 SSH 憑證的惡意程式碼。</div>
+      <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
+      <h3 class="title"><a href="https://www.ithome.com.tw/news/176131" target="_blank">NIST發布製造業資安實務指南草案，聚焦ICS網路攻擊事件應變與復原</a></h3>
+      <div class="ai-takeaway">為了強化製造業資安，在5月21日，美國國家標準暨技術研究院（NIST）國家網路安全卓越中心（NCCoE）公開</div>
       <div class="terms">
-        <span class="term">Laravel</span><span class="term">供應鏈攻擊</span><span class="term">資安</span><span class="term">PHP</span><span class="term">惡意程式</span>
-      </div>
-      <div class="byline">
-        <b>SCORE</b><span class="score">8/10</span>
-      </div>
-    </article>
-  
-    <article class="card" data-topic="Tech" data-search="gemini-powered universal cart helps you shop the web with deal tracking, proactive help gemini 驅動的通用購物車可跨網站聚合商品，即時追蹤優惠。 gemini 通用購物車 電子商務 ai助理 優惠追蹤">
-      <div class="kicker">9to5Google [Tech]</div>
-      <div class="hook"><span class="q">Q</span>Gemini 通用購物車能否真正簡化跨網站的線上購物體驗？</div>
-      <h3 class="title"><a href="https://9to5google.com/2026/05/19/google-gemini-universal-cart-web-shopping-tool/" target="_blank">Gemini-powered Universal Cart helps you shop the web with deal tracking, proactive help</a></h3>
-      <div class="ai-takeaway">Gemini 驅動的通用購物車可跨網站聚合商品，即時追蹤優惠。</div>
-      <div class="terms">
-        <span class="term">Gemini</span><span class="term">通用購物車</span><span class="term">電子商務</span><span class="term">AI助理</span><span class="term">優惠追蹤</span>
-      </div>
-      <div class="byline">
-        <b>SCORE</b><span class="score">8/10</span>
-      </div>
-    </article>
-  
-    <article class="card" data-topic="Tech" data-search="google adds us national teams to its growing list of world cup partnerships google 與美國男女足球國家隊達成合作，將在搜尋加入世界盃專屬功能。 google 世界盃 足球 合作 搜尋功能">
-      <div class="kicker">9to5Google [Tech]</div>
-      <div class="hook"><span class="q">Q</span>Google 與美國國家足球隊的合作會帶來什麼新搜尋功能？</div>
-      <h3 class="title"><a href="https://9to5google.com/2026/05/21/google-becomes-us-national-team-sponsor-before-world-cup/" target="_blank">Google adds US National Teams to its growing list of World Cup partnerships</a></h3>
-      <div class="ai-takeaway">Google 與美國男女足球國家隊達成合作，將在搜尋加入世界盃專屬功能。</div>
-      <div class="terms">
-        <span class="term">Google</span><span class="term">世界盃</span><span class="term">足球</span><span class="term">合作</span><span class="term">搜尋功能</span>
-      </div>
-      <div class="byline">
-        <b>SCORE</b><span class="score">7/10</span>
-      </div>
-    </article>
-  
-    <article class="card" data-topic="Tech" data-search="核能專家葉宗洸談新一代核能：smr 熱潮下，台灣傳產機會浮現 專家指出，小型模組化反應爐（smr）熱潮下，台灣傳統產業迎來新商機。 核能 smr 台灣 能源 新技術">
-      <div class="kicker">TechNews 科技新報 [Tech]</div>
-      <div class="hook"><span class="q">Q</span>台灣在 SMR 熱潮中，傳統產業有哪些具體的參與機會？</div>
-      <h3 class="title"><a href="https://technews.tw/2026/05/26/is-taiwan-can-have-smr/" target="_blank">核能專家葉宗洸談新一代核能：SMR 熱潮下，台灣傳產機會浮現</a></h3>
-      <div class="ai-takeaway">專家指出，小型模組化反應爐（SMR）熱潮下，台灣傳統產業迎來新商機。</div>
-      <div class="terms">
-        <span class="term">核能</span><span class="term">SMR</span><span class="term">台灣</span><span class="term">能源</span><span class="term">新技術</span>
-      </div>
-      <div class="byline">
-        <b>SCORE</b><span class="score">7/10</span>
-      </div>
-    </article>
-  
-    <article class="card" data-topic="Tech" data-search="no, that probably wasn&amp;#8217;t pixel 11&amp;#8217;s &amp;#8216;glow&amp;#8217; at i/o – &amp;#8216;pixel ultra meeting&amp;#8217; anyone? pixel 11 的「glow」功能在 i/o 演講被洩露，但官方仍未證實。 pixel google android glow 洩露">
-      <div class="kicker">9to5Google [Tech]</div>
-      <div class="hook"><span class="q">Q</span>Pixel 11 的 Glow 功能何時才會正式向用戶開放？</div>
-      <h3 class="title"><a href="https://9to5google.com/2026/05/24/pixel-11-glow-io-wink/" target="_blank">No, that probably wasn&amp;#8217;t Pixel 11&amp;#8217;s &amp;#8216;Glow&amp;#8217; at I/O – &amp;#8216;Pixel Ultra meeting&amp;#8217; anyone?</a></h3>
-      <div class="ai-takeaway">Pixel 11 的「Glow」功能在 I/O 演講被洩露，但官方仍未證實。</div>
-      <div class="terms">
-        <span class="term">Pixel</span><span class="term">Google</span><span class="term">Android</span><span class="term">Glow</span><span class="term">洩露</span>
-      </div>
-      <div class="byline">
-        <b>SCORE</b><span class="score">6/10</span>
-      </div>
-    </article>
-  
-    <article class="card" data-topic="Tech" data-search="android 17 qpr1 beta 3 has a bouncy new animation for quick settings [video] android 17 最新 beta 加入具有彈跳效果的快速設定新動畫。 android 17 quick settings ui 動畫 beta">
-      <div class="kicker">9to5Google [Tech]</div>
-      <div class="hook"><span class="q">Q</span>Android 17 的彈跳快速設定動畫會提升使用者體驗嗎？</div>
-      <h3 class="title"><a href="https://9to5google.com/2026/05/19/android-17-qpr1-beta-3-has-a-bouncy-new-animation-for-quick-settings-video/" target="_blank">Android 17 QPR1 Beta 3 has a bouncy new animation for Quick Settings [Video]</a></h3>
-      <div class="ai-takeaway">Android 17 最新 Beta 加入具有彈跳效果的快速設定新動畫。</div>
-      <div class="terms">
-        <span class="term">Android 17</span><span class="term">Quick Settings</span><span class="term">UI</span><span class="term">動畫</span><span class="term">Beta</span>
+        <span class="term">Tech</span>
       </div>
       <div class="byline">
         <b>SCORE</b><span class="score">5/10</span>
@@ -406,11 +460,11 @@
     <div class="section-rule cat-heading" style="--cat: #4a5568"><span class="accent">每日綜合快訊</span> General News</div>
     <div class="cards" style="--cat: #4a5568">
       
-    <article class="card" data-topic="General" data-search="u.s. carries out renewed strikes in southern iran military officials said that the strikes targeted missile sites near a major iranian port that threatened u.s. ships and planes. general">
-      <div class="kicker">NY Times [General]</div>
+    <article class="card" data-topic="General" data-search="israel’s occupation of gaza, lebanon, syria extends beyond what maps show findings show israel holds 1,000sq km of gaza, lebanon and syria under direct military rule. general">
+      <div class="kicker">Al Jazeera [General]</div>
       <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
-      <h3 class="title"><a href="https://www.nytimes.com/2026/05/25/world/middleeast/us-iran-strikes.html" target="_blank">U.S. Carries Out Renewed Strikes in Southern Iran</a></h3>
-      <div class="ai-takeaway">Military officials said that the strikes targeted missile sites near a major Iranian port that threatened U.S. ships and planes.</div>
+      <h3 class="title"><a href="https://www.aljazeera.com/news/2026/5/26/israels-occupation-of-gaza-lebanon-syria-extends-beyond-what-maps-show?traffic_source=rss" target="_blank">Israel’s occupation of Gaza, Lebanon, Syria extends beyond what maps show</a></h3>
+      <div class="ai-takeaway">Findings show Israel holds 1,000sq km of Gaza, Lebanon and Syria under direct military rule.</div>
       <div class="terms">
         <span class="term">General</span>
       </div>
@@ -419,11 +473,11 @@
       </div>
     </article>
   
-    <article class="card" data-topic="General" data-search="thai rescuers join effort to free seven people trapped in laos cave &amp;lt;p&amp;gt;group have been stuck in flooded cave in central laos for five days after heavy rain caused landslides&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;divers who helped in the dramatic &amp;lt;a href=&quot;https://www.theguardian. general">
-      <div class="kicker">The Guardian [General]</div>
+    <article class="card" data-topic="General" data-search="new york back in nba finals for first time since 1999 after beating cleveland new york will play the defending champion oklahoma city thunder or san antonio spurs in the finals. the western conference finals is tied at two games apiece with game 5 to be played on tuesday.(image general">
+      <div class="kicker">NPR [General]</div>
       <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
-      <h3 class="title"><a href="https://www.theguardian.com/world/2026/may/25/laos-flooded-cave-thai-rescuers" target="_blank">Thai rescuers join effort to free seven people trapped in Laos cave</a></h3>
-      <div class="ai-takeaway">&amp;lt;p&amp;gt;Group have been stuck in flooded cave in central Laos for five days after heavy rain caused landslides&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;Divers who helped in the dramatic &amp;lt;a href=&quot;https://www.theguardian.</div>
+      <h3 class="title"><a href="https://www.npr.org/2026/05/26/nx-s1-5834808/new-york-nba-finals" target="_blank">New York back in NBA Finals for first time since 1999 after beating Cleveland</a></h3>
+      <div class="ai-takeaway">New York will play the defending champion Oklahoma City Thunder or San Antonio Spurs in the finals. The Western Conference finals is tied at two games apiece with Game 5 to be played on Tuesday.(Image</div>
       <div class="terms">
         <span class="term">General</span>
       </div>
@@ -432,24 +486,11 @@
       </div>
     </article>
   
-    <article class="card" data-topic="General" data-search="india’s government orders handover of exclusive delhi gymkhana club &amp;lt;p&amp;gt;move comes against backdrop of challenge by prime minister, narendra modi, to country’s traditional elites&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;the indian government has ordered one of the country’s most exclus general">
-      <div class="kicker">The Guardian [General]</div>
-      <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
-      <h3 class="title"><a href="https://www.theguardian.com/world/2026/may/23/india-government-orders-takeover-exclusive-delhi-gymkhana-club-narendra-modi" target="_blank">India’s government orders handover of exclusive Delhi Gymkhana Club</a></h3>
-      <div class="ai-takeaway">&amp;lt;p&amp;gt;Move comes against backdrop of challenge by prime minister, Narendra Modi, to country’s traditional elites&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;The Indian government has ordered one of the country’s most exclus</div>
-      <div class="terms">
-        <span class="term">General</span>
-      </div>
-      <div class="byline">
-        <b>SCORE</b><span class="score">5/10</span>
-      </div>
-    </article>
-  
-    <article class="card" data-topic="General" data-search="蕭旭岑收錢照「若告上法院」 律師曝最壞狀況：馬也涉侵占？ https://media.zenfs.com/ko/ftvn.com.tw/510478515d7f054b7e5d3869fea9f346 general">
+    <article class="card" data-topic="General" data-search="台灣鋼聯啟動碳盤查與深度節能輔導工作 https://media.zenfs.com/ko/tssdnews.com.tw/115ef9d12046466075be64e847f5a686 general">
       <div class="kicker">Yahoo 新聞 [General]</div>
       <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
-      <h3 class="title"><a href="https://tw.news.yahoo.com/%E8%95%AD%E6%97%AD%E5%B2%91%E6%94%B6%E9%8C%A2%E7%85%A7-%E8%8B%A5%E5%91%8A%E4%B8%8A%E6%B3%95%E9%99%A2-%E5%BE%8B%E5%B8%AB%E6%9B%9D%E6%9C%80%E5%A3%9E%E7%8B%80%E6%B3%81-%E9%A6%AC%E4%B9%9F%E6%B6%89%E4%BE%B5%E5%8D%A0-130758740.html" target="_blank">蕭旭岑收錢照「若告上法院」 律師曝最壞狀況：馬也涉侵占？</a></h3>
-      <div class="ai-takeaway">https://media.zenfs.com/ko/ftvn.com.tw/510478515d7f054b7e5d3869fea9f346</div>
+      <h3 class="title"><a href="https://tw.news.yahoo.com/%E5%8F%B0%E7%81%A3%E9%8B%BC%E8%81%AF%E5%95%9F%E5%8B%95%E7%A2%B3%E7%9B%A4%E6%9F%A5%E8%88%87%E6%B7%B1%E5%BA%A6%E7%AF%80%E8%83%BD%E8%BC%94%E5%B0%8E%E5%B7%A5%E4%BD%9C-132507908.html" target="_blank">台灣鋼聯啟動碳盤查與深度節能輔導工作</a></h3>
+      <div class="ai-takeaway">https://media.zenfs.com/ko/tssdnews.com.tw/115ef9d12046466075be64e847f5a686</div>
       <div class="terms">
         <span class="term">General</span>
       </div>
@@ -458,11 +499,11 @@
       </div>
     </article>
   
-    <article class="card" data-topic="General" data-search="pm says alberta ‘essential’ to canada as separatists push for independence &amp;lt;p&amp;gt;alberta premier calls for referendum on secession after judge ruled initiative to force binding vote invalid &amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;the canadian prime minister, &amp;lt;a href=&quot;https://www.theguardia general">
-      <div class="kicker">The Guardian [General]</div>
+    <article class="card" data-topic="General" data-search="快訊／大樂透5/26中獎號碼出爐 如何兌獎一次看 https://media.zenfs.com/ko/setn.com.tw/7f535533306236393b01947a8374525c general">
+      <div class="kicker">Yahoo 新聞 [General]</div>
       <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
-      <h3 class="title"><a href="https://www.theguardian.com/world/2026/may/22/canada-mark-carney-alberta-secession" target="_blank">PM says Alberta ‘essential’ to Canada as separatists push for independence</a></h3>
-      <div class="ai-takeaway">&amp;lt;p&amp;gt;Alberta premier calls for referendum on secession after judge ruled initiative to force binding vote invalid &amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;The Canadian prime minister, &amp;lt;a href=&quot;https://www.theguardia</div>
+      <h3 class="title"><a href="https://tw.news.yahoo.com/%E5%BF%AB%E8%A8%8A-%E5%A4%A7%E6%A8%82%E9%80%8F5-26%E4%B8%AD%E7%8D%8E%E8%99%9F%E7%A2%BC%E5%87%BA%E7%88%90-%E5%A6%82%E4%BD%95%E5%85%8C%E7%8D%8E-%E6%AC%A1%E7%9C%8B-130900871.html" target="_blank">快訊／大樂透5/26中獎號碼出爐 如何兌獎一次看</a></h3>
+      <div class="ai-takeaway">https://media.zenfs.com/ko/setn.com.tw/7f535533306236393b01947a8374525c</div>
       <div class="terms">
         <span class="term">General</span>
       </div>
@@ -471,11 +512,37 @@
       </div>
     </article>
   
-    <article class="card" data-topic="General" data-search="she was told to marry in a country which bans girls' education. so she got in a taxi and fled nearly five years on from afghanistan's school ban, young women say they have waved goodbye to their dreams. general">
-      <div class="kicker">BBC News [General]</div>
+    <article class="card" data-topic="General" data-search="南紡 每股現金股利0.3元 南紡（1440）昨（26）日召開股東常會，通過董事會決議，以保留盈餘配發現金股利每股0.3元；董事長侯博明強調，面對大陸彼岸的產品「大擱俗碗」競爭，傳產營運至為辛苦，因此只能本業積極轉型，調整現有的生產業態，汰弱換強朝精緻化發展，現階段沒有利潤的產品寧可不作，朝有特殊化，有附加價值的產品邁進，並漸進式活化現有資產，今年目標力拚損益兩平。產品在轉型方面，不論是南帝化工的鎮江廠，或是其轉投資的南美特科 general">
+      <div class="kicker">Yahoo 新聞 [General]</div>
       <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
-      <h3 class="title"><a href="https://www.bbc.com/news/articles/ce3pgn48wnqo?at_medium=RSS&amp;amp;at_campaign=rss" target="_blank">She was told to marry in a country which bans girls' education. So she got in a taxi and fled</a></h3>
-      <div class="ai-takeaway">Nearly five years on from Afghanistan's school ban, young women say they have waved goodbye to their dreams.</div>
+      <h3 class="title"><a href="https://tw.news.yahoo.com/%E5%8D%97%E7%B4%A1-%E6%AF%8F%E8%82%A1%E7%8F%BE%E9%87%91%E8%82%A1%E5%88%A90-3%E5%85%83-132507390.html" target="_blank">南紡 每股現金股利0.3元</a></h3>
+      <div class="ai-takeaway">南紡（1440）昨（26）日召開股東常會，通過董事會決議，以保留盈餘配發現金股利每股0.3元；董事長侯博明強調，面對大陸彼岸的產品「大擱俗碗」競爭，傳產營運至為辛苦，因此只能本業積極轉型，調整現有的生產業態，汰弱換強朝精緻化發展，現階段沒有利潤的產品寧可不作，朝有特殊化，有附加價值的產品邁進，並漸進式活化現有資產，今年目標力拚損益兩平。產品在轉型方面，不論是南帝化工的鎮江廠，或是其轉投資的南美特科</div>
+      <div class="terms">
+        <span class="term">General</span>
+      </div>
+      <div class="byline">
+        <b>SCORE</b><span class="score">5/10</span>
+      </div>
+    </article>
+  
+    <article class="card" data-topic="General" data-search="delaney hall ice protests escalate after sherrill denied access by dhs protests escalated outside delaney hall, an ice detention center in newark, after dhs denied gov. sherrill&amp;#039;s request to enter the facility. general">
+      <div class="kicker">CBS News [General]</div>
+      <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
+      <h3 class="title"><a href="https://www.cbsnews.com/news/mikie-sherrill-delaney-hall-ice-facility-protests-nj/" target="_blank">Delaney Hall ICE protests escalate after Sherrill denied access by DHS</a></h3>
+      <div class="ai-takeaway">Protests escalated outside Delaney Hall, an ICE detention center in Newark, after DHS denied Gov. Sherrill&amp;#039;s request to enter the facility.</div>
+      <div class="terms">
+        <span class="term">General</span>
+      </div>
+      <div class="byline">
+        <b>SCORE</b><span class="score">5/10</span>
+      </div>
+    </article>
+  
+    <article class="card" data-topic="General" data-search="新北三、蘆、社宅廉政平臺聯繫會議 新北市政府城鄉發展局為加速推動三重、蘆洲地區公共建設與社會住宅政策，昨（二十六）日召開「三重區三重段、蘆洲區光華段停車場及青年社會住宅工程採購廉政平臺」第2次聯繫會議，邀集臺灣新北地方檢察署檢察官、法務部調查局新北市調查處板橋站以及市府環保局、地政局、政風處與臺灣透明組織協會等單位共同參與，透過跨域合作機制，協助工程順利推展。三重區三重段及蘆洲區光華段工程結合停車場與青年社會住宅，不僅可增加在地停 general">
+      <div class="kicker">Yahoo 新聞 [General]</div>
+      <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
+      <h3 class="title"><a href="https://tw.news.yahoo.com/%E6%96%B0%E5%8C%97%E4%B8%89-%E8%98%86-%E7%A4%BE%E5%AE%85%E5%BB%89%E6%94%BF%E5%B9%B3%E8%87%BA%E8%81%AF%E7%B9%AB%E6%9C%83%E8%AD%B0-133110572.html" target="_blank">新北三、蘆、社宅廉政平臺聯繫會議</a></h3>
+      <div class="ai-takeaway">新北市政府城鄉發展局為加速推動三重、蘆洲地區公共建設與社會住宅政策，昨（二十六）日召開「三重區三重段、蘆洲區光華段停車場及青年社會住宅工程採購廉政平臺」第2次聯繫會議，邀集臺灣新北地方檢察署檢察官、法務部調查局新北市調查處板橋站以及市府環保局、地政局、政風處與臺灣透明組織協會等單位共同參與，透過跨域合作機制，協助工程順利推展。三重區三重段及蘆洲區光華段工程結合停車場與青年社會住宅，不僅可增加在地停</div>
       <div class="terms">
         <span class="term">General</span>
       </div>
@@ -497,121 +564,108 @@
       </div>
     </article>
   
-    <article class="card" data-topic="General" data-search="un’s climate crisis vote shows political momentum is growing, say experts &amp;lt;p&amp;gt;resolution backed by 141 states hailed as ‘new chapter’ that could improve climate diplomacy and litigation efforts&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;when the un general assembly &amp;lt;a href=&quot;https://www.theg general">
-      <div class="kicker">The Guardian [General]</div>
-      <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
-      <h3 class="title"><a href="https://www.theguardian.com/environment/2026/may/22/un-climate-crisis-vote-shows-political-momentum-growing-experts" target="_blank">UN’s climate crisis vote shows political momentum is growing, say experts</a></h3>
-      <div class="ai-takeaway">&amp;lt;p&amp;gt;Resolution backed by 141 states hailed as ‘new chapter’ that could improve climate diplomacy and litigation efforts&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;When the UN general assembly &amp;lt;a href=&quot;https://www.theg</div>
-      <div class="terms">
-        <span class="term">General</span>
-      </div>
-      <div class="byline">
-        <b>SCORE</b><span class="score">5/10</span>
-      </div>
-    </article>
-  
     </div>
   </section>
   <section class="cat" id="cat-finance" data-topic="Finance">
     <div class="section-rule cat-heading" style="--cat: #1b4d3e"><span class="accent">財經市場精選</span> Finance &amp; Markets</div>
     <div class="cards" style="--cat: #1b4d3e">
       
-    <article class="card" data-topic="Finance" data-search="雄獅股東會通過配息 12.8 元史上新高！ai 帶進破億營收、強攻全球頂級鐵道 雄獅旅行社在股東會中宣布配發 12.8 元股息創歷史新高，ai 已帶來破億營收，並積極進軍全球頂級鐵道市場。 雄獅 配息 ai 旅遊 鐵道">
-      <div class="kicker">財經新報 [Finance]</div>
-      <div class="hook"><span class="q">Q</span>雄獅如何透過 AI 技術突破傳統旅遊業的營收瓶頸，進而搶攻全球頂級鐵道市場？</div>
-      <h3 class="title"><a href="https://finance.technews.tw/2026/05/25/railway-tourism/" target="_blank">雄獅股東會通過配息 12.8 元史上新高！AI 帶進破億營收、強攻全球頂級鐵道</a></h3>
-      <div class="ai-takeaway">雄獅旅行社在股東會中宣布配發 12.8 元股息創歷史新高，AI 已帶來破億營收，並積極進軍全球頂級鐵道市場。</div>
-      <div class="terms">
-        <span class="term">雄獅</span><span class="term">配息</span><span class="term">AI</span><span class="term">旅遊</span><span class="term">鐵道</span>
-      </div>
-      <div class="byline">
-        <b>SCORE</b><span class="score">9/10</span>
-      </div>
-    </article>
-  
-    <article class="card" data-topic="Finance" data-search="潤泰總裁尹衍樑享壽 76 歲灑脫謝幕！百億救 gogoro、千億吞南山傳奇一生 潤泰集團總裁尹衍樑逝世，享年 76 歲，他曾以百億拯救 gogoro、千億收購南山人壽，傳奇一生留下深遠影響。 尹衍樑 潤泰 gogoro 南山 逝世">
-      <div class="kicker">財經新報 [Finance]</div>
-      <div class="hook"><span class="q">Q</span>尹衍樑的商業傳奇將如何影響台灣未來的產業布局？</div>
-      <h3 class="title"><a href="https://finance.technews.tw/2026/05/26/a-graceful-farewell/" target="_blank">潤泰總裁尹衍樑享壽 76 歲灑脫謝幕！百億救 Gogoro、千億吞南山傳奇一生</a></h3>
-      <div class="ai-takeaway">潤泰集團總裁尹衍樑逝世，享年 76 歲，他曾以百億拯救 Gogoro、千億收購南山人壽，傳奇一生留下深遠影響。</div>
-      <div class="terms">
-        <span class="term">尹衍樑</span><span class="term">潤泰</span><span class="term">Gogoro</span><span class="term">南山</span><span class="term">逝世</span>
-      </div>
-      <div class="byline">
-        <b>SCORE</b><span class="score">9/10</span>
-      </div>
-    </article>
-  
-    <article class="card" data-topic="Finance" data-search="asml 規劃 ai 時代半導體藍圖，台灣總經理揭密最新 euv 技術與在地佈局 在半導體設備大廠艾司摩爾（asml）副總裁暨台灣總經理汪佳慧分享 ai 時代最新 euv 技術藍圖與台灣在地布局。 asml euv 半導體 ai 台灣">
-      <div class="kicker">財經新報 [Finance]</div>
-      <div class="hook"><span class="q">Q</span>ASML 的最新 EUV 技術將如何推動台灣半導體產業的 AI 發展？</div>
-      <h3 class="title"><a href="https://finance.technews.tw/2026/05/25/asml-taiwan-general-manager-reveals-latest-euv-technology-and-local-deployment/" target="_blank">ASML 規劃 AI 時代半導體藍圖，台灣總經理揭密最新 EUV 技術與在地佈局</a></h3>
-      <div class="ai-takeaway">在半導體設備大廠艾司摩爾（ASML）副總裁暨台灣總經理汪佳慧分享 AI 時代最新 EUV 技術藍圖與台灣在地布局。</div>
-      <div class="terms">
-        <span class="term">ASML</span><span class="term">EUV</span><span class="term">半導體</span><span class="term">AI</span><span class="term">台灣</span>
-      </div>
-      <div class="byline">
-        <b>SCORE</b><span class="score">9/10</span>
-      </div>
-    </article>
-  
-    <article class="card" data-topic="Finance" data-search="無畏極端戰場與強光！雷虎結盟義隆電打造純台血統「無人機之眼」 雷虎科技宣布與義隆電簽署策略合作備忘錄，攜手打造純台灣製造的「無人機之眼」，以應對極端戰場與強光環境。 雷虎 義隆電 無人機 ai 台灣製造">
-      <div class="kicker">財經新報 [Finance]</div>
-      <div class="hook"><span class="q">Q</span>台灣自製的「無人機之眼」如何在惡劣環境中取得技術突破？</div>
-      <h3 class="title"><a href="https://finance.technews.tw/2026/05/26/gelannet/" target="_blank">無畏極端戰場與強光！雷虎結盟義隆電打造純台血統「無人機之眼」</a></h3>
-      <div class="ai-takeaway">雷虎科技宣布與義隆電簽署策略合作備忘錄，攜手打造純台灣製造的「無人機之眼」，以應對極端戰場與強光環境。</div>
-      <div class="terms">
-        <span class="term">雷虎</span><span class="term">義隆電</span><span class="term">無人機</span><span class="term">AI</span><span class="term">台灣製造</span>
-      </div>
-      <div class="byline">
-        <b>SCORE</b><span class="score">8/10</span>
-      </div>
-    </article>
-  
-    <article class="card" data-topic="Finance" data-search="被黃仁勳點名「應強化法規遵循管理」，美超微聲明回應 美超微針對黃仁勳要求強化法規遵循管理的呼籲發表聲明，強調正與合作夥伴共同努力確保合規。 美超微 黃仁勳 法規遵循 ai 伺服器 出口管制">
-      <div class="kicker">財經新報 [Finance]</div>
-      <div class="hook"><span class="q">Q</span>美超微將如何回應黃仁勳的合規要求，以避免 AI 伺服器出口爭議？</div>
-      <h3 class="title"><a href="https://finance.technews.tw/2026/05/25/supermicro-nvidia/" target="_blank">被黃仁勳點名「應強化法規遵循管理」，美超微聲明回應</a></h3>
-      <div class="ai-takeaway">美超微針對黃仁勳要求強化法規遵循管理的呼籲發表聲明，強調正與合作夥伴共同努力確保合規。</div>
-      <div class="terms">
-        <span class="term">美超微</span><span class="term">黃仁勳</span><span class="term">法規遵循</span><span class="term">AI 伺服器</span><span class="term">出口管制</span>
-      </div>
-      <div class="byline">
-        <b>SCORE</b><span class="score">8/10</span>
-      </div>
-    </article>
-  
-    <article class="card" data-topic="Finance" data-search="只看標題就簽名？馬斯克出庭自爆沒看條款，openai 非營利承諾成羅生門 馬斯克在法庭上自曝未閱讀條款即簽署文件，openai 的非營利承諾因此陷入爭議。 馬斯克 openai 法律 非營利 ai">
-      <div class="kicker">財經新報 [Finance]</div>
-      <div class="hook"><span class="q">Q</span>馬斯克未閱讀條款就簽署是否會影響 OpenAI 的非營利定位？</div>
-      <h3 class="title"><a href="https://finance.technews.tw/2026/05/26/elon-musk-vs-openai-explained-why-musk-lost/" target="_blank">只看標題就簽名？馬斯克出庭自爆沒看條款，OpenAI 非營利承諾成羅生門</a></h3>
-      <div class="ai-takeaway">馬斯克在法庭上自曝未閱讀條款即簽署文件，OpenAI 的非營利承諾因此陷入爭議。</div>
-      <div class="terms">
-        <span class="term">馬斯克</span><span class="term">OpenAI</span><span class="term">法律</span><span class="term">非營利</span><span class="term">AI</span>
-      </div>
-      <div class="byline">
-        <b>SCORE</b><span class="score">8/10</span>
-      </div>
-    </article>
-  
-    <article class="card" data-topic="Finance" data-search="中東和平露曙光，日經勁揚逾 3%、首衝 6 萬 5,000 點大關 日本東京股市日經指數首度突破 6 萬 5,000 點，創歷史新高，市場看好中東和平前景帶動油價回穩。 日經指數 中東和平 股市 經濟 油價">
-      <div class="kicker">財經新報 [Finance]</div>
-      <div class="hook"><span class="q">Q</span>中東和平的曙光是否足以支撐日經指數的持續上漲？</div>
-      <h3 class="title"><a href="https://finance.technews.tw/2026/05/25/middle-east-peace-glimmer-sends-nikkei-soaring-over-3-breaching-65000-points-first-time/" target="_blank">中東和平露曙光，日經勁揚逾 3%、首衝 6 萬 5,000 點大關</a></h3>
-      <div class="ai-takeaway">日本東京股市日經指數首度突破 6 萬 5,000 點，創歷史新高，市場看好中東和平前景帶動油價回穩。</div>
-      <div class="terms">
-        <span class="term">日經指數</span><span class="term">中東和平</span><span class="term">股市</span><span class="term">經濟</span><span class="term">油價</span>
-      </div>
-      <div class="byline">
-        <b>SCORE</b><span class="score">7/10</span>
-      </div>
-    </article>
-  
-    <article class="card" data-topic="Finance" data-search="spacex 等巨型 ipo 掀波  美銀：美股集中度超越達康 美國銀行警告，spacex 等巨型 ipo 導致美股集中度超越網路 finance">
+    <article class="card" data-topic="Finance" data-search="高鐵史上最嚴重延誤初判原因出爐！首度踢到「轉轍器電源異常」鐵板 台灣高鐵 5 月 25 日清晨因苗栗路段發生號誌訊號異常，引發史上最嚴重的延誤事件，當天自上午 8 時起，高鐵 [&amp;#8230;] finance">
       <div class="kicker">財經新報 [Finance]</div>
       <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
-      <h3 class="title"><a href="https://finance.technews.tw/2026/05/25/us-stock-market-concentration-set-to-surpass-dot-com-bubble-levels/" target="_blank">SpaceX 等巨型 IPO 掀波  美銀：美股集中度超越達康</a></h3>
-      <div class="ai-takeaway">美國銀行警告，SpaceX 等巨型 IPO 導致美股集中度超越網路</div>
+      <h3 class="title"><a href="https://finance.technews.tw/2026/05/26/switch-machine-control-case/" target="_blank">高鐵史上最嚴重延誤初判原因出爐！首度踢到「轉轍器電源異常」鐵板</a></h3>
+      <div class="ai-takeaway">台灣高鐵 5 月 25 日清晨因苗栗路段發生號誌訊號異常，引發史上最嚴重的延誤事件，當天自上午 8 時起，高鐵 [&amp;#8230;]</div>
+      <div class="terms">
+        <span class="term">Finance</span>
+      </div>
+      <div class="byline">
+        <b>SCORE</b><span class="score">5/10</span>
+      </div>
+    </article>
+  
+    <article class="card" data-topic="Finance" data-search="被黃仁勳點名「應強化法規遵循管理」，美超微聲明回應 針對 ai 伺服器疑似透過不實申報出口、涉及轉運至受限制市場的爭議，美超微稍早也發出聲明，強調該公司正與產業夥 [&amp;#8230;] finance">
+      <div class="kicker">財經新報 [Finance]</div>
+      <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
+      <h3 class="title"><a href="https://finance.technews.tw/2026/05/25/supermicro-nvidia/" target="_blank">被黃仁勳點名「應強化法規遵循管理」，美超微聲明回應</a></h3>
+      <div class="ai-takeaway">針對 AI 伺服器疑似透過不實申報出口、涉及轉運至受限制市場的爭議，美超微稍早也發出聲明，強調該公司正與產業夥 [&amp;#8230;]</div>
+      <div class="terms">
+        <span class="term">Finance</span>
+      </div>
+      <div class="byline">
+        <b>SCORE</b><span class="score">5/10</span>
+      </div>
+    </article>
+  
+    <article class="card" data-topic="Finance" data-search="無畏極端戰場與強光！雷虎結盟義隆電打造純台血統「無人機之眼」 雷虎科技今日宣布與 on-device ai 技術領導廠商義隆電簽署策略合作備忘錄（mou），標誌著雷虎科技從 [&amp;#8230;] finance">
+      <div class="kicker">財經新報 [Finance]</div>
+      <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
+      <h3 class="title"><a href="https://finance.technews.tw/2026/05/26/gelannet/" target="_blank">無畏極端戰場與強光！雷虎結盟義隆電打造純台血統「無人機之眼」</a></h3>
+      <div class="ai-takeaway">雷虎科技今日宣布與 On-Device AI 技術領導廠商義隆電簽署策略合作備忘錄（MOU），標誌著雷虎科技從 [&amp;#8230;]</div>
+      <div class="terms">
+        <span class="term">Finance</span>
+      </div>
+      <div class="byline">
+        <b>SCORE</b><span class="score">5/10</span>
+      </div>
+    </article>
+  
+    <article class="card" data-topic="Finance" data-search="ai 機櫃功耗上看 200kw，嘉實多切入資料中心液冷服務商機 ai 伺服器功耗持續攀升，資料中心散熱架構也從傳統氣冷加速轉向液冷，從車用潤滑油起家的嘉實多（castrol） [&amp;#8230;] finance">
+      <div class="kicker">財經新報 [Finance]</div>
+      <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
+      <h3 class="title"><a href="https://finance.technews.tw/2026/05/25/ai-server-castrol-cooling/" target="_blank">AI 機櫃功耗上看 200kW，嘉實多切入資料中心液冷服務商機</a></h3>
+      <div class="ai-takeaway">AI 伺服器功耗持續攀升，資料中心散熱架構也從傳統氣冷加速轉向液冷，從車用潤滑油起家的嘉實多（Castrol） [&amp;#8230;]</div>
+      <div class="terms">
+        <span class="term">Finance</span>
+      </div>
+      <div class="byline">
+        <b>SCORE</b><span class="score">5/10</span>
+      </div>
+    </article>
+  
+    <article class="card" data-topic="Finance" data-search="錯過輝達暴漲怎麼辦？群益 009824 搭配 009823 承包美國九成市值 全球股市交投熱絡，輝達（nvidia）股價日前衝破 235.74 美元新天價，帶動市值站上 5.7 兆美元，為 [&amp;#8230;] finance">
+      <div class="kicker">財經新報 [Finance]</div>
+      <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
+      <h3 class="title"><a href="https://finance.technews.tw/2026/05/25/009824/" target="_blank">錯過輝達暴漲怎麼辦？群益 009824 搭配 009823 承包美國九成市值</a></h3>
+      <div class="ai-takeaway">全球股市交投熱絡，輝達（NVIDIA）股價日前衝破 235.74 美元新天價，帶動市值站上 5.7 兆美元，為 [&amp;#8230;]</div>
+      <div class="terms">
+        <span class="term">Finance</span>
+      </div>
+      <div class="byline">
+        <b>SCORE</b><span class="score">5/10</span>
+      </div>
+    </article>
+  
+    <article class="card" data-topic="Finance" data-search="力排眾議催生日本超商，7-eleven 前掌門人過世 日本 7&amp;#38;i 控股公司名譽顧問鈴木敏文，生前曾力排眾議，把便利商店引進日本，並催生出全球最大的連鎖便利 [&amp;#8230;] finance">
+      <div class="kicker">財經新報 [Finance]</div>
+      <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
+      <h3 class="title"><a href="https://finance.technews.tw/2026/05/25/7-eleven-toshifumi-suzuki-passes-away/" target="_blank">力排眾議催生日本超商，7-Eleven 前掌門人過世</a></h3>
+      <div class="ai-takeaway">日本 7&amp;#38;I 控股公司名譽顧問鈴木敏文，生前曾力排眾議，把便利商店引進日本，並催生出全球最大的連鎖便利 [&amp;#8230;]</div>
+      <div class="terms">
+        <span class="term">Finance</span>
+      </div>
+      <div class="byline">
+        <b>SCORE</b><span class="score">5/10</span>
+      </div>
+    </article>
+  
+    <article class="card" data-topic="Finance" data-search="nasa 終結近 70 年特權，首度開放 jpl 營運權合約競標 nasa 宣布將開放噴射推進實驗室（jet propulsion laboratory，jpl）營運合約競標， [&amp;#8230;] finance">
+      <div class="kicker">財經新報 [Finance]</div>
+      <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
+      <h3 class="title"><a href="https://finance.technews.tw/2026/05/25/jpl-management-contract-faces-open-competition-for-first-time-ever/" target="_blank">NASA 終結近 70 年特權，首度開放 JPL 營運權合約競標</a></h3>
+      <div class="ai-takeaway">NASA 宣布將開放噴射推進實驗室（Jet Propulsion Laboratory，JPL）營運合約競標， [&amp;#8230;]</div>
+      <div class="terms">
+        <span class="term">Finance</span>
+      </div>
+      <div class="byline">
+        <b>SCORE</b><span class="score">5/10</span>
+      </div>
+    </article>
+  
+    <article class="card" data-topic="Finance" data-search="供不應求激勵價格成長，1q26 全球前五大 nand flash 品牌合計營收季增 83.7% trendforce 最新 nand flash 產業調查，2026 年第一季全球各雲端服務供應商（csp）為 [&amp;#8230;] finance">
+      <div class="kicker">財經新報 [Finance]</div>
+      <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
+      <h3 class="title"><a href="https://finance.technews.tw/2026/05/25/nand-flash-undersupply-drives-prices-top-5-brands-1q26-revenue-83-7-qoq/" target="_blank">供不應求激勵價格成長，1Q26 全球前五大 NAND Flash 品牌合計營收季增 83.7%</a></h3>
+      <div class="ai-takeaway">TrendForce 最新 NAND Flash 產業調查，2026 年第一季全球各雲端服務供應商（CSP）為 [&amp;#8230;]</div>
       <div class="terms">
         <span class="term">Finance</span>
       </div>
@@ -626,36 +680,10 @@
     <div class="section-rule cat-heading" style="--cat: #c25100"><span class="accent">體育競技動態</span> Sports Arena</div>
     <div class="cards" style="--cat: #c25100">
       
-    <article class="card" data-topic="Sports" data-search="st mirren survive - will interim mcleish get the job now? interim manager craig mcleish has not been fancied for the st mirren job permanently. but after keeping the club up amid a rollercoaster season, will that change? sports">
-      <div class="kicker">BBC Sport [Sports]</div>
-      <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
-      <h3 class="title"><a href="https://www.bbc.com/sport/football/articles/c89330lwdxpo?at_medium=RSS&amp;amp;at_campaign=rss" target="_blank">St Mirren survive - will interim McLeish get the job now?</a></h3>
-      <div class="ai-takeaway">Interim manager Craig McLeish has not been fancied for the St Mirren job permanently. But after keeping the club up amid a rollercoaster season, will that change?</div>
-      <div class="terms">
-        <span class="term">Sports</span>
-      </div>
-      <div class="byline">
-        <b>SCORE</b><span class="score">5/10</span>
-      </div>
-    </article>
-  
-    <article class="card" data-topic="Sports" data-search="full-back gibbons to leave cambridge this summer [getty images]cambridge united full-back james gibbons will leave the club this summer after he turned down the offer of a new contract.the 28-year-old made the decision in order to be closer to his f sports">
-      <div class="kicker">Yahoo Sports [Sports]</div>
-      <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
-      <h3 class="title"><a href="https://sports.yahoo.com/articles/full-back-gibbons-leave-cambridge-132623699.html" target="_blank">Full-back Gibbons to leave Cambridge this summer</a></h3>
-      <div class="ai-takeaway">[Getty Images]Cambridge United full-back James Gibbons will leave the club this summer after he turned down the offer of a new contract.The 28-year-old made the decision in order to be closer to his f</div>
-      <div class="terms">
-        <span class="term">Sports</span>
-      </div>
-      <div class="byline">
-        <b>SCORE</b><span class="score">5/10</span>
-      </div>
-    </article>
-  
-    <article class="card" data-topic="Sports" data-search="《plg(s6)季後賽》勇士主場沒能雙告捷，獵鷹韌性追平首戰27分落敗準備回家 最新消息 sports">
+    <article class="card" data-topic="Sports" data-search="o3站前話中職(2026 week 9)-龍驤麟振未嘗敗，象陷深淵勝難求。 最新消息 sports">
       <div class="kicker">運動視界 [Sports]</div>
       <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
-      <h3 class="title"><a href="https://www.sportsv.net/articles/126558" target="_blank">《PLG(S6)季後賽》勇士主場沒能雙告捷，獵鷹韌性追平首戰27分落敗準備回家</a></h3>
+      <h3 class="title"><a href="https://www.sportsv.net/articles/126562" target="_blank">O3站前話中職(2026 Week 9)-龍驤麟振未嘗敗，象陷深淵勝難求。</a></h3>
       <div class="ai-takeaway">最新消息</div>
       <div class="terms">
         <span class="term">Sports</span>
@@ -665,11 +693,11 @@
       </div>
     </article>
   
-    <article class="card" data-topic="Sports" data-search="everton women set to appoint scott phelan as new head coach scott phelan is set to be appointed everton women head coach on a full-time basis.the former under-18s men’s coach was appointed interim manager following brian sorensen’s sacking in february.the deal sports">
-      <div class="kicker">Yahoo Sports [Sports]</div>
+    <article class="card" data-topic="Sports" data-search="mlb power rankings: brewers surge into top three, cubs slide, plus mets and tigers land in bottom five the braves and dodgers hold the top two spots, but the brewers, one of mlb&amp;#039;s best-run franchises, are right on their tails sports">
+      <div class="kicker">CBS Sports [Sports]</div>
       <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
-      <h3 class="title"><a href="https://sports.yahoo.com/articles/everton-women-set-appoint-scott-131605808.html" target="_blank">Everton Women set to appoint Scott Phelan as new head coach</a></h3>
-      <div class="ai-takeaway">Scott Phelan is set to be appointed Everton Women head coach on a full-time basis.The former Under-18s men’s coach was appointed interim manager following Brian Sorensen’s sacking in February.The deal</div>
+      <h3 class="title"><a href="https://www.cbssports.com/mlb/news/mlb-power-rankings-brewers-top-three-may-26/" target="_blank">MLB Power Rankings: Brewers surge into top three, Cubs slide, plus Mets and Tigers land in bottom five</a></h3>
+      <div class="ai-takeaway">The Braves and Dodgers hold the top two spots, but the Brewers, one of MLB&amp;#039;s best-run franchises, are right on their tails</div>
       <div class="terms">
         <span class="term">Sports</span>
       </div>
@@ -678,11 +706,11 @@
       </div>
     </article>
   
-    <article class="card" data-topic="Sports" data-search="georgia high school football player, tulane recruit dies in crash hours after graduating a south georgia community and tulane university are mourning the loss of a football player who died in a crash hours after his high school graduation. deontavis cooper graduated from thomas county cen sports">
-      <div class="kicker">Yahoo Sports [Sports]</div>
+    <article class="card" data-topic="Sports" data-search="板凳深度得nba天下？重思馬刺和雷霆的「板凳深度」與馬刺「逆轉勝解法」 最新消息 sports">
+      <div class="kicker">運動視界 [Sports]</div>
       <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
-      <h3 class="title"><a href="https://sports.yahoo.com/articles/georgia-high-school-football-player-132439525.html" target="_blank">Georgia high school football player, Tulane recruit dies in crash hours after graduating</a></h3>
-      <div class="ai-takeaway">A south Georgia community and Tulane University are mourning the loss of a football player who died in a crash hours after his high school graduation. Deontavis Cooper graduated from Thomas County Cen</div>
+      <h3 class="title"><a href="https://www.sportsv.net/articles/126548" target="_blank">板凳深度得NBA天下？重思馬刺和雷霆的「板凳深度」與馬刺「逆轉勝解法」</a></h3>
+      <div class="ai-takeaway">最新消息</div>
       <div class="terms">
         <span class="term">Sports</span>
       </div>
@@ -691,13 +719,11 @@
       </div>
     </article>
   
-    <article class="card" data-topic="Sports" data-search="dwyane wade finally admits why cocky big 3 heat weren’t ready for mavericks dwyane wade finally admits why cocky big 3 heat weren’t ready for mavericks originally appeared on the sporting news.
-                add the sporting news as a preferred source by clicking here.the 2 sports">
-      <div class="kicker">Yahoo Sports [Sports]</div>
+    <article class="card" data-topic="Sports" data-search="use draftkings promo code for $100 bonus bets by targeting thunder-spurs, golden knights-avalanche on sunday draftkings offers $100 in bonus bets instantly after your first $5 wager for nba, nhl and mlb on sunday sports">
+      <div class="kicker">CBS Sports [Sports]</div>
       <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
-      <h3 class="title"><a href="https://sports.yahoo.com/articles/dwyane-wade-finally-admits-why-132137475.html" target="_blank">Dwyane Wade finally admits why cocky Big 3 Heat weren’t ready for Mavericks</a></h3>
-      <div class="ai-takeaway">Dwyane Wade finally admits why cocky Big 3 Heat weren’t ready for Mavericks originally appeared on The Sporting News.
-                Add The Sporting News as a Preferred Source by clicking here.The 2</div>
+      <h3 class="title"><a href="https://www.cbssports.com/betting/news/use-draftkings-promo-code-for-100-bonus-bets-thunder-spurs-golden-knights-avalanche-sunday/" target="_blank">Use DraftKings promo code for $100 bonus bets by targeting Thunder-Spurs, Golden Knights-Avalanche on Sunday</a></h3>
+      <div class="ai-takeaway">DraftKings offers $100 in bonus bets instantly after your first $5 wager for NBA, NHL and MLB on Sunday</div>
       <div class="terms">
         <span class="term">Sports</span>
       </div>
@@ -706,11 +732,11 @@
       </div>
     </article>
   
-    <article class="card" data-topic="Sports" data-search="titans qb will levis spent &amp;#39;exorbitant&amp;#39; money to get explicit videos removed online beth levis, mother of tennessee titans quarterback will levis, explained the arduous process her son had to go through to get an explicit video of himself and former girlfriend taken off the internet  sports">
-      <div class="kicker">Yahoo Sports [Sports]</div>
+    <article class="card" data-topic="Sports" data-search="做伙拚．台鋼週報(week9)－喜憂參半 最新消息 sports">
+      <div class="kicker">運動視界 [Sports]</div>
       <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
-      <h3 class="title"><a href="https://sports.yahoo.com/articles/titans-qb-levis-spent-exorbitant-132401304.html" target="_blank">Titans QB Will Levis spent &amp;#39;exorbitant&amp;#39; money to get explicit videos removed online</a></h3>
-      <div class="ai-takeaway">Beth Levis, mother of Tennessee Titans quarterback Will Levis, explained the arduous process her son had to go through to get an explicit video of himself and former girlfriend taken off the internet </div>
+      <h3 class="title"><a href="https://www.sportsv.net/articles/126565" target="_blank">做伙拚．台鋼週報(week9)－喜憂參半</a></h3>
+      <div class="ai-takeaway">最新消息</div>
       <div class="terms">
         <span class="term">Sports</span>
       </div>
@@ -719,11 +745,37 @@
       </div>
     </article>
   
-    <article class="card" data-topic="Sports" data-search="why the charles schwab challenge winner will receive this custom car the winner of this week’s charles schwab challenge will once again drive away in a classic prize that’s truly one-of-a-kind.for the eighth consecutive year, the winner at famed colonial country club i sports">
-      <div class="kicker">Yahoo Sports [Sports]</div>
+    <article class="card" data-topic="Sports" data-search="gibbs-white sends england message as forest draw with bournemouth nottingham forest's morgan gibbs-white sends a message to england boss thomas tuchel, as bournemouth miss out on the champions league. sports">
+      <div class="kicker">BBC Sport [Sports]</div>
       <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
-      <h3 class="title"><a href="https://sports.yahoo.com/articles/why-charles-schwab-challenge-winner-133123701.html" target="_blank">Why the Charles Schwab Challenge winner will receive this custom car</a></h3>
-      <div class="ai-takeaway">The winner of this week’s Charles Schwab Challenge will once again drive away in a classic prize that’s truly one-of-a-kind.For the eighth consecutive year, the winner at famed Colonial Country Club i</div>
+      <h3 class="title"><a href="https://www.bbc.com/sport/football/videos/c1w2z0wj05zo?at_medium=RSS&amp;amp;at_campaign=rss" target="_blank">Gibbs-White sends England message as Forest draw with Bournemouth</a></h3>
+      <div class="ai-takeaway">Nottingham Forest's Morgan Gibbs-White sends a message to England boss Thomas Tuchel, as Bournemouth miss out on the Champions League.</div>
+      <div class="terms">
+        <span class="term">Sports</span>
+      </div>
+      <div class="byline">
+        <b>SCORE</b><span class="score">5/10</span>
+      </div>
+    </article>
+  
+    <article class="card" data-topic="Sports" data-search="wawrinka bids fond farewell to french open stan wawrinka bids a fond farewell to the french open as the 2015 champion is beaten in the first round in paris. sports">
+      <div class="kicker">BBC Sport [Sports]</div>
+      <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
+      <h3 class="title"><a href="https://www.bbc.com/sport/tennis/articles/cdrp2r1xz5yo?at_medium=RSS&amp;amp;at_campaign=rss" target="_blank">Wawrinka bids fond farewell to French Open</a></h3>
+      <div class="ai-takeaway">Stan Wawrinka bids a fond farewell to the French Open as the 2015 champion is beaten in the first round in Paris.</div>
+      <div class="terms">
+        <span class="term">Sports</span>
+      </div>
+      <div class="byline">
+        <b>SCORE</b><span class="score">5/10</span>
+      </div>
+    </article>
+  
+    <article class="card" data-topic="Sports" data-search="neville leaves mls strugglers portland timbers portland timbers confirm that they have parted company with head coach phil neville by mutual consent. sports">
+      <div class="kicker">BBC Sport [Sports]</div>
+      <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
+      <h3 class="title"><a href="https://www.bbc.com/sport/football/articles/c8e886je729o?at_medium=RSS&amp;amp;at_campaign=rss" target="_blank">Neville leaves MLS strugglers Portland Timbers</a></h3>
+      <div class="ai-takeaway">Portland Timbers confirm that they have parted company with head coach Phil Neville by mutual consent.</div>
       <div class="terms">
         <span class="term">Sports</span>
       </div>
@@ -738,11 +790,11 @@
     <div class="section-rule cat-heading" style="--cat: #0f766e"><span class="accent">健康生活新知</span> Health &amp; Wellness</div>
     <div class="cards" style="--cat: #0f766e">
       
-    <article class="card" data-topic="Health" data-search="'people can feel lonely in a crowd' dawn french discusses loneliness, particularly among older women, on woman's hour. health">
+    <article class="card" data-topic="Health" data-search="vaccines a huge success, but public trust must be earned - key findings from covid report immunisation saved hundreds of thousands of uk lives, but vaccine hesitancy remains an issue. health">
       <div class="kicker">BBC Health [Health]</div>
       <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
-      <h3 class="title"><a href="https://www.bbc.com/news/videos/cyv25rq7jj0o?at_medium=RSS&amp;amp;at_campaign=rss" target="_blank">'People can feel lonely in a crowd'</a></h3>
-      <div class="ai-takeaway">Dawn French discusses loneliness, particularly among older women, on Woman's Hour.</div>
+      <h3 class="title"><a href="https://www.bbc.com/news/articles/ce3dp52l70zo?at_medium=RSS&amp;amp;at_campaign=rss" target="_blank">Vaccines a huge success, but public trust must be earned - key findings from Covid report</a></h3>
+      <div class="ai-takeaway">Immunisation saved hundreds of thousands of UK lives, but vaccine hesitancy remains an issue.</div>
       <div class="terms">
         <span class="term">Health</span>
       </div>
@@ -751,11 +803,50 @@
       </div>
     </article>
   
-    <article class="card" data-topic="Health" data-search="hospitals coping well with doctors' strike so far - nhs boss resident doctors in england – the new name for junior doctors – are taking part in their 15th walkout in a long-running pay dispute. health">
+    <article class="card" data-topic="Health" data-search="i tried the uk's 'saltiest' sandwich - here's what i learned health correspondent james gallagher absorbs more than the recommended daily limit in just one meal to find out how salt affects our bodies. health">
       <div class="kicker">BBC Health [Health]</div>
       <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
-      <h3 class="title"><a href="https://www.bbc.com/news/articles/clyrzrp0x5go?at_medium=RSS&amp;amp;at_campaign=rss" target="_blank">Hospitals coping well with doctors' strike so far - NHS boss</a></h3>
-      <div class="ai-takeaway">Resident doctors in England – the new name for junior doctors – are taking part in their 15th walkout in a long-running pay dispute.</div>
+      <h3 class="title"><a href="https://www.bbc.com/news/articles/cd9pylq25y9o?at_medium=RSS&amp;amp;at_campaign=rss" target="_blank">I tried the UK's 'saltiest' sandwich - here's what I learned</a></h3>
+      <div class="ai-takeaway">Health correspondent James Gallagher absorbs more than the recommended daily limit in just one meal to find out how salt affects our bodies.</div>
+      <div class="terms">
+        <span class="term">Health</span>
+      </div>
+      <div class="byline">
+        <b>SCORE</b><span class="score">5/10</span>
+      </div>
+    </article>
+  
+    <article class="card" data-topic="Health" data-search="what you need to know about latest meningitis cluster after a fourth case of meningitis b has been confirmed in reading, bbc south's health correspondent alastair fee shares what you need to know. health">
+      <div class="kicker">BBC Health [Health]</div>
+      <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
+      <h3 class="title"><a href="https://www.bbc.com/news/videos/cvgz1pl3x73o?at_medium=RSS&amp;amp;at_campaign=rss" target="_blank">What you need to know about latest meningitis cluster</a></h3>
+      <div class="ai-takeaway">After a fourth case of meningitis B has been confirmed in Reading, BBC South's health correspondent Alastair Fee shares what you need to know.</div>
+      <div class="terms">
+        <span class="term">Health</span>
+      </div>
+      <div class="byline">
+        <b>SCORE</b><span class="score">5/10</span>
+      </div>
+    </article>
+  
+    <article class="card" data-topic="Health" data-search="riskiest skin cancer cases hit uk record high the number of melanoma skin cancer cases has risen above 20,000 a year for the first time in the uk. health">
+      <div class="kicker">BBC Health [Health]</div>
+      <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
+      <h3 class="title"><a href="https://www.bbc.com/news/articles/c4g0ryrewdxo?at_medium=RSS&amp;amp;at_campaign=rss" target="_blank">Riskiest skin cancer cases hit UK record high</a></h3>
+      <div class="ai-takeaway">The number of melanoma skin cancer cases has risen above 20,000 a year for the first time in the UK.</div>
+      <div class="terms">
+        <span class="term">Health</span>
+      </div>
+      <div class="byline">
+        <b>SCORE</b><span class="score">5/10</span>
+      </div>
+    </article>
+  
+    <article class="card" data-topic="Health" data-search="calls for reformer pilates regulation amid boom reformer pilates businesses in the uk rose nearly ten-fold between 2024 and 2025. health">
+      <div class="kicker">BBC Health [Health]</div>
+      <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
+      <h3 class="title"><a href="https://www.bbc.com/news/articles/cp9p5m00nxgo?at_medium=RSS&amp;amp;at_campaign=rss" target="_blank">Calls for Reformer Pilates regulation amid boom</a></h3>
+      <div class="ai-takeaway">Reformer Pilates businesses in the UK rose nearly ten-fold between 2024 and 2025.</div>
       <div class="terms">
         <span class="term">Health</span>
       </div>
@@ -777,11 +868,11 @@
       </div>
     </article>
   
-    <article class="card" data-topic="Health" data-search="pcos name change 'more representative of condition' health experts in jersey say the change helps people realise it is not an ovaries-only condition. health">
+    <article class="card" data-topic="Health" data-search="wellbeing garden opens to combat isolation the outdoor area at yarm wellness will officially open to the public on saturday. health">
       <div class="kicker">BBC Health [Health]</div>
       <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
-      <h3 class="title"><a href="https://www.bbc.com/news/articles/cpdp9zqgj80o?at_medium=RSS&amp;amp;at_campaign=rss" target="_blank">PCOS name change 'more representative of condition'</a></h3>
-      <div class="ai-takeaway">Health experts in Jersey say the change helps people realise it is not an ovaries-only condition.</div>
+      <h3 class="title"><a href="https://www.bbc.com/news/articles/c1l9967yq9mo?at_medium=RSS&amp;amp;at_campaign=rss" target="_blank">Wellbeing garden opens to combat isolation</a></h3>
+      <div class="ai-takeaway">The outdoor area at Yarm Wellness will officially open to the public on Saturday.</div>
       <div class="terms">
         <span class="term">Health</span>
       </div>
@@ -790,50 +881,11 @@
       </div>
     </article>
   
-    <article class="card" data-topic="Health" data-search="researchers look into island's health benefits the team aims to find out what it is about the isle of wight that makes people feel better. health">
+    <article class="card" data-topic="Health" data-search="why did resident doctors go on strike and how much are they paid? resident doctors in england have returned to work after the 15th walkout in a long-running dispute. health">
       <div class="kicker">BBC Health [Health]</div>
       <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
-      <h3 class="title"><a href="https://www.bbc.com/news/articles/c5yvpr21mnno?at_medium=RSS&amp;amp;at_campaign=rss" target="_blank">Researchers look into island's health benefits</a></h3>
-      <div class="ai-takeaway">The team aims to find out what it is about the Isle of Wight that makes people feel better.</div>
-      <div class="terms">
-        <span class="term">Health</span>
-      </div>
-      <div class="byline">
-        <b>SCORE</b><span class="score">5/10</span>
-      </div>
-    </article>
-  
-    <article class="card" data-topic="Health" data-search="living with pmdd is like having the grim reaper visit every month women diagnosed with premenstrual dysphoric disorder discuss how it impacts their lives. health">
-      <div class="kicker">BBC Health [Health]</div>
-      <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
-      <h3 class="title"><a href="https://www.bbc.com/news/articles/cx21kypwpzno?at_medium=RSS&amp;amp;at_campaign=rss" target="_blank">Living with PMDD is like having the Grim Reaper visit every month</a></h3>
-      <div class="ai-takeaway">Women diagnosed with premenstrual dysphoric disorder discuss how it impacts their lives.</div>
-      <div class="terms">
-        <span class="term">Health</span>
-      </div>
-      <div class="byline">
-        <b>SCORE</b><span class="score">5/10</span>
-      </div>
-    </article>
-  
-    <article class="card" data-topic="Health" data-search="ebola risk raised to 'very high' in dr congo the head of the un health agency says the risk in the wider region is &quot;high&quot;, but it remains &quot;low&quot; at the global level. health">
-      <div class="kicker">BBC Health [Health]</div>
-      <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
-      <h3 class="title"><a href="https://www.bbc.com/news/articles/cr7p30m1dn1o?at_medium=RSS&amp;amp;at_campaign=rss" target="_blank">Ebola risk raised to 'very high' in DR Congo</a></h3>
-      <div class="ai-takeaway">The head of the UN health agency says the risk in the wider region is &quot;high&quot;, but it remains &quot;low&quot; at the global level.</div>
-      <div class="terms">
-        <span class="term">Health</span>
-      </div>
-      <div class="byline">
-        <b>SCORE</b><span class="score">5/10</span>
-      </div>
-    </article>
-  
-    <article class="card" data-topic="Health" data-search="posh sandwich has more salt than nearly five cheeseburgers action on salt &amp; sugar said people should not be exposed to a &quot;hidden health risk every time they buy lunch&quot;. health">
-      <div class="kicker">BBC Health [Health]</div>
-      <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
-      <h3 class="title"><a href="https://www.bbc.com/news/articles/c4g4l54g2ppo?at_medium=RSS&amp;amp;at_campaign=rss" target="_blank">Posh sandwich has more salt than nearly five cheeseburgers</a></h3>
-      <div class="ai-takeaway">Action on Salt &amp; Sugar said people should not be exposed to a &quot;hidden health risk every time they buy lunch&quot;.</div>
+      <h3 class="title"><a href="https://www.bbc.com/news/articles/cn0qyl4ljjko?at_medium=RSS&amp;amp;at_campaign=rss" target="_blank">Why did resident doctors go on strike and how much are they paid?</a></h3>
+      <div class="ai-takeaway">Resident doctors in England have returned to work after the 15th walkout in a long-running dispute.</div>
       <div class="terms">
         <span class="term">Health</span>
       </div>
@@ -848,11 +900,63 @@
     <div class="section-rule cat-heading" style="--cat: #6b21a8"><span class="accent">娛樂與流行文化</span> Entertainment &amp; Culture</div>
     <div class="cards" style="--cat: #6b21a8">
       
-    <article class="card" data-topic="Entertainment" data-search="russell crowe defends brusque warning to autograph seekers in viral video: &amp;#8220;what&amp;#8217;s your problem?&amp;#8221; the 'gladiator' star was captured telling fans in paris: &quot;don't f***ing push in on me, i'll come to you. give everybody space. as soon as somebody's a d***, i'm going.&quot; entertainment">
+    <article class="card" data-topic="Entertainment" data-search="queen margrethe rushed back to hospital just days after treatment for heart attack queen margrethe of denmark has been taken to hospital yet again - just days undergoing treatment following a heart attack earlier this month entertainment">
+      <div class="kicker">Mirror Celebrity [Entertainment]</div>
+      <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
+      <h3 class="title"><a href="https://www.mirror.co.uk/news/royals/queen-margrethe-of-denmark-hospital-37205630" target="_blank">Queen Margrethe rushed back to hospital just days after treatment for heart attack</a></h3>
+      <div class="ai-takeaway">Queen Margrethe of Denmark has been taken to hospital yet again - just days undergoing treatment following a heart attack earlier this month</div>
+      <div class="terms">
+        <span class="term">Entertainment</span>
+      </div>
+      <div class="byline">
+        <b>SCORE</b><span class="score">5/10</span>
+      </div>
+    </article>
+  
+    <article class="card" data-topic="Entertainment" data-search="zayn malik snaps at fans as they block him getting into car in uk on video 最新消息 entertainment">
+      <div class="kicker">TMZ [Entertainment]</div>
+      <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
+      <h3 class="title"><a href="https://www.tmz.com/2026/05/25/zayn-malik-has-tense-altercation-with-fans/" target="_blank">Zayn Malik Snaps At Fans As They Block Him Getting Into Car In UK On Video</a></h3>
+      <div class="ai-takeaway">最新消息</div>
+      <div class="terms">
+        <span class="term">Entertainment</span>
+      </div>
+      <div class="byline">
+        <b>SCORE</b><span class="score">5/10</span>
+      </div>
+    </article>
+  
+    <article class="card" data-topic="Entertainment" data-search="michelle obama and craig robinson to host live recording of their ‘imo’ podcast at sxsw london michelle obama and her brother craig robinson have joined the roster of keynote speakers at the second edition of sxsw london, which runs june 1-6. the former first lady and robinson, executive direct entertainment">
+      <div class="kicker">Variety [Entertainment]</div>
+      <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
+      <h3 class="title"><a href="https://variety.com/2026/digital/global/michelle-obama-craig-robinson-sxsw-london-live-podcast-1236758757/" target="_blank">Michelle Obama and Craig Robinson to Host Live Recording of Their ‘IMO’ Podcast at SXSW London</a></h3>
+      <div class="ai-takeaway">Michelle Obama and her brother Craig Robinson have joined the roster of keynote speakers at the second edition of SXSW London, which runs June 1-6. The former First Lady and Robinson, executive direct</div>
+      <div class="terms">
+        <span class="term">Entertainment</span>
+      </div>
+      <div class="byline">
+        <b>SCORE</b><span class="score">5/10</span>
+      </div>
+    </article>
+  
+    <article class="card" data-topic="Entertainment" data-search="industry star marisa abela reveals life-changing mental health diagnosis after brutal cancer battle the industry and back to black star, 29, has opened up about her recent diagnosis and how intrusive thoughts led her to believe she had &amp;quot;manifested&amp;quot; her thyroid cancer in 2020 entertainment">
+      <div class="kicker">Mirror Celebrity [Entertainment]</div>
+      <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
+      <h3 class="title"><a href="https://www.mirror.co.uk/3am/celebrity-news/marisa-abela-industry-amy-winehouse-37206181" target="_blank">Industry star Marisa Abela reveals life-changing mental health diagnosis after brutal cancer battle</a></h3>
+      <div class="ai-takeaway">The Industry and Back to Black star, 29, has opened up about her recent diagnosis and how intrusive thoughts led her to believe she had &amp;quot;manifested&amp;quot; her thyroid cancer in 2020</div>
+      <div class="terms">
+        <span class="term">Entertainment</span>
+      </div>
+      <div class="byline">
+        <b>SCORE</b><span class="score">5/10</span>
+      </div>
+    </article>
+  
+    <article class="card" data-topic="Entertainment" data-search="pawel pawlikowski, ruben östlund set for slano film days the polish director will bring his cannes-premiering 'fatherland,' honored with a best director award, to the event in croatia, while the swedish filmmaker will present a selection of his shorts. entertainment">
       <div class="kicker">Hollywood Reporter [Entertainment]</div>
       <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
-      <h3 class="title"><a href="https://www.hollywoodreporter.com/movies/movie-news/russell-crowe-defends-video-paris-tmz-fans-gladiator-1236605811/" target="_blank">Russell Crowe Defends Brusque Warning to Autograph Seekers in Viral Video: &amp;#8220;What&amp;#8217;s Your Problem?&amp;#8221;</a></h3>
-      <div class="ai-takeaway">The 'Gladiator' star was captured telling fans in Paris: &quot;Don't f***ing push in on me, I'll come to you. Give everybody space. As soon as somebody's a d***, I'm going.&quot;</div>
+      <h3 class="title"><a href="https://www.hollywoodreporter.com/movies/movie-news/pawel-pawlikowski-ruben-ostlund-2026-slano-film-days-1236605802/" target="_blank">Pawel Pawlikowski, Ruben Östlund Set for Slano Film Days</a></h3>
+      <div class="ai-takeaway">The Polish director will bring his Cannes-premiering 'Fatherland,' honored with a best director award, to the event in Croatia, while the Swedish filmmaker will present a selection of his shorts.</div>
       <div class="terms">
         <span class="term">Entertainment</span>
       </div>
@@ -861,49 +965,10 @@
       </div>
     </article>
   
-    <article class="card" data-topic="Entertainment" data-search="stacey solomon says &amp;apos;we&amp;apos;re just like any couple&amp;apos; as she addresses joe swash relationship rumours the tv star insisted 'divorce' talk did not bother her because it is unfounded. entertainment">
-      <div class="kicker">Mirror Celebrity [Entertainment]</div>
-      <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
-      <h3 class="title"><a href="https://www.mirror.co.uk/3am/celebrity-news/stacey-solomon-joe-swash-marriage-37202114" target="_blank">Stacey Solomon says &amp;apos;we&amp;apos;re just like any couple&amp;apos; as she addresses Joe Swash relationship rumours</a></h3>
-      <div class="ai-takeaway">The TV star insisted 'divorce' talk did not bother her because it is unfounded.</div>
-      <div class="terms">
-        <span class="term">Entertainment</span>
-      </div>
-      <div class="byline">
-        <b>SCORE</b><span class="score">5/10</span>
-      </div>
-    </article>
-  
-    <article class="card" data-topic="Entertainment" data-search="venezuela fury seen strolling through airport in bloody socks after noah price honeymoon as a wedding present to venezuela fury and noah price, heavyweight boxer tyson and his wife paris gifted the couple a static home - and they're back and about to move in entertainment">
-      <div class="kicker">Mirror Celebrity [Entertainment]</div>
-      <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
-      <h3 class="title"><a href="https://www.mirror.co.uk/3am/celebrity-news/venezuela-fury-bloody-socks-honeymoon-37202216" target="_blank">Venezuela Fury seen strolling through airport in bloody socks after Noah Price honeymoon</a></h3>
-      <div class="ai-takeaway">As a wedding present to Venezuela Fury and Noah Price, heavyweight boxer Tyson and his wife Paris gifted the couple a static home - and they're back and about to move in</div>
-      <div class="terms">
-        <span class="term">Entertainment</span>
-      </div>
-      <div class="byline">
-        <b>SCORE</b><span class="score">5/10</span>
-      </div>
-    </article>
-  
-    <article class="card" data-topic="Entertainment" data-search="katseye shouts out bts for &amp;#8216;inspiring us&amp;#8217; in new artist of the year acceptance speech at 2026&amp;#160;amas icons recognize icons! at the american music awards monday (may 25), katseye took home the award for new artist of the year, beating out a star-studded lineup of nominees that included leon thomas, ol entertainment">
-      <div class="kicker">Billboard [Entertainment]</div>
-      <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
-      <h3 class="title"><a href="https://www.billboard.com/music/awards/katseye-bts-shout-out-new-artist-of-the-year-speech-amas-1236256430/" target="_blank">KATSEYE Shouts Out BTS for &amp;#8216;Inspiring Us&amp;#8217; in New Artist of the Year Acceptance Speech at 2026&amp;#160;AMAs</a></h3>
-      <div class="ai-takeaway">Icons recognize icons! At the American Music Awards Monday (May 25), KATSEYE took home the award for new artist of the year, beating out a star-studded lineup of nominees that included Leon Thomas, Ol</div>
-      <div class="terms">
-        <span class="term">Entertainment</span>
-      </div>
-      <div class="byline">
-        <b>SCORE</b><span class="score">5/10</span>
-      </div>
-    </article>
-  
-    <article class="card" data-topic="Entertainment" data-search="miami dolphins legend manny fernandez dead at 79 最新消息 entertainment">
+    <article class="card" data-topic="Entertainment" data-search="sydney sweeney goes fully topless in wild &amp;#039;euphoria&amp;#039; scene 最新消息 entertainment">
       <div class="kicker">TMZ [Entertainment]</div>
       <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
-      <h3 class="title"><a href="https://www.tmz.com/2026/05/26/manny-fernandez-dead/" target="_blank">Miami Dolphins Legend Manny Fernandez Dead at 79</a></h3>
+      <h3 class="title"><a href="https://www.tmz.com/2026/05/25/sydney-sweeney-naked-on-euphoria/" target="_blank">Sydney Sweeney Goes Fully Topless in Wild &amp;#039;Euphoria&amp;#039; Scene</a></h3>
       <div class="ai-takeaway">最新消息</div>
       <div class="terms">
         <span class="term">Entertainment</span>
@@ -913,11 +978,11 @@
       </div>
     </article>
   
-    <article class="card" data-topic="Entertainment" data-search="saturday kitchen star launches pottery career after losing his fortune jez rose says he has never been happier since watching his old business and career disappear entertainment">
+    <article class="card" data-topic="Entertainment" data-search="molly-mae&amp;apos;s family &amp;apos;concerned&amp;apos; as tommy fury back in ring day after star&amp;apos;s due date molly-mae hague and tommy fury are expecting their second child together, but the boxer has a fight lined up the day after the love island star is due to give birth entertainment">
       <div class="kicker">Mirror Celebrity [Entertainment]</div>
       <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
-      <h3 class="title"><a href="https://www.mirror.co.uk/tv/saturday-kitchen-star-launches-pottery-37205594" target="_blank">Saturday Kitchen star launches pottery career after losing his fortune</a></h3>
-      <div class="ai-takeaway">Jez Rose says he has never been happier since watching his old business and career disappear</div>
+      <h3 class="title"><a href="https://www.mirror.co.uk/3am/celebrity-news/molly-maes-family-concerned-tommy-37205164" target="_blank">Molly-Mae&amp;apos;s family &amp;apos;concerned&amp;apos; as Tommy Fury back in ring day after star&amp;apos;s due date</a></h3>
+      <div class="ai-takeaway">Molly-Mae Hague and Tommy Fury are expecting their second child together, but the boxer has a fight lined up the day after the Love Island star is due to give birth</div>
       <div class="terms">
         <span class="term">Entertainment</span>
       </div>
@@ -926,24 +991,11 @@
       </div>
     </article>
   
-    <article class="card" data-topic="Entertainment" data-search="bts wins artist of the year at 2026 amas: &amp;#8216;we made it once&amp;#160;again&amp;#8217; it was a victorious night for bts and army. on the heels of winning the song of the summer for &amp;#8220;swim&amp;#8221; at the 2026 american music awards, the boy band took home the artist of the year award entertainment">
-      <div class="kicker">Billboard [Entertainment]</div>
+    <article class="card" data-topic="Entertainment" data-search="proof of concept announces second class of filmmakers proof of concept, an accelerator program supporting women, trans and nonbinary filmmakers founded by oscar winner cate blanchett, emmy-nominated producer coco francini and dr. stacy l. smith, and supp entertainment">
+      <div class="kicker">Variety [Entertainment]</div>
       <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
-      <h3 class="title"><a href="https://www.billboard.com/music/awards/bts-wins-artist-of-the-year-2026-amas-thanks-army-1236256405/" target="_blank">BTS Wins Artist of the Year at 2026 AMAs: &amp;#8216;We Made It Once&amp;#160;Again&amp;#8217;</a></h3>
-      <div class="ai-takeaway">It was a victorious night for BTS and ARMY. On the heels of winning the song of the summer for &amp;#8220;SWIM&amp;#8221; at the 2026 American Music Awards, the boy band took home the artist of the year award</div>
-      <div class="terms">
-        <span class="term">Entertainment</span>
-      </div>
-      <div class="byline">
-        <b>SCORE</b><span class="score">5/10</span>
-      </div>
-    </article>
-  
-    <article class="card" data-topic="Entertainment" data-search="amar&amp;#039;e stoudemire walks us through finding out he made hall of fame 最新消息 entertainment">
-      <div class="kicker">TMZ [Entertainment]</div>
-      <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
-      <h3 class="title"><a href="https://www.tmz.com/2026/05/26/amare-stoudemire-hall-of-fame-story/" target="_blank">Amar&amp;#039;e Stoudemire Walks Us Through Finding Out He Made Hall Of Fame</a></h3>
-      <div class="ai-takeaway">最新消息</div>
+      <h3 class="title"><a href="https://variety.com/2026/film/news/cate-blanchett-proof-of-concept-second-cohort-filmmakers-1236758801/" target="_blank">Proof of Concept Announces Second Class of Filmmakers</a></h3>
+      <div class="ai-takeaway">Proof of Concept, an accelerator program supporting women, trans and nonbinary filmmakers founded by Oscar winner Cate Blanchett, Emmy-nominated producer Coco Francini and Dr. Stacy L. Smith, and supp</div>
       <div class="terms">
         <span class="term">Entertainment</span>
       </div>
@@ -958,63 +1010,11 @@
     <div class="section-rule cat-heading" style="--cat: #b91c1c"><span class="accent">美食與生活美學</span> Gastronomy &amp; Life</div>
     <div class="cards" style="--cat: #b91c1c">
       
-    <article class="card" data-topic="Food" data-search="where to eat in chicago, from touchdown to takeoff on june 15, the culinary world will descend on chicago for the james beard awards. for the uninitiated, this esteemed ceremony, hosted by the james beard foundation, recognizes the country’s best chef food">
-      <div class="kicker">Eater [Food]</div>
-      <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
-      <h3 class="title"><a href="https://www.eater.com/ad/maps/where-to-eat-in-chicago-for-the-james-beard-awards" target="_blank">Where to Eat in Chicago, From Touchdown to Takeoff</a></h3>
-      <div class="ai-takeaway">On June 15, the culinary world will descend on Chicago for the James Beard Awards. For the uninitiated, this esteemed ceremony, hosted by the James Beard Foundation, recognizes the country’s best chef</div>
-      <div class="terms">
-        <span class="term">Food</span>
-      </div>
-      <div class="byline">
-        <b>SCORE</b><span class="score">5/10</span>
-      </div>
-    </article>
-  
     <article class="card" data-topic="Food" data-search="why the nordstrom cafe was the ultimate mother-daughter experience a version of this post originally appeared on may 6 in our newsletter eater today. sign up here to receive stories like this in your inbox. eating lunch and shopping are two of my mother’s favorite th food">
       <div class="kicker">Eater [Food]</div>
       <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
       <h3 class="title"><a href="https://www.eater.com/food-culture/960443/nordstrom-cafe-mother-daughter-nostalgia-tomato-soup-grilled-cheese" target="_blank">Why the Nordstrom Cafe Was the Ultimate Mother-Daughter Experience</a></h3>
       <div class="ai-takeaway">A version of this post originally appeared on May 6 in our newsletter Eater Today. Sign up here to receive stories like this in your inbox. Eating lunch and shopping are two of my mother’s favorite th</div>
-      <div class="terms">
-        <span class="term">Food</span>
-      </div>
-      <div class="byline">
-        <b>SCORE</b><span class="score">5/10</span>
-      </div>
-    </article>
-  
-    <article class="card" data-topic="Food" data-search="the 38 best london restaurants, according to eater’s local dining expert the story of the london food scene is one that includes dim sum, sunday roasts, curries, pizza, sinasir, rarebits, banh mi, udon, pepper pot, sweetbread suya, and natural wine. across cuisines, neighb food">
-      <div class="kicker">Eater [Food]</div>
-      <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
-      <h3 class="title"><a href="https://www.eater.com/maps/best-london-restaurants-eater-38" target="_blank">The 38 Best London Restaurants, According to Eater’s Local Dining Expert</a></h3>
-      <div class="ai-takeaway">The story of the London food scene is one that includes dim sum, Sunday roasts, curries, pizza, sinasir, rarebits, banh mi, udon, pepper pot, sweetbread suya, and natural wine. Across cuisines, neighb</div>
-      <div class="terms">
-        <span class="term">Food</span>
-      </div>
-      <div class="byline">
-        <b>SCORE</b><span class="score">5/10</span>
-      </div>
-    </article>
-  
-    <article class="card" data-topic="Food" data-search="a new ode to british pubs takes nyc by storm a decade after opening beloved soho bistro king, chef and owner jess shadbolt and co-owner annie shi just opened a classic british pub right next door. dean’s serves standout british dishes like starg food">
-      <div class="kicker">Eater [Food]</div>
-      <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
-      <h3 class="title"><a href="https://www.eater.com/video/962739/deans-british-pub-nyc-restaurant-opening-now-open" target="_blank">A New Ode to British Pubs Takes NYC By Storm</a></h3>
-      <div class="ai-takeaway">A decade after opening beloved Soho bistro King, chef and owner Jess Shadbolt and co-owner Annie Shi just opened a classic British pub right next door. Dean’s serves standout British dishes like starg</div>
-      <div class="terms">
-        <span class="term">Food</span>
-      </div>
-      <div class="byline">
-        <b>SCORE</b><span class="score">5/10</span>
-      </div>
-    </article>
-  
-    <article class="card" data-topic="Food" data-search="how i got my job running cafes out of climbing gyms this excerpt was originally published in pre shift, our newsletter for the hospitality industry.&amp;#160;subscribe&amp;#160;for more first-person accounts, advice, and interviews. everyone needs a convenient food">
-      <div class="kicker">Eater [Food]</div>
-      <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
-      <h3 class="title"><a href="https://www.eater.com/pre-shift/961011/georgies-vital-joeleen-ng-cafe-pre-shift" target="_blank">How I Got My Job Running Cafes Out of Climbing Gyms</a></h3>
-      <div class="ai-takeaway">This excerpt was originally published in Pre Shift, our newsletter for the hospitality industry.&amp;#160;Subscribe&amp;#160;for more first-person accounts, advice, and interviews. Everyone needs a convenient</div>
       <div class="terms">
         <span class="term">Food</span>
       </div>
@@ -1036,10 +1036,23 @@
       </div>
     </article>
   
-    <article class="card" data-topic="Food" data-search="how a sliding-scale, worker-owned sandwich shop makes it work this excerpt was originally published in pre shift, our newsletter for the hospitality industry.&amp;#160;subscribe&amp;#160;for more first-person accounts, advice, and interviews. everyone needs a convenient food">
+    <article class="card" data-topic="Food" data-search="the 38 best london restaurants, according to eater’s local dining expert the story of the london food scene is one that includes dim sum, sunday roasts, curries, pizza, sinasir, rarebits, banh mi, udon, pepper pot, sweetbread suya, and natural wine. across cuisines, neighb food">
       <div class="kicker">Eater [Food]</div>
       <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
-      <h3 class="title"><a href="https://www.eater.com/pre-shift/962846/sea-soil-coop-sandwiches-sliding-scale-pre-shift" target="_blank">How a Sliding-Scale, Worker-Owned Sandwich Shop Makes It Work</a></h3>
+      <h3 class="title"><a href="https://www.eater.com/maps/best-london-restaurants-eater-38" target="_blank">The 38 Best London Restaurants, According to Eater’s Local Dining Expert</a></h3>
+      <div class="ai-takeaway">The story of the London food scene is one that includes dim sum, Sunday roasts, curries, pizza, sinasir, rarebits, banh mi, udon, pepper pot, sweetbread suya, and natural wine. Across cuisines, neighb</div>
+      <div class="terms">
+        <span class="term">Food</span>
+      </div>
+      <div class="byline">
+        <b>SCORE</b><span class="score">5/10</span>
+      </div>
+    </article>
+  
+    <article class="card" data-topic="Food" data-search="how i got my job running cafes out of climbing gyms this excerpt was originally published in pre shift, our newsletter for the hospitality industry.&amp;#160;subscribe&amp;#160;for more first-person accounts, advice, and interviews. everyone needs a convenient food">
+      <div class="kicker">Eater [Food]</div>
+      <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
+      <h3 class="title"><a href="https://www.eater.com/pre-shift/961011/georgies-vital-joeleen-ng-cafe-pre-shift" target="_blank">How I Got My Job Running Cafes Out of Climbing Gyms</a></h3>
       <div class="ai-takeaway">This excerpt was originally published in Pre Shift, our newsletter for the hospitality industry.&amp;#160;Subscribe&amp;#160;for more first-person accounts, advice, and interviews. Everyone needs a convenient</div>
       <div class="terms">
         <span class="term">Food</span>
@@ -1049,11 +1062,50 @@
       </div>
     </article>
   
-    <article class="card" data-topic="Food" data-search="restaurants are in their blue period amid a stretch of red-brick buildings, the brooklyn restaurant margot, right at the corner on a busy intersection, stands out. it’s blue: very blue, its two-story exterior painted the color of a pair  food">
+    <article class="card" data-topic="Food" data-search="a new ode to british pubs takes nyc by storm a decade after opening beloved soho bistro king, chef and owner jess shadbolt and co-owner annie shi just opened a classic british pub right next door. dean’s serves standout british dishes like starg food">
       <div class="kicker">Eater [Food]</div>
       <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
-      <h3 class="title"><a href="https://www.eater.com/food-culture/961654/bright-blue-yves-klein-restaurants-trend" target="_blank">Restaurants Are in Their Blue Period</a></h3>
-      <div class="ai-takeaway">Amid a stretch of red-brick buildings, the Brooklyn restaurant Margot, right at the corner on a busy intersection, stands out. It’s blue: very blue, its two-story exterior painted the color of a pair </div>
+      <h3 class="title"><a href="https://www.eater.com/video/962739/deans-british-pub-nyc-restaurant-opening-now-open" target="_blank">A New Ode to British Pubs Takes NYC By Storm</a></h3>
+      <div class="ai-takeaway">A decade after opening beloved Soho bistro King, chef and owner Jess Shadbolt and co-owner Annie Shi just opened a classic British pub right next door. Dean’s serves standout British dishes like starg</div>
+      <div class="terms">
+        <span class="term">Food</span>
+      </div>
+      <div class="byline">
+        <b>SCORE</b><span class="score">5/10</span>
+      </div>
+    </article>
+  
+    <article class="card" data-topic="Food" data-search="new york’s buzziest new restaurant is a pub this excerpt was originally published in pre shift, our newsletter for the hospitality industry.&amp;#160;subscribe&amp;#160;for more first-person accounts, advice, and interviews. now open is a yearlong seri food">
+      <div class="kicker">Eater [Food]</div>
+      <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
+      <h3 class="title"><a href="https://www.eater.com/pre-shift/961028/deans-pub-new-york-pre-shift" target="_blank">New York’s Buzziest New Restaurant Is a Pub</a></h3>
+      <div class="ai-takeaway">This excerpt was originally published in Pre Shift, our newsletter for the hospitality industry.&amp;#160;Subscribe&amp;#160;for more first-person accounts, advice, and interviews. Now Open is a yearlong seri</div>
+      <div class="terms">
+        <span class="term">Food</span>
+      </div>
+      <div class="byline">
+        <b>SCORE</b><span class="score">5/10</span>
+      </div>
+    </article>
+  
+    <article class="card" data-topic="Food" data-search="quince sells caviar and wine now. is it any good? for years, quince has been a website that i knew as “that place to get affordable cashmere sweaters.” but as its offerings have expanded further and further, from home goods and luggage to jewelry and food">
+      <div class="kicker">Eater [Food]</div>
+      <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
+      <h3 class="title"><a href="https://www.eater.com/shopping/960397/quince-caviar-wine-coffee-review" target="_blank">Quince Sells Caviar and Wine Now. Is It Any Good?</a></h3>
+      <div class="ai-takeaway">For years, Quince has been a website that I knew as “that place to get affordable cashmere sweaters.” But as its offerings have expanded further and further, from home goods and luggage to jewelry and</div>
+      <div class="terms">
+        <span class="term">Food</span>
+      </div>
+      <div class="byline">
+        <b>SCORE</b><span class="score">5/10</span>
+      </div>
+    </article>
+  
+    <article class="card" data-topic="Food" data-search="where to eat in chicago, from touchdown to takeoff on june 15, the culinary world will descend on chicago for the james beard awards. for the uninitiated, this esteemed ceremony, hosted by the james beard foundation, recognizes the country’s best chef food">
+      <div class="kicker">Eater [Food]</div>
+      <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
+      <h3 class="title"><a href="https://www.eater.com/ad/maps/where-to-eat-in-chicago-for-the-james-beard-awards" target="_blank">Where to Eat in Chicago, From Touchdown to Takeoff</a></h3>
+      <div class="ai-takeaway">On June 15, the culinary world will descend on Chicago for the James Beard Awards. For the uninitiated, this esteemed ceremony, hosted by the James Beard Foundation, recognizes the country’s best chef</div>
       <div class="terms">
         <span class="term">Food</span>
       </div>
@@ -1068,37 +1120,11 @@
     <div class="section-rule cat-heading" style="--cat: #0369a1"><span class="accent">數位遊戲與電競</span> Gaming &amp; Esports</div>
     <div class="cards" style="--cat: #0369a1">
       
-    <article class="card" data-topic="Gaming" data-search="《战争幻想》公布预告 《戰爭幻想》預告片展示心理恐怖與第一人稱射擊的融合。 戰爭幻想 心理恐怖 射擊 預告">
-      <div class="kicker">IGN 中文 [Gaming]</div>
-      <div class="hook"><span class="q">Q</span>《戰爭幻想》將心理恐怖與射擊結合，會不會成為下一個熱門遊戲？</div>
-      <h3 class="title"><a href="https://www.ign.com.cn/topic/60239/zhan-zheng-huan-xiang-gong-bu-yu-gao" target="_blank">《战争幻想》公布预告</a></h3>
-      <div class="ai-takeaway">《戰爭幻想》預告片展示心理恐怖與第一人稱射擊的融合。</div>
-      <div class="terms">
-        <span class="term">戰爭幻想</span><span class="term">心理恐怖</span><span class="term">射擊</span><span class="term">預告</span>
-      </div>
-      <div class="byline">
-        <b>SCORE</b><span class="score">7/10</span>
-      </div>
-    </article>
-  
-    <article class="card" data-topic="Gaming" data-search="剧集《沃特崛起》先导预告 《黑袍糾察隊》衍生劇《沃特崛起》預告揭開 1950 年代的黑暗起源。 沃特崛起 黑袍">
-      <div class="kicker">IGN 中文 [Gaming]</div>
-      <div class="hook"><span class="q">Q</span>《沃特崛起》1950 年代的背景會如何影響故事深度與角色動機？</div>
-      <h3 class="title"><a href="https://www.ign.com.cn/vought-rising/60223/ju-ji-wo-te-jue-qi-xian-dao-yu-gao" target="_blank">剧集《沃特崛起》先导预告</a></h3>
-      <div class="ai-takeaway">《黑袍糾察隊》衍生劇《沃特崛起》預告揭開 1950 年代的黑暗起源。</div>
-      <div class="terms">
-        <span class="term">沃特崛起</span><span class="term">黑袍</span>
-      </div>
-      <div class="byline">
-        <b>SCORE</b><span class="score">6/10</span>
-      </div>
-    </article>
-  
-    <article class="card" data-topic="Gaming" data-search="《漫畫家菅谷充》什麼時候覺得靠創作就能過活了？他為年輕創作者分享親身經歷 各位從事創作活動的大家，會不會希望自己有一天「靠創作就能過活了」呢？最近日本資深漫畫家菅谷充（すがやみつる）就被網友問到了這個問題。然而他表示即便他已經在業界打滾超過一甲子，也從來沒有「靠創作就能過活... gaming">
+    <article class="card" data-topic="Gaming" data-search="書迷好奇《東京這間二手書店》為什麼這麼多人愛拍照？原來曾在超多作品登場過 日本東京千代田區的神保町，有著號稱日本最大規模的舊書店街。由於這裡的書店全都歷史悠久，加上商品種類包羅萬象，因此經常會有愛書人士特地前來這裡挖寶。其中有一間創立於1918年，有著超過百年歷史的「矢口書... gaming">
       <div class="kicker">遊戲基地 [Gaming]</div>
       <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
-      <h3 class="title"><a href="https://news.gamme.com.tw/1774110" target="_blank">《漫畫家菅谷充》什麼時候覺得靠創作就能過活了？他為年輕創作者分享親身經歷</a></h3>
-      <div class="ai-takeaway">各位從事創作活動的大家，會不會希望自己有一天「靠創作就能過活了」呢？最近日本資深漫畫家菅谷充（すがやみつる）就被網友問到了這個問題。然而他表示即便他已經在業界打滾超過一甲子，也從來沒有「靠創作就能過活...</div>
+      <h3 class="title"><a href="https://news.gamme.com.tw/1774072" target="_blank">書迷好奇《東京這間二手書店》為什麼這麼多人愛拍照？原來曾在超多作品登場過</a></h3>
+      <div class="ai-takeaway">日本東京千代田區的神保町，有著號稱日本最大規模的舊書店街。由於這裡的書店全都歷史悠久，加上商品種類包羅萬象，因此經常會有愛書人士特地前來這裡挖寶。其中有一間創立於1918年，有著超過百年歷史的「矢口書...</div>
       <div class="terms">
         <span class="term">Gaming</span>
       </div>
@@ -1107,41 +1133,11 @@
       </div>
     </article>
   
-    <article class="card" data-topic="Gaming" data-search="《峡谷》「敌群」宣传视频 &amp;lt;img src=&quot;/sm/t/ign_cn/screenshot/default/ch-blogroll-1779391496177_5kpk.640.jpg&quot; width=&quot;120&quot; hspace=&quot;5&quot; alt=&quot;&quot; vspace=&quot;5&quot; align=&quot;left&quot; /&amp;gt;踏上征服峡谷的旅途
-《峡谷（canyons）》是一款合作式pve冒险游戏，背景设定在一个由程序生成的世界——这里 gaming">
-      <div class="kicker">IGN 中文 [Gaming]</div>
-      <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
-      <h3 class="title"><a href="https://www.ign.com.cn/canyons/60222/xia-gu-di-qun-xuan-chuan-shi-pin" target="_blank">《峡谷》「敌群」宣传视频</a></h3>
-      <div class="ai-takeaway">&amp;lt;img src=&quot;/sm/t/ign_cn/screenshot/default/ch-blogroll-1779391496177_5kpk.640.jpg&quot; width=&quot;120&quot; hspace=&quot;5&quot; alt=&quot;&quot; vspace=&quot;5&quot; align=&quot;left&quot; /&amp;gt;踏上征服峡谷的旅途
-《峡谷（Canyons）》是一款合作式PvE冒险游戏，背景设定在一个由程序生成的世界——这里</div>
-      <div class="terms">
-        <span class="term">Gaming</span>
-      </div>
-      <div class="byline">
-        <b>SCORE</b><span class="score">5/10</span>
-      </div>
-    </article>
-  
-    <article class="card" data-topic="Gaming" data-search="塞巴斯蒂安·斯坦自爆在《新蝙蝠侠2》中「身兼数角」 &amp;lt;img src=&quot;/sm/t/ign_cn/screenshot/default/10_yttx.640.jpg&quot; width=&quot;120&quot; hspace=&quot;5&quot; alt=&quot;&quot; vspace=&quot;5&quot; align=&quot;left&quot; /&amp;gt;
-「双面人」 gaming">
-      <div class="kicker">IGN 中文 [Gaming]</div>
-      <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
-      <h3 class="title"><a href="https://www.ign.com.cn/thebatman2022/60234/sai-ba-si-di-an-si-tan-zi-bao-zai-xin-bian-fu-xia-2-zhong-shen-jian-shu-jiao" target="_blank">塞巴斯蒂安·斯坦自爆在《新蝙蝠侠2》中「身兼数角」</a></h3>
-      <div class="ai-takeaway">&amp;lt;img src=&quot;/sm/t/ign_cn/screenshot/default/10_yttx.640.jpg&quot; width=&quot;120&quot; hspace=&quot;5&quot; alt=&quot;&quot; vspace=&quot;5&quot; align=&quot;left&quot; /&amp;gt;
-「双面人」</div>
-      <div class="terms">
-        <span class="term">Gaming</span>
-      </div>
-      <div class="byline">
-        <b>SCORE</b><span class="score">5/10</span>
-      </div>
-    </article>
-  
-    <article class="card" data-topic="Gaming" data-search="網友票選《提到戰鬥類動漫，你會想到那些作品？》問卷結果排行榜 best20 公佈 日本的4月13號是「決鬥之日」，之所以有這個由來是因為在1612年宮本武藏與佐佐木小次郎在巖流島進行對決而衍生。而在動漫的世界裡面講到戰鬥就有許多作品了，不管是以必殺技為主的招牌大招，還是特殊能力孕育... gaming">
+    <article class="card" data-topic="Gaming" data-search="《酒吧禮儀》坐在吧檯需不需要摘下手錶？如果摘下來店家會很感謝你 你有沒有聽過去酒吧的時候，如果坐在吧檯就需要摘下手錶這種說法呢？最近有些日本酒保、調酒師們就議論起了這個話題。有些人認為摘下手錶是理所當然，因為高級吧檯通常會採用木頭材質，非常容易被手錶這種金屬物品刮... gaming">
       <div class="kicker">遊戲基地 [Gaming]</div>
       <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
-      <h3 class="title"><a href="https://news.gamme.com.tw/1774057" target="_blank">網友票選《提到戰鬥類動漫，你會想到那些作品？》問卷結果排行榜 Best20 公佈</a></h3>
-      <div class="ai-takeaway">日本的4月13號是「決鬥之日」，之所以有這個由來是因為在1612年宮本武藏與佐佐木小次郎在巖流島進行對決而衍生。而在動漫的世界裡面講到戰鬥就有許多作品了，不管是以必殺技為主的招牌大招，還是特殊能力孕育...</div>
+      <h3 class="title"><a href="https://news.gamme.com.tw/1774051" target="_blank">《酒吧禮儀》坐在吧檯需不需要摘下手錶？如果摘下來店家會很感謝你</a></h3>
+      <div class="ai-takeaway">你有沒有聽過去酒吧的時候，如果坐在吧檯就需要摘下手錶這種說法呢？最近有些日本酒保、調酒師們就議論起了這個話題。有些人認為摘下手錶是理所當然，因為高級吧檯通常會採用木頭材質，非常容易被手錶這種金屬物品刮...</div>
       <div class="terms">
         <span class="term">Gaming</span>
       </div>
@@ -1150,13 +1146,13 @@
       </div>
     </article>
   
-    <article class="card" data-topic="Gaming" data-search="《red light on》实机预告 &amp;lt;img src=&quot;/sm/t/ign_cn/screenshot/default/qq20260525-085757_fqe6.640.png&quot; width=&quot;120&quot; hspace=&quot;5&quot; alt=&quot;&quot; vspace=&quot;5&quot; align=&quot;left&quot; /&amp;gt;超写实射击游戏
-《red light on》是一款由v games制作的单人超写实第一人称射击游戏。玩家扮演的战术警官，在一次调 gaming">
+    <article class="card" data-topic="Gaming" data-search="《chop chop inc.》试玩demo宣传视频 &amp;lt;img src=&quot;/sm/t/ign_cn/screenshot/default/chopchopthumb-1779299055494_m4vb.640.png&quot; width=&quot;120&quot; hspace=&quot;5&quot; alt=&quot;&quot; vspace=&quot;5&quot; align=&quot;left&quot; /&amp;gt;制作家具并卖掉赚钱
+你被furnox corp解雇了 。现在你只剩下一把斧头、几棵树和满脑子的复仇计划，从头 gaming">
       <div class="kicker">IGN 中文 [Gaming]</div>
       <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
-      <h3 class="title"><a href="https://www.ign.com.cn/red-light-on/60202/red-light-on-shi-ji-yu-gao" target="_blank">《Red Light On》实机预告</a></h3>
-      <div class="ai-takeaway">&amp;lt;img src=&quot;/sm/t/ign_cn/screenshot/default/qq20260525-085757_fqe6.640.png&quot; width=&quot;120&quot; hspace=&quot;5&quot; alt=&quot;&quot; vspace=&quot;5&quot; align=&quot;left&quot; /&amp;gt;超写实射击游戏
-《Red Light On》是一款由V Games制作的单人超写实第一人称射击游戏。玩家扮演的战术警官，在一次调</div>
+      <h3 class="title"><a href="https://www.ign.com.cn/chop-chop-inc/60244/chop-chop-inc-shi-wan-demoxuan-chuan-shi-pin" target="_blank">《Chop Chop Inc.》试玩Demo宣传视频</a></h3>
+      <div class="ai-takeaway">&amp;lt;img src=&quot;/sm/t/ign_cn/screenshot/default/chopchopthumb-1779299055494_m4vb.640.png&quot; width=&quot;120&quot; hspace=&quot;5&quot; alt=&quot;&quot; vspace=&quot;5&quot; align=&quot;left&quot; /&amp;gt;制作家具并卖掉赚钱
+你被Furnox Corp解雇了 。现在你只剩下一把斧头、几棵树和满脑子的复仇计划，从头</div>
       <div class="terms">
         <span class="term">Gaming</span>
       </div>
@@ -1165,13 +1161,71 @@
       </div>
     </article>
   
-    <article class="card" data-topic="Gaming" data-search="《穆瑞：狂野森林》发售档期预告 &amp;lt;img src=&quot;/sm/t/ign_cn/screenshot/default/muriwildwood-thumb-1778873427983_h8dk.640.jpg&quot; width=&quot;120&quot; hspace=&quot;5&quot; alt=&quot;&quot; vspace=&quot;5&quot; align=&quot;left&quot; /&amp;gt;化身小小的冒险家
-探索神秘的狂野森林，化身小小的冒险家——穆瑞！这里充满了奇异生物，等待你发现隐藏 gaming">
+    <article class="card" data-topic="Gaming" data-search="《漫畫家富澤千夏》出清家中雜物 竟然清出博物館等級的家家酒玩具 隨著人們的安全意識提升，對於玩具的規範也只會越來越嚴格。這也就導致某些以前的玩具，為了符合現代的安全標準，可能就再也無法復刻了。最近日本網友們就議論起了一款在1969年發售，名叫ママ・レンジ（mama... gaming">
+      <div class="kicker">遊戲基地 [Gaming]</div>
+      <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
+      <h3 class="title"><a href="https://news.gamme.com.tw/1774116" target="_blank">《漫畫家富澤千夏》出清家中雜物 竟然清出博物館等級的家家酒玩具</a></h3>
+      <div class="ai-takeaway">隨著人們的安全意識提升，對於玩具的規範也只會越來越嚴格。這也就導致某些以前的玩具，為了符合現代的安全標準，可能就再也無法復刻了。最近日本網友們就議論起了一款在1969年發售，名叫ママ・レンジ（Mama...</div>
+      <div class="terms">
+        <span class="term">Gaming</span>
+      </div>
+      <div class="byline">
+        <b>SCORE</b><span class="score">5/10</span>
+      </div>
+    </article>
+  
+    <article class="card" data-topic="Gaming" data-search="ign 中国《刺客信条：黑旗 记忆重置》制作人访谈 &amp;lt;img src=&quot;/sm/t/ign_cn/screenshot/default/20260424-ci-ke-xin-tiao-hei-qi-cai-fang-1779698579184_zun7.640.jpg&quot; width=&quot;120&quot; hspace=&quot;5&quot; alt=&quot;&quot; vspace=&quot;5&quot; align=&quot;left&quot; /&amp;gt;
+开发者谈重制版的核心取舍 gaming">
       <div class="kicker">IGN 中文 [Gaming]</div>
       <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
-      <h3 class="title"><a href="https://www.ign.com.cn/muri-wildwoods/60243/mu-rui-kuang-ye-sen-lin-fa-shou-dang-qi-yu-gao" target="_blank">《穆瑞：狂野森林》发售档期预告</a></h3>
-      <div class="ai-takeaway">&amp;lt;img src=&quot;/sm/t/ign_cn/screenshot/default/muriwildwood-thumb-1778873427983_h8dk.640.jpg&quot; width=&quot;120&quot; hspace=&quot;5&quot; alt=&quot;&quot; vspace=&quot;5&quot; align=&quot;left&quot; /&amp;gt;化身小小的冒险家
-探索神秘的狂野森林，化身小小的冒险家——穆瑞！这里充满了奇异生物，等待你发现隐藏</div>
+      <h3 class="title"><a href="https://www.ign.com.cn/ci-ke-xin-tiao-hei-qi-ji-yi-zhong-zhi/60226/ign-zhong-guo-ci-ke-xin-tiao-hei-qi-ji-yi-zhong-zhi-zhi-zuo-ren-fang-tan" target="_blank">IGN 中国《刺客信条：黑旗 记忆重置》制作人访谈</a></h3>
+      <div class="ai-takeaway">&amp;lt;img src=&quot;/sm/t/ign_cn/screenshot/default/20260424-ci-ke-xin-tiao-hei-qi-cai-fang-1779698579184_zun7.640.jpg&quot; width=&quot;120&quot; hspace=&quot;5&quot; alt=&quot;&quot; vspace=&quot;5&quot; align=&quot;left&quot; /&amp;gt;
+开发者谈重制版的核心取舍</div>
+      <div class="terms">
+        <span class="term">Gaming</span>
+      </div>
+      <div class="byline">
+        <b>SCORE</b><span class="score">5/10</span>
+      </div>
+    </article>
+  
+    <article class="card" data-topic="Gaming" data-search="《forgery craft》发售档期预告 &amp;lt;img src=&quot;/sm/t/ign_cn/screenshot/default/forgerycraft-thumb-1779235503921_8keh.640.jpg&quot; width=&quot;120&quot; hspace=&quot;5&quot; alt=&quot;&quot; vspace=&quot;5&quot; align=&quot;left&quot; /&amp;gt;创造一个优秀的赝品只成功了一半
+在《forgery craft》这款故事类模拟游戏中你的任务是掌握 gaming">
+      <div class="kicker">IGN 中文 [Gaming]</div>
+      <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
+      <h3 class="title"><a href="https://www.ign.com.cn/forgery-craft/60245/forgery-craft-fa-shou-dang-qi-yu-gao" target="_blank">《Forgery Craft》发售档期预告</a></h3>
+      <div class="ai-takeaway">&amp;lt;img src=&quot;/sm/t/ign_cn/screenshot/default/forgerycraft-thumb-1779235503921_8keh.640.jpg&quot; width=&quot;120&quot; hspace=&quot;5&quot; alt=&quot;&quot; vspace=&quot;5&quot; align=&quot;left&quot; /&amp;gt;创造一个优秀的赝品只成功了一半
+在《Forgery Craft》这款故事类模拟游戏中你的任务是掌握</div>
+      <div class="terms">
+        <span class="term">Gaming</span>
+      </div>
+      <div class="byline">
+        <b>SCORE</b><span class="score">5/10</span>
+      </div>
+    </article>
+  
+    <article class="card" data-topic="Gaming" data-search="《火箭联盟》「虚幻引擎6」先导预告 &amp;lt;img src=&quot;/sm/t/ign_cn/screenshot/default/rl-vcms-1779642651311_p4pp.640.jpg&quot; width=&quot;120&quot; hspace=&quot;5&quot; alt=&quot;&quot; vspace=&quot;5&quot; align=&quot;left&quot; /&amp;gt;展示画面为引擎内实录
+epic games旗下的psyonix工作室在巴黎举行的major赛事上发布了一段预览视频，展示 gaming">
+      <div class="kicker">IGN 中文 [Gaming]</div>
+      <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
+      <h3 class="title"><a href="https://www.ign.com.cn/hjlmgame/60215/huo-jian-lian-meng-xu-huan-yin-qing-6-xian-dao-yu-gao" target="_blank">《火箭联盟》「虚幻引擎6」先导预告</a></h3>
+      <div class="ai-takeaway">&amp;lt;img src=&quot;/sm/t/ign_cn/screenshot/default/rl-vcms-1779642651311_p4pp.640.jpg&quot; width=&quot;120&quot; hspace=&quot;5&quot; alt=&quot;&quot; vspace=&quot;5&quot; align=&quot;left&quot; /&amp;gt;展示画面为引擎内实录
+Epic Games旗下的Psyonix工作室在巴黎举行的Major赛事上发布了一段预览视频，展示</div>
+      <div class="terms">
+        <span class="term">Gaming</span>
+      </div>
+      <div class="byline">
+        <b>SCORE</b><span class="score">5/10</span>
+      </div>
+    </article>
+  
+    <article class="card" data-topic="Gaming" data-search="《黑袍纠察队》第五季评测 &amp;lt;img src=&quot;/sm/t/ign_cn/screenshot/default/hei-pao-ping-ce_ggd8.640.jpg&quot; width=&quot;120&quot; hspace=&quot;5&quot; alt=&quot;&quot; vspace=&quot;5&quot; align=&quot;left&quot; /&amp;gt;再见了，所有的超人类
+即便《黑袍纠察队》第五季留下了许多遗憾，但当片尾真正落下，看到祖国人求饶时，相信很多观众和我一样有种失落感，这 gaming">
+      <div class="kicker">IGN 中文 [Gaming]</div>
+      <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
+      <h3 class="title"><a href="https://www.ign.com.cn/the-boys-26/60224/hei-pao-jiu-cha-dui-di-wu-ji-ping-ce" target="_blank">《黑袍纠察队》第五季评测</a></h3>
+      <div class="ai-takeaway">&amp;lt;img src=&quot;/sm/t/ign_cn/screenshot/default/hei-pao-ping-ce_ggd8.640.jpg&quot; width=&quot;120&quot; hspace=&quot;5&quot; alt=&quot;&quot; vspace=&quot;5&quot; align=&quot;left&quot; /&amp;gt;再见了，所有的超人类
+即便《黑袍纠察队》第五季留下了许多遗憾，但当片尾真正落下，看到祖国人求饶时，相信很多观众和我一样有种失落感，这</div>
       <div class="terms">
         <span class="term">Gaming</span>
       </div>
@@ -1186,11 +1240,13 @@
     <div class="section-rule cat-heading" style="--cat: #047857"><span class="accent">全球旅遊與探索</span> Travel &amp; Exploration</div>
     <div class="cards" style="--cat: #047857">
       
-    <article class="card" data-topic="Travel" data-search="到屏東里港喝咖啡吃甜點！肉桂捲、鳳梨醬水果茶與舒芙蕾，在高屏溪畔停留3間風格咖啡廳 沿著國道三號一路往南，里港是進入屏東後的第一個停留點。這裡不只有餛飩與豬腳，還有充滿特色的咖啡甜點店。從美術館旁的后院咖啡、玉田村轉角的水果茶，到中山路上的現做舒芙蕾，引人慢下來品嘗高屏溪畔的小鎮香氣。 travel">
-      <div class="kicker">微笑台灣 [Travel]</div>
+    <article class="card" data-topic="Travel" data-search="沖繩國際通新飯店｜沖繩那霸格蘭康索爾飯店 hotel grand consort naha，近單軌列車站縣廳前站，未滿13歲兒童不加床可免費同住 沖繩新飯店 那霸格蘭康索爾飯店 ，近單軌線廳前站，鬧中取靜的沖繩國際通飯店！ 那霸格蘭康索爾飯店房價也很便宜，...
+這篇文章 沖繩國際通新飯店｜沖繩那霸格蘭康索爾飯店 hotel grand consort naha，近單軌列車站縣廳前站，未滿13歲兒童不加床可免費同住 最早出現於 旅行玩很大。 travel">
+      <div class="kicker">台灣旅行趣 [Travel]</div>
       <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
-      <h3 class="title"><a href="https://smiletaiwan.cw.com.tw/article/9137" target="_blank">到屏東里港喝咖啡吃甜點！肉桂捲、鳳梨醬水果茶與舒芙蕾，在高屏溪畔停留3間風格咖啡廳</a></h3>
-      <div class="ai-takeaway">沿著國道三號一路往南，里港是進入屏東後的第一個停留點。這裡不只有餛飩與豬腳，還有充滿特色的咖啡甜點店。從美術館旁的后院咖啡、玉田村轉角的水果茶，到中山路上的現做舒芙蕾，引人慢下來品嘗高屏溪畔的小鎮香氣。</div>
+      <h3 class="title"><a href="https://travelfun.tw/hotel-grand-consort-nah/" target="_blank">沖繩國際通新飯店｜沖繩那霸格蘭康索爾飯店 Hotel Grand Consort Naha，近單軌列車站縣廳前站，未滿13歲兒童不加床可免費同住</a></h3>
+      <div class="ai-takeaway">沖繩新飯店 那霸格蘭康索爾飯店 ，近單軌線廳前站，鬧中取靜的沖繩國際通飯店！ 那霸格蘭康索爾飯店房價也很便宜，...
+這篇文章 沖繩國際通新飯店｜沖繩那霸格蘭康索爾飯店 Hotel Grand Consort Naha，近單軌列車站縣廳前站，未滿13歲兒童不加床可免費同住 最早出現於 旅行玩很大。</div>
       <div class="terms">
         <span class="term">Travel</span>
       </div>
@@ -1199,11 +1255,11 @@
       </div>
     </article>
   
-    <article class="card" data-topic="Travel" data-search="逆境之後鼓聲不滅，新北新莊「响仁和」製鼓師王錫坤守住技藝，讓聲音活在下一世代 新北新莊「响仁和」的製鼓師王錫坤承接父親王阿塗留下的製鼓技藝，在牛皮、木框的細工之間，守住一門鼓聲的工藝。即使2024年廠房遭大火燒毀，他仍帶著年輕一代重新出發，用浴火重生的堅韌精神，讓百年鼓聲繼續迴盪。 travel">
+    <article class="card" data-topic="Travel" data-search="澎湖湖西、白沙、西嶼跳島之旅｜美炸的夏天！從夢幻沙灘到無人島sup，解鎖目斗嶼、鐵砧嶼和吉貝沙尾 澎湖的夏日魅力不只有「澎湖國際海上花火節」，還有那些藏在離離離島的人文底蘊與驚奇地景。這次從湖西鄉出發，一路向北解鎖西嶼與白沙的絕美沙灘與無人島，澎湖跳島旅行景點與美食精選推薦。 travel">
       <div class="kicker">微笑台灣 [Travel]</div>
       <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
-      <h3 class="title"><a href="https://smiletaiwan.cw.com.tw/article/9129" target="_blank">逆境之後鼓聲不滅，新北新莊「响仁和」製鼓師王錫坤守住技藝，讓聲音活在下一世代</a></h3>
-      <div class="ai-takeaway">新北新莊「响仁和」的製鼓師王錫坤承接父親王阿塗留下的製鼓技藝，在牛皮、木框的細工之間，守住一門鼓聲的工藝。即使2024年廠房遭大火燒毀，他仍帶著年輕一代重新出發，用浴火重生的堅韌精神，讓百年鼓聲繼續迴盪。</div>
+      <h3 class="title"><a href="https://smiletaiwan.cw.com.tw/article/9128" target="_blank">澎湖湖西、白沙、西嶼跳島之旅｜美炸的夏天！從夢幻沙灘到無人島SUP，解鎖目斗嶼、鐵砧嶼和吉貝沙尾</a></h3>
+      <div class="ai-takeaway">澎湖的夏日魅力不只有「澎湖國際海上花火節」，還有那些藏在離離離島的人文底蘊與驚奇地景。這次從湖西鄉出發，一路向北解鎖西嶼與白沙的絕美沙灘與無人島，澎湖跳島旅行景點與美食精選推薦。</div>
       <div class="terms">
         <span class="term">Travel</span>
       </div>
@@ -1212,11 +1268,37 @@
       </div>
     </article>
   
-    <article class="card" data-topic="Travel" data-search="克服強風挑戰，雲林東勢夫妻檔種出環保級玉女小番茄，還讓侏儒小蒜頭與醜檸檬成為天菜 雲林東勢鄉臨海，冬季東北季風強勁，農耕挑戰關關難過。七年級生夫妻檔黃士珈、潘穎儒返鄉東勢，以環境友善方式投入耕作，從試錯到熟悉，種出一顆顆紅寶石般飽滿多汁的小番茄，還讓格外品成為天菜好物。 travel">
+    <article class="card" data-topic="Travel" data-search="苗栗避暑步道｜12條山林景點推薦，溪畔、多遮蔭、高海拔巨木群，走進山城涼爽健行去 炎炎夏日，躲進苗栗森林聽溪水潺潺，感受瀑布的涼意最消暑！到高海拔森林挑戰登山步道，或輕鬆走踏溪流、多遮蔭步道，到山城聚落賞桐花與螢火蟲，也吸收獨有的地景知識。微笑台灣精選苗栗12條步道路線，走進山林涼一下。 travel">
       <div class="kicker">微笑台灣 [Travel]</div>
       <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
-      <h3 class="title"><a href="https://smiletaiwan.cw.com.tw/article/9152" target="_blank">克服強風挑戰，雲林東勢夫妻檔種出環保級玉女小番茄，還讓侏儒小蒜頭與醜檸檬成為天菜</a></h3>
-      <div class="ai-takeaway">雲林東勢鄉臨海，冬季東北季風強勁，農耕挑戰關關難過。七年級生夫妻檔黃士珈、潘穎儒返鄉東勢，以環境友善方式投入耕作，從試錯到熟悉，種出一顆顆紅寶石般飽滿多汁的小番茄，還讓格外品成為天菜好物。</div>
+      <h3 class="title"><a href="https://smiletaiwan.cw.com.tw/article/9145" target="_blank">苗栗避暑步道｜12條山林景點推薦，溪畔、多遮蔭、高海拔巨木群，走進山城涼爽健行去</a></h3>
+      <div class="ai-takeaway">炎炎夏日，躲進苗栗森林聽溪水潺潺，感受瀑布的涼意最消暑！到高海拔森林挑戰登山步道，或輕鬆走踏溪流、多遮蔭步道，到山城聚落賞桐花與螢火蟲，也吸收獨有的地景知識。微笑台灣精選苗栗12條步道路線，走進山林涼一下。</div>
+      <div class="terms">
+        <span class="term">Travel</span>
+      </div>
+      <div class="byline">
+        <b>SCORE</b><span class="score">5/10</span>
+      </div>
+    </article>
+  
+    <article class="card" data-topic="Travel" data-search="老牛舍變書屋！屏東萬丹「興化廍幸福學堂」分享書本不打烊，守住農村孩子的閱讀夢 在屏東萬丹鄉間有間孩子的閱讀書屋？「興化廍幸福學堂」由陳佳裕、熊敏慧夫妻一步步打造，24小時開放，讓孩子與村民都能自在走進來閱讀。老牛舍不只留下農村痕跡，如今也用書本養育下一代的未來，讓閱讀成為孩童溫柔而長久的陪伴。 travel">
+      <div class="kicker">微笑台灣 [Travel]</div>
+      <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
+      <h3 class="title"><a href="https://smiletaiwan.cw.com.tw/article/9156" target="_blank">老牛舍變書屋！屏東萬丹「興化廍幸福學堂」分享書本不打烊，守住農村孩子的閱讀夢</a></h3>
+      <div class="ai-takeaway">在屏東萬丹鄉間有間孩子的閱讀書屋？「興化廍幸福學堂」由陳佳裕、熊敏慧夫妻一步步打造，24小時開放，讓孩子與村民都能自在走進來閱讀。老牛舍不只留下農村痕跡，如今也用書本養育下一代的未來，讓閱讀成為孩童溫柔而長久的陪伴。</div>
+      <div class="terms">
+        <span class="term">Travel</span>
+      </div>
+      <div class="byline">
+        <b>SCORE</b><span class="score">5/10</span>
+      </div>
+    </article>
+  
+    <article class="card" data-topic="Travel" data-search="把森林香氣帶回家！走進植物療癒的世界，從青草拍打槌到花草茶，感受園藝治療的力量 植物香氣不僅僅是好聞的氣味，也同時是大自然給身心的綠色處方。從森林氣息、青草拍打槌到一杯花草茶，園藝治療將植物的防禦力量轉化為日常療癒，也讓人重新感受土地、身體與生活之間的連結。 travel">
+      <div class="kicker">微笑台灣 [Travel]</div>
+      <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
+      <h3 class="title"><a href="https://smiletaiwan.cw.com.tw/article/9149" target="_blank">把森林香氣帶回家！走進植物療癒的世界，從青草拍打槌到花草茶，感受園藝治療的力量</a></h3>
+      <div class="ai-takeaway">植物香氣不僅僅是好聞的氣味，也同時是大自然給身心的綠色處方。從森林氣息、青草拍打槌到一杯花草茶，園藝治療將植物的防禦力量轉化為日常療癒，也讓人重新感受土地、身體與生活之間的連結。</div>
       <div class="terms">
         <span class="term">Travel</span>
       </div>
@@ -1238,52 +1320,28 @@
       </div>
     </article>
   
-    <article class="card" data-topic="Travel" data-search="石花菜正著時！品嚐東北角漁村特色海味，新北貢寮石花凍店家與海鮮餐廳一次推薦 東北角沿岸礁岩正鋪展著黃、紅、紫相間的石花菜，宛如大自然編織的繽紛地毯。經過「七洗七曬」與時間熬煮出的剔透石花凍，可成為甜品或是開胃前菜。一次推薦貢寮的石花凍店家、海鮮餐廳，別錯過品嚐當季限定的特色海味。 travel">
-      <div class="kicker">微笑台灣 [Travel]</div>
-      <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
-      <h3 class="title"><a href="https://smiletaiwan.cw.com.tw/article/9141" target="_blank">石花菜正著時！品嚐東北角漁村特色海味，新北貢寮石花凍店家與海鮮餐廳一次推薦</a></h3>
-      <div class="ai-takeaway">東北角沿岸礁岩正鋪展著黃、紅、紫相間的石花菜，宛如大自然編織的繽紛地毯。經過「七洗七曬」與時間熬煮出的剔透石花凍，可成為甜品或是開胃前菜。一次推薦貢寮的石花凍店家、海鮮餐廳，別錯過品嚐當季限定的特色海味。</div>
-      <div class="terms">
-        <span class="term">Travel</span>
-      </div>
-      <div class="byline">
-        <b>SCORE</b><span class="score">5/10</span>
-      </div>
-    </article>
-  
-    <article class="card" data-topic="Travel" data-search="來自海拔2421公尺的迴聲，《阿里山林鐵音樂紀行》台北首映，以樂音詮釋當代林鐵旅程 林保署、林鐵及文資處攜手嘉義在地團隊「嘉頌重奏團」，推出《阿里山林鐵音樂紀行》，轉譯自紀錄阿里山林鐵沿線美好的《2421m的迴聲》一書，譜寫海拔2421公尺的動人迴聲，用樂音打造一場如同在列車行進間、充滿人文溫度的沉浸式旅程。 travel">
-      <div class="kicker">微笑台灣 [Travel]</div>
-      <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
-      <h3 class="title"><a href="https://smiletaiwan.cw.com.tw/article/9150" target="_blank">來自海拔2421公尺的迴聲，《阿里山林鐵音樂紀行》台北首映，以樂音詮釋當代林鐵旅程</a></h3>
-      <div class="ai-takeaway">林保署、林鐵及文資處攜手嘉義在地團隊「嘉頌重奏團」，推出《阿里山林鐵音樂紀行》，轉譯自紀錄阿里山林鐵沿線美好的《2421m的迴聲》一書，譜寫海拔2421公尺的動人迴聲，用樂音打造一場如同在列車行進間、充滿人文溫度的沉浸式旅程。</div>
-      <div class="terms">
-        <span class="term">Travel</span>
-      </div>
-      <div class="byline">
-        <b>SCORE</b><span class="score">5/10</span>
-      </div>
-    </article>
-  
-    <article class="card" data-topic="Travel" data-search="走進台灣人覺醒的歷史現場 看一場不給結論的展覽 補課台灣史！專訪臺灣新文化運動紀念館館長許美惠｜微笑款款聽ep.177 今天，你微笑了嗎？藏在台北大稻埕裡的歷史現場，有一棟背負沉重歷史的北警察署，如今正以溫柔的姿態述說著百年前的島嶼覺醒。這集我們這集我們邀請臺灣新文化運動紀念館館長許美惠，聊聊館方如何透過當代視角，將當年台灣人覺醒的幾個重大事件，以及知識份子的熱血，轉化成大眾都覺得有趣又能心領神會的展覽，也分享她的大稻埕散策路線。點擊下方「播放」按鈕，收聽本集podcast。 travel">
-      <div class="kicker">微笑台灣 [Travel]</div>
-      <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
-      <h3 class="title"><a href="https://smiletaiwan.cw.com.tw/article/9157" target="_blank">走進台灣人覺醒的歷史現場 看一場不給結論的展覽 補課台灣史！專訪臺灣新文化運動紀念館館長許美惠｜微笑款款聽Ep.177</a></h3>
-      <div class="ai-takeaway">今天，你微笑了嗎？藏在台北大稻埕裡的歷史現場，有一棟背負沉重歷史的北警察署，如今正以溫柔的姿態述說著百年前的島嶼覺醒。這集我們這集我們邀請臺灣新文化運動紀念館館長許美惠，聊聊館方如何透過當代視角，將當年台灣人覺醒的幾個重大事件，以及知識份子的熱血，轉化成大眾都覺得有趣又能心領神會的展覽，也分享她的大稻埕散策路線。點擊下方「播放」按鈕，收聽本集Podcast。</div>
-      <div class="terms">
-        <span class="term">Travel</span>
-      </div>
-      <div class="byline">
-        <b>SCORE</b><span class="score">5/10</span>
-      </div>
-    </article>
-  
-    <article class="card" data-topic="Travel" data-search="東京迪士尼樂園住宿｜東京灣希爾頓酒店 hilton tokyo bay，魔法童話客房、迪士尼商店、24小時lawson~步行1分鐘到海灣站！ 東京灣希爾頓酒店 hilton tokyo bay是東京迪士尼度假區公認飯店，可享有住宿遊客獨享禮遇！設施有室...
-這篇文章 東京迪士尼樂園住宿｜東京灣希爾頓酒店 hilton tokyo bay，魔法童話客房、迪士尼商店、24小時lawson~步行1分鐘到海灣站！ 最早出現於 旅行玩很大。 travel">
+    <article class="card" data-topic="Travel" data-search="迪士尼住宿｜東京灣大倉酒店，東京迪士尼度假區的公認飯店，房間翻新，來泡伊豆石澡堂！ 東京灣大倉酒店 hotel okura tokyo bay是東京迪士尼度假區公認飯店，享有住宿獨享禮遇～飯店內...
+這篇文章 迪士尼住宿｜東京灣大倉酒店，東京迪士尼度假區的公認飯店，房間翻新，來泡伊豆石澡堂！ 最早出現於 旅行玩很大。 travel">
       <div class="kicker">台灣旅行趣 [Travel]</div>
       <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
-      <h3 class="title"><a href="https://travelfun.tw/hilton-tokyo-bay/" target="_blank">東京迪士尼樂園住宿｜東京灣希爾頓酒店 Hilton Tokyo Bay，魔法童話客房、迪士尼商店、24小時Lawson~步行1分鐘到海灣站！</a></h3>
-      <div class="ai-takeaway">東京灣希爾頓酒店 Hilton Tokyo Bay是東京迪士尼度假區公認飯店，可享有住宿遊客獨享禮遇！設施有室...
-這篇文章 東京迪士尼樂園住宿｜東京灣希爾頓酒店 Hilton Tokyo Bay，魔法童話客房、迪士尼商店、24小時Lawson~步行1分鐘到海灣站！ 最早出現於 旅行玩很大。</div>
+      <h3 class="title"><a href="https://travelfun.tw/hotel-okura-tokyobay/" target="_blank">迪士尼住宿｜東京灣大倉酒店，東京迪士尼度假區的公認飯店，房間翻新，來泡伊豆石澡堂！</a></h3>
+      <div class="ai-takeaway">東京灣大倉酒店 Hotel Okura Tokyo Bay是東京迪士尼度假區公認飯店，享有住宿獨享禮遇～飯店內...
+這篇文章 迪士尼住宿｜東京灣大倉酒店，東京迪士尼度假區的公認飯店，房間翻新，來泡伊豆石澡堂！ 最早出現於 旅行玩很大。</div>
+      <div class="terms">
+        <span class="term">Travel</span>
+      </div>
+      <div class="byline">
+        <b>SCORE</b><span class="score">5/10</span>
+      </div>
+    </article>
+  
+    <article class="card" data-topic="Travel" data-search="沖繩國際通飯店｜那霸凱悅酒店沖繩，步行到國際通只要3分鐘，未滿13歲兒童不加床可免費同住 沖繩國際通親子友善飯店，那霸凱悅酒店沖繩提供寬敞的住宿空間及全館免費 wifi，步行到國際通只需3分鐘，離最近...
+這篇文章 沖繩國際通飯店｜那霸凱悅酒店沖繩，步行到國際通只要3分鐘，未滿13歲兒童不加床可免費同住 最早出現於 旅行玩很大。 travel">
+      <div class="kicker">台灣旅行趣 [Travel]</div>
+      <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
+      <h3 class="title"><a href="https://travelfun.tw/hyatt-regency-naha-okinawa/" target="_blank">沖繩國際通飯店｜那霸凱悅酒店沖繩，步行到國際通只要3分鐘，未滿13歲兒童不加床可免費同住</a></h3>
+      <div class="ai-takeaway">沖繩國際通親子友善飯店，那霸凱悅酒店沖繩提供寬敞的住宿空間及全館免費 WiFi，步行到國際通只需3分鐘，離最近...
+這篇文章 沖繩國際通飯店｜那霸凱悅酒店沖繩，步行到國際通只要3分鐘，未滿13歲兒童不加床可免費同住 最早出現於 旅行玩很大。</div>
       <div class="terms">
         <span class="term">Travel</span>
       </div>
@@ -1305,7 +1363,7 @@
   const playIcon = document.getElementById('play-icon');
   const pauseIcon = document.getElementById('pause-icon');
   const playerStatus = document.getElementById('player-status');
-  const briefingText = "【今日總結】\\n今天是 2026年5月26日 星期二。AI 本地化記帳與工作記憶創新同步，企業忙堵混沌失效；Tech 的 Google 搜尋 AI 代理成形、Laravel 套件被植入竊資、Android 17 滾動動畫與 ChromaDB RCE 值得關注；Gaming 推出心理恐怖《戰爭幻想》與超寫實射擊《Red Light On》；General 中美軍伊朗襲擊、寮國洞穴救援、印度 Gymkhana 接管與阿爾伯塔分離公投升溫，UN 氣候決議獲 141 國背書；Finance 見雄師 AI 配息新高、日經首破 65,000、尹衍樑逝世、SpaceX IPO 引發美股集中度警告；Sports";
+  const briefingText = "【今日總結】\\nAI：Qwen3.7‑Max 实现 35 小时自主运行，0.12 % 参数插件提升代理记忆，治理工具与“AI 技术债”成焦点；Tech：FCC 征集《The View》是否属新闻节目，Google Pixel 全 3D Emoji 抢先曝光，企业私有云加速液冷升级；Gaming：《Forgery Craft》及《Rocket League》将采用 Unreal Engine 6，东京神保町二手书店仍为打卡热点；General：以色列占领地图引发争议，纽约重返 NBA 总决赛，台湾碳盘查启动，大乐透开奖号码出炉；Finance：台灣高鐵史上最嚴重延誤源於轉轍器電源異常，美超微合規受";
 
   function getSelectedVoice() {
     if (!synth) return null;

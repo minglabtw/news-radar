@@ -12,7 +12,6 @@
 |------|------|
 | 新聞網站 | https://minglabtw.github.io/news-radar/ |
 | 過刊牆 | https://minglabtw.github.io/news-radar/archive.html |
-| n8n 管理介面 | https://n8n.sunder.net.tw |
 | GitHub 倉庫 | https://github.com/minglabtw/news-radar |
 
 ## 核心功能

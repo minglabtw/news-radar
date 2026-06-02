@@ -1,34 +1,121 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-Hant" data-theme="light">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>銘於心-AI日報 · 過刊</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>歷史過刊 · 銘於心-AI日報</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700;8..60,800;8..60,900&family=Inter:wght@500;600;700;800&family=Noto+Sans+TC:wght@500;600;700;900&family=Noto+Serif+TC:wght@500;600;700;900&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#faf9f6;--text:#2d2d2d;--muted:#888;--border:#e8e5df;--accent:#d4a574}
-[data-theme=dark]{--bg:#1a1a1a;--text:#e0ddd6;--muted:#999;--border:#333;--accent:#c9955e}
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans TC",sans-serif;background:var(--bg);color:var(--text);font-size:18px;line-height:1.8;max-width:740px;margin:0 auto;padding:40px 24px 80px}
-header{text-align:center;padding:48px 0 36px;border-bottom:1px solid var(--border);margin-bottom:36px}
-header h1{font-size:28px}
-header a{color:var(--accent);text-decoration:none;font-size:15px}
-.issue-list{list-style:none;padding:0}
-.issue-list li{padding:14px 0;border-bottom:1px solid var(--border)}
-.issue-list a{color:var(--accent);text-decoration:none;font-size:17px;font-weight:600}
-.issue-list a:hover{text-decoration:underline}
-footer{text-align:center;color:var(--muted);font-size:14px;margin-top:64px;padding-top:24px;border-top:1px solid var(--border)}
-.theme-btn{position:fixed;bottom:16px;right:16px;width:36px;height:36px;border-radius:50%;z-index:100;background:transparent;border:1px solid var(--border);color:var(--text);cursor:pointer;font-size:14px}
+  :root {
+    --bg: #fbf9f4; --bg-elev: #ffffff; --border: #e0dbd0; --rule: #2a2824; 
+    --fg: #1f1d1a; --fg-mute: #6b655c; --accent: #8b1a1a;
+    --serif: "Source Serif 4", "Noto Serif TC", "Songti TC", "PMingLiU", Georgia, serif;
+    --sans: "Inter", "Noto Sans TC", "PingFang TC", -apple-system, sans-serif;
+  }
+  [data-theme="dark"] {
+    --bg: #14141a; --bg-elev: #1b1c22; --border: #2c2d36; --rule: #b6b3ab;
+    --fg: #d8d6cf; --fg-mute: #8a867d; --accent: #d68c8c;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--fg); font: 600 17px/1.75 var(--sans); min-height: 100vh; transition: background .25s ease, color .25s ease; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 800px; margin: 0 auto; padding: 36px 24px 80px; }
+  a { color: inherit; text-decoration: none; }
+  
+  .masthead { text-align: center; padding-bottom: 22px; border-bottom: 3px double var(--rule); position: relative; }
+  .masthead h1 { font-family: var(--serif); font-weight: 900; font-size: 42px; line-height: 1.15; letter-spacing: -0.01em; margin: 4px 0 8px; }
+  .masthead .tagline { font-family: var(--sans); font-weight: 600; font-size: 16px; color: var(--fg-mute); margin: 0 0 6px; }
+  .masthead .meta-line a { color: var(--accent); border-bottom: 1px dotted var(--accent); }
+  .masthead .theme-btn { position: absolute; top: 0; right: 0; background: transparent; border: 1px solid var(--border); color: var(--fg); width: 36px; height: 36px; border-radius: 4px; cursor: pointer; transition: .12s; }
+  @media(max-width:600px){.masthead .theme-btn{position:fixed;top:auto;bottom:20px;right:20px;width:36px;height:36px;border-radius:50%;z-index:100;box-shadow:0 2px 8px rgba(0,0,0,.15)}}
+  
+  .section-rule { display: flex; align-items: center; gap: 14px; margin: 48px 0 24px; font-family: var(--sans); font-weight: 600; font-size: 13px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--fg); }
+  .section-rule::after { content: ""; flex: 1; border-bottom: 1px solid var(--rule); }
+  .accent { color: var(--accent); font-weight: 800;}
+  
+  .archive-list { list-style: none; padding: 0; margin: 0; }
+  .archive-list li { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px dotted var(--border); transition: transform 0.2s; }
+  .archive-list li:hover { transform: translateX(8px); }
+  .archive-list a { display: flex; flex-direction: column; width: 100%; gap: 4px; }
+  @media(min-width: 600px) { .archive-list a { flex-direction: row; justify-content: space-between; align-items: center; } }
+  .archive-list .date { font-family: var(--serif); font-size: 20px; font-weight: 800; color: var(--fg); }
+  .archive-list .issue { font-family: var(--sans); font-size: 13px; letter-spacing: 0.1em; color: var(--fg-mute); text-transform: uppercase; font-weight: 700; }
+  .archive-list .issue::after { content: ' →'; opacity: 0; transition: opacity .2s; }
+  .archive-list li:hover .issue::after { opacity: 1; color: var(--accent); }
+  
+  .loading { text-align: center; color: var(--fg-mute); font-family: var(--serif); padding: 48px 0; font-size: 18px; font-style: italic; }
+  footer { margin-top: 48px; padding-top: 22px; border-top: 3px double var(--rule); color: var(--fg-mute); font-family: var(--sans); font-size: 11.5px; letter-spacing: 0.10em; text-transform: uppercase; text-align: center; }
 </style>
 </head>
 <body>
-<button class="theme-btn" onclick="toggleTheme()">🌓</button>
-<header><h1>銘於心-AI日報</h1><a href="index.html">回到首頁</a></header>
-<h2 style="margin-bottom:24px">歷史過刊</h2>
-<ul class="issue-list"><li style="color:var(--muted)">尚無過刊</li></ul>
-<footer>© 2026 銘於心 (MING). 智慧物聯架獲實驗室.</footer>
+<div class="wrap">
+  <header class="masthead">
+    <h1>歷史過刊</h1>
+    <p class="tagline">銘於心-AI日報</p>
+    <p class="meta-line"><a href="/news-radar/">返回今日日報</a></p>
+    <button class="theme-btn" onclick="document.documentElement.dataset.theme = document.documentElement.dataset.theme==='light'?'dark':'light'">🌓</button>
+  </header>
+
+  <div class="section-rule"><span class="accent">過往精選</span> Archives</div>
+  
+  <div id="loader" class="loading">正在從資料庫載入過刊，請稍候...</div>
+  <ul class="archive-list" id="archiveList"></ul>
+
+  <footer>© 2026 銘於心 (MING). 智慧物聯架構實驗室.</footer>
+</div>
+
 <script>
-function toggleTheme(){var e=document.documentElement.dataset.theme=='light'?'dark':'light';document.documentElement.dataset.theme=e;localStorage.setItem('news-radar-theme',e)}
-(function(){var e=localStorage.getItem('news-radar-theme');if(e)document.documentElement.dataset.theme=e})();
+  async function loadArchives() {
+    const list = document.getElementById('archiveList');
+    const loader = document.getElementById('loader');
+    try {
+      // Github API: Get contents of /issues folder
+      const res = await fetch('https://api.github.com/repos/minglabtw/news-radar/contents/issues');
+      if (!res.ok) throw new Error('Network response was not ok');
+      const files = await res.json();
+      
+      // Filter for html files and sort by name descending (newest first)
+      const htmlFiles = files.filter(f => f.name.endsWith('.html')).sort((a, b) => b.name.localeCompare(a.name));
+      
+      if (htmlFiles.length === 0) {
+        loader.textContent = '目前尚未有歷史過刊。';
+        return;
+      }
+      
+      loader.style.display = 'none';
+      
+      const startDate = new Date('2026-05-25T00:00:00Z');
+      
+      htmlFiles.forEach(file => {
+        const dateStr = file.name.replace('.html', '');
+        const dateObj = new Date(dateStr + 'T00:00:00Z');
+        
+        const issueNo = Math.max(1, Math.floor((dateObj - startDate) / 1000 / 60 / 60 / 24) + 1);
+        
+        const y = dateObj.getFullYear();
+        const m = dateObj.getMonth() + 1;
+        const d = dateObj.getDate();
+        const days = ['星期日','星期一','星期二','星期三','星期四','星期五','星期六'];
+        const displayDate = `${y}年${m}月${d}日 ${days[dateObj.getDay()]}`;
+        
+        const li = document.createElement('li');
+        li.innerHTML = `
+          <a href="issues/${file.name}">
+            <span class="date">${displayDate}</span>
+            <span class="issue">Vol. 1 · No. ${issueNo}</span>
+          </a>
+        `;
+        list.appendChild(li);
+      });
+      
+    } catch (err) {
+      loader.textContent = '載入過刊失敗，請稍後再試。';
+      console.error(err);
+    }
+  }
+  
+  loadArchives();
 </script>
 </body>
 </html>

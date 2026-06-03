@@ -156,6 +156,48 @@
   .player-title-text { font-size: 15.5px; font-weight: 700; color: var(--fg); font-family: var(--sans); }
   .player-status-subtitle { font-size: 12.5px; color: var(--fg-mute); font-family: var(--sans); }
 
+  .player-speed-controls {
+    margin-left: auto;
+    display: flex;
+    gap: 6px;
+    align-items: center;
+  }
+  .speed-chip {
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--fg-mute);
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  .speed-chip:hover {
+    color: var(--fg);
+    border-color: var(--fg-mute);
+  }
+  .speed-chip.active {
+    background: var(--accent);
+    color: #ffffff;
+    border-color: var(--accent);
+    box-shadow: 0 2px 6px rgba(139, 26, 26, 0.15);
+  }
+  @media (max-width: 600px) {
+    .audio-player-container {
+      flex-wrap: wrap;
+    }
+    .player-speed-controls {
+      margin-left: 0;
+      width: 100%;
+      justify-content: flex-start;
+      margin-top: 10px;
+      border-top: 1px dashed var(--border);
+      padding-top: 10px;
+    }
+  }
+
   .toolbar { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; margin: 16px 0 0; padding: 10px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
   .search { flex: 1; min-width: 200px; background: transparent; border: none; border-bottom: 1px solid var(--border); color: var(--fg); padding: 6px 4px; font: inherit; font-size: 14.5px; outline: none; }
   .search:focus { border-bottom-color: var(--rule); }
@@ -263,27 +305,27 @@
   <div class="briefing">
       <div class="briefing-card" style="--badge-color: #8b1a1a">
         <span class="briefing-badge">科技</span>
-        <ul class="briefing-list"><li>Meta AI助理遭濫用致Instagram帳號被劫持</li><li>假冒Gemini與Claude安裝網站散布木馬，竊取開發者帳號與環境資料</li><li>象印台灣子公司遭駭，客戶與員工個資外洩</li><li>Magento快取外掛出現CVE‑2026‑45247漏洞，可未授權執行任意程式碼</li><li>黃仁勳在GTC台北展示Vera CPU與RTX Spark，宣告有用AI時代已來臨</li><li>國家級駭客利用ROADtools鎖定Microsoft Entra ID，進行列舉與權杖竊取</li></ul>
+        <ul class="briefing-list"><li>開源平台 Gitea 修復 CVE‑2026‑27771 漏洞，防止未授權存取私有容器映像</li><li>HPE Zerto 整合生成式 AI 助理與第3方 AI 平台，提升災難復原管理效率</li><li>Sony State of Play 發布《料理人班喬》《漫威金刚狼》《漫威斗魂》新預告及血腥特效關閉功能</li><li>哈根達斯中國門市出售予檸季主導的投資者</li></ul>
       </div>
     
       <div class="briefing-card" style="--badge-color: #4a5568">
         <span class="briefing-badge">綜合</span>
-        <ul class="briefing-list"><li>中國煤礦事故死亡人數為15年之最，能源安全與綠色轉型矛盾加劇</li><li>伊朗、中國、緬甸、委內瑞拉民眾透過地下VPN、星鏈走私等突破防火長城</li><li>美國小費文化向海外蔓延，服務業薪酬結構引發討論</li><li>法網因王欣瑜拒握手而引發傳統裁判制度爭議</li><li>中國大幅裁撤文史哲學科，以培养工程技术人才迎合未來需求</li><li>特朗普聲稱空中力量足以推翻伊朗政權，但伊朗保持強硬，使中東策略陷入僵局</li></ul>
+        <ul class="briefing-list"><li>印度 47°C 高溫重塑居民作息，「早晨與夜晚」概念消失</li><li>特朗普時隔九年訪華，台灣、關稅等核心議題未見突破</li><li>文革發動 60 週年引發歷史回顧與反思</li><li>AI 技術解讀梵蒂岡沉寂四百年的神秘手稿，揭示潛在古配方</li><li>研究指出沉迷白日夢屬適應不良的心理狀態</li></ul>
       </div>
     
       <div class="briefing-card" style="--badge-color: #1b4d3e">
         <span class="briefing-badge">財經</span>
-        <ul class="briefing-list"><li>慧與科技（HPE）伺服器業務遠超預期，上季財測大幅調高，盤後股價急升30%</li><li>COMPUTEX 2026顯示AI應用走向實際場景，Token消耗呈倍數增加</li><li>高盛與花旗因供應吃緊與關稅不確定性，將年底銅價預測上調至每噸13,735美元</li><li>輝達與聯發科共同推出RTX Spark超級晶片，致英特爾與超微股價受挫</li><li>英國若重返歐盟將面臨每年約2000億元的額外費用，並需加入歐元區與申根區</li></ul>
+        <ul class="briefing-list"><li>馬自達不走價格戰，提升展間氛圍以打造高端品牌形象</li><li>台積電攜手輝達 CUDA‑X 與 AI 技術加速新世代 AI 晶片製造</li><li>沉寂多年的大立光因擺脫華為供應限制及手機鏡頭需求回溫，股價創五年高點</li><li>慧與科技（HPE）伺服器營收遠優預期，全年財測上調，盤後股價暴漲約 30%</li><li>戴爾財報顯示 AI 伺服器需求爆發，單日股價飆逾 33%，帶動 SMCI、HPE 等概念股同漲</li><li>COMPUTEX 2026 揭示 AI 從雲端走向邊緣，Token 消耗倍增，硬體需求將大幅上升</li></ul>
       </div>
     
       <div class="briefing-card" style="--badge-color: #c25100">
         <span class="briefing-badge">運動</span>
-        <ul class="briefing-list"><li>熱刺引進Marcos Senesi強化後防，技術與高空防守兼顧</li><li>捷克以定位球與高空球聞名，為A組威脅</li><li>南韓擁有成熟進攻體系，亦是A組焦點</li><li>日本公布26人世界盃名單，森保一兼顧經驗與新血</li><li>TPBL季後賽國王主場擊敗夢想家率先聽牌</li><li>WNBA主席盃再度登場，集合本賽季熱門看點</li></ul>
+        <ul class="briefing-list"><li>Julian Champagnie 在關鍵搶七大戰中神奇逆轉，助球隊前進家鄉籃球聖地</li><li>南韓國家隊在世足 A 組被譽為進攻體系最成熟之一</li><li>TPBL 第二季總冠軍賽第五戰，奧帝關鍵罰球助夢想家再勝國王取得聽牌</li><li>現代籃球趨勢迫使傳統 3D 球員必須開發多元進攻技能</li><li>台北大巨蛋週末賽事結合多元商業活動，富邦悍將收益可觀</li><li>巴黎聖日耳曼在 2025‑26 賽季歐洲冠軍盃決賽中奪冠</li></ul>
       </div>
     
       <div class="briefing-card" style="--badge-color: #0f766e">
         <span class="briefing-badge">生活</span>
-        <ul class="briefing-list"><li>《名偵探柯南》票房破108.8億日元，限定咖啡廳推出「犯人就在那裡」百匯甜點</li><li>漫畫家高橋真拍賣工作室原畫與簽名書因應數位化潮流</li><li>環球影城蘑菇造型水壺設計突破，引發購買熱潮</li><li>玩家將90年代復古鋼彈模型塗裝改造成現代帥氣外觀</li><li>日本進化型自助洗衣店以休息區、咖啡吧提升顧客體驗</li><li>儘管航班全禁菸，機上化妝室仍保留煙灰缸，網友疑惑其存在理由</li></ul>
+        <ul class="briefing-list"><li>電視動畫《鬥球女彈子》公開主視覺預告，片頭曲邀請桃色幸運草 Z 演唱</li><li>結合躲貓貓與塗鴉的手機遊戲《MECCHA CHAMELEON》將於 6 月問世</li><li>網路迷因「城之內之死」因直接暴雷令年輕觀眾困惑，引發「忍耐前期」是否佳作的熱議</li><li>另類周邊「美少女遊戲保險套」創意奇葩引發熱議</li><li>藝術家以刀片逐層刮除苔蘚創作出精緻風景畫，展現新興創作手法。</li></ul>
       </div>
     </div>
 
@@ -296,37 +338,42 @@
       <span class="player-title-text">聽總編輯說日報 (AI 語音播報)</span>
       <span class="player-status-subtitle" id="player-status">點擊播放 · 總編輯女聲語音朗讀</span>
     </div>
+    <div class="player-speed-controls">
+      <button class="speed-chip" data-speed="1" onclick="setSpeed(1)">1.0x</button>
+      <button class="speed-chip" data-speed="1.25" onclick="setSpeed(1.25)">1.25x</button>
+      <button class="speed-chip" data-speed="1.5" onclick="setSpeed(1.5)">1.5x</button>
+    </div>
   </div>
 
   <div class="section-rule"><span class="accent">熱門趨勢</span> Trending</div>
   <div class="trending"><ol>
   <li>
-    <span class="term">ai</span>
-    <span class="count">5 則相關</span>
-  </li>
-
-  <li>
-    <span class="term">資安</span>
-    <span class="count">4 則相關</span>
-  </li>
-
-  <li>
-    <span class="term">生活</span>
-    <span class="count">4 則相關</span>
-  </li>
-
-  <li>
-    <span class="term">中國</span>
+    <span class="term">hpe</span>
     <span class="count">3 則相關</span>
   </li>
 
   <li>
-    <span class="term">世界盃</span>
+    <span class="term">人工智慧</span>
     <span class="count">3 則相關</span>
   </li>
 
   <li>
-    <span class="term">rtx spark</span>
+    <span class="term">動畫</span>
+    <span class="count">3 則相關</span>
+  </li>
+
+  <li>
+    <span class="term">state of play</span>
+    <span class="count">2 則相關</span>
+  </li>
+
+  <li>
+    <span class="term">特朗普</span>
+    <span class="count">2 則相關</span>
+  </li>
+
+  <li>
+    <span class="term">訪華</span>
     <span class="count">2 則相關</span>
   </li>
 </ol></div>
@@ -342,16 +389,16 @@
   <div class="empty" id="empty-state">找不到符合的文章，請嘗試其他關鍵字或主題。</div>
 
   
-  <div class="section-rule cat-heading" style="--cat: #8b1a1a"><span class="accent">今日焦點推薦</span> Spotlight</div>
-  <div class="hero-banner-overlay" style="--cat: #8b1a1a" data-topic="科技" data-search="駭客利用 meta ai 支援助理，輕鬆接管他人 instagram 帳號 攻擊者利用 meta ai 支援助理成功劫持他人 instagram 帳號，暴露平台安全漏洞。 meta ai instagram 帳號劫持 資安 駭客">
+  <div class="section-rule cat-heading" style="--cat: #4a5568"><span class="accent">今日焦點推薦</span> Spotlight</div>
+  <div class="hero-banner-overlay" style="--cat: #4a5568" data-topic="綜合" data-search="「文化大革命」60週年：從幾大關鍵詞看這場十年文化浩劫 bbc 中文梳理文革發動 60 週年與結束 50 週年的歷史脈絡，從關鍵人物、組織演變與形勢發展回顧這場影響深遠的政治運動。 文化大革命 60週年 歷史回顧 中國政治 文化浩劫">
     <div class="hero-backdrop"></div>
-    
+    <img class="hero-image-overlay" src="https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/d278/live/1ec66db0-49f2-11f1-a9e7-0f8f590f205b.jpg" onerror="this.style.display='none'; this.parentElement.querySelector('.hero-backdrop').style.display='block';" onload="this.style.display='block'; this.parentElement.querySelector('.hero-backdrop').style.display='none';">
     <div class="hero-gradient-mask"></div>
     <div class="hero-content">
-      <div class="hero-kicker">TechNews 科技新報 [科技]</div>
-      <div class="hero-hook"><span class="hero-q">Q</span>Meta AI 真的能成為駭客的新武器嗎？</div>
-      <h2><a href="https://infosecu.technews.tw/2026/06/02/hackers-say-they-used-meta-s-ai-support-chatbot-to-change-emails-tied-to-instagram-accounts/" target="_blank">駭客利用 Meta AI 支援助理，輕鬆接管他人 Instagram 帳號</a></h2>
-      <div class="takeaway">攻擊者利用 Meta AI 支援助理成功劫持他人 Instagram 帳號，暴露平台安全漏洞。</div>
+      <div class="hero-kicker">BBC 中文 [綜合]</div>
+      <div class="hero-hook"><span class="hero-q">Q</span>文革的歷史教訓如何影響當代中國的政治與社會走向？</div>
+      <h2><a href="https://www.bbc.com/zhongwen/articles/c1j2pl97p1zo/trad?at_medium=RSS&amp;amp;at_campaign=rss" target="_blank">「文化大革命」60週年：從幾大關鍵詞看這場十年文化浩劫</a></h2>
+      <div class="takeaway">BBC 中文梳理文革發動 60 週年與結束 50 週年的歷史脈絡，從關鍵人物、組織演變與形勢發展回顧這場影響深遠的政治運動。</div>
       <div class="byline">
         <b>FOCUS SCORE</b> <span>9/10</span>
       </div>
@@ -362,51 +409,15 @@
     <div class="section-rule cat-heading" style="--cat: #8b1a1a"><span class="accent">科技綜合精選</span> Tech Highlights</div>
     <div class="cards" style="--cat: #8b1a1a">
       
-      <article class="card" data-topic="科技" data-search="電商平臺magento快取外掛存在重大漏洞，攻擊者可用於遠端程式碼執行攻擊 資安公司 sansec 揭露 magento 快取外掛存在 cve‑2026‑45247 漏洞，攻擊者可在未授權狀態下執行任意程式碼。  magento adobe commerce 快取外掛 漏洞 遠端程式碼執行 資安">
+      <article class="card" data-topic="科技" data-search="gitea修補套件登錄庫漏洞，逾3萬自架站點恐暴露私有容器映像檔 開源程式碼託管平台 gitea 修復 cve202627771 漏洞，該漏洞可能導致未授權用戶在無需登入的情況下存取私有容器映像檔。  gitea 安全漏洞 容器映像檔 cve202627771 開源">
         <div class="card-inner">
           <div class="card-body">
             <div class="kicker">iThome [科技]</div>
-            <div class="hook"><span class="q">Q</span>電商平台若未修補此漏洞，將面臨何種威脅？</div>
-            <h3 class="title"><a href="https://www.ithome.com.tw/news/176288" target="_blank">電商平臺Magento快取外掛存在重大漏洞，攻擊者可用於遠端程式碼執行攻擊</a></h3>
-            <div class="ai-takeaway">資安公司 Sansec 揭露 Magento 快取外掛存在 CVE‑2026‑45247 漏洞，攻擊者可在未授權狀態下執行任意程式碼。</div>
+            <div class="hook"><span class="q">Q</span>超過 3 萬個受影響站點中，有多少組織已即時更新以防範資料外洩？</div>
+            <h3 class="title"><a href="https://www.ithome.com.tw/news/176304" target="_blank">Gitea修補套件登錄庫漏洞，逾3萬自架站點恐暴露私有容器映像檔</a></h3>
+            <div class="ai-takeaway">開源程式碼託管平台 Gitea 修復 CVE202627771 漏洞，該漏洞可能導致未授權用戶在無需登入的情況下存取私有容器映像檔。</div>
             <div class="terms">
-              <span class="term">Magento</span><span class="term">Adobe Commerce</span><span class="term">快取外掛</span><span class="term">漏洞</span><span class="term">遠端程式碼執行</span><span class="term">資安</span>
-            </div>
-            <div class="byline">
-              <b>SCORE</b><span class="score">9/10</span>
-            </div>
-          </div>
-          
-        </div>
-      </article>
-    
-      <article class="card" data-topic="科技" data-search="國家級駭客濫用roadtools，鎖定微軟雲端身分識別環境 palo alto unit 42 發現攻擊者將開源工具 roadtools 整合至雲端攻擊行動，針對 microsoft entra id 進行列舉與權杖竊取。  roadtools microsoft entra id 雲端資安 國家級駭客 身份識別">
-        <div class="card-inner">
-          <div class="card-body">
-            <div class="kicker">iThome [科技]</div>
-            <div class="hook"><span class="q">Q</span>ROADtools 變成攻擊工具，企業如何防範雲端身份被竊？</div>
-            <h3 class="title"><a href="https://www.ithome.com.tw/news/176305" target="_blank">國家級駭客濫用ROADtools，鎖定微軟雲端身分識別環境</a></h3>
-            <div class="ai-takeaway">Palo Alto Unit 42 發現攻擊者將開源工具 ROADtools 整合至雲端攻擊行動，針對 Microsoft Entra ID 進行列舉與權杖竊取。</div>
-            <div class="terms">
-              <span class="term">ROADtools</span><span class="term">Microsoft Entra ID</span><span class="term">雲端資安</span><span class="term">國家級駭客</span><span class="term">身份識別</span>
-            </div>
-            <div class="byline">
-              <b>SCORE</b><span class="score">9/10</span>
-            </div>
-          </div>
-          
-        </div>
-      </article>
-    
-      <article class="card" data-topic="科技" data-search="駭客利用假冒gemini與claude安裝網站散布惡意軟體，竊取開發者帳號與開發環境資料 駭客假借 gemini cli 與 claude code 安裝網站植入木馬，竊取開發者帳號與開發環境資訊。  gemini claude 惡意軟體 開發者 資安 假冒">
-        <div class="card-inner">
-          <div class="card-body">
-            <div class="kicker">iThome [科技]</div>
-            <div class="hook"><span class="q">Q</span>開發者該如何避免被假冒工具騙取帳號？</div>
-            <h3 class="title"><a href="https://www.ithome.com.tw/news/176273" target="_blank">駭客利用假冒Gemini與Claude安裝網站散布惡意軟體，竊取開發者帳號與開發環境資料</a></h3>
-            <div class="ai-takeaway">駭客假借 Gemini CLI 與 Claude Code 安裝網站植入木馬，竊取開發者帳號與開發環境資訊。</div>
-            <div class="terms">
-              <span class="term">Gemini</span><span class="term">Claude</span><span class="term">惡意軟體</span><span class="term">開發者</span><span class="term">資安</span><span class="term">假冒</span>
+              <span class="term">Gitea</span><span class="term">安全漏洞</span><span class="term">容器映像檔</span><span class="term">CVE202627771</span><span class="term">開源</span>
             </div>
             <div class="byline">
               <b>SCORE</b><span class="score">8/10</span>
@@ -416,15 +427,15 @@
         </div>
       </article>
     
-      <article class="card" data-topic="科技" data-search="日本象印揭露臺灣子公司遭駭！客戶與員工個資外洩 日本象印子公司台象遭受第三方網路攻擊，經數位鑑識確認已發生台灣客戶與員工個人資料外洩，受影響人數尚未公布。  象印 台灣子公司 資料外洩 資安 個資">
+      <article class="card" data-topic="科技" data-search="hpe將ai對話式互動帶進災難復原管理，zerto新增ai助理與第3方ai平臺整合 hpe 旗下 zerto 平台新增對話式 ai 助理及 zerto context protocol，整合生成式 ai 技術簡化資料保護管理。  hpe zerto ai助理 災難復原 生成式ai">
         <div class="card-inner">
           <div class="card-body">
             <div class="kicker">iThome [科技]</div>
-            <div class="hook"><span class="q">Q</span>台象個資外洩將對受害者造成何種潛在風險？</div>
-            <h3 class="title"><a href="https://www.ithome.com.tw/news/176271" target="_blank">日本象印揭露臺灣子公司遭駭！客戶與員工個資外洩</a></h3>
-            <div class="ai-takeaway">日本象印子公司台象遭受第三方網路攻擊，經數位鑑識確認已發生台灣客戶與員工個人資料外洩，受影響人數尚未公布。</div>
+            <div class="hook"><span class="q">Q</span>企業在導入 AI 驅動的災難復原方案時，如何確保資料隱私與合規性？</div>
+            <h3 class="title"><a href="https://www.ithome.com.tw/news/176317" target="_blank">HPE將AI對話式互動帶進災難復原管理，Zerto新增AI助理與第3方AI平臺整合</a></h3>
+            <div class="ai-takeaway">HPE 旗下 Zerto 平台新增對話式 AI 助理及 Zerto Context Protocol，整合生成式 AI 技術簡化資料保護管理。</div>
             <div class="terms">
-              <span class="term">象印</span><span class="term">台灣子公司</span><span class="term">資料外洩</span><span class="term">資安</span><span class="term">個資</span>
+              <span class="term">HPE</span><span class="term">Zerto</span><span class="term">AI助理</span><span class="term">災難復原</span><span class="term">生成式AI</span>
             </div>
             <div class="byline">
               <b>SCORE</b><span class="score">8/10</span>
@@ -434,21 +445,75 @@
         </div>
       </article>
     
-      <article class="card" data-topic="科技" data-search="【科技早餐】黃仁勳宣告有用的 ai 到來，歐洲 ai 基建與 token 成本同步升溫 nvidia 執行長黃仁勳在 gtc taipei 表示有用的 ai 已到來，並展示 vera cpu 與 rtx spark 等新硬體，加速 ai 在個人電腦的應用。 https://techorange.com/app/uploads/2026/06/003ccbe09a012249-720x400.png 黃仁勳 ai vera cpu rtx spark nvidia gtc taipei">
+      <article class="card" data-topic="科技" data-search="《料理人班乔》公布预告 | state of play 《料理人班喬》是一款以成為偉大廚師為目標的遊戲，在 sony 的 state of play 活動中公布最新預告片。 https://www.ign.com.cn/sm/ign_cn/screenshot/default/youtube-thumbnail-zui-gao-zhi-liang-9_yfep.jpg 料理人班喬 state of play 遊戲預告 料理遊戲 sony">
         <div class="card-inner">
           <div class="card-body">
-            <div class="kicker">TechOrange 科技報橘 [科技]</div>
-            <div class="hook"><span class="q">Q</span>Vera CPU 與 RTX Spark 將如何改變 AI 應用生態？</div>
-            <h3 class="title"><a href="https://techorange.com/2026/06/02/nvidia-ceo-jensen-huang-annnounces-useful-ai-arrived/?utm_source=rss&amp;amp;utm_medium=feed&amp;amp;utm_campaign=techorange_rss" target="_blank">【科技早餐】黃仁勳宣告有用的 AI 到來，歐洲 AI 基建與 Token 成本同步升溫</a></h3>
-            <div class="ai-takeaway">NVIDIA 執行長黃仁勳在 GTC Taipei 表示有用的 AI 已到來，並展示 Vera CPU 與 RTX Spark 等新硬體，加速 AI 在個人電腦的應用。</div>
+            <div class="kicker">IGN 中文 [科技]</div>
+            <div class="hook"><span class="q">Q</span>這款結合料理與冒险元素的作品將在哪些平台首发？</div>
+            <h3 class="title"><a href="https://www.ign.com.cn/bancho-the-chef/60401/da-chu-ban-qiao-gong-bu-yu-gao-state-of-play" target="_blank">《料理人班乔》公布预告 | State of Play</a></h3>
+            <div class="ai-takeaway">《料理人班喬》是一款以成為偉大廚師為目標的遊戲，在 Sony 的 State of Play 活動中公布最新預告片。</div>
             <div class="terms">
-              <span class="term">黃仁勳</span><span class="term">AI</span><span class="term">Vera CPU</span><span class="term">RTX Spark</span><span class="term">NVIDIA</span><span class="term">GTC Taipei</span>
+              <span class="term">料理人班喬</span><span class="term">State of Play</span><span class="term">遊戲預告</span><span class="term">料理遊戲</span><span class="term">Sony</span>
             </div>
             <div class="byline">
-              <b>SCORE</b><span class="score">8/10</span>
+              <b>SCORE</b><span class="score">7/10</span>
             </div>
           </div>
-          <div class="card-thumb"><img src="https://wsrv.nl/?url=https%3A%2F%2Ftechorange.com%2Fapp%2Fuploads%2F2026%2F06%2F003ccbe09a012249-720x400.png" onerror="this.style.display='none'; this.parentElement.classList.add('no-image');" alt=""><span class="card-thumb-label">科技</span></div>
+          <div class="card-thumb"><img src="https://wsrv.nl/?url=https%3A%2F%2Fwww.ign.com.cn%2Fsm%2Fign_cn%2Fscreenshot%2Fdefault%2Fyoutube-thumbnail-zui-gao-zhi-liang-9_yfep.jpg" onerror="this.style.display='none'; this.parentElement.classList.add('no-image');" alt=""><span class="card-thumb-label">科技</span></div>
+        </div>
+      </article>
+    
+      <article class="card" data-topic="科技" data-search="《漫威金刚狼》可关闭血腥特效 玩家可在《漫威金鋼狼》遊戲中一鍵關閉血腥與暴力場景，以獲得更舒適的遊玩體驗。 https://www.ign.com.cn/sm/ign_cn/screenshot/default/wolverine-again-1780437499137_c1an.jpg 漫威金剛狼 血腥特效 遊戲設定 玩家選擇 動作遊戲">
+        <div class="card-inner">
+          <div class="card-body">
+            <div class="kicker">IGN 中文 [科技]</div>
+            <div class="hook"><span class="q">Q</span>開發商是否考虑在不同地區推出差异化的内容分级版本？</div>
+            <h3 class="title"><a href="https://www.ign.com.cn/marvels-wolverine/60422/man-wei-jin-gang-lang-ke-guan-bi-xie-xing-te-xiao" target="_blank">《漫威金刚狼》可关闭血腥特效</a></h3>
+            <div class="ai-takeaway">玩家可在《漫威金鋼狼》遊戲中一鍵關閉血腥與暴力場景，以獲得更舒適的遊玩體驗。</div>
+            <div class="terms">
+              <span class="term">漫威金剛狼</span><span class="term">血腥特效</span><span class="term">遊戲設定</span><span class="term">玩家選擇</span><span class="term">動作遊戲</span>
+            </div>
+            <div class="byline">
+              <b>SCORE</b><span class="score">7/10</span>
+            </div>
+          </div>
+          <div class="card-thumb"><img src="https://wsrv.nl/?url=https%3A%2F%2Fwww.ign.com.cn%2Fsm%2Fign_cn%2Fscreenshot%2Fdefault%2Fwolverine-again-1780437499137_c1an.jpg" onerror="this.style.display='none'; this.parentElement.classList.add('no-image');" alt=""><span class="card-thumb-label">科技</span></div>
+        </div>
+      </article>
+    
+      <article class="card" data-topic="科技" data-search="高價路線不敵 cp 值，美商出售哈根達斯中國門市 美國食品大廠通用磨坊宣布將哈根達斯中國門市出售給以檸季為首的投資者集團，交易預計年內完成。  哈根達斯 通用磨坊 檸季 中國市場 零售併購">
+        <div class="card-inner">
+          <div class="card-body">
+            <div class="kicker">TechNews 科技新報 [科技]</div>
+            <div class="hook"><span class="q">Q</span>檸季收購哈根達斯後，將如何調整其在中國高端冰淇淋市場的營運策略？</div>
+            <h3 class="title"><a href="https://finance.technews.tw/2026/06/03/premium-strategy-yields-value-us-firm-sells-haagen-dazs-china-stores/" target="_blank">高價路線不敵 CP 值，美商出售哈根達斯中國門市</a></h3>
+            <div class="ai-takeaway">美國食品大廠通用磨坊宣布將哈根達斯中國門市出售給以檸季為首的投資者集團，交易預計年內完成。</div>
+            <div class="terms">
+              <span class="term">哈根達斯</span><span class="term">通用磨坊</span><span class="term">檸季</span><span class="term">中國市場</span><span class="term">零售併購</span>
+            </div>
+            <div class="byline">
+              <b>SCORE</b><span class="score">7/10</span>
+            </div>
+          </div>
+          
+        </div>
+      </article>
+    
+      <article class="card" data-topic="科技" data-search="《漫威斗魂》「毁灭骑士」宣传视频 | state of play 《漫威斗魂》公開「毀滅騎士」角色宣傳片，強調 4v4 團隊格鬥玩法與客製化夢之隊系統。 https://www.ign.com.cn/sm/ign_cn/screenshot/default/youtube-thumbnail-zui-gao-zhi-liang-1_ypq5.jpg 漫威斗魂 毀滅騎士 4v4格鬥 state of play 超級英雄遊戲">
+        <div class="card-inner">
+          <div class="card-body">
+            <div class="kicker">IGN 中文 [科技]</div>
+            <div class="hook"><span class="q">Q</span>「毀滅騎士」在 4v4 模式中將扮演什麼樣的關鍵角色定位？</div>
+            <h3 class="title"><a href="https://www.ign.com.cn/marvel-tokon-fighting-souls/60393/man-wei-dou-hun-hui-mie-qi-shi-xuan-chuan-shi-pin-state-of-play" target="_blank">《漫威斗魂》「毁灭骑士」宣传视频 | State of Play</a></h3>
+            <div class="ai-takeaway">《漫威斗魂》公開「毀滅騎士」角色宣傳片，強調 4v4 團隊格鬥玩法與客製化夢之隊系統。</div>
+            <div class="terms">
+              <span class="term">漫威斗魂</span><span class="term">毀滅騎士</span><span class="term">4v4格鬥</span><span class="term">State of Play</span><span class="term">超級英雄遊戲</span>
+            </div>
+            <div class="byline">
+              <b>SCORE</b><span class="score">7/10</span>
+            </div>
+          </div>
+          <div class="card-thumb"><img src="https://wsrv.nl/?url=https%3A%2F%2Fwww.ign.com.cn%2Fsm%2Fign_cn%2Fscreenshot%2Fdefault%2Fyoutube-thumbnail-zui-gao-zhi-liang-1_ypq5.jpg" onerror="this.style.display='none'; this.parentElement.classList.add('no-image');" alt=""><span class="card-thumb-label">科技</span></div>
         </div>
       </article>
     
@@ -458,111 +523,93 @@
     <div class="section-rule cat-heading" style="--cat: #4a5568"><span class="accent">每日綜合快訊</span> General News</div>
     <div class="cards" style="--cat: #4a5568">
       
-      <article class="card" data-topic="綜合" data-search="突破防火長城：中國、伊朗、緬甸、委內瑞拉民間如何抵抗網絡封鎖？ bbc 報導指出，這些國家的民眾透過地下 vpn、星鏈走私、秘密咖啡店等方式突破官方網路封鎖，維持資訊暢通。 https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/e4c7/live/01ba06c0-58f0-11f1-8b8c-6d33e1d5abb6.jpg 網路封鎖 vpn 星鏈 伊朗 中國 緬甸 委內瑞拉">
+      <article class="card" data-topic="綜合" data-search="47°c高溫下「早晨和夜晚已不復存在」：印度最炎熱地區的一天 印度極端高溫前線的日常：當氣溫達到 47°c，「早晨和夜晚」的概念已不復存在，居民生活節奏被迫重新調整。 https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/2568/live/4a93dda0-5d99-11f1-b199-9da46582c1b0.png 印度 極端高溫 氣候變遷 47°c 日常生活">
         <div class="card-inner">
           <div class="card-body">
             <div class="kicker">BBC 中文 [綜合]</div>
-            <div class="hook"><span class="q">Q</span>這些創意抵抗手法能否持久挑戰官方網路審查？</div>
-            <h3 class="title"><a href="https://www.bbc.com/zhongwen/articles/c5yrrr6eq2no/trad?at_medium=RSS&amp;amp;at_campaign=rss" target="_blank">突破防火長城：中國、伊朗、緬甸、委內瑞拉民間如何抵抗網絡封鎖？</a></h3>
-            <div class="ai-takeaway">BBC 報導指出，這些國家的民眾透過地下 VPN、星鏈走私、秘密咖啡店等方式突破官方網路封鎖，維持資訊暢通。</div>
+            <div class="hook"><span class="q">Q</span>當地社區如何適應這種前所未有的氣候變遷帶來的生存挑戰？</div>
+            <h3 class="title"><a href="https://www.bbc.com/zhongwen/articles/c809zjzym4vo/trad?at_medium=RSS&amp;amp;at_campaign=rss" target="_blank">47°C高溫下「早晨和夜晚已不復存在」：印度最炎熱地區的一天</a></h3>
+            <div class="ai-takeaway">印度極端高溫前線的日常：當氣溫達到 47°C，「早晨和夜晚」的概念已不復存在，居民生活節奏被迫重新調整。</div>
             <div class="terms">
-              <span class="term">網路封鎖</span><span class="term">VPN</span><span class="term">星鏈</span><span class="term">伊朗</span><span class="term">中國</span><span class="term">緬甸</span><span class="term">委內瑞拉</span>
+              <span class="term">印度</span><span class="term">極端高溫</span><span class="term">氣候變遷</span><span class="term">47°C</span><span class="term">日常生活</span>
             </div>
             <div class="byline">
               <b>SCORE</b><span class="score">8/10</span>
             </div>
           </div>
-          <div class="card-thumb"><img src="https://wsrv.nl/?url=https%3A%2F%2Fichef.bbci.co.uk%2Face%2Fws%2F240%2Fcpsprodpb%2Fe4c7%2Flive%2F01ba06c0-58f0-11f1-8b8c-6d33e1d5abb6.jpg" onerror="this.style.display='none'; this.parentElement.classList.add('no-image');" alt=""><span class="card-thumb-label">綜合</span></div>
+          <div class="card-thumb"><img src="https://wsrv.nl/?url=https%3A%2F%2Fichef.bbci.co.uk%2Face%2Fws%2F240%2Fcpsprodpb%2F2568%2Flive%2F4a93dda0-5d99-11f1-b199-9da46582c1b0.png" onerror="this.style.display='none'; this.parentElement.classList.add('no-image');" alt=""><span class="card-thumb-label">綜合</span></div>
         </div>
       </article>
     
-      <article class="card" data-topic="綜合" data-search="分析：特朗普需要結束這場戰爭，但伊朗不會退讓 特朗普聲稱強大空中力量足以推翻伊朗政權，但伊朗在多年制裁與戰爭考驗後仍保持強硬，使美國的中東策略陷入僵局。 https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/08db/live/a5895d30-5db6-11f1-8b6d-5b89cbb85786.jpg 特朗普 伊朗 中東 戰爭 美國 外交">
+      <article class="card" data-topic="綜合" data-search="特朗普訪華落幕：美中各取所需，台灣、關稅等未解之事走向何方？ 特朗普訪華行程結束，北京與華盛頓在台灣、關稅等核心議題上仍無實質突破，雙方刻意釋放的「穩定」訊號引發外界質疑。 https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/ce71/live/6052f140-5109-11f1-b332-0d15aaaa8302.jpg 特朗普 訪華 美中關係 台灣問題 貿易談判">
         <div class="card-inner">
           <div class="card-body">
             <div class="kicker">BBC 中文 [綜合]</div>
-            <div class="hook"><span class="q">Q</span>美國若不妥協，是否會陷入更深的軍事泥沼？</div>
-            <h3 class="title"><a href="https://www.bbc.com/zhongwen/articles/cn9przzxyx9o/trad?at_medium=RSS&amp;amp;at_campaign=rss" target="_blank">分析：特朗普需要結束這場戰爭，但伊朗不會退讓</a></h3>
-            <div class="ai-takeaway">特朗普聲稱強大空中力量足以推翻伊朗政權，但伊朗在多年制裁與戰爭考驗後仍保持強硬，使美國的中東策略陷入僵局。</div>
+            <div class="hook"><span class="q">Q</span>美中雙方刻意營造的友好氛圍能持續多久，實質性貿易協議何時才能達成？</div>
+            <h3 class="title"><a href="https://www.bbc.com/zhongwen/articles/czr2pjdj8ypo/trad?at_medium=RSS&amp;amp;at_campaign=rss" target="_blank">特朗普訪華落幕：美中各取所需，台灣、關稅等未解之事走向何方？</a></h3>
+            <div class="ai-takeaway">特朗普訪華行程結束，北京與華盛頓在台灣、關稅等核心議題上仍無實質突破，雙方刻意釋放的「穩定」訊號引發外界質疑。</div>
             <div class="terms">
-              <span class="term">特朗普</span><span class="term">伊朗</span><span class="term">中東</span><span class="term">戰爭</span><span class="term">美國</span><span class="term">外交</span>
+              <span class="term">特朗普</span><span class="term">訪華</span><span class="term">美中關係</span><span class="term">台灣問題</span><span class="term">貿易談判</span>
             </div>
             <div class="byline">
               <b>SCORE</b><span class="score">8/10</span>
             </div>
           </div>
-          <div class="card-thumb"><img src="https://wsrv.nl/?url=https%3A%2F%2Fichef.bbci.co.uk%2Face%2Fws%2F240%2Fcpsprodpb%2F08db%2Flive%2Fa5895d30-5db6-11f1-8b6d-5b89cbb85786.jpg" onerror="this.style.display='none'; this.parentElement.classList.add('no-image');" alt=""><span class="card-thumb-label">綜合</span></div>
+          <div class="card-thumb"><img src="https://wsrv.nl/?url=https%3A%2F%2Fichef.bbci.co.uk%2Face%2Fws%2F240%2Fcpsprodpb%2Fce71%2Flive%2F6052f140-5109-11f1-b332-0d15aaaa8302.jpg" onerror="this.style.display='none'; this.parentElement.classList.add('no-image');" alt=""><span class="card-thumb-label">綜合</span></div>
         </div>
       </article>
     
-      <article class="card" data-topic="綜合" data-search="秘密隧道與非法勞工：中國煤難令人想起黑暗的過去 中國遭遇 15 年來死亡人數最多的煤礦事故，正值大力推動綠色能源轉型之際，顯示能源安全與環保之間的張力。 https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/2489/live/d26bb2d0-5b54-11f1-a62b-2f41c7c3a318.jpg 中國 煤礦 能源 綠色轉型 事故">
+      <article class="card" data-topic="綜合" data-search="陰謀、情書與療方：人工智慧揭示的中世紀秘密 研究人員運用人工智慧技術，解讀梵蒂岡圖書館中一本沉寂四百多年的神秘手稿，發現其中可能隱藏治療人體疾病的古老配方。 https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/2b11/live/db6d9060-5d7a-11f1-8b8c-6d33e1d5abb6.jpg 人工智慧 中世紀手稿 梵蒂岡圖書館 醫學歷史 ai應用">
         <div class="card-inner">
           <div class="card-body">
             <div class="kicker">BBC 中文 [綜合]</div>
-            <div class="hook"><span class="q">Q</span>煤礦災難將如何影響中國的能源政策與減碳目標？</div>
-            <h3 class="title"><a href="https://www.bbc.com/zhongwen/articles/ckgpj127y4mo/trad?at_medium=RSS&amp;amp;at_campaign=rss" target="_blank">秘密隧道與非法勞工：中國煤難令人想起黑暗的過去</a></h3>
-            <div class="ai-takeaway">中國遭遇 15 年來死亡人數最多的煤礦事故，正值大力推動綠色能源轉型之際，顯示能源安全與環保之間的張力。</div>
+            <div class="hook"><span class="q">Q</span>AI 解讀古代文獻的突破是否將開啟醫學史研究的新篇章？</div>
+            <h3 class="title"><a href="https://www.bbc.com/zhongwen/articles/c1k2d7xnyz9o/trad?at_medium=RSS&amp;amp;at_campaign=rss" target="_blank">陰謀、情書與療方：人工智慧揭示的中世紀秘密</a></h3>
+            <div class="ai-takeaway">研究人員運用人工智慧技術，解讀梵蒂岡圖書館中一本沉寂四百多年的神秘手稿，發現其中可能隱藏治療人體疾病的古老配方。</div>
             <div class="terms">
-              <span class="term">中國</span><span class="term">煤礦</span><span class="term">能源</span><span class="term">綠色轉型</span><span class="term">事故</span>
+              <span class="term">人工智慧</span><span class="term">中世紀手稿</span><span class="term">梵蒂岡圖書館</span><span class="term">醫學歷史</span><span class="term">AI應用</span>
+            </div>
+            <div class="byline">
+              <b>SCORE</b><span class="score">8/10</span>
+            </div>
+          </div>
+          <div class="card-thumb"><img src="https://wsrv.nl/?url=https%3A%2F%2Fichef.bbci.co.uk%2Face%2Fws%2F240%2Fcpsprodpb%2F2b11%2Flive%2Fdb6d9060-5d7a-11f1-8b8c-6d33e1d5abb6.jpg" onerror="this.style.display='none'; this.parentElement.classList.add('no-image');" alt=""><span class="card-thumb-label">綜合</span></div>
+        </div>
+      </article>
+    
+      <article class="card" data-topic="綜合" data-search="特朗普時隔九年再度訪華，中國年輕一代的「美國夢」在褪色嗎？ 特朗普時隔九年再度訪華，在中國社交媒體引發討論，年輕一代對美國的認知與態度成為焦點話題。 https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/2462/live/1fe55320-4f40-11f1-b010-590460292038.jpg 特朗普 訪華 中國年輕人 美國夢 社群媒體">
+        <div class="card-inner">
+          <div class="card-body">
+            <div class="kicker">BBC 中文 [綜合]</div>
+            <div class="hook"><span class="q">Q</span>中國 Z 世代如何看待中美關係的未來發展與個人發展機會？</div>
+            <h3 class="title"><a href="https://www.bbc.com/zhongwen/articles/c362j4npz5xo/trad?at_medium=RSS&amp;amp;at_campaign=rss" target="_blank">特朗普時隔九年再度訪華，中國年輕一代的「美國夢」在褪色嗎？</a></h3>
+            <div class="ai-takeaway">特朗普時隔九年再度訪華，在中國社交媒體引發討論，年輕一代對美國的認知與態度成為焦點話題。</div>
+            <div class="terms">
+              <span class="term">特朗普</span><span class="term">訪華</span><span class="term">中國年輕人</span><span class="term">美國夢</span><span class="term">社群媒體</span>
             </div>
             <div class="byline">
               <b>SCORE</b><span class="score">7/10</span>
             </div>
           </div>
-          <div class="card-thumb"><img src="https://wsrv.nl/?url=https%3A%2F%2Fichef.bbci.co.uk%2Face%2Fws%2F240%2Fcpsprodpb%2F2489%2Flive%2Fd26bb2d0-5b54-11f1-a62b-2f41c7c3a318.jpg" onerror="this.style.display='none'; this.parentElement.classList.add('no-image');" alt=""><span class="card-thumb-label">綜合</span></div>
+          <div class="card-thumb"><img src="https://wsrv.nl/?url=https%3A%2F%2Fichef.bbci.co.uk%2Face%2Fws%2F240%2Fcpsprodpb%2F2462%2Flive%2F1fe55320-4f40-11f1-b010-590460292038.jpg" onerror="this.style.display='none'; this.parentElement.classList.add('no-image');" alt=""><span class="card-thumb-label">綜合</span></div>
         </div>
       </article>
     
-      <article class="card" data-topic="綜合" data-search="打造工程師之國？中國取消「無用」的大學學科 在 ai 裁員衝擊全球科技業之際，中国大幅裁撤文史哲等「無用」學科，以培養更多工程技術人才迎合未來產業需求。 https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/fc32/live/0f6c7fd0-5da2-11f1-b682-cf91850925ea.jpg 中國 大學 學科 工程師 ai 教育">
+      <article class="card" data-topic="綜合" data-search="沉迷白日夢的人  生活在兩個平行世界裡 研究指出沉迷於白日夢可能是一種適應不良的心理狀態，患者常因孤獨、創傷或情緒需求未被滿足而陷入幻想干擾日常生活。 https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/bd17/live/938574a0-5e44-11f1-89a3-d1f559421220.jpg 白日夢 心理健康 適應不良 心理學 創傷">
         <div class="card-inner">
           <div class="card-body">
             <div class="kicker">BBC 中文 [綜合]</div>
-            <div class="hook"><span class="q">Q</span>取消文史哲學科能否真的培養出符合 AI 時代需求的工程師？</div>
-            <h3 class="title"><a href="https://www.bbc.com/zhongwen/articles/c87qzd4ryp4o/trad?at_medium=RSS&amp;amp;at_campaign=rss" target="_blank">打造工程師之國？中國取消「無用」的大學學科</a></h3>
-            <div class="ai-takeaway">在 AI 裁員衝擊全球科技業之際，中国大幅裁撤文史哲等「無用」學科，以培養更多工程技術人才迎合未來產業需求。</div>
+            <div class="hook"><span class="q">Q</span>醫學界是否應該將適應不良型白日夢納入正式的精神疾病診斷分類？</div>
+            <h3 class="title"><a href="https://www.bbc.com/zhongwen/articles/cwy29wdyxq6o/trad?at_medium=RSS&amp;amp;at_campaign=rss" target="_blank">沉迷白日夢的人  生活在兩個平行世界裡</a></h3>
+            <div class="ai-takeaway">研究指出沉迷於白日夢可能是一種適應不良的心理狀態，患者常因孤獨、創傷或情緒需求未被滿足而陷入幻想干擾日常生活。</div>
             <div class="terms">
-              <span class="term">中國</span><span class="term">大學</span><span class="term">學科</span><span class="term">工程師</span><span class="term">AI</span><span class="term">教育</span>
+              <span class="term">白日夢</span><span class="term">心理健康</span><span class="term">適應不良</span><span class="term">心理學</span><span class="term">創傷</span>
             </div>
             <div class="byline">
               <b>SCORE</b><span class="score">7/10</span>
             </div>
           </div>
-          <div class="card-thumb"><img src="https://wsrv.nl/?url=https%3A%2F%2Fichef.bbci.co.uk%2Face%2Fws%2F240%2Fcpsprodpb%2Ffc32%2Flive%2F0f6c7fd0-5da2-11f1-b682-cf91850925ea.jpg" onerror="this.style.display='none'; this.parentElement.classList.add('no-image');" alt=""><span class="card-thumb-label">綜合</span></div>
-        </div>
-      </article>
-    
-      <article class="card" data-topic="綜合" data-search="美國「失控」的小費文化是否正在向海外蔓延？ 美國服務生對低於 20% 小費不滿，帶動其他國家小費水準逐步上升，引發服務業薪酬結構的討論。 https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/7b48/live/fcd95050-5770-11f1-907e-c389fdeeba6e.jpg 小費 美國 服務業 全球趨勢">
-        <div class="card-inner">
-          <div class="card-body">
-            <div class="kicker">BBC 中文 [綜合]</div>
-            <div class="hook"><span class="q">Q</span>小費文化全球化會對各國服務業產生什麼影響？</div>
-            <h3 class="title"><a href="https://www.bbc.com/zhongwen/articles/cy82w2e91dwo/trad?at_medium=RSS&amp;amp;at_campaign=rss" target="_blank">美國「失控」的小費文化是否正在向海外蔓延？</a></h3>
-            <div class="ai-takeaway">美國服務生對低於 20% 小費不滿，帶動其他國家小費水準逐步上升，引發服務業薪酬結構的討論。</div>
-            <div class="terms">
-              <span class="term">小費</span><span class="term">美國</span><span class="term">服務業</span><span class="term">全球趨勢</span>
-            </div>
-            <div class="byline">
-              <b>SCORE</b><span class="score">6/10</span>
-            </div>
-          </div>
-          <div class="card-thumb"><img src="https://wsrv.nl/?url=https%3A%2F%2Fichef.bbci.co.uk%2Face%2Fws%2F240%2Fcpsprodpb%2F7b48%2Flive%2Ffcd95050-5770-11f1-907e-c389fdeeba6e.jpg" onerror="this.style.display='none'; this.parentElement.classList.add('no-image');" alt=""><span class="card-thumb-label">綜合</span></div>
-        </div>
-      </article>
-    
-      <article class="card" data-topic="綜合" data-search="法國網球公開賽：被拒絕握手的王欣瑜，做錯了什麼？ 在不使用電子線審和鷹眼的法網賽場，王欣瑜因拒絕與裁判握手而引發争议，凸顯傳統裁判制度的張力。 https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/fc60/live/ad703df0-5b33-11f1-adc4-274fecea7050.jpg 法網 王欣瑜 裁判 爭議 網球">
-        <div class="card-inner">
-          <div class="card-body">
-            <div class="kicker">BBC 中文 [綜合]</div>
-            <div class="hook"><span class="q">Q</span>法網堅持人工裁決是否會影響賽事公平性？</div>
-            <h3 class="title"><a href="https://www.bbc.com/zhongwen/articles/c3w20432v3zo/trad?at_medium=RSS&amp;amp;at_campaign=rss" target="_blank">法國網球公開賽：被拒絕握手的王欣瑜，做錯了什麼？</a></h3>
-            <div class="ai-takeaway">在不使用電子線審和鷹眼的法網賽場，王欣瑜因拒絕與裁判握手而引發争议，凸顯傳統裁判制度的張力。</div>
-            <div class="terms">
-              <span class="term">法網</span><span class="term">王欣瑜</span><span class="term">裁判</span><span class="term">爭議</span><span class="term">網球</span>
-            </div>
-            <div class="byline">
-              <b>SCORE</b><span class="score">6/10</span>
-            </div>
-          </div>
-          <div class="card-thumb"><img src="https://wsrv.nl/?url=https%3A%2F%2Fichef.bbci.co.uk%2Face%2Fws%2F240%2Fcpsprodpb%2Ffc60%2Flive%2Fad703df0-5b33-11f1-adc4-274fecea7050.jpg" onerror="this.style.display='none'; this.parentElement.classList.add('no-image');" alt=""><span class="card-thumb-label">綜合</span></div>
+          <div class="card-thumb"><img src="https://wsrv.nl/?url=https%3A%2F%2Fichef.bbci.co.uk%2Face%2Fws%2F240%2Fcpsprodpb%2Fbd17%2Flive%2F938574a0-5e44-11f1-89a3-d1f559421220.jpg" onerror="this.style.display='none'; this.parentElement.classList.add('no-image');" alt=""><span class="card-thumb-label">綜合</span></div>
         </div>
       </article>
     
@@ -572,111 +619,111 @@
     <div class="section-rule cat-heading" style="--cat: #c25100"><span class="accent">體育競技動態</span> Sports Arena</div>
     <div class="cards" style="--cat: #c25100">
       
-      <article class="card" data-topic="運動" data-search="【2026世界盃】日本篇（一）：森保一的 26 人名單與凡事徹底的豪賭 日本國家隊主教練森保一公布 26 人名單，兼顧經驗與新生代，展現「凡事徹底」的執教哲學，力拚佳績。 https://bucket-image.inkmaginecms.com/version/social/9dde7c0f-a597-445c-80dd-9a93db8a4006/image/2026/05/631c76fa-1099-4cfd-b481-741dc3e0c2f5.webp 日本 世界盃 森保一 2026 名單 足球">
+      <article class="card" data-topic="運動" data-search="從「情人節棄將」到搶七射手奇蹟！julian champagnie 緊抱致勝球，逆襲轟下雷霆、昂首前進家鄉籃球聖地 julian champagnie 在關鍵搶七大戰中展現神奇表現，從被球隊放棄的低谷逆襲成為致勝英雄，帶領球隊前進家鄉籃球聖地。 https://bucket-image.inkmaginecms.com/version/social/9dde7c0f-a597-445c-80dd-9a93db8a4006/image/2026/06/1b607892-9b31-443d-ad23-af58e28397b1.webp julian champagnie 搶七大戰 雷霆 nba 奇蹟逆轉">
         <div class="card-inner">
           <div class="card-body">
             <div class="kicker">運動視界 [運動]</div>
-            <div class="hook"><span class="q">Q</span>森保一的豪賭式名單能否助日本在世界盃突破八強？</div>
-            <h3 class="title"><a href="https://www.sportsv.net/articles/126686" target="_blank">【2026世界盃】日本篇（一）：森保一的 26 人名單與凡事徹底的豪賭</a></h3>
-            <div class="ai-takeaway">日本國家隊主教練森保一公布 26 人名單，兼顧經驗與新生代，展現「凡事徹底」的執教哲學，力拚佳績。</div>
+            <div class="hook"><span class="q">Q</span>Champagnie 的職業生涯轉折點是否為其他被低估球員樹立了典範？</div>
+            <h3 class="title"><a href="https://www.sportsv.net/articles/126698" target="_blank">從「情人節棄將」到搶七射手奇蹟！Julian Champagnie 緊抱致勝球，逆襲轟下雷霆、昂首前進家鄉籃球聖地</a></h3>
+            <div class="ai-takeaway">Julian Champagnie 在關鍵搶七大戰中展現神奇表現，從被球隊放棄的低谷逆襲成為致勝英雄，帶領球隊前進家鄉籃球聖地。</div>
             <div class="terms">
-              <span class="term">日本</span><span class="term">世界盃</span><span class="term">森保一</span><span class="term">2026</span><span class="term">名單</span><span class="term">足球</span>
+              <span class="term">Julian Champagnie</span><span class="term">搶七大戰</span><span class="term">雷霆</span><span class="term">NBA</span><span class="term">奇蹟逆轉</span>
             </div>
             <div class="byline">
               <b>SCORE</b><span class="score">8/10</span>
             </div>
           </div>
-          <div class="card-thumb"><img src="https://wsrv.nl/?url=https%3A%2F%2Fbucket-image.inkmaginecms.com%2Fversion%2Fsocial%2F9dde7c0f-a597-445c-80dd-9a93db8a4006%2Fimage%2F2026%2F05%2F631c76fa-1099-4cfd-b481-741dc3e0c2f5.webp" onerror="this.style.display='none'; this.parentElement.classList.add('no-image');" alt=""><span class="card-thumb-label">運動</span></div>
+          <div class="card-thumb"><img src="https://wsrv.nl/?url=https%3A%2F%2Fbucket-image.inkmaginecms.com%2Fversion%2Fsocial%2F9dde7c0f-a597-445c-80dd-9a93db8a4006%2Fimage%2F2026%2F06%2F1b607892-9b31-443d-ad23-af58e28397b1.webp" onerror="this.style.display='none'; this.parentElement.classList.add('no-image');" alt=""><span class="card-thumb-label">運動</span></div>
         </div>
       </article>
     
-      <article class="card" data-topic="運動" data-search="marcos senesi：熱刺後場技術升級的關鍵拼圖 阿根廷中後衛 marcos senesi 的技術與防守意識為熱刺後防注入新活力，提升球隊傳控與高空球防守能力。 https://bucket-image.inkmaginecms.com/version/social/9dde7c0f-a597-445c-80dd-9a93db8a4006/image/2026/05/f464d7d2-25ab-4a62-89a1-62b54d6c46ab.webp marcos senesi 熱刺 英超 後防 轉會">
+      <article class="card" data-topic="運動" data-search="巴黎奪下25/26賽季歐洲冠軍盃 巴黎聖日耳曼在激烈的歐洲冠軍盃決賽中擊敗對手，成功奪得 202526 賽季冠軍。 https://bucket-image.inkmaginecms.com/version/social/9dde7c0f-a597-445c-80dd-9a93db8a4006/image/2026/06/bd5ae903-3636-45aa-ad74-d397cf1133d9.webp 巴黎聖日耳曼 歐洲冠軍盃 足球 202526賽季 冠軍">
         <div class="card-inner">
           <div class="card-body">
             <div class="kicker">運動視界 [運動]</div>
-            <div class="hook"><span class="q">Q</span>Senesi 的加盟能否助熱刺挑戰英超前四？</div>
-            <h3 class="title"><a href="https://www.sportsv.net/articles/126646" target="_blank">Marcos Senesi：熱刺後場技術升級的關鍵拼圖</a></h3>
-            <div class="ai-takeaway">阿根廷中後衛 Marcos Senesi 的技術與防守意識為熱刺後防注入新活力，提升球隊傳控與高空球防守能力。</div>
+            <div class="hook"><span class="q">Q</span>巴黎聖日耳曼本賽季的奪冠陣容與戰術體系有哪些關鍵改變？</div>
+            <h3 class="title"><a href="https://www.sportsv.net/articles/126707" target="_blank">巴黎奪下25/26賽季歐洲冠軍盃</a></h3>
+            <div class="ai-takeaway">巴黎聖日耳曼在激烈的歐洲冠軍盃決賽中擊敗對手，成功奪得 202526 賽季冠軍。</div>
             <div class="terms">
-              <span class="term">Marcos Senesi</span><span class="term">熱刺</span><span class="term">英超</span><span class="term">後防</span><span class="term">轉會</span>
+              <span class="term">巴黎聖日耳曼</span><span class="term">歐洲冠軍盃</span><span class="term">足球</span><span class="term">202526賽季</span><span class="term">冠軍</span>
             </div>
             <div class="byline">
-              <b>SCORE</b><span class="score">7/10</span>
+              <b>SCORE</b><span class="score">8/10</span>
             </div>
           </div>
-          <div class="card-thumb"><img src="https://wsrv.nl/?url=https%3A%2F%2Fbucket-image.inkmaginecms.com%2Fversion%2Fsocial%2F9dde7c0f-a597-445c-80dd-9a93db8a4006%2Fimage%2F2026%2F05%2Ff464d7d2-25ab-4a62-89a1-62b54d6c46ab.webp" onerror="this.style.display='none'; this.parentElement.classList.add('no-image');" alt=""><span class="card-thumb-label">運動</span></div>
+          <div class="card-thumb"><img src="https://wsrv.nl/?url=https%3A%2F%2Fbucket-image.inkmaginecms.com%2Fversion%2Fsocial%2F9dde7c0f-a597-445c-80dd-9a93db8a4006%2Fimage%2F2026%2F06%2Fbd5ae903-3636-45aa-ad74-d397cf1133d9.webp" onerror="this.style.display='none'; this.parentElement.classList.add('no-image');" alt=""><span class="card-thumb-label">運動</span></div>
         </div>
       </article>
     
-      <article class="card" data-topic="運動" data-search="世界盃a組捷克分析：定位球之王與空中戰的霸主 捷克國家隊以定位球與高空球戰術聞名，擁有身材劣勢球員與空中爭頂優勢，是 a 組的威脅。 https://bucket-image.inkmaginecms.com/version/social/9dde7c0f-a597-445c-80dd-9a93db8a4006/image/2026/06/b987098e-bf72-46b2-85b5-d0597c1c5eef.webp 世界盃 捷克 定位球 空中戰 a 組">
+      <article class="card" data-topic="運動" data-search="世界盃a組南韓分析：亞洲最成熟的進攻體系之一 南韓國家隊被評價為 a 組中進攻體系最為成熟的球隊之一，其战术配合與球員素質備受關注。 https://bucket-image.inkmaginecms.com/version/social/9dde7c0f-a597-445c-80dd-9a93db8a4006/image/2026/06/1a703529-c35f-4c86-b8fd-8e5961eef23d.webp 世界盃 南韓 a組 進攻體系 足球戰力分析">
         <div class="card-inner">
           <div class="card-body">
             <div class="kicker">運動視界 [運動]</div>
-            <div class="hook"><span class="q">Q</span>捷克的高空戰術能否在世界盃舞台上突破強隊防守？</div>
-            <h3 class="title"><a href="https://www.sportsv.net/articles/126712" target="_blank">世界盃A組捷克分析：定位球之王與空中戰的霸主</a></h3>
-            <div class="ai-takeaway">捷克國家隊以定位球與高空球戰術聞名，擁有身材劣勢球員與空中爭頂優勢，是 A 組的威脅。</div>
-            <div class="terms">
-              <span class="term">世界盃</span><span class="term">捷克</span><span class="term">定位球</span><span class="term">空中戰</span><span class="term">A 組</span>
-            </div>
-            <div class="byline">
-              <b>SCORE</b><span class="score">7/10</span>
-            </div>
-          </div>
-          <div class="card-thumb"><img src="https://wsrv.nl/?url=https%3A%2F%2Fbucket-image.inkmaginecms.com%2Fversion%2Fsocial%2F9dde7c0f-a597-445c-80dd-9a93db8a4006%2Fimage%2F2026%2F06%2Fb987098e-bf72-46b2-85b5-d0597c1c5eef.webp" onerror="this.style.display='none'; this.parentElement.classList.add('no-image');" alt=""><span class="card-thumb-label">運動</span></div>
-        </div>
-      </article>
-    
-      <article class="card" data-topic="運動" data-search="世界盃a組南韓分析：亞洲最成熟的進攻體系之一 南韓隊以快速邊路突破與團隊配合著稱，進攻體系成熟，是 a 組中最具威脅的球隊之一。 https://bucket-image.inkmaginecms.com/version/social/9dde7c0f-a597-445c-80dd-9a93db8a4006/image/2026/06/396b6933-2fc4-40b2-ae5e-a8d9637c3915.webp 世界盃 南韓 進攻 a 組 足球">
-        <div class="card-inner">
-          <div class="card-body">
-            <div class="kicker">運動視界 [運動]</div>
-            <div class="hook"><span class="q">Q</span>南韓的進攻體系能否在世界杯對抗歐美強隊？</div>
+            <div class="hook"><span class="q">Q</span>南韓隊在接下來的小組賽中將如何運用其技術優勢應對不同對手的防守策略？</div>
             <h3 class="title"><a href="https://www.sportsv.net/articles/126711" target="_blank">世界盃A組南韓分析：亞洲最成熟的進攻體系之一</a></h3>
-            <div class="ai-takeaway">南韓隊以快速邊路突破與團隊配合著稱，進攻體系成熟，是 A 組中最具威脅的球隊之一。</div>
+            <div class="ai-takeaway">南韓國家隊被評價為 A 組中進攻體系最為成熟的球隊之一，其战术配合與球員素質備受關注。</div>
             <div class="terms">
-              <span class="term">世界盃</span><span class="term">南韓</span><span class="term">進攻</span><span class="term">A 組</span><span class="term">足球</span>
+              <span class="term">世界盃</span><span class="term">南韓</span><span class="term">A組</span><span class="term">進攻體系</span><span class="term">足球戰力分析</span>
             </div>
             <div class="byline">
               <b>SCORE</b><span class="score">7/10</span>
             </div>
           </div>
-          <div class="card-thumb"><img src="https://wsrv.nl/?url=https%3A%2F%2Fbucket-image.inkmaginecms.com%2Fversion%2Fsocial%2F9dde7c0f-a597-445c-80dd-9a93db8a4006%2Fimage%2F2026%2F06%2F396b6933-2fc4-40b2-ae5e-a8d9637c3915.webp" onerror="this.style.display='none'; this.parentElement.classList.add('no-image');" alt=""><span class="card-thumb-label">運動</span></div>
+          <div class="card-thumb"><img src="https://wsrv.nl/?url=https%3A%2F%2Fbucket-image.inkmaginecms.com%2Fversion%2Fsocial%2F9dde7c0f-a597-445c-80dd-9a93db8a4006%2Fimage%2F2026%2F06%2F1a703529-c35f-4c86-b8fd-8e5961eef23d.webp" onerror="this.style.display='none'; this.parentElement.classList.add('no-image');" alt=""><span class="card-thumb-label">運動</span></div>
         </div>
       </article>
     
-      <article class="card" data-topic="運動" data-search="《tpbl(s2)季後賽》國王主場力壓夢想家踢館率先聽牌，  賽程、比分總整理(持續更新) tpbl 第二季季後賽中，國王隊在主場以關鍵表現擊敗夢想家，取得聽牌優勢，系列賽進入關鍵階段。 https://bucket-image.inkmaginecms.com/version/social/9dde7c0f-a597-445c-80dd-9a93db8a4006/image/2026/06/c35177b0-44bc-457b-b232-517f64fd0c1a.webp tpbl 季後賽 國王 夢想家 籃球">
+      <article class="card" data-topic="運動" data-search="《tpbl(s2)總冠軍賽》奧帝罰球是噩夢又現，國王怎麼再次折服夢想家手握聽牌？ tpbl 第二季總冠軍賽第五戰，奧帝的關鍵罰球幫助夢想家再次擊敗國王，成功握有聽牌優勢。 https://bucket-image.inkmaginecms.com/version/social/9dde7c0f-a597-445c-80dd-9a93db8a4006/image/2026/06/0b18b4a8-c10f-4bff-926d-db16b62d7b3c.webp tpbl 總冠軍賽 夢想家 國王 罰球">
         <div class="card-inner">
           <div class="card-body">
             <div class="kicker">運動視界 [運動]</div>
-            <div class="hook"><span class="q">Q</span>國王能否在接下來的客場挑戰中完成聽牌？</div>
-            <h3 class="title"><a href="https://www.sportsv.net/articles/126395" target="_blank">《TPBL(S2)季後賽》國王主場力壓夢想家踢館率先聽牌，  賽程、比分總整理(持續更新)</a></h3>
-            <div class="ai-takeaway">TPBL 第二季季後賽中，國王隊在主場以關鍵表現擊敗夢想家，取得聽牌優勢，系列賽進入關鍵階段。</div>
+            <div class="hook"><span class="q">Q</span>國王在關鍵時刻連續失誤的原因究竟是壓力過大還是戰術設計有問題？</div>
+            <h3 class="title"><a href="https://www.sportsv.net/articles/126706" target="_blank">《TPBL(S2)總冠軍賽》奧帝罰球是噩夢又現，國王怎麼再次折服夢想家手握聽牌？</a></h3>
+            <div class="ai-takeaway">TPBL 第二季總冠軍賽第五戰，奧帝的關鍵罰球幫助夢想家再次擊敗國王，成功握有聽牌優勢。</div>
             <div class="terms">
-              <span class="term">TPBL</span><span class="term">季後賽</span><span class="term">國王</span><span class="term">夢想家</span><span class="term">籃球</span>
+              <span class="term">TPBL</span><span class="term">總冠軍賽</span><span class="term">夢想家</span><span class="term">國王</span><span class="term">罰球</span>
             </div>
             <div class="byline">
               <b>SCORE</b><span class="score">7/10</span>
             </div>
           </div>
-          <div class="card-thumb"><img src="https://wsrv.nl/?url=https%3A%2F%2Fbucket-image.inkmaginecms.com%2Fversion%2Fsocial%2F9dde7c0f-a597-445c-80dd-9a93db8a4006%2Fimage%2F2026%2F06%2Fc35177b0-44bc-457b-b232-517f64fd0c1a.webp" onerror="this.style.display='none'; this.parentElement.classList.add('no-image');" alt=""><span class="card-thumb-label">運動</span></div>
+          <div class="card-thumb"><img src="https://wsrv.nl/?url=https%3A%2F%2Fbucket-image.inkmaginecms.com%2Fversion%2Fsocial%2F9dde7c0f-a597-445c-80dd-9a93db8a4006%2Fimage%2F2026%2F06%2F0b18b4a8-c10f-4bff-926d-db16b62d7b3c.webp" onerror="this.style.display='none'; this.parentElement.classList.add('no-image');" alt=""><span class="card-thumb-label">運動</span></div>
         </div>
       </article>
     
-      <article class="card" data-topic="運動" data-search="wnba年中激戰再起：一文看懂主席盃（commissioner&amp;amp;apos;s cup）與今年熱門看點 wnba 主席盃（commissioner’s cup）再度登場，集合本賽季熱門球員與戰術看點，為季中錦標賽增添激烈競爭。 https://bucket-image.inkmaginecms.com/version/social/9dde7c0f-a597-445c-80dd-9a93db8a4006/image/2026/05/122e4692-44f8-4ed5-8bb4-26287b6037e1.webp wnba 主席盃 年中 籃球 賽制">
+      <article class="card" data-topic="運動" data-search="從快腿到大砲 下一個轉職者在哪裡 現代籃球趨勢促使傳統「3d 球員」必須開發更多進攻技能，本文探討球員如何在體能型与技术型之間成功轉型。 https://bucket-image.inkmaginecms.com/version/social/9dde7c0f-a597-445c-80dd-9a93db8a4006/image/2026/06/bf157cb8-614b-4582-a8dd-08ef18838203.webp 球員轉型 3d球員 全能球員 nba趨勢 籃球技術">
         <div class="card-inner">
           <div class="card-body">
             <div class="kicker">運動視界 [運動]</div>
-            <div class="hook"><span class="q">Q</span>主席盃冠軍將如何影響球隊本賽季的最終排名？</div>
-            <h3 class="title"><a href="https://www.sportsv.net/articles/126692" target="_blank">WNBA年中激戰再起：一文看懂主席盃（Commissioner&amp;amp;apos;s Cup）與今年熱門看點</a></h3>
-            <div class="ai-takeaway">WNBA 主席盃（Commissioner’s Cup）再度登場，集合本賽季熱門球員與戰術看點，為季中錦標賽增添激烈競爭。</div>
+            <div class="hook"><span class="q">Q</span>哪些現有 NBA 球員是成功從「3D」轉型為進攻核心的最佳案例？</div>
+            <h3 class="title"><a href="https://www.sportsv.net/articles/126729" target="_blank">從快腿到大砲 下一個轉職者在哪裡</a></h3>
+            <div class="ai-takeaway">現代籃球趨勢促使傳統「3D 球員」必須開發更多進攻技能，本文探討球員如何在體能型与技术型之間成功轉型。</div>
             <div class="terms">
-              <span class="term">WNBA</span><span class="term">主席盃</span><span class="term">年中</span><span class="term">籃球</span><span class="term">賽制</span>
+              <span class="term">球員轉型</span><span class="term">3D球員</span><span class="term">全能球員</span><span class="term">NBA趨勢</span><span class="term">籃球技術</span>
             </div>
             <div class="byline">
               <b>SCORE</b><span class="score">7/10</span>
             </div>
           </div>
-          <div class="card-thumb"><img src="https://wsrv.nl/?url=https%3A%2F%2Fbucket-image.inkmaginecms.com%2Fversion%2Fsocial%2F9dde7c0f-a597-445c-80dd-9a93db8a4006%2Fimage%2F2026%2F05%2F122e4692-44f8-4ed5-8bb4-26287b6037e1.webp" onerror="this.style.display='none'; this.parentElement.classList.add('no-image');" alt=""><span class="card-thumb-label">運動</span></div>
+          <div class="card-thumb"><img src="https://wsrv.nl/?url=https%3A%2F%2Fbucket-image.inkmaginecms.com%2Fversion%2Fsocial%2F9dde7c0f-a597-445c-80dd-9a93db8a4006%2Fimage%2F2026%2F06%2Fbf157cb8-614b-4582-a8dd-08ef18838203.webp" onerror="this.style.display='none'; this.parentElement.classList.add('no-image');" alt=""><span class="card-thumb-label">運動</span></div>
+        </div>
+      </article>
+    
+      <article class="card" data-topic="運動" data-search="大巨蛋週末的商業煉金術：集大成者為富邦悍將 富邦悍將充分利用台北大巨蛋的週末賽事機會，透過多元商業活動與粉絲互動創造可觀收益。 https://bucket-image.inkmaginecms.com/version/social/9dde7c0f-a597-445c-80dd-9a93db8a4006/image/2026/06/a7225d20-cf46-4325-94dd-33ea314fbd27.webp 台北大巨蛋 富邦悍將 週末效應 商業收益 中華職棒">
+        <div class="card-inner">
+          <div class="card-body">
+            <div class="kicker">運動視界 [運動]</div>
+            <div class="hook"><span class="q">Q</span>其他中職球隊是否應該借鑒富邦的商業模式以提升整體聯盟收入？</div>
+            <h3 class="title"><a href="https://www.sportsv.net/articles/126708" target="_blank">大巨蛋週末的商業煉金術：集大成者為富邦悍將</a></h3>
+            <div class="ai-takeaway">富邦悍將充分利用台北大巨蛋的週末賽事機會，透過多元商業活動與粉絲互動創造可觀收益。</div>
+            <div class="terms">
+              <span class="term">台北大巨蛋</span><span class="term">富邦悍將</span><span class="term">週末效應</span><span class="term">商業收益</span><span class="term">中華職棒</span>
+            </div>
+            <div class="byline">
+              <b>SCORE</b><span class="score">7/10</span>
+            </div>
+          </div>
+          <div class="card-thumb"><img src="https://wsrv.nl/?url=https%3A%2F%2Fbucket-image.inkmaginecms.com%2Fversion%2Fsocial%2F9dde7c0f-a597-445c-80dd-9a93db8a4006%2Fimage%2F2026%2F06%2Fa7225d20-cf46-4325-94dd-33ea314fbd27.webp" onerror="this.style.display='none'; this.parentElement.classList.add('no-image');" alt=""><span class="card-thumb-label">運動</span></div>
         </div>
       </article>
     
@@ -686,33 +733,51 @@
     <div class="section-rule cat-heading" style="--cat: #1b4d3e"><span class="accent">財經市場精選</span> Finance &amp; Markets</div>
     <div class="cards" style="--cat: #1b4d3e">
       
-      <article class="card" data-topic="財經" data-search="hpe 伺服器營收遠優、調高年度財測  盤後暴衝 30% 慧與科技（hpe）第二季財報顯示伺服器業務表現亮眼，營收大幅超越預期，並將全年財測調高，盤後股價急升30%。  慧與科技 伺服器 財測 科技股 ai">
+      <article class="card" data-topic="財經" data-search="台積電導入輝達 cuda-x 服務與 ai 技術，加速新世代 ai 晶片開發製造 台積電引入輝達的 cuda‑x 平台與 ai 技術，幫助代工客戶加速開發高效能 ai 晶片，提升製造效率。  台積電 輝達 cuda‑x ai 晶片 半導體 先進製造 合作">
         <div class="card-inner">
           <div class="card-body">
             <div class="kicker">財經新報 [財經]</div>
-            <div class="hook"><span class="q">Q</span>HPE 的伺服器業務能否持續高速增長，帶動其股價持續上揚？</div>
-            <h3 class="title"><a href="https://finance.technews.tw/2026/06/02/hpe-reports-fiscal-2026-second-quarter-results/" target="_blank">HPE 伺服器營收遠優、調高年度財測  盤後暴衝 30%</a></h3>
-            <div class="ai-takeaway">慧與科技（HPE）第二季財報顯示伺服器業務表現亮眼，營收大幅超越預期，並將全年財測調高，盤後股價急升30%。</div>
+            <div class="hook"><span class="q">Q</span>台積電與輝達的深度合作將如何重塑 AI 晶片的開發與生產速度？</div>
+            <h3 class="title"><a href="https://finance.technews.tw/2026/06/01/tsmc-is-adopting-nvidias-cuda-x-services-and-ai-technology/" target="_blank">台積電導入輝達 CUDA-X 服務與 AI 技術，加速新世代 AI 晶片開發製造</a></h3>
+            <div class="ai-takeaway">台積電引入輝達的 CUDA‑X 平台與 AI 技術，幫助代工客戶加速開發高效能 AI 晶片，提升製造效率。</div>
             <div class="terms">
-              <span class="term">慧與科技</span><span class="term">伺服器</span><span class="term">財測</span><span class="term">科技股</span><span class="term">AI</span>
+              <span class="term">台積電</span><span class="term">輝達</span><span class="term">CUDA‑X</span><span class="term">AI 晶片</span><span class="term">半導體</span><span class="term">先進製造</span><span class="term">合作</span>
             </div>
             <div class="byline">
-              <b>SCORE</b><span class="score">8/10</span>
+              <b>SCORE</b><span class="score">9/10</span>
             </div>
           </div>
           
         </div>
       </article>
     
-      <article class="card" data-topic="財經" data-search="computex 2026 帶領 ai 走進現實！貿協黃志芳：token 消耗呈倍數增加 computex 2026 將展示 ai 應用於實際場景，黃志芳指出 ai 模型的 token 消耗正以倍數增加，顯示需求急速上升。  computex 2026 ai token 科技展覽 黃志芳">
+      <article class="card" data-topic="財經" data-search="computex 2026 帶領 ai 走進現實！貿協黃志芳：token 消耗呈倍數增加 computex 2026 將展示 ai 從雲端到邊緣的實體應用，黃志芳指出 ai 模型的 token 消耗正以倍數速度成長，預示硬體需求大增。  computex ai token 黃志芳 半導體 展會 人工智慧 邊緣運算">
         <div class="card-inner">
           <div class="card-body">
             <div class="kicker">財經新報 [財經]</div>
-            <div class="hook"><span class="q">Q</span>未來 AI 發展將如何因應 Token 消耗的爆炸式增長？</div>
+            <div class="hook"><span class="q">Q</span>AI 應用普及與 Token 消耗激增將如何影響未來半導體與伺服器市場？</div>
             <h3 class="title"><a href="https://finance.technews.tw/2026/06/01/token-ai/" target="_blank">COMPUTEX 2026 帶領 AI 走進現實！貿協黃志芳：Token 消耗呈倍數增加</a></h3>
-            <div class="ai-takeaway">COMPUTEX 2026 將展示 AI 應用於實際場景，黃志芳指出 AI 模型的 Token 消耗正以倍數增加，顯示需求急速上升。</div>
+            <div class="ai-takeaway">COMPUTEX 2026 將展示 AI 從雲端到邊緣的實體應用，黃志芳指出 AI 模型的 Token 消耗正以倍數速度成長，預示硬體需求大增。</div>
             <div class="terms">
-              <span class="term">COMPUTEX 2026</span><span class="term">AI</span><span class="term">Token</span><span class="term">科技展覽</span><span class="term">黃志芳</span>
+              <span class="term">COMPUTEX</span><span class="term">AI</span><span class="term">Token</span><span class="term">黃志芳</span><span class="term">半導體</span><span class="term">展會</span><span class="term">人工智慧</span><span class="term">邊緣運算</span>
+            </div>
+            <div class="byline">
+              <b>SCORE</b><span class="score">9/10</span>
+            </div>
+          </div>
+          
+        </div>
+      </article>
+    
+      <article class="card" data-topic="財經" data-search="展間變黑了、氣氛變高級了，不打價格戰的馬自達在下一盤什麼棋？ 在全球車廠競相降價的環境下，馬自達選擇提升展間氛圍與品牌形象，而非參與價格競爭，試圖以高檔體驗突圍市場。  馬自達 價格戰 展間 品牌形象 電動車 高端 汽車">
+        <div class="card-inner">
+          <div class="card-body">
+            <div class="kicker">財經新報 [財經]</div>
+            <div class="hook"><span class="q">Q</span>馬自達的高端展間與品牌策略，能否在激烈的電動車價格戰中站穩腳步？</div>
+            <h3 class="title"><a href="https://finance.technews.tw/2026/06/01/mazdas-inchworm-brand-strategy-hinges-on-transformed-dealerships/" target="_blank">展間變黑了、氣氛變高級了，不打價格戰的馬自達在下一盤什麼棋？</a></h3>
+            <div class="ai-takeaway">在全球車廠競相降價的環境下，馬自達選擇提升展間氛圍與品牌形象，而非參與價格競爭，試圖以高檔體驗突圍市場。</div>
+            <div class="terms">
+              <span class="term">馬自達</span><span class="term">價格戰</span><span class="term">展間</span><span class="term">品牌形象</span><span class="term">電動車</span><span class="term">高端</span><span class="term">汽車</span>
             </div>
             <div class="byline">
               <b>SCORE</b><span class="score">8/10</span>
@@ -722,15 +787,15 @@
         </div>
       </article>
     
-      <article class="card" data-topic="財經" data-search="供應吃緊＋關稅隱憂，高盛／花旗上調銅價預測 高盛與花旗因應全球銅供應緊張及關稅不確定性，將年底銅價預測大幅上調至每噸13,735美元。  銅價 高盛 花旗 供需 關稅">
+      <article class="card" data-topic="財經" data-search="昔日股王絕地反攻！大立光股價創五年新高，爆量漲停背後走出「華為陰影」 沉寂多年的大立光因擺脫華為供應限制、手機鏡頭需求回溫，股價飆升至五年高點，成交量大幅放大。  大立光 股價 五年新高 華為 手機鏡頭 市場回溫">
         <div class="card-inner">
           <div class="card-body">
             <div class="kicker">財經新報 [財經]</div>
-            <div class="hook"><span class="q">Q</span>銅價持續上漲將如何影響相關產業鏈的成本與投資布局？</div>
-            <h3 class="title"><a href="https://finance.technews.tw/2026/06/01/goldman-sachs-citi-raise-copper-price-forecast-tight-supply-tariff-concerns/" target="_blank">供應吃緊＋關稅隱憂，高盛／花旗上調銅價預測</a></h3>
-            <div class="ai-takeaway">高盛與花旗因應全球銅供應緊張及關稅不確定性，將年底銅價預測大幅上調至每噸13,735美元。</div>
+            <div class="hook"><span class="q">Q</span>大立光能否持續此波漲勢，摆脱過往華為陰影並重回產業龍頭？</div>
+            <h3 class="title"><a href="https://finance.technews.tw/2026/06/01/largan-precision-stock-price-5-year-high-founder-family-bought-shares-should-you-invest-uncover-old-stock-king-transformation-secret/" target="_blank">昔日股王絕地反攻！大立光股價創五年新高，爆量漲停背後走出「華為陰影」</a></h3>
+            <div class="ai-takeaway">沉寂多年的大立光因擺脫華為供應限制、手機鏡頭需求回溫，股價飆升至五年高點，成交量大幅放大。</div>
             <div class="terms">
-              <span class="term">銅價</span><span class="term">高盛</span><span class="term">花旗</span><span class="term">供需</span><span class="term">關稅</span>
+              <span class="term">大立光</span><span class="term">股價</span><span class="term">五年新高</span><span class="term">華為</span><span class="term">手機鏡頭</span><span class="term">市場回溫</span>
             </div>
             <div class="byline">
               <b>SCORE</b><span class="score">8/10</span>
@@ -740,15 +805,15 @@
         </div>
       </article>
     
-      <article class="card" data-topic="財經" data-search="輝達攜手聯發科發表 rtx spark 超級晶片，英特爾及超微股價受挫下跌 輝達與聯發科共同推出 rtx spark 超級晶片，強化 ai 與繪圖效能，導致英特爾與超微股價下挫。  輝達 聯發科 rtx spark gpu 半導體">
+      <article class="card" data-topic="財經" data-search="hpe 伺服器營收遠優、調高年度財測  盤後暴衝 30% 慧與科技第二季伺服器業務大幅超越分析師預期，全年財測同步上調，帶動盤後股價飆升約30%。  hpe 伺服器 財測 營收 股票 ai 科技">
         <div class="card-inner">
           <div class="card-body">
             <div class="kicker">財經新報 [財經]</div>
-            <div class="hook"><span class="q">Q</span>RTX Spark 的出現將如何重新分配 GPU 市場的競爭格局？</div>
-            <h3 class="title"><a href="https://finance.technews.tw/2026/06/02/nvidia-and-mediatek-unveil-rtx-spark-super-chip/" target="_blank">輝達攜手聯發科發表 RTX Spark 超級晶片，英特爾及超微股價受挫下跌</a></h3>
-            <div class="ai-takeaway">輝達與聯發科共同推出 RTX Spark 超級晶片，強化 AI 與繪圖效能，導致英特爾與超微股價下挫。</div>
+            <div class="hook"><span class="q">Q</span>HPE 的伺服器需求熱潮能否持續，並在 AI 時代擴大市場份額？</div>
+            <h3 class="title"><a href="https://finance.technews.tw/2026/06/02/hpe-reports-fiscal-2026-second-quarter-results/" target="_blank">HPE 伺服器營收遠優、調高年度財測  盤後暴衝 30%</a></h3>
+            <div class="ai-takeaway">慧與科技第二季伺服器業務大幅超越分析師預期，全年財測同步上調，帶動盤後股價飆升約30%。</div>
             <div class="terms">
-              <span class="term">輝達</span><span class="term">聯發科</span><span class="term">RTX Spark</span><span class="term">GPU</span><span class="term">半導體</span>
+              <span class="term">HPE</span><span class="term">伺服器</span><span class="term">財測</span><span class="term">營收</span><span class="term">股票</span><span class="term">AI</span><span class="term">科技</span>
             </div>
             <div class="byline">
               <b>SCORE</b><span class="score">8/10</span>
@@ -758,36 +823,18 @@
         </div>
       </article>
     
-      <article class="card" data-topic="財經" data-search="搶食企業 ai 落地！橘子 vyin ai 首發「機器人大腦」登 computex 2026 橘子集團的 vyin ai 在 computex 2026 推出全新「vyinris」機器人大腦解決方案，瞄準企業 ai 落地需求。  橘子 vyin ai 機器人大腦 computex ai">
+      <article class="card" data-topic="財經" data-search="戴爾財報後飆、ai 伺服器需求爆 smci、hpe 同歡 戴爾最新財報顯示 ai 伺服器收入大幅成長，帶動股價單日飆升逾 33%，並刺激 smci、hpe 等相關個股同步上漲。  戴爾 ai 伺服器 財報 股票 smci hpe 硬體 人工智慧">
         <div class="card-inner">
           <div class="card-body">
             <div class="kicker">財經新報 [財經]</div>
-            <div class="hook"><span class="q">Q</span>Vyin AI 的機器人大腦能否成為企業 AI 應用的關鍵催化劑？</div>
-            <h3 class="title"><a href="https://finance.technews.tw/2026/06/01/vyinris/" target="_blank">搶食企業 AI 落地！橘子 Vyin AI 首發「機器人大腦」登 COMPUTEX 2026</a></h3>
-            <div class="ai-takeaway">橘子集團的 Vyin AI 在 COMPUTEX 2026 推出全新「VyinRIS」機器人大腦解決方案，瞄準企業 AI 落地需求。</div>
+            <div class="hook"><span class="q">Q</span>傳統硬體大廠如何在 AI 基建熱潮中轉型並持續領先？</div>
+            <h3 class="title"><a href="https://finance.technews.tw/2026/06/01/dell-shares-soar-30-percent-as-ai-server-demand/" target="_blank">戴爾財報後飆、AI 伺服器需求爆 SMCI、HPE 同歡</a></h3>
+            <div class="ai-takeaway">戴爾最新財報顯示 AI 伺服器收入大幅成長，帶動股價單日飆升逾 33%，並刺激 SMCI、HPE 等相關個股同步上漲。</div>
             <div class="terms">
-              <span class="term">橘子</span><span class="term">Vyin AI</span><span class="term">機器人大腦</span><span class="term">COMPUTEX</span><span class="term">AI</span>
+              <span class="term">戴爾</span><span class="term">AI 伺服器</span><span class="term">財報</span><span class="term">股票</span><span class="term">SMCI</span><span class="term">HPE</span><span class="term">硬體</span><span class="term">人工智慧</span>
             </div>
             <div class="byline">
-              <b>SCORE</b><span class="score">7/10</span>
-            </div>
-          </div>
-          
-        </div>
-      </article>
-    
-      <article class="card" data-topic="財經" data-search="英國重回歐盟代價高昂！除了每年恐多付 2,000 億元，還須加入歐元區／申根區 根據最新研究，英國若重新加入歐盟，每年將面臨約2000億元額外費用，且需加入歐元區及申根區。  英國 歐盟 脫歐 歐元區 申根區 地緣政治">
-        <div class="card-inner">
-          <div class="card-body">
-            <div class="kicker">財經新報 [財經]</div>
-            <div class="hook"><span class="q">Q</span>英國重新加入歐盟的成本與收益，是否能在經濟上取得平衡？</div>
-            <h3 class="title"><a href="https://finance.technews.tw/2026/05/30/uk-wanna-return-to-eu/" target="_blank">英國重回歐盟代價高昂！除了每年恐多付 2,000 億元，還須加入歐元區／申根區</a></h3>
-            <div class="ai-takeaway">根據最新研究，英國若重新加入歐盟，每年將面臨約2000億元額外費用，且需加入歐元區及申根區。</div>
-            <div class="terms">
-              <span class="term">英國</span><span class="term">歐盟</span><span class="term">脫歐</span><span class="term">歐元區</span><span class="term">申根區</span><span class="term">地緣政治</span>
-            </div>
-            <div class="byline">
-              <b>SCORE</b><span class="score">7/10</span>
+              <b>SCORE</b><span class="score">8/10</span>
             </div>
           </div>
           
@@ -800,108 +847,108 @@
     <div class="section-rule cat-heading" style="--cat: #0f766e"><span class="accent">生活探索精選</span> Life Highlights</div>
     <div class="cards" style="--cat: #0f766e">
       
-      <article class="card" data-topic="生活" data-search="紀念劇場版《名偵探柯南：高速公路的墮天使》上映而開設的期間限定咖啡廳，推出趣味料理「犯人就在那裡！？百匯」一棒子下去就能享受巧克力與莓果的風味 為紀念《名偵探柯南：高速公路的墮天使》票房突破108.8億日元，限定咖啡廳推出造型甜點「犯人就在那裡」百匯。  名偵探柯南 限定咖啡廳 百匯 動漫 生活">
+      <article class="card" data-topic="生活" data-search="電視動畫《鬥球女彈子》主視覺pv公開 片頭曲邀請「桃色幸運草z」演唱超好聽主題歌 以躲避球為主題的電視動畫《鬥球女彈子》公開主視覺預告，並邀請桃色幸運草 z 打造熱血片頭曲。  鬥球女彈子 動畫 躲避球 桃色幸運草 z 片頭曲 主視覺 pv">
         <div class="card-inner">
           <div class="card-body">
             <div class="kicker">遊戲基地 [生活]</div>
-            <div class="hook"><span class="q">Q</span>這款結合動畫與甜點的限定料理，會不會掀起粉絲排隊熱潮？</div>
-            <h3 class="title"><a href="https://news.gamme.com.tw/1774141" target="_blank">紀念劇場版《名偵探柯南：高速公路的墮天使》上映而開設的期間限定咖啡廳，推出趣味料理「犯人就在那裡！？百匯」一棒子下去就能享受巧克力與莓果的風味</a></h3>
-            <div class="ai-takeaway">為紀念《名偵探柯南：高速公路的墮天使》票房突破108.8億日元，限定咖啡廳推出造型甜點「犯人就在那裡」百匯。</div>
+            <div class="hook"><span class="q">Q</span>躲避球题材的《鬥球女彈子》能否在動畫市場掀起熱潮？</div>
+            <h3 class="title"><a href="https://news.gamme.com.tw/1774184" target="_blank">電視動畫《鬥球女彈子》主視覺PV公開 片頭曲邀請「桃色幸運草Z」演唱超好聽主題歌</a></h3>
+            <div class="ai-takeaway">以躲避球為主題的電視動畫《鬥球女彈子》公開主視覺預告，並邀請桃色幸運草 Z 打造熱血片頭曲。</div>
             <div class="terms">
-              <span class="term">名偵探柯南</span><span class="term">限定咖啡廳</span><span class="term">百匯</span><span class="term">動漫</span><span class="term">生活</span>
+              <span class="term">鬥球女彈子</span><span class="term">動畫</span><span class="term">躲避球</span><span class="term">桃色幸運草 Z</span><span class="term">片頭曲</span><span class="term">主視覺</span><span class="term">PV</span>
             </div>
             <div class="byline">
-              <b>SCORE</b><span class="score">6/10</span>
+              <b>SCORE</b><span class="score">7/10</span>
             </div>
           </div>
           
         </div>
       </article>
     
-      <article class="card" data-topic="生活" data-search="《漫畫家高橋真》工作室大清倉 粉絲夢寐以求的原畫、簽名書和參考資料全都拿來賣 因數位化潮流，漫畫家高橋真決定拍賣工作室內所有原畫、簽名書與珍貴參考資料。  高橋真 漫畫 拍賣 原畫 收藏">
+      <article class="card" data-topic="生活" data-search="躲貓貓塗鴉遊戲《meccha chameleon/超級變色龍》透過畫筆讓角色融入背景不被逮到 結合躲貓貓與塗鴉的手機遊戲《meccha chameleon》將於6月推出，玩家可用畫筆讓角色融入背景以躲避追逐。  meccha chameleon 超級變色龍 躲貓貓 塗鴉 手機遊戲 隱身 新作">
         <div class="card-inner">
           <div class="card-body">
             <div class="kicker">遊戲基地 [生活]</div>
-            <div class="hook"><span class="q">Q</span>這些珍貴的手稿與收藏將吸引哪些收藏家與粉絲？</div>
-            <h3 class="title"><a href="https://news.gamme.com.tw/1774181" target="_blank">《漫畫家高橋真》工作室大清倉 粉絲夢寐以求的原畫、簽名書和參考資料全都拿來賣</a></h3>
-            <div class="ai-takeaway">因數位化潮流，漫畫家高橋真決定拍賣工作室內所有原畫、簽名書與珍貴參考資料。</div>
+            <div class="hook"><span class="q">Q</span>結合繪畫隱身機制的躲貓貓遊戲，能否開創手機遊戲新玩法？</div>
+            <h3 class="title"><a href="https://news.gamme.com.tw/1774144" target="_blank">躲貓貓塗鴉遊戲《MECCHA CHAMELEON/超級變色龍》透過畫筆讓角色融入背景不被逮到</a></h3>
+            <div class="ai-takeaway">結合躲貓貓與塗鴉的手機遊戲《MECCHA CHAMELEON》將於6月推出，玩家可用畫筆讓角色融入背景以躲避追逐。</div>
             <div class="terms">
-              <span class="term">高橋真</span><span class="term">漫畫</span><span class="term">拍賣</span><span class="term">原畫</span><span class="term">收藏</span>
+              <span class="term">MECCHA CHAMELEON</span><span class="term">超級變色龍</span><span class="term">躲貓貓</span><span class="term">塗鴉</span><span class="term">手機遊戲</span><span class="term">隱身</span><span class="term">新作</span>
             </div>
             <div class="byline">
-              <b>SCORE</b><span class="score">6/10</span>
+              <b>SCORE</b><span class="score">7/10</span>
             </div>
           </div>
           
         </div>
       </article>
     
-      <article class="card" data-topic="生活" data-search="網友改造《90年代推出的復古鋼彈模型》透過塗裝以及技術修補，也能呈現出不輸現代款式的帥氣 熱心玩家對1990年代復古鋼彈模型進行塗裝與修復，使其外觀不亞於現代款式。  鋼彈 模型 改造 復古 玩家">
+      <article class="card" data-topic="生活" data-search="年輕人不懂《城之內之死》為什麼打個牌還會死掉呢？ 《遊戲王—怪獸之決鬥》第127話預告「城之內之死」因直接暴雷而成為網路迷因，現今年輕觀眾對此感到不解。  城之內之死 遊戲王 暴雷 動畫 迷因 經典 年輕觀眾">
         <div class="card-inner">
           <div class="card-body">
             <div class="kicker">遊戲基地 [生活]</div>
-            <div class="hook"><span class="q">Q</span>這種懷舊改裝熱潮會不會帶動模型市場的二次創作風潮？</div>
-            <h3 class="title"><a href="https://news.gamme.com.tw/1774154" target="_blank">網友改造《90年代推出的復古鋼彈模型》透過塗裝以及技術修補，也能呈現出不輸現代款式的帥氣</a></h3>
-            <div class="ai-takeaway">熱心玩家對1990年代復古鋼彈模型進行塗裝與修復，使其外觀不亞於現代款式。</div>
+            <div class="hook"><span class="q">Q</span>為何《城之內之死》這種直接暴雷的預告能在動畫圈流傳多年？</div>
+            <h3 class="title"><a href="https://news.gamme.com.tw/1773171" target="_blank">年輕人不懂《城之內之死》為什麼打個牌還會死掉呢？</a></h3>
+            <div class="ai-takeaway">《遊戲王—怪獸之決鬥》第127話預告「城之內之死」因直接暴雷而成為網路迷因，現今年輕觀眾對此感到不解。</div>
             <div class="terms">
-              <span class="term">鋼彈</span><span class="term">模型</span><span class="term">改造</span><span class="term">復古</span><span class="term">玩家</span>
+              <span class="term">城之內之死</span><span class="term">遊戲王</span><span class="term">暴雷</span><span class="term">動畫</span><span class="term">迷因</span><span class="term">經典</span><span class="term">年輕觀眾</span>
             </div>
             <div class="byline">
-              <b>SCORE</b><span class="score">6/10</span>
+              <b>SCORE</b><span class="score">7/10</span>
             </div>
           </div>
           
         </div>
       </article>
     
-      <article class="card" data-topic="生活" data-search="日本興起《進化型自助洗衣店》解決等待時間就能抓住客人的心 新型自助洗衣店透過休息區、咖啡吧等配套，解決顧客等待時無聊的困擾。  自助洗衣店 日本 創新服務 生活 休閒">
+      <article class="card" data-topic="生活" data-search="《忍過前期就好看的作品》你覺得這種說法有道理嗎？有人認為前期難看就是糞作了 日本動漫圈針對「只要忍耐前期就能看到佳作」的說法展開激烈討論，許多人認為前期不佳即代表作品整體失敗。  動畫 前期 作品評價 忍耐 日本 討論 網友">
         <div class="card-inner">
           <div class="card-body">
             <div class="kicker">遊戲基地 [生活]</div>
-            <div class="hook"><span class="q">Q</span>這種結合休閒的洗衣模式能否在台灣複製成功？</div>
-            <h3 class="title"><a href="https://news.gamme.com.tw/1774133" target="_blank">日本興起《進化型自助洗衣店》解決等待時間就能抓住客人的心</a></h3>
-            <div class="ai-takeaway">新型自助洗衣店透過休息區、咖啡吧等配套，解決顧客等待時無聊的困擾。</div>
+            <div class="hook"><span class="q">Q</span>觀眾該不該忍耐不吸引人的前期，來等待作品的精彩後續？</div>
+            <h3 class="title"><a href="https://news.gamme.com.tw/1774171" target="_blank">《忍過前期就好看的作品》你覺得這種說法有道理嗎？有人認為前期難看就是糞作了</a></h3>
+            <div class="ai-takeaway">日本動漫圈針對「只要忍耐前期就能看到佳作」的說法展開激烈討論，許多人認為前期不佳即代表作品整體失敗。</div>
             <div class="terms">
-              <span class="term">自助洗衣店</span><span class="term">日本</span><span class="term">創新服務</span><span class="term">生活</span><span class="term">休閒</span>
+              <span class="term">動畫</span><span class="term">前期</span><span class="term">作品評價</span><span class="term">忍耐</span><span class="term">日本</span><span class="term">討論</span><span class="term">網友</span>
             </div>
             <div class="byline">
-              <b>SCORE</b><span class="score">6/10</span>
+              <b>SCORE</b><span class="score">7/10</span>
             </div>
           </div>
           
         </div>
       </article>
     
-      <article class="card" data-topic="生活" data-search="環球影城販售的《蘑菇水壺》不買不知道一買才知道這商品原來還有如此衝擊的設計！？ 環球影城推出的蘑菇造型水壺外觀新穎、容量特殊，讓購買者驚呼設計突破。  環球影城 蘑菇水壺 主題樂園 周邊商品 生活">
+      <article class="card" data-topic="生活" data-search="奇葩周邊商品《美少女遊戲保險套》日本網友吐槽這種東西誰會用 以美少女遊戲為概念的保險套周邊因其奇葩創意在日本引發熱議，網友普遍懷疑實際使用率。  美少女遊戲 保險套 周邊商品 acg 日本 爭議 成人">
         <div class="card-inner">
           <div class="card-body">
             <div class="kicker">遊戲基地 [生活]</div>
-            <div class="hook"><span class="q">Q</span>這款造型水壺的熱銷是否代表主題樂園周邊商品的創意新趨勢？</div>
-            <h3 class="title"><a href="https://news.gamme.com.tw/1774174" target="_blank">環球影城販售的《蘑菇水壺》不買不知道一買才知道這商品原來還有如此衝擊的設計！？</a></h3>
-            <div class="ai-takeaway">環球影城推出的蘑菇造型水壺外觀新穎、容量特殊，讓購買者驚呼設計突破。</div>
+            <div class="hook"><span class="q">Q</span>這種結合成人向與收藏性的保險套周邊，究竟是商機還是噱頭？</div>
+            <h3 class="title"><a href="https://news.gamme.com.tw/1774170" target="_blank">奇葩周邊商品《美少女遊戲保險套》日本網友吐槽這種東西誰會用</a></h3>
+            <div class="ai-takeaway">以美少女遊戲為概念的保險套周邊因其奇葩創意在日本引發熱議，網友普遍懷疑實際使用率。</div>
             <div class="terms">
-              <span class="term">環球影城</span><span class="term">蘑菇水壺</span><span class="term">主題樂園</span><span class="term">周邊商品</span><span class="term">生活</span>
+              <span class="term">美少女遊戲</span><span class="term">保險套</span><span class="term">周邊商品</span><span class="term">ACG</span><span class="term">日本</span><span class="term">爭議</span><span class="term">成人</span>
             </div>
             <div class="byline">
-              <b>SCORE</b><span class="score">5/10</span>
+              <b>SCORE</b><span class="score">7/10</span>
             </div>
           </div>
           
         </div>
       </article>
     
-      <article class="card" data-topic="生活" data-search="網友疑問《日本飛機化妝室的煙灰缸》不是通通禁菸嘛？為什麼還會有這種設計呢？ 即使飛機全面禁菸，日本航班化妝室仍設有煙灰缸，網友疑惑其存在理由。  飛機 化妝室 煙灰缸 航空 生活">
+      <article class="card" data-topic="生活" data-search="透過刮擦苔蘚來創作風景畫 不是高壓水槍而是透過刀片去一刀刀刻劃出藝術的深度 不同於高壓水槍除苔的舒壓影片，藝術家使用刀片逐層刮除苔蘚，創作出細緻的風景畫作，展現另類創作手法。  苔蘚 風景畫 刀片 藝術 創作 舒壓 手作">
         <div class="card-inner">
           <div class="card-body">
             <div class="kicker">遊戲基地 [生活]</div>
-            <div class="hook"><span class="q">Q</span>飛機化妝室的煙灰缸是否僅是傳統設計，或有其他實際用途？</div>
-            <h3 class="title"><a href="https://news.gamme.com.tw/1774161" target="_blank">網友疑問《日本飛機化妝室的煙灰缸》不是通通禁菸嘛？為什麼還會有這種設計呢？</a></h3>
-            <div class="ai-takeaway">即使飛機全面禁菸，日本航班化妝室仍設有煙灰缸，網友疑惑其存在理由。</div>
+            <div class="hook"><span class="q">Q</span>以刀片雕刻苔蘚的藝術手法，能否成為新興的創作潮流？</div>
+            <h3 class="title"><a href="https://news.gamme.com.tw/1774080" target="_blank">透過刮擦苔蘚來創作風景畫 不是高壓水槍而是透過刀片去一刀刀刻劃出藝術的深度</a></h3>
+            <div class="ai-takeaway">不同於高壓水槍除苔的舒壓影片，藝術家使用刀片逐層刮除苔蘚，創作出細緻的風景畫作，展現另類創作手法。</div>
             <div class="terms">
-              <span class="term">飛機</span><span class="term">化妝室</span><span class="term">煙灰缸</span><span class="term">航空</span><span class="term">生活</span>
+              <span class="term">苔蘚</span><span class="term">風景畫</span><span class="term">刀片</span><span class="term">藝術</span><span class="term">創作</span><span class="term">舒壓</span><span class="term">手作</span>
             </div>
             <div class="byline">
-              <b>SCORE</b><span class="score">5/10</span>
+              <b>SCORE</b><span class="score">7/10</span>
             </div>
           </div>
           
@@ -915,46 +962,77 @@
 </div>
 
 <script>
-  let synth = window.speechSynthesis;
-  let utterance = null;
+  let audio = null;
   let isPlaying = false;
+  let currentSpeed = 1.0;
   const playIcon = document.getElementById('play-icon');
   const pauseIcon = document.getElementById('pause-icon');
   const playerStatus = document.getElementById('player-status');
-  const briefingText = "科技：\\nMeta AI助理遭濫用致Instagram帳號被劫持；假冒Gemini與Claude安裝網站散布木馬，竊取開發者帳號與環境資料；象印台灣子公司遭駭，客戶與員工個資外洩；Magento快取外掛出現CVE‑2026‑45247漏洞，可未授權執行任意程式碼；黃仁勳在GTC台北展示Vera CPU與RTX Spark，宣告有用AI時代已來臨；國家級駭客利用ROADtools鎖定Microsoft Entra ID，進行列舉與權杖竊取\\n\\n綜合：\\n中國煤礦事故死亡人數為15年之最，能源安全與綠色轉型矛盾加劇；伊朗、中國、緬甸、委內瑞拉民眾透過地下VPN、星鏈走私等突破防火長城；美國小費文化向海外蔓延，服務業薪酬結構引發討論；法網因王欣瑜拒握手而引發傳統裁判制度爭議；中國大幅裁撤文史哲學科，以培养工程技术人才迎合未來需求；特朗普聲稱空中力量足以推翻伊朗政權，但伊朗保持強硬，使中東策略陷入僵局\\n\\n財經：\\n慧與科技（HPE）伺服器業務遠超預期，上季財測大幅調高，盤後股價急升30%；COMPUTEX 2026顯示AI應用走向實際場景，Token消耗呈倍數增加；高盛與花旗因供應吃緊與關稅不確定性，將年底銅價預測上調至每噸13,735美元；輝達與聯發科共同推出RTX Spark超級晶片，致英特爾與超微股價受挫；英國若重返歐盟將面臨每年約2000億元的額外費用，並需加入歐元區與申根區\\n\\n體育：\\n熱刺引進Marcos Senesi強化後防，技術與高空防守兼顧；捷克以定位球與高空球聞名，為A組威脅；南韓擁有成熟進攻體系，亦是A組焦點；日本公布26人世界盃名單，森保一兼顧經驗與新血；TPBL季後賽國王主場擊敗夢想家率先聽牌；WNBA主席盃再度登場，集合本賽季熱門看點\\n\\n生活：\\n《名偵探柯南》票房破108.8億日元，限定咖啡廳推出「犯人就在那裡」百匯甜點；漫畫家高橋真拍賣工作室原畫與簽名書因應數位化潮流；環球影城蘑菇造型水壺設計突破，引發購買熱潮；玩家將90年代復古鋼彈模型塗裝改造成現代帥氣外觀；日本進化型自助洗衣店以休息區、咖啡吧提升顧客體驗；儘管航班全禁菸，機上化妝室仍保留煙灰缸，網友疑惑其存在理由";
 
-  function getSelectedVoice() {
-    if (!synth) return null;
-    const voices = synth.getVoices();
-    const twVoices = voices.filter(v => v.lang.includes('zh-TW') || v.lang.includes('zh-HK') || v.lang.includes('zh-'));
-    if (twVoices.length === 0) return null;
-    let v = voices.find(v => v.name.includes('Mei-Jia') || v.name.includes('美佳'));
-    if (v) return v;
-    v = voices.find(v => v.name.includes('Xiaoxiao') || v.name.includes('曉臻'));
-    if (v) return v;
-    v = voices.find(v => v.name.includes('Ting-Ting') || v.name.includes('廷廷'));
-    if (v) return v;
-    return twVoices[0];
-  }
-  function toggleSpeech() {
-    if (!synth) { playerStatus.innerText = '您的瀏覽器不支援語音播報'; return; }
-    if (isPlaying) { synth.cancel(); isPlaying = false; playIcon.style.display = 'block'; pauseIcon.style.display = 'none'; playerStatus.innerText = '已暫停'; }
-    else {
-      synth.cancel();
-      utterance = new SpeechSynthesisUtterance(briefingText);
-      utterance.lang = 'zh-TW';
-      const selectedVoice = getSelectedVoice();
-      if (selectedVoice) utterance.voice = selectedVoice;
-      utterance.onend = () => { isPlaying = false; playIcon.style.display = 'block'; pauseIcon.style.display = 'none'; playerStatus.innerText = '播放結束 · 重新收聽'; };
-      utterance.onerror = () => { isPlaying = false; playIcon.style.display = 'block'; pauseIcon.style.display = 'none'; playerStatus.innerText = '播音遭遇阻礙，請重試'; };
-      synth.speak(utterance);
+  function initAudio() {
+    if (audio) return;
+    audio = new Audio("audio/briefing.mp3?v=" + new Date().getTime());
+    
+    audio.onplay = () => {
       isPlaying = true;
       playIcon.style.display = 'none';
       pauseIcon.style.display = 'block';
-      playerStatus.innerText = '播放中 · 聆聽總編輯女聲說日報';
+      playerStatus.innerText = '播放中 · 聆聽總編輯主播說日報';
+    };
+    
+    audio.onpause = () => {
+      isPlaying = false;
+      playIcon.style.display = 'block';
+      pauseIcon.style.display = 'none';
+      playerStatus.innerText = '已暫停';
+    };
+    
+    audio.onended = () => {
+      isPlaying = false;
+      playIcon.style.display = 'block';
+      pauseIcon.style.display = 'none';
+      playerStatus.innerText = '播放結束 · 重新收聽';
+    };
+    
+    audio.onerror = () => {
+      isPlaying = false;
+      playIcon.style.display = 'block';
+      pauseIcon.style.display = 'none';
+      playerStatus.innerText = '語音加載失敗或尚未生成，請稍後再試';
+    };
+  }
+
+  function toggleSpeech() {
+    initAudio();
+    if (isPlaying) {
+      audio.pause();
+    } else {
+      audio.playbackRate = currentSpeed;
+      audio.play().catch(err => {
+        console.error("播放失敗:", err);
+        playerStatus.innerText = '播放失敗，請檢查網路';
+      });
     }
   }
-  if (synth && synth.onvoiceschanged !== undefined) { synth.onvoiceschanged = () => {}; }
+
+  function setSpeed(rate) {
+    currentSpeed = rate;
+    if (audio) {
+      audio.playbackRate = rate;
+    }
+    
+    document.querySelectorAll('.speed-chip').forEach(chip => {
+      const chipSpeed = parseFloat(chip.getAttribute('data-speed'));
+      if (chipSpeed === rate) {
+        chip.classList.add('active');
+      } else {
+        chip.classList.remove('active');
+      }
+    });
+  }
+
+  // 設置初始狀態
+  setSpeed(1.0);
 
   // Toolbar: 主題 Chip 過濾
   function filterTopic(btn) {

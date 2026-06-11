@@ -1,0 +1,1012 @@
+<!doctype html>
+<html lang="zh-Hant" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<title>心聞 · Heart News | 每一天，都值得銘記</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700;8..60,800;8..60,900&family=Inter:wght@500;600;700;800&family=Noto+Sans+TC:wght@500;600;700;900&family=Noto+Serif+TC:wght@500;600;700;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #fbf9f4; --bg-elev: #ffffff; --bg-card: #ffffff;
+    --border: #e0dbd0; --rule: #2a2824; --fg: #1f1d1a; --fg-mute: #6b655c;
+    --accent: #8b1a1a; --accent-soft: rgba(139, 26, 26, 0.03);
+    --good: #5a7d52;
+    --serif: "Source Serif 4", "Noto Serif TC", "Songti TC", "PMingLiU", Georgia, serif;
+    --sans: "Inter", "Noto Sans TC", "PingFang TC", -apple-system, sans-serif;
+  }
+  [data-theme="dark"] {
+    --bg: #111216; --bg-elev: #17181f; --bg-card: #1c1d26;
+    --border: #282a36; --rule: #b6b3ab; --fg: #d5d3ca; --fg-mute: #858177;
+    --accent: #e58b8b; --accent-soft: rgba(229, 139, 139, 0.06);
+    --good: #9bc198;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--bg); color: var(--fg); font: 600 17px/1.75 var(--sans); min-height: 100vh; transition: background .25s ease, color .25s ease; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 36px 24px 80px; }
+  a { color: inherit; text-decoration: none; }
+  .masthead h1 a:hover { color: var(--accent); }
+
+  .masthead { text-align: center; padding-bottom: 22px; border-bottom: 3px double var(--rule); position: relative; }
+  .masthead .dateline { display: flex; justify-content: center; align-items: center; gap: 12px; font-family: var(--sans); font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--fg-mute); padding: 0 4px 14px; }
+  .masthead h1 { font-family: var(--serif); font-weight: 900; font-size: 56px; line-height: 1.15; letter-spacing: -0.01em; margin: 4px 0 8px; }
+  .masthead .tagline { font-family: var(--sans); font-weight: 600; font-size: 16px; color: var(--fg-mute); margin: 0 0 6px; }
+  .masthead .meta-line { font-size: 12px; color: var(--fg-mute); letter-spacing: 0.04em; }
+  .masthead .theme-btn { position: absolute; top: 0; right: 0; background: transparent; border: 1px solid var(--border); color: var(--fg); width: 36px; height: 36px; border-radius: 4px; cursor: pointer; transition: .12s; }
+  @media(max-width:600px){.masthead .theme-btn{position:fixed;top:auto;bottom:20px;right:20px;width:36px;height:36px;border-radius:50%;z-index:100;box-shadow:0 2px 8px rgba(0,0,0,.15)}}
+  .daily-quote { background: var(--bg-elev); border-radius: 12px; padding: 24px 40px; margin: 32px auto 12px; max-width: 640px; font-family: var(--serif); font-size: 19px; line-height: 1.7; color: var(--accent); font-weight: 600; font-style: italic; text-align: center; position: relative; box-shadow: 0 4px 20px rgba(0,0,0,0.02); border: 1px solid var(--border); }
+  .daily-quote::before { content: "“"; font-family: Georgia, serif; font-size: 64px; color: var(--accent-soft); position: absolute; top: 10px; left: 18px; line-height: 1; }
+
+  .section-rule { display: flex; align-items: center; gap: 14px; margin: 36px 0 18px; font-family: var(--sans); font-weight: 600; font-size: 11.5px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--fg); }
+  .section-rule::after { content: ""; flex: 1; border-bottom: 1px solid var(--rule); }
+  .section-rule.cat-heading { color: var(--cat, var(--accent)); }
+  .section-rule.cat-heading::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--cat, var(--accent)); box-shadow: 0 0 0 3px color-mix(in srgb, var(--cat, var(--accent)) 16%, transparent); }
+  .accent { color: var(--accent); font-weight: 800; }
+
+  .briefing { margin: 24px 0 0; font-family: var(--serif); font-size: 18px; line-height: 1.85; color: var(--fg); display: grid; grid-template-columns: 1fr; gap: 20px; }
+  @media (min-width: 760px) {
+    .briefing {
+      grid-template-columns: 1fr 1fr;
+      column-gap: 28px;
+      row-gap: 20px;
+    }
+    .briefing-card.briefing-date-card {
+      grid-column: span 2;
+    }
+    .briefing-card:last-child {
+      grid-column: span 2;
+    }
+  }
+  
+  .briefing-card {
+    background: var(--bg-elev);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 22px 26px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.015);
+    transition: all 0.25s ease;
+    border-left: 4px solid var(--badge-color, var(--accent));
+  }
+  .briefing-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.03);
+    border-color: var(--badge-color, var(--accent));
+  }
+  
+  .briefing-card.briefing-date-card {
+    border-left: none;
+    background: var(--accent-soft);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px 24px;
+    border: 1px dashed color-mix(in srgb, var(--accent) 30%, transparent);
+  }
+  
+  .briefing-date-text {
+    margin: 0;
+    font-family: var(--serif);
+    font-weight: 800;
+    font-size: 24px;
+    color: var(--accent);
+    letter-spacing: 0.05em;
+  }
+  
+  .briefing-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 2px 10px;
+    font-size: 13px;
+    font-weight: 800;
+    font-family: var(--sans);
+    border-radius: 4px;
+    background: color-mix(in srgb, var(--badge-color, var(--accent)) 10%, transparent);
+    color: var(--badge-color, var(--accent));
+    border: 1px solid color-mix(in srgb, var(--badge-color, var(--accent)) 20%, transparent);
+    margin-bottom: 14px;
+    letter-spacing: 0.05em;
+  }
+  
+  .briefing-body-text {
+    margin: 0;
+    font-weight: 600;
+    text-align: justify;
+    line-height: 1.8;
+  }
+  
+  .briefing-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .briefing-list li {
+    position: relative;
+    padding-left: 18px;
+    font-size: 16.5px;
+    line-height: 1.7;
+    color: var(--fg);
+    margin-bottom: 8px;
+    font-weight: 600;
+    text-align: justify;
+  }
+  .briefing-list li:last-child {
+    margin-bottom: 0;
+  }
+  .briefing-list li::before {
+    content: "•";
+    color: var(--badge-color, var(--accent));
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: -1px;
+    font-size: 18px;
+  }
+
+  .audio-player-container { display: flex; align-items: center; gap: 20px; background: var(--bg-elev); border: 1px solid var(--border); border-radius: 12px; padding: 16px 24px; margin: 20px 0 32px; box-shadow: 0 4px 20px rgba(0,0,0,0.02); border-left: 4px solid var(--accent); transition: all 0.3s ease; }
+  .audio-player-container:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.04); }
+  .play-btn-circle { width: 44px; height: 44px; border-radius: 50%; background: var(--accent); color: #ffffff; border: none; cursor: pointer; display: flex; justify-content: center; align-items: center; transition: all 0.2s ease; box-shadow: 0 4px 10px rgba(139, 26, 26, 0.2); flex-shrink: 0; }
+  .play-btn-circle:hover { transform: scale(1.08); box-shadow: 0 6px 14px rgba(139, 26, 26, 0.3); }
+  .player-info-meta { display: flex; flex-direction: column; gap: 4px; }
+  .player-title-text { font-size: 15.5px; font-weight: 700; color: var(--fg); font-family: var(--sans); }
+  .player-status-subtitle { font-size: 12.5px; color: var(--fg-mute); font-family: var(--sans); }
+
+  .player-speed-controls {
+    margin-left: auto;
+    display: flex;
+    gap: 6px;
+    align-items: center;
+  }
+  .speed-chip {
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--fg-mute);
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  .speed-chip:hover {
+    color: var(--fg);
+    border-color: var(--fg-mute);
+  }
+  .speed-chip.active {
+    background: var(--accent);
+    color: #ffffff;
+    border-color: var(--accent);
+    box-shadow: 0 2px 6px rgba(139, 26, 26, 0.15);
+  }
+  @media (max-width: 600px) {
+    .audio-player-container {
+      flex-wrap: wrap;
+    }
+    .player-speed-controls {
+      margin-left: 0;
+      width: 100%;
+      justify-content: flex-start;
+      margin-top: 10px;
+      border-top: 1px dashed var(--border);
+      padding-top: 10px;
+    }
+  }
+
+  .toolbar { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; margin: 16px 0 0; padding: 10px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+  .search { flex: 1; min-width: 200px; background: transparent; border: none; border-bottom: 1px solid var(--border); color: var(--fg); padding: 6px 4px; font: inherit; font-size: 14.5px; outline: none; }
+  .search:focus { border-bottom-color: var(--rule); }
+  .search::placeholder { color: var(--fg-mute); }
+  .chip-row { display: flex; flex-wrap: wrap; gap: 4px; }
+  .chip { border: none; background: transparent; color: var(--fg-mute); padding: 6px 12px; border-radius: 0; font-family: var(--sans); font-size: 12px; letter-spacing: 0.10em; text-transform: uppercase; font-weight: 500; cursor: pointer; transition: color .12s ease; border-bottom: 2px solid transparent; }
+  .chip[data-active="true"] { color: var(--chip-color, var(--accent)); border-bottom-color: var(--chip-color, var(--accent)); }
+  .chip:hover { color: var(--fg); }
+  section.cat[hidden] { display: none; }
+  .empty { text-align: center; color: var(--fg-mute); padding: 48px 0; font-family: var(--serif); font-weight: 600; font-size: 15px; display: none; }
+  .empty[data-show="true"] { display: block; }
+
+  .trending ol { list-style: none; counter-reset: trend; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr; }
+  @media (min-width: 600px) { .trending ol { grid-template-columns: 1fr 1fr; column-gap: 28px; } }
+  .trending li { counter-increment: trend; display: flex; align-items: baseline; gap: 12px; padding: 10px 0; border-bottom: 1px dotted var(--border); font-family: var(--serif); font-size: 17px; }
+  .trending li::before { content: counter(trend, decimal-leading-zero); font-family: var(--sans); font-weight: 600; font-size: 13px; color: var(--fg-mute); min-width: 24px; }
+
+  .cards { display: grid; grid-template-columns: 1fr; gap: 0; }
+  @media (min-width: 760px) { .cards { grid-template-columns: 1fr 1fr; column-gap: 36px; } }
+  .card { padding: 24px 0; border-bottom: 1px solid var(--border); border-left: 3px solid color-mix(in srgb, var(--cat, var(--accent)) 12%, transparent); padding-left: 14px; transition: border-color .2s ease; }
+  .card:hover { border-left-color: var(--cat, var(--accent)); }
+  .card[hidden] { display: none; }
+  .card .kicker { font-family: var(--sans); font-size: 10.5px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--cat, var(--accent)); font-weight: 600; margin-bottom: 6px; }
+  .card .hook { display: inline-flex; align-items: center; gap: 10px; margin: 0 0 10px; font-family: var(--sans); font-weight: 700; font-size: 14px; color: var(--cat, var(--accent)); }
+  .card .hook .q { display: inline-flex; justify-content: center; align-items: center; width: 24px; height: 24px; border-radius: 50%; background: var(--cat, var(--accent)); color: var(--bg); font-size: 12px; font-weight: 800; }
+  .card .title { font-family: var(--serif); font-weight: 800; font-size: 24px; line-height: 1.4; letter-spacing: -0.005em; margin: 0 0 10px; }
+  .card .title a:hover { text-decoration: underline; }
+  .card .ai-takeaway { font-family: var(--serif); font-size: 15px; line-height: 1.65; color: var(--fg-mute); font-weight: 600; margin: 6px 0; }
+  .card .byline { display: flex; align-items: center; gap: 8px; font-family: var(--sans); font-size: 11.5px; color: var(--fg-mute); margin-top: 14px; }
+  .card .byline b { color: var(--fg); font-weight: 600; letter-spacing: 0.05em; }
+  .card .byline .score { font-weight: 800; color: var(--good); font-size: 13px; }
+  .card .terms { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+  .card .term { font-family: var(--sans); font-size: 11.5px; letter-spacing: 0.06em; color: var(--fg-mute); }
+  .card .term::before { content: "#"; color: var(--cat, var(--accent)); }
+
+  .hero { margin-top: 14px; padding-top: 4px; }
+  .hero .kicker { font-family: var(--sans); font-size: 11.5px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--cat, var(--accent)); margin-bottom: 10px; font-weight: 600; }
+  .hero .hook { display: inline-flex; align-items: center; gap: 10px; margin: 0 0 10px; font-family: var(--sans); font-weight: 700; font-size: 14px; color: var(--cat, var(--accent)); letter-spacing: 0.02em; }
+  .hero .hook .q { display: inline-flex; justify-content: center; align-items: center; width: 24px; height: 24px; border-radius: 50%; background: var(--cat, var(--accent)); color: var(--bg); font-size: 12px; font-weight: 800; }
+  .hero h2 { font-family: var(--serif); font-weight: 900; font-size: 42px; line-height: 1.3; letter-spacing: -0.01em; margin: 0 0 14px; }
+  .hero h2 a:hover { color: var(--cat, var(--accent)); }
+  .hero .takeaway { font-family: var(--serif); font-weight: 700; font-size: 17px; line-height: 1.65; color: var(--cat, var(--accent)); border-left: 4px solid var(--cat, var(--accent)); padding-left: 16px; margin: 14px 0; max-width: 60ch; }
+  .hero .byline { font-family: var(--sans); font-size: 12px; color: var(--fg-mute); letter-spacing: 0.04em; margin-top: 14px; }
+  .hero .byline b { color: var(--fg); font-weight: 600; }
+
+  /* Hero Banner Overlay styles */
+  .hero-banner-overlay { position: relative; min-height: 320px; overflow: hidden; border-radius: 12px; margin-top: 14px; display: flex; flex-direction: column; justify-content: flex-end; }
+  .hero-content { position: relative; z-index: 3; padding: 28px 24px 20px; color: #ffffff; }
+  .hero-backdrop { position: absolute; inset: 0; z-index: 0; background: linear-gradient(135deg, var(--cat, var(--accent)), color-mix(in srgb, var(--cat, var(--accent)) 60%, black)); }
+  [data-theme="dark"] .hero-backdrop { background: linear-gradient(135deg, var(--cat, var(--accent)), color-mix(in srgb, var(--cat, var(--accent)) 30%, #111216)); }
+  .hero-image-overlay { position: absolute; inset: 0; z-index: 1; width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease; display: none; }
+  .hero-banner-overlay:hover .hero-image-overlay { transform: scale(1.02); }
+  .hero-gradient-mask { position: absolute; inset: 0; z-index: 2; background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 60%, rgba(0,0,0,0.05) 100%); }
+  .hero-kicker { font-family: var(--sans); font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.85); margin-bottom: 6px; font-weight: 600; }
+  .hero-hook { display: inline-flex; align-items: center; gap: 8px; margin-bottom: 10px; font-family: var(--sans); font-weight: 700; font-size: 14px; color: #ffffff; }
+  .hero-q { display: inline-flex; justify-content: center; align-items: center; width: 22px; height: 22px; border-radius: 50%; background: #ffffff; color: var(--cat, var(--accent)); font-size: 11px; font-weight: 800; }
+  .hero-banner-overlay h2 { font-family: var(--serif); font-weight: 900; font-size: 32px; line-height: 1.35; color: #fff; margin: 0 0 8px; text-shadow: 0 2px 6px rgba(0,0,0,0.4); }
+  .hero-banner-overlay h2 a { color: #fff; }
+  .hero-banner-overlay h2 a:hover { color: rgba(255,255,255,0.9); text-decoration: underline; }
+  .hero-banner-overlay .takeaway { font-family: var(--serif); font-weight: 700; font-size: 15px; line-height: 1.6; color: rgba(255,255,255,0.92); border: none; margin: 6px 0; max-width: 55ch; background: rgba(255,255,255,0.15); border-radius: 6px; padding: 8px 12px; backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); }
+  .hero-banner-overlay .byline { font-family: var(--sans); font-size: 11px; color: rgba(255,255,255,0.65); margin-top: 10px; }
+  .hero-banner-overlay .byline b { color: rgba(255,255,255,0.85); font-weight: 600; }
+  @media (max-width: 760px) {
+    .hero-banner-overlay { min-height: 240px; }
+    .hero-content { padding: 16px 12px 12px; }
+    .hero-banner-overlay h2 { font-size: 22px; }
+  }
+
+  /* Card Thumbnails */
+  .card-inner { display: flex; gap: 16px; align-items: stretch; }
+  .card-body { flex: 1; min-width: 0; display: flex; flex-direction: column; justify-content: space-between; }
+  .card-thumb { width: 120px; flex-shrink: 0; height: 90px; border-radius: 6px; overflow: hidden; position: relative; display: flex; align-items: center; justify-content: center; background: var(--bg-elev); border: 1px solid var(--border); }
+  .card-thumb img { width: 100%; height: 100%; object-fit: cover; }
+  .card-thumb-label { display: none; }
+  .card-thumb.no-image { display: none !important; }
+  @media (max-width: 760px) {
+    .card-inner { flex-direction: column-reverse; align-items: stretch; gap: 12px; }
+    .card-thumb { width: 100%; height: 140px; }
+  }
+  footer { margin-top: 48px; padding-top: 22px; border-top: 3px double var(--rule); color: var(--fg-mute); font-family: var(--sans); font-size: 11.5px; letter-spacing: 0.10em; text-transform: uppercase; text-align: center; }
+
+  @media(max-width:600px){
+    body{font-size:18px;overflow-x:hidden}
+    .masthead h1{font-size:36px}
+    .hero h2{font-size:28px}
+    .card .title{font-size:22px}
+    .toolbar{flex-direction:column;align-items:stretch}
+    .search{min-width:auto}
+    .audio-player-container{padding:16px 20px;gap:16px}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="masthead">
+    <div class="dateline"><span>2026年6月11日 星期四</span><span>Vol. 1 · No. 18</span><span>🏮 距離 端午節 還有 8 天</span></div>
+    <h1><a href="/news-radar/">心聞 · Heart News</a></h1>
+    <p class="tagline">全自動 AI 新聞日報</p>
+    <p class="meta-line">收錄 24 篇 · <a href="/news-radar/archive.html">歷史過刊</a></p>
+    <button class="theme-btn" onclick="document.documentElement.dataset.theme = document.documentElement.dataset.theme==='light'?'dark':'light'">🌓</button>
+  </header>
+
+  <div class="daily-quote">創新區別了領導者與跟隨者。 —— 史蒂夫·賈伯斯</div>
+  <div class="section-rule"><span class="accent">總編輯的話</span> Briefing</div>
+  <div class="briefing">
+      <div class="briefing-card" style="--badge-color: #8b1a1a">
+        <span class="briefing-badge">科技</span>
+        <ul class="briefing-list"><li>OpenAI 与 Nvidia 合作在俄亥俄州租赁巨型资料中心，加速 AI 算力布局</li><li>GPU 从成本中心转为盈利引擎，AI 基础设施商业化进入新阶段</li><li>Switch 2 多款新作与续作预告，游戏生态持续扩张</li></ul>
+      </div>
+    
+      <div class="briefing-card" style="--badge-color: #4a5568">
+        <span class="briefing-badge">綜合</span>
+        <ul class="briefing-list"><li>法德共同研发战机计划破局，凸显欧盟防务分歧</li><li>南海局势升级，越菲等国加紧造岛，中国海警活动加剧</li><li>日菲启动专属经济区划界谈判，中国强烈抗议并派遣海警巡弋台东部海域</li><li>乌克兰无人机袭击圣彼得堡论坛，特朗普与伊朗对抗局势胶着</li></ul>
+      </div>
+    
+      <div class="briefing-card" style="--badge-color: #1b4d3e">
+        <span class="briefing-badge">財經</span>
+        <ul class="briefing-list"><li>力积电筹资8.86亿美元投入未来动能</li><li>日月光5月营收创同期最高，AI 先进封测驱动增长</li><li>AI 实质需求推动 Perplexity 维持2028年上市目标，房产市场同步受惠</li><li>精湛科技子公司被动元件需求激增，迎接下半年旺季</li></ul>
+      </div>
+    
+      <div class="briefing-card" style="--badge-color: #c25100">
+        <span class="briefing-badge">運動</span>
+        <ul class="briefing-list"><li>2026年世界杯赛程海报发布，球迷关注热度升温</li><li>全球体育赛事逐步回归，赛季安排备受期待</li></ul>
+      </div>
+    
+      <div class="briefing-card" style="--badge-color: #0f766e">
+        <span class="briefing-badge">生活</span>
+        <ul class="briefing-list"><li>东京上野酒店受旅客好评，提供便利交通</li><li>日本网络内容因 AI 取代猜测引发热议，传统宗教命名亦受冲击</li><li>网络 viral 现象如熊爪抛光、鬼灭角色空洞化等，反映数位生活与文化的交织。</li></ul>
+      </div>
+    </div>
+
+  <div class="audio-player-container">
+    <button class="play-btn-circle" id="play-btn" onclick="toggleSpeech()">
+      <svg id="play-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+      <svg id="pause-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="display:none;"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+    </button>
+    <div class="player-info-meta">
+      <span class="player-title-text">聽總編輯說日報 (AI 語音播報)</span>
+      <span class="player-status-subtitle" id="player-status">點擊播放 · 總編輯男聲語音朗讀</span>
+    </div>
+    <div class="player-speed-controls">
+      <button class="speed-chip" data-speed="1" onclick="setSpeed(1)">1.0x</button>
+      <button class="speed-chip" data-speed="1.25" onclick="setSpeed(1.25)">1.25x</button>
+      <button class="speed-chip" data-speed="1.5" onclick="setSpeed(1.5)">1.5x</button>
+    </div>
+  </div>
+
+  <div class="section-rule"><span class="accent">熱門趨勢</span> Trending</div>
+  <div class="trending"><ol>
+  <li>
+    <span class="term">科技</span>
+    <span class="count">6 則相關</span>
+  </li>
+
+  <li>
+    <span class="term">綜合</span>
+    <span class="count">6 則相關</span>
+  </li>
+
+  <li>
+    <span class="term">半導體</span>
+    <span class="count">3 則相關</span>
+  </li>
+
+  <li>
+    <span class="term">ai</span>
+    <span class="count">3 則相關</span>
+  </li>
+
+  <li>
+    <span class="term">創意</span>
+    <span class="count">3 則相關</span>
+  </li>
+
+  <li>
+    <span class="term">日本</span>
+    <span class="count">3 則相關</span>
+  </li>
+</ol></div>
+
+  <div class="toolbar">
+    <input type="text" class="search" placeholder="🔍 搜尋文章標題、摘要、標籤..." oninput="searchArticles(this.value)">
+    <div class="chip-row">
+      <button class="chip" data-filter="all" data-active="true" style="--chip-color: var(--accent)" onclick="filterTopic(this)">全部</button>
+      <button class="chip" data-filter="科技" style="--chip-color: #8b1a1a" onclick="filterTopic(this)">科技</button><button class="chip" data-filter="綜合" style="--chip-color: #4a5568" onclick="filterTopic(this)">每日</button><button class="chip" data-filter="財經" style="--chip-color: #1b4d3e" onclick="filterTopic(this)">財經</button><button class="chip" data-filter="生活" style="--chip-color: #0f766e" onclick="filterTopic(this)">生活</button>
+    </div>
+  </div>
+
+  <div class="empty" id="empty-state">找不到符合的文章，請嘗試其他關鍵字或主題。</div>
+
+  
+  <div class="section-rule cat-heading" style="--cat: #1b4d3e"><span class="accent">今日焦點推薦</span> Spotlight</div>
+  <div class="hero-banner-overlay" style="--cat: #1b4d3e" data-topic="財經" data-search="日月光投控 5 月營收創同期高，ai 先進封測幫大忙 日月光投控5月自結合併營收達630.33億元，年增28.6%，創同期最高，先進封測需求是主要成長引擎。 日月光 ai封測 營收 半導體 成長">
+    <div class="hero-backdrop"></div>
+    
+    <div class="hero-gradient-mask"></div>
+    <div class="hero-content">
+      <div class="hero-kicker">財經新報 [財經]</div>
+      <div class="hero-hook"><span class="hero-q">Q</span>AI 先進封測需求持續升溫，是否會讓日月光在下半年維持高速營收成長？</div>
+      <h2><a href="https://finance.technews.tw/2026/06/09/ase-fr-2605/" target="_blank">日月光投控 5 月營收創同期高，AI 先進封測幫大忙</a></h2>
+      <div class="takeaway">日月光投控5月自結合併營收達630.33億元，年增28.6%，創同期最高，先進封測需求是主要成長引擎。</div>
+      <div class="byline">
+        <b>FOCUS SCORE</b> <span>9/10</span>
+      </div>
+    </div>
+  </div>
+  
+  <section class="cat" id="cat-科技" data-topic="科技">
+    <div class="section-rule cat-heading" style="--cat: #8b1a1a"><span class="accent">科技綜合精選</span> Tech Highlights</div>
+    <div class="cards" style="--cat: #8b1a1a">
+      
+      <article class="card" data-topic="科技" data-search="傳 openai 洽租俄亥俄州巨型資料中心，輝達擬出資支持 美國科技媒體 the information 援引知情人士說法報導，ai 龍頭 openai 正在洽談租用位於 [&amp;#8230;]  科技">
+        <div class="card-inner">
+          <div class="card-body">
+            <div class="kicker">TechNews 科技新報 [科技]</div>
+            <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
+            <h3 class="title"><a href="https://technews.tw/2026/06/10/openai-reportedly-in-talks-to-lease-a-data-center-in-ohio/" target="_blank">傳 OpenAI 洽租俄亥俄州巨型資料中心，輝達擬出資支持</a></h3>
+            <div class="ai-takeaway">美國科技媒體 The Information 援引知情人士說法報導，AI 龍頭 OpenAI 正在洽談租用位於 [&amp;#8230;]</div>
+            <div class="terms">
+              <span class="term">科技</span>
+            </div>
+            <div class="byline">
+              <b>SCORE</b><span class="score">5/10</span>
+            </div>
+          </div>
+          
+        </div>
+      </article>
+    
+      <article class="card" data-topic="科技" data-search="switch 2版《优米雅的炼金工房》公布预告 | 任天堂直面会 &amp;lt;img src=&quot;/sm/t/ign_cn/screenshot/default/atelieryumia-swith2_z2nw.640.jpg&quot; width=&quot;120&quot; hspace=&quot;5&quot; alt=&quot;&quot; vspace=&quot;5&quot; align=&quot;left&quot; /&amp;gt;在广阔的原野上四处冒险
+炼金术rpg《优米雅的炼金工房》讲述的是优米雅一行人正视自己的「记忆」，即使感到迷惘仍向自己所坚信的 https://www.ign.com.cn/sm/ign_cn/screenshot/default/atelieryumia-swith2_z2nw.jpg 科技">
+        <div class="card-inner">
+          <div class="card-body">
+            <div class="kicker">IGN 中文 [科技]</div>
+            <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
+            <h3 class="title"><a href="https://www.ign.com.cn/atelier-yumia-the-alchemist-of-memories-the-envisioned-land/60671/switch-2ban-you-mi-ya-de-lian-jin-gong-fang-gong-bu-yu-gao-ren-tian-tang-zhi-mian-hui" target="_blank">Switch 2版《优米雅的炼金工房》公布预告 | 任天堂直面会</a></h3>
+            <div class="ai-takeaway">&amp;lt;img src=&quot;/sm/t/ign_cn/screenshot/default/atelieryumia-swith2_z2nw.640.jpg&quot; width=&quot;120&quot; hspace=&quot;5&quot; alt=&quot;&quot; vspace=&quot;5&quot; align=&quot;left&quot; /&amp;gt;在广阔的原野上四处冒险
+炼金术RPG《优米雅的炼金工房》讲述的是优米雅一行人正视自己的「记忆」，即使感到迷惘仍向自己所坚信的</div>
+            <div class="terms">
+              <span class="term">科技</span>
+            </div>
+            <div class="byline">
+              <b>SCORE</b><span class="score">5/10</span>
+            </div>
+          </div>
+          <div class="card-thumb"><img src="https://wsrv.nl/?url=https%3A%2F%2Fwww.ign.com.cn%2Fsm%2Fign_cn%2Fscreenshot%2Fdefault%2Fatelieryumia-swith2_z2nw.jpg" onerror="this.style.display='none'; this.parentElement.classList.add('no-image');" alt=""><span class="card-thumb-label">科技</span></div>
+        </div>
+      </article>
+    
+      <article class="card" data-topic="科技" data-search="《宇宙巨人：希曼崛起》评测 &amp;lt;img src=&quot;/sm/t/ign_cn/screenshot/default/yu-zhou-ju-ren-ping-ce_mqyz.640.jpg&quot; width=&quot;120&quot; hspace=&quot;5&quot; alt=&quot;&quot; vspace=&quot;5&quot; align=&quot;left&quot; /&amp;gt;中二魂已老实
+《宇宙巨人希曼》在保留ip原汁原味的同时，又担心被时代审美与价值观念所排斥，所以只能在怀旧与解构之间反复 https://www.ign.com.cn/sm/ign_cn/screenshot/default/yu-zhou-ju-ren-ping-ce_mqyz.jpg 科技">
+        <div class="card-inner">
+          <div class="card-body">
+            <div class="kicker">IGN 中文 [科技]</div>
+            <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
+            <h3 class="title"><a href="https://www.ign.com.cn/movies/60691/yu-zhou-ju-ren-xi-man-jue-qi-ping-ce" target="_blank">《宇宙巨人：希曼崛起》评测</a></h3>
+            <div class="ai-takeaway">&amp;lt;img src=&quot;/sm/t/ign_cn/screenshot/default/yu-zhou-ju-ren-ping-ce_mqyz.640.jpg&quot; width=&quot;120&quot; hspace=&quot;5&quot; alt=&quot;&quot; vspace=&quot;5&quot; align=&quot;left&quot; /&amp;gt;中二魂已老实
+《宇宙巨人希曼》在保留IP原汁原味的同时，又担心被时代审美与价值观念所排斥，所以只能在怀旧与解构之间反复</div>
+            <div class="terms">
+              <span class="term">科技</span>
+            </div>
+            <div class="byline">
+              <b>SCORE</b><span class="score">5/10</span>
+            </div>
+          </div>
+          <div class="card-thumb"><img src="https://wsrv.nl/?url=https%3A%2F%2Fwww.ign.com.cn%2Fsm%2Fign_cn%2Fscreenshot%2Fdefault%2Fyu-zhou-ju-ren-ping-ce_mqyz.jpg" onerror="this.style.display='none'; this.parentElement.classList.add('no-image');" alt=""><span class="card-thumb-label">科技</span></div>
+        </div>
+      </article>
+    
+      <article class="card" data-topic="科技" data-search="當 gpu 從成本負擔變成獲利引擎，企業 ai 經濟進入新賽局 當全球 ai 競賽的焦點從「模型演算法」轉向「算力基礎設施」，誰能高效調度 gpu、誰能將算力資產商業化，誰就掌握了下個世代 ai 經濟的話語權。
+
+
+
+在剛落幕的 computex 2026 上，深耕 ai 基礎設施近十年的 infinitix 數位無限，以「從 ai 基礎設施到 ai 雲端經濟」為主題，協助企業將手中昂貴卻無法最大化效率的 gpu，轉化為可營運、可計價、可變現的雲端服務。
+
+
+ https://techorange.com/app/uploads/2026/06/5b1b92d434c2322d-720x540.jpg 科技">
+        <div class="card-inner">
+          <div class="card-body">
+            <div class="kicker">TechOrange 科技報橘 [科技]</div>
+            <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
+            <h3 class="title"><a href="https://techorange.com/2026/06/09/computex2026-infinitix-gpu-aiagent/?utm_source=rss&amp;amp;utm_medium=feed&amp;amp;utm_campaign=techorange_rss" target="_blank">當 GPU 從成本負擔變成獲利引擎，企業 AI 經濟進入新賽局</a></h3>
+            <div class="ai-takeaway">當全球 AI 競賽的焦點從「模型演算法」轉向「算力基礎設施」，誰能高效調度 GPU、誰能將算力資產商業化，誰就掌握了下個世代 AI 經濟的話語權。
+
+
+
+在剛落幕的 COMPUTEX 2026 上，深耕 AI 基礎設施近十年的 INFINITIX 數位無限，以「從 AI 基礎設施到 AI 雲端經濟」為主題，協助企業將手中昂貴卻無法最大化效率的 GPU，轉化為可營運、可計價、可變現的雲端服務。
+
+
+</div>
+            <div class="terms">
+              <span class="term">科技</span>
+            </div>
+            <div class="byline">
+              <b>SCORE</b><span class="score">5/10</span>
+            </div>
+          </div>
+          <div class="card-thumb"><img src="https://wsrv.nl/?url=https%3A%2F%2Ftechorange.com%2Fapp%2Fuploads%2F2026%2F06%2F5b1b92d434c2322d-720x540.jpg" onerror="this.style.display='none'; this.parentElement.classList.add('no-image');" alt=""><span class="card-thumb-label">科技</span></div>
+        </div>
+      </article>
+    
+      <article class="card" data-topic="科技" data-search="《三角符文》第五章上线日期预告 | 任天堂直面会 &amp;lt;img src=&quot;/sm/t/ign_cn/screenshot/default/deltarune_n5bv.640.jpg&quot; width=&quot;120&quot; hspace=&quot;5&quot; alt=&quot;&quot; vspace=&quot;5&quot; align=&quot;left&quot; /&amp;gt;第五章免费更新将于6月24日推出
+欢迎来到《传说之下》的平行世界！在精彩纷呈的战斗中，你可以选择战斗或宽恕，与一群既熟悉又可爱的新老角色一起探索 https://www.ign.com.cn/sm/ign_cn/screenshot/default/deltarune_n5bv.jpg 科技">
+        <div class="card-inner">
+          <div class="card-body">
+            <div class="kicker">IGN 中文 [科技]</div>
+            <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
+            <h3 class="title"><a href="https://www.ign.com.cn/deltarune/60681/san-jiao-fu-wen-di-wu-zhang-shang-xian-ri-qi-yu-gao-ren-tian-tang-zhi-mian-hui" target="_blank">《三角符文》第五章上线日期预告 | 任天堂直面会</a></h3>
+            <div class="ai-takeaway">&amp;lt;img src=&quot;/sm/t/ign_cn/screenshot/default/deltarune_n5bv.640.jpg&quot; width=&quot;120&quot; hspace=&quot;5&quot; alt=&quot;&quot; vspace=&quot;5&quot; align=&quot;left&quot; /&amp;gt;第五章免费更新将于6月24日推出
+欢迎来到《传说之下》的平行世界！在精彩纷呈的战斗中，你可以选择战斗或宽恕，与一群既熟悉又可爱的新老角色一起探索</div>
+            <div class="terms">
+              <span class="term">科技</span>
+            </div>
+            <div class="byline">
+              <b>SCORE</b><span class="score">5/10</span>
+            </div>
+          </div>
+          <div class="card-thumb"><img src="https://wsrv.nl/?url=https%3A%2F%2Fwww.ign.com.cn%2Fsm%2Fign_cn%2Fscreenshot%2Fdefault%2Fdeltarune_n5bv.jpg" onerror="this.style.display='none'; this.parentElement.classList.add('no-image');" alt=""><span class="card-thumb-label">科技</span></div>
+        </div>
+      </article>
+    
+      <article class="card" data-topic="科技" data-search="switch 2版《异度神剑 终极版》介绍视频 &amp;lt;img src=&quot;/sm/t/ign_cn/screenshot/default/080b623055c22ae4bee1d6ac597cd0c50f52234a783067db15b4d38d01f5_jxad.640.jpg&quot; width=&quot;120&quot; hspace=&quot;5&quot; alt=&quot;&quot; vspace=&quot;5&quot; align=&quot;left&quot; /&amp;gt;能以更细腻流畅的画面表现享受冒险
+swit https://www.ign.com.cn/sm/ign_cn/screenshot/default/080b623055c22ae4bee1d6ac597cd0c50f52234a783067db15b4d38d01f5_jxad.jpg 科技">
+        <div class="card-inner">
+          <div class="card-body">
+            <div class="kicker">IGN 中文 [科技]</div>
+            <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
+            <h3 class="title"><a href="https://www.ign.com.cn/ydsj/60698/switch-2ban-yi-du-shen-jian-zhong-ji-ban-jie-shao-shi-pin" target="_blank">Switch 2版《异度神剑 终极版》介绍视频</a></h3>
+            <div class="ai-takeaway">&amp;lt;img src=&quot;/sm/t/ign_cn/screenshot/default/080b623055c22ae4bee1d6ac597cd0c50f52234a783067db15b4d38d01f5_jxad.640.jpg&quot; width=&quot;120&quot; hspace=&quot;5&quot; alt=&quot;&quot; vspace=&quot;5&quot; align=&quot;left&quot; /&amp;gt;能以更细腻流畅的画面表现享受冒险
+Swit</div>
+            <div class="terms">
+              <span class="term">科技</span>
+            </div>
+            <div class="byline">
+              <b>SCORE</b><span class="score">5/10</span>
+            </div>
+          </div>
+          <div class="card-thumb"><img src="https://wsrv.nl/?url=https%3A%2F%2Fwww.ign.com.cn%2Fsm%2Fign_cn%2Fscreenshot%2Fdefault%2F080b623055c22ae4bee1d6ac597cd0c50f52234a783067db15b4d38d01f5_jxad.jpg" onerror="this.style.display='none'; this.parentElement.classList.add('no-image');" alt=""><span class="card-thumb-label">科技</span></div>
+        </div>
+      </article>
+    
+    </div>
+  </section>
+  <section class="cat" id="cat-綜合" data-topic="綜合">
+    <div class="section-rule cat-heading" style="--cat: #4a5568"><span class="accent">每日綜合快訊</span> General News</div>
+    <div class="cards" style="--cat: #4a5568">
+      
+      <article class="card" data-topic="綜合" data-search="法德戰鬥機計劃告吹，盟友在防務前景上出現分歧 這項旗艦合作計劃，最終卻成為兩國分歧的顯著象徵。 https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/bc9c/live/ef188f80-640e-11f1-b639-cdbeabf73caa.png 綜合">
+        <div class="card-inner">
+          <div class="card-body">
+            <div class="kicker">BBC 中文 [綜合]</div>
+            <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
+            <h3 class="title"><a href="https://www.bbc.com/zhongwen/articles/cr5jmvg54zvo/trad?at_medium=RSS&amp;amp;at_campaign=rss" target="_blank">法德戰鬥機計劃告吹，盟友在防務前景上出現分歧</a></h3>
+            <div class="ai-takeaway">這項旗艦合作計劃，最終卻成為兩國分歧的顯著象徵。</div>
+            <div class="terms">
+              <span class="term">綜合</span>
+            </div>
+            <div class="byline">
+              <b>SCORE</b><span class="score">5/10</span>
+            </div>
+          </div>
+          <div class="card-thumb"><img src="https://wsrv.nl/?url=https%3A%2F%2Fichef.bbci.co.uk%2Face%2Fws%2F240%2Fcpsprodpb%2Fbc9c%2Flive%2Fef188f80-640e-11f1-b639-cdbeabf73caa.png" onerror="this.style.display='none'; this.parentElement.classList.add('no-image');" alt=""><span class="card-thumb-label">綜合</span></div>
+        </div>
+      </article>
+    
+      <article class="card" data-topic="綜合" data-search="先下手為強：南海島礁爭奪的新現實 多年來，越南一直目睹中國透過造地來支持其廣泛的領土主張，如今，越南也開始在南海建造一些礁石來鞏固其主張。菲律賓也正在進行類似的做法，只是規模較小。 https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/3a80/live/357b5b10-5e74-11f1-8b8c-6d33e1d5abb6.jpg 綜合">
+        <div class="card-inner">
+          <div class="card-body">
+            <div class="kicker">BBC 中文 [綜合]</div>
+            <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
+            <h3 class="title"><a href="https://www.bbc.com/zhongwen/articles/c78q2gwxp90o/trad?at_medium=RSS&amp;amp;at_campaign=rss" target="_blank">先下手為強：南海島礁爭奪的新現實</a></h3>
+            <div class="ai-takeaway">多年來，越南一直目睹中國透過造地來支持其廣泛的領土主張，如今，越南也開始在南海建造一些礁石來鞏固其主張。菲律賓也正在進行類似的做法，只是規模較小。</div>
+            <div class="terms">
+              <span class="term">綜合</span>
+            </div>
+            <div class="byline">
+              <b>SCORE</b><span class="score">5/10</span>
+            </div>
+          </div>
+          <div class="card-thumb"><img src="https://wsrv.nl/?url=https%3A%2F%2Fichef.bbci.co.uk%2Face%2Fws%2F240%2Fcpsprodpb%2F3a80%2Flive%2F357b5b10-5e74-11f1-8b8c-6d33e1d5abb6.jpg" onerror="this.style.display='none'; this.parentElement.classList.add('no-image');" alt=""><span class="card-thumb-label">綜合</span></div>
+        </div>
+      </article>
+    
+      <article class="card" data-topic="綜合" data-search="印太新局？日本與菲律賓最新軍事經濟結盟為何引發中國抗議 日菲兩國宣佈正式啟動太平洋專屬經濟區劃界談判，這個被視為強化「第一島鏈」的戰略舉動立即引發中國強烈抨擊，稱有關舉動「完全非法且無效」，並派遣海警巡弋台灣東部海域。 https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/8317/live/43940770-609e-11f1-89a3-d1f559421220.jpg 綜合">
+        <div class="card-inner">
+          <div class="card-body">
+            <div class="kicker">BBC 中文 [綜合]</div>
+            <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
+            <h3 class="title"><a href="https://www.bbc.com/zhongwen/articles/cx21293v800o/trad?at_medium=RSS&amp;amp;at_campaign=rss" target="_blank">印太新局？日本與菲律賓最新軍事經濟結盟為何引發中國抗議</a></h3>
+            <div class="ai-takeaway">日菲兩國宣佈正式啟動太平洋專屬經濟區劃界談判，這個被視為強化「第一島鏈」的戰略舉動立即引發中國強烈抨擊，稱有關舉動「完全非法且無效」，並派遣海警巡弋台灣東部海域。</div>
+            <div class="terms">
+              <span class="term">綜合</span>
+            </div>
+            <div class="byline">
+              <b>SCORE</b><span class="score">5/10</span>
+            </div>
+          </div>
+          <div class="card-thumb"><img src="https://wsrv.nl/?url=https%3A%2F%2Fichef.bbci.co.uk%2Face%2Fws%2F240%2Fcpsprodpb%2F8317%2Flive%2F43940770-609e-11f1-89a3-d1f559421220.jpg" onerror="this.style.display='none'; this.parentElement.classList.add('no-image');" alt=""><span class="card-thumb-label">綜合</span></div>
+        </div>
+      </article>
+    
+      <article class="card" data-topic="綜合" data-search="2026足球世界盃賽程海報  點擊這裡免費下載 你可以從這裡下載並打印免費的2026世界盃賽程海報，全面追蹤這項全球最大足球盛事的每一場賽程與比賽結果。 https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/842b/live/d224de60-5e8c-11f1-89a3-d1f559421220.png 綜合">
+        <div class="card-inner">
+          <div class="card-body">
+            <div class="kicker">BBC 中文 [綜合]</div>
+            <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
+            <h3 class="title"><a href="https://www.bbc.com/zhongwen/articles/cx21r3d9y1yo/trad?at_medium=RSS&amp;amp;at_campaign=rss" target="_blank">2026足球世界盃賽程海報  點擊這裡免費下載</a></h3>
+            <div class="ai-takeaway">你可以從這裡下載並打印免費的2026世界盃賽程海報，全面追蹤這項全球最大足球盛事的每一場賽程與比賽結果。</div>
+            <div class="terms">
+              <span class="term">綜合</span>
+            </div>
+            <div class="byline">
+              <b>SCORE</b><span class="score">5/10</span>
+            </div>
+          </div>
+          <div class="card-thumb"><img src="https://wsrv.nl/?url=https%3A%2F%2Fichef.bbci.co.uk%2Face%2Fws%2F240%2Fcpsprodpb%2F842b%2Flive%2Fd224de60-5e8c-11f1-89a3-d1f559421220.png" onerror="this.style.display='none'; this.parentElement.classList.add('no-image');" alt=""><span class="card-thumb-label">綜合</span></div>
+        </div>
+      </article>
+    
+      <article class="card" data-topic="綜合" data-search="分析：特朗普需要結束這場戰爭，但伊朗不會退讓 特朗普對伊朗發動戰爭時稱，強大的空中力量足以推翻德黑蘭的伊斯蘭政權。他誤判了這個政權的本質，在經歷了戰爭、制裁和孤立帶來的嚴峻考驗後，這個政權仍能維持近半個世紀。 https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/08db/live/a5895d30-5db6-11f1-8b6d-5b89cbb85786.jpg 綜合">
+        <div class="card-inner">
+          <div class="card-body">
+            <div class="kicker">BBC 中文 [綜合]</div>
+            <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
+            <h3 class="title"><a href="https://www.bbc.com/zhongwen/articles/cn9przzxyx9o/trad?at_medium=RSS&amp;amp;at_campaign=rss" target="_blank">分析：特朗普需要結束這場戰爭，但伊朗不會退讓</a></h3>
+            <div class="ai-takeaway">特朗普對伊朗發動戰爭時稱，強大的空中力量足以推翻德黑蘭的伊斯蘭政權。他誤判了這個政權的本質，在經歷了戰爭、制裁和孤立帶來的嚴峻考驗後，這個政權仍能維持近半個世紀。</div>
+            <div class="terms">
+              <span class="term">綜合</span>
+            </div>
+            <div class="byline">
+              <b>SCORE</b><span class="score">5/10</span>
+            </div>
+          </div>
+          <div class="card-thumb"><img src="https://wsrv.nl/?url=https%3A%2F%2Fichef.bbci.co.uk%2Face%2Fws%2F240%2Fcpsprodpb%2F08db%2Flive%2Fa5895d30-5db6-11f1-8b6d-5b89cbb85786.jpg" onerror="this.style.display='none'; this.parentElement.classList.add('no-image');" alt=""><span class="card-thumb-label">綜合</span></div>
+        </div>
+      </article>
+    
+      <article class="card" data-topic="綜合" data-search="聖彼得堡論壇最後一天當地遭烏克蘭無人機襲擊  130國數千賓客參會 這輪最新襲擊發生在烏軍數日前對聖彼得堡郊區發動攻擊之後。普京主辦、被視為其招牌活動的聖彼得堡國際經濟論壇在其家鄉舉行。 https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/e0d1/live/c2fb25a0-6190-11f1-89a3-d1f559421220.png 綜合">
+        <div class="card-inner">
+          <div class="card-body">
+            <div class="kicker">BBC 中文 [綜合]</div>
+            <div class="hook"><span class="q">Q</span>這則消息值得關注嗎？</div>
+            <h3 class="title"><a href="https://www.bbc.com/zhongwen/articles/cwyk3vvzxp2o/trad?at_medium=RSS&amp;amp;at_campaign=rss" target="_blank">聖彼得堡論壇最後一天當地遭烏克蘭無人機襲擊  130國數千賓客參會</a></h3>
+            <div class="ai-takeaway">這輪最新襲擊發生在烏軍數日前對聖彼得堡郊區發動攻擊之後。普京主辦、被視為其招牌活動的聖彼得堡國際經濟論壇在其家鄉舉行。</div>
+            <div class="terms">
+              <span class="term">綜合</span>
+            </div>
+            <div class="byline">
+              <b>SCORE</b><span class="score">5/10</span>
+            </div>
+          </div>
+          <div class="card-thumb"><img src="https://wsrv.nl/?url=https%3A%2F%2Fichef.bbci.co.uk%2Face%2Fws%2F240%2Fcpsprodpb%2Fe0d1%2Flive%2Fc2fb25a0-6190-11f1-89a3-d1f559421220.png" onerror="this.style.display='none'; this.parentElement.classList.add('no-image');" alt=""><span class="card-thumb-label">綜合</span></div>
+        </div>
+      </article>
+    
+    </div>
+  </section>
+  <section class="cat" id="cat-財經" data-topic="財經">
+    <div class="section-rule cat-heading" style="--cat: #1b4d3e"><span class="accent">財經市場精選</span> Finance &amp; Markets</div>
+    <div class="cards" style="--cat: #1b4d3e">
+      
+      <article class="card" data-topic="財經" data-search="力積電成功籌資 8.86 億美元，強化投資未來動能 力積電透過發行海外存託憑證與員工認股，成功集資8.86億美元，將投入未來關鍵技術與產能擴張。  力積電 募資 海外存託憑證 半導體 投資">
+        <div class="card-inner">
+          <div class="card-body">
+            <div class="kicker">財經新報 [財經]</div>
+            <div class="hook"><span class="q">Q</span>這筆巨額資金將如何具體帶动力積電在半導體市場的技術升級與產能提升？</div>
+            <h3 class="title"><a href="https://finance.technews.tw/2026/06/10/psmc-to-raise-money-through-gds-offering-and-employee-common-shares-subscription/" target="_blank">力積電成功籌資 8.86 億美元，強化投資未來動能</a></h3>
+            <div class="ai-takeaway">力積電透過發行海外存託憑證與員工認股，成功集資8.86億美元，將投入未來關鍵技術與產能擴張。</div>
+            <div class="terms">
+              <span class="term">力積電</span><span class="term">募資</span><span class="term">海外存託憑證</span><span class="term">半導體</span><span class="term">投資</span>
+            </div>
+            <div class="byline">
+              <b>SCORE</b><span class="score">8/10</span>
+            </div>
+          </div>
+          
+        </div>
+      </article>
+    
+      <article class="card" data-topic="財經" data-search="邱銘乾：terafab 已進行接觸，ai 需求非泡沫未來三到五年發展非常樂觀 家登精密董事長邱銘乾指出ai需求屬實質硬體建設，非泡沫，並透露已與terafab展開接觸，對未來三至五年發展持樂觀態度。  家登精密 terafab ai需求 半導體 供應鏈">
+        <div class="card-inner">
+          <div class="card-body">
+            <div class="kicker">財經新報 [財經]</div>
+            <div class="hook"><span class="q">Q</span>TeraFab與家登精密的合作將如何加速AI硬體供應鏈的整合與市場布局？</div>
+            <h3 class="title"><a href="https://finance.technews.tw/2026/06/09/gudeng-said-the-demand-for-ai-is-very-optimistic-for-the-next-three-to-five-years/" target="_blank">邱銘乾：TeraFab 已進行接觸，AI 需求非泡沫未來三到五年發展非常樂觀</a></h3>
+            <div class="ai-takeaway">家登精密董事長邱銘乾指出AI需求屬實質硬體建設，非泡沫，並透露已與TeraFab展開接觸，對未來三至五年發展持樂觀態度。</div>
+            <div class="terms">
+              <span class="term">家登精密</span><span class="term">TeraFab</span><span class="term">AI需求</span><span class="term">半導體</span><span class="term">供應鏈</span>
+            </div>
+            <div class="byline">
+              <b>SCORE</b><span class="score">8/10</span>
+            </div>
+          </div>
+          
+        </div>
+      </article>
+    
+      <article class="card" data-topic="財經" data-search="從「輝達宅」到「輝達區」！ai 熱潮燒進房市，北投交易量年增 32.7% 黃仁勳訪台帶動ai熱潮，北投新建案出現「輝達區」標語，房市成交量較去年同期大增32.7%。  ai 房市 北投 輝達 黃仁勳 成交">
+        <div class="card-inner">
+          <div class="card-body">
+            <div class="kicker">財經新報 [財經]</div>
+            <div class="hook"><span class="q">Q</span>「輝達區」效應是否會向外擴散，成為AI與房地產結合的新商業模式？</div>
+            <h3 class="title"><a href="https://finance.technews.tw/2026/06/09/transaction-volume-in-beitou-increased-by-32-7-year-on-year/" target="_blank">從「輝達宅」到「輝達區」！AI 熱潮燒進房市，北投交易量年增 32.7%</a></h3>
+            <div class="ai-takeaway">黃仁勳訪台帶動AI熱潮，北投新建案出現「輝達區」標語，房市成交量較去年同期大增32.7%。</div>
+            <div class="terms">
+              <span class="term">AI</span><span class="term">房市</span><span class="term">北投</span><span class="term">輝達</span><span class="term">黃仁勳</span><span class="term">成交</span>
+            </div>
+            <div class="byline">
+              <b>SCORE</b><span class="score">8/10</span>
+            </div>
+          </div>
+          
+        </div>
+      </article>
+    
+      <article class="card" data-topic="財經" data-search="不論同行上市表現是好是壞，都不影響 perplexity 堅持 2028 年才 ipo 決定 perplexity 表示將維持2028年公開上市的目標，即便同行近期上市表現起伏也不改其時程。  perplexity ai搜尋 ipo 新創 上市">
+        <div class="card-inner">
+          <div class="card-body">
+            <div class="kicker">財經新報 [財經]</div>
+            <div class="hook"><span class="q">Q</span>在激烈競爭的AI搜尋市場，Perplexity 如何在2028年前打造可持續的營收模式以支撐 IPO？</div>
+            <h3 class="title"><a href="https://finance.technews.tw/2026/06/09/perplexity-stays-course-on-2028-ipo-amid-openai-anthropic-ipos/" target="_blank">不論同行上市表現是好是壞，都不影響 Perplexity 堅持 2028 年才 IPO 決定</a></h3>
+            <div class="ai-takeaway">Perplexity 表示將維持2028年公開上市的目標，即便同行近期上市表現起伏也不改其時程。</div>
+            <div class="terms">
+              <span class="term">Perplexity</span><span class="term">AI搜尋</span><span class="term">IPO</span><span class="term">新創</span><span class="term">上市</span>
+            </div>
+            <div class="byline">
+              <b>SCORE</b><span class="score">7/10</span>
+            </div>
+          </div>
+          
+        </div>
+      </article>
+    
+      <article class="card" data-topic="財經" data-search="受惠被動元件拉貨狂飆！精湛科技子公司爆單迎下半年大旺季 精湛科技子公司因被動元件拉貨激增，訂單爆滿，將迎來下半年旺季；公司亦正從光學篩選設備轉型至ai+aoi智能視覺。  精湛科技 被動元件 ai 智能視覺 旺季">
+        <div class="card-inner">
+          <div class="card-body">
+            <div class="kicker">財經新報 [財經]</div>
+            <div class="hook"><span class="q">Q</span>精湛科技能否在智能視覺領域取得突破，支撐其下半年的營收成長？</div>
+            <h3 class="title"><a href="https://finance.technews.tw/2026/06/09/passive-component-delivery/" target="_blank">受惠被動元件拉貨狂飆！精湛科技子公司爆單迎下半年大旺季</a></h3>
+            <div class="ai-takeaway">精湛科技子公司因被動元件拉貨激增，訂單爆滿，將迎來下半年旺季；公司亦正從光學篩選設備轉型至AI+AOI智能視覺。</div>
+            <div class="terms">
+              <span class="term">精湛科技</span><span class="term">被動元件</span><span class="term">AI</span><span class="term">智能視覺</span><span class="term">旺季</span>
+            </div>
+            <div class="byline">
+              <b>SCORE</b><span class="score">7/10</span>
+            </div>
+          </div>
+          
+        </div>
+      </article>
+    
+    </div>
+  </section>
+  <section class="cat" id="cat-生活" data-topic="生活">
+    <div class="section-rule cat-heading" style="--cat: #0f766e"><span class="accent">生活探索精選</span> Life Highlights</div>
+    <div class="cards" style="--cat: #0f766e">
+      
+      <article class="card" data-topic="生活" data-search="《ａｉ取戒名》日本和尚取一次名要收幾十萬 何不自己問ａｉ就好了？ 和尚為往生者取戒名收費不透明，部分家屬求助 ai 系統，引發傳統宗教習俗與 ai 取代的討論。  ai 戒名 和尚 日本 喪禮 傳統">
+        <div class="card-inner">
+          <div class="card-body">
+            <div class="kicker">遊戲基地 [生活]</div>
+            <div class="hook"><span class="q">Q</span>AI 取代和尚取戒名是否會衝擊日本宗教文化的商業模式？</div>
+            <h3 class="title"><a href="https://news.gamme.com.tw/1774214" target="_blank">《ＡＩ取戒名》日本和尚取一次名要收幾十萬 何不自己問ＡＩ就好了？</a></h3>
+            <div class="ai-takeaway">和尚為往生者取戒名收費不透明，部分家屬求助 AI 系統，引發傳統宗教習俗與 AI 取代的討論。</div>
+            <div class="terms">
+              <span class="term">AI</span><span class="term">戒名</span><span class="term">和尚</span><span class="term">日本</span><span class="term">喪禮</span><span class="term">傳統</span>
+            </div>
+            <div class="byline">
+              <b>SCORE</b><span class="score">7/10</span>
+            </div>
+          </div>
+          
+        </div>
+      </article>
+    
+      <article class="card" data-topic="生活" data-search="東京上野住宿｜nohga hotel ueno 上野諾加上飯店, 高評價飯店推薦, 機場直達 只需步行5分鐘 nohga hotel ueno 位於東京上野，提供成田機場直達服務，距離jr上野站步行僅5分鐘，是高評價的住宿選擇。  東京 上野 住宿 nohga hotel 機場直達 旅遊">
+        <div class="card-inner">
+          <div class="card-body">
+            <div class="kicker">台灣旅行趣 [生活]</div>
+            <div class="hook"><span class="q">Q</span>想在東京上野享受便利交通與優質服務的旅客，NOHGA HOTEL 是否為首選？</div>
+            <h3 class="title"><a href="https://travelfun.tw/nohga-hotel-ueno/" target="_blank">東京上野住宿｜NOHGA HOTEL UENO 上野諾加上飯店, 高評價飯店推薦, 機場直達 只需步行5分鐘</a></h3>
+            <div class="ai-takeaway">NOHGA HOTEL UENO 位於東京上野，提供成田機場直達服務，距離JR上野站步行僅5分鐘，是高評價的住宿選擇。</div>
+            <div class="terms">
+              <span class="term">東京</span><span class="term">上野</span><span class="term">住宿</span><span class="term">NOHGA HOTEL</span><span class="term">機場直達</span><span class="term">旅遊</span>
+            </div>
+            <div class="byline">
+              <b>SCORE</b><span class="score">6/10</span>
+            </div>
+          </div>
+          
+        </div>
+      </article>
+    
+      <article class="card" data-topic="生活" data-search="日本搞笑護理師素材網《sukima nurse》連不上了 網友懷疑是被ａｉ取代了嗎？ 日本惡搞護理師素材網站「sukima nurse」近期無法連線，網友猜測可能是生成式 ai 取代了其內容。  sukima nurse 素材網站 ai取代 日本 創意">
+        <div class="card-inner">
+          <div class="card-body">
+            <div class="kicker">遊戲基地 [生活]</div>
+            <div class="hook"><span class="q">Q</span>AI 是否正快速取代傳統素材網站，讓創意工作者失去平台？</div>
+            <h3 class="title"><a href="https://news.gamme.com.tw/1774215" target="_blank">日本搞笑護理師素材網《Sukima Nurse》連不上了 網友懷疑是被ＡＩ取代了嗎？</a></h3>
+            <div class="ai-takeaway">日本惡搞護理師素材網站「Sukima Nurse」近期無法連線，網友猜測可能是生成式 AI 取代了其內容。</div>
+            <div class="terms">
+              <span class="term">Sukima Nurse</span><span class="term">素材網站</span><span class="term">AI取代</span><span class="term">日本</span><span class="term">創意</span>
+            </div>
+            <div class="byline">
+              <b>SCORE</b><span class="score">6/10</span>
+            </div>
+          </div>
+          
+        </div>
+      </article>
+    
+      <article class="card" data-topic="生活" data-search="網友分享《用電動美甲機打磨拋光的黑熊爪》越覺得它漂亮就越感受到當中的恐怖(怕) 日本冬季熊入侵人類區域，有網友使用電動美甲機將黑熊爪拋光成美甲作品，作品看似精緻卻引發不安。  美甲 黑熊 創意 日本 冬季 動物保護">
+        <div class="card-inner">
+          <div class="card-body">
+            <div class="kicker">遊戲基地 [生活]</div>
+            <div class="hook"><span class="q">Q</span>這類以動物為素材的創意作品是否會觸發動物保護與道德爭議？</div>
+            <h3 class="title"><a href="https://news.gamme.com.tw/1774234" target="_blank">網友分享《用電動美甲機打磨拋光的黑熊爪》越覺得它漂亮就越感受到當中的恐怖(怕)</a></h3>
+            <div class="ai-takeaway">日本冬季熊入侵人類區域，有網友使用電動美甲機將黑熊爪拋光成美甲作品，作品看似精緻卻引發不安。</div>
+            <div class="terms">
+              <span class="term">美甲</span><span class="term">黑熊</span><span class="term">創意</span><span class="term">日本</span><span class="term">冬季</span><span class="term">動物保護</span>
+            </div>
+            <div class="byline">
+              <b>SCORE</b><span class="score">5/10</span>
+            </div>
+          </div>
+          
+        </div>
+      </article>
+    
+      <article class="card" data-topic="生活" data-search="以巨大注連繩聞名的《出雲大社》其實觀光客超容易誤會一件事 出雲大社以巨大注連繩聞名，但許多遊客誤解其象徵意義，事實上它代表神聖的結界。  出雲大社 注連繩 日本神社 觀光 文化">
+        <div class="card-inner">
+          <div class="card-body">
+            <div class="kicker">遊戲基地 [生活]</div>
+            <div class="hook"><span class="q">Q</span>了解注連繩真正意義後，觀光客的參拜體驗會有何不同？</div>
+            <h3 class="title"><a href="https://news.gamme.com.tw/1774207" target="_blank">以巨大注連繩聞名的《出雲大社》其實觀光客超容易誤會一件事</a></h3>
+            <div class="ai-takeaway">出雲大社以巨大注連繩聞名，但許多遊客誤解其象徵意義，事實上它代表神聖的結界。</div>
+            <div class="terms">
+              <span class="term">出雲大社</span><span class="term">注連繩</span><span class="term">日本神社</span><span class="term">觀光</span><span class="term">文化</span>
+            </div>
+            <div class="byline">
+              <b>SCORE</b><span class="score">5/10</span>
+            </div>
+          </div>
+          
+        </div>
+      </article>
+    
+      <article class="card" data-topic="生活" data-search="沉迷《朋友收集夢想生活2026》的9歲女兒 做了「鬼滅之刃」的角色，但仔細一看結果發現空虛到不行的後腦勺 一名9歲女孩在《朋友收集夢想生活2026》中製作了《鬼滅之刃》角色，卻呈現空洞的後腦勺，引發對兒童遊戲內容的討論。  手遊 朋友收集夢想生活2026 鬼滅之刃 兒童 創意">
+        <div class="card-inner">
+          <div class="card-body">
+            <div class="kicker">遊戲基地 [生活]</div>
+            <div class="hook"><span class="q">Q</span>這款手遊的設計是否可能對兒童的創意與審美造成負面影響？</div>
+            <h3 class="title"><a href="https://news.gamme.com.tw/1774224" target="_blank">沉迷《朋友收集夢想生活2026》的9歲女兒 做了「鬼滅之刃」的角色，但仔細一看結果發現空虛到不行的後腦勺</a></h3>
+            <div class="ai-takeaway">一名9歲女孩在《朋友收集夢想生活2026》中製作了《鬼滅之刃》角色，卻呈現空洞的後腦勺，引發對兒童遊戲內容的討論。</div>
+            <div class="terms">
+              <span class="term">手遊</span><span class="term">朋友收集夢想生活2026</span><span class="term">鬼滅之刃</span><span class="term">兒童</span><span class="term">創意</span>
+            </div>
+            <div class="byline">
+              <b>SCORE</b><span class="score">5/10</span>
+            </div>
+          </div>
+          
+        </div>
+      </article>
+    
+    </div>
+  </section>
+
+  <footer>© 2026 心聞 · Heart News. 智慧物聯架構實驗室.</footer>
+</div>
+
+<script>
+  let audio = null;
+  let isPlaying = false;
+  let currentSpeed = 1.0;
+  const playIcon = document.getElementById('play-icon');
+  const pauseIcon = document.getElementById('pause-icon');
+  const playerStatus = document.getElementById('player-status');
+
+  function initAudio() {
+    if (audio) return;
+    audio = new Audio("audio/briefing.mp3?v=" + new Date().getTime());
+    
+    audio.onplay = () => {
+      isPlaying = true;
+      playIcon.style.display = 'none';
+      pauseIcon.style.display = 'block';
+      playerStatus.innerText = '播放中 · 聆聽總編輯主播說日報';
+    };
+    
+    audio.onpause = () => {
+      isPlaying = false;
+      playIcon.style.display = 'block';
+      pauseIcon.style.display = 'none';
+      playerStatus.innerText = '已暫停';
+    };
+    
+    audio.onended = () => {
+      isPlaying = false;
+      playIcon.style.display = 'block';
+      pauseIcon.style.display = 'none';
+      playerStatus.innerText = '播放結束 · 重新收聽';
+    };
+    
+    audio.onerror = () => {
+      isPlaying = false;
+      playIcon.style.display = 'block';
+      pauseIcon.style.display = 'none';
+      playerStatus.innerText = '語音加載失敗或尚未生成，請稍後再試';
+    };
+  }
+
+  function toggleSpeech() {
+    initAudio();
+    if (isPlaying) {
+      audio.pause();
+    } else {
+      audio.playbackRate = currentSpeed;
+      audio.play().catch(err => {
+        console.error("播放失敗:", err);
+        playerStatus.innerText = '播放失敗，請檢查網路';
+      });
+    }
+  }
+
+  function setSpeed(rate) {
+    currentSpeed = rate;
+    if (audio) {
+      audio.playbackRate = rate;
+    }
+    
+    document.querySelectorAll('.speed-chip').forEach(chip => {
+      const chipSpeed = parseFloat(chip.getAttribute('data-speed'));
+      if (chipSpeed === rate) {
+        chip.classList.add('active');
+      } else {
+        chip.classList.remove('active');
+      }
+    });
+  }
+
+  // 設置初始狀態
+  setSpeed(1.0);
+
+  // Toolbar: 主題 Chip 過濾
+  function filterTopic(btn) {
+    document.querySelectorAll('.chip').forEach(c => c.dataset.active = 'false');
+    btn.dataset.active = 'true';
+    const filter = btn.dataset.filter;
+    const sections = document.querySelectorAll('section.cat');
+    const hero = document.querySelector('.hero-banner-overlay');
+    const searchInput = document.querySelector('.search');
+    if (searchInput) searchInput.value = '';
+
+    if (filter === 'all') {
+      sections.forEach(s => s.hidden = false);
+      if (hero) hero.style.display = 'flex';
+      document.querySelectorAll('.card').forEach(c => c.hidden = false);
+    } else {
+      sections.forEach(s => {
+        s.hidden = s.dataset.topic !== filter;
+      });
+      if (hero) {
+        hero.style.display = (hero.dataset.topic === filter) ? 'flex' : 'none';
+      }
+      document.querySelectorAll('.card').forEach(c => {
+        c.hidden = c.dataset.topic !== filter;
+      });
+    }
+    checkEmpty();
+  }
+
+  // Toolbar: 搜尋
+  function searchArticles(query) {
+    const q = query.toLowerCase().trim();
+    document.querySelectorAll('.chip').forEach(c => c.dataset.active = 'false');
+    document.querySelector('.chip[data-filter="all"]').dataset.active = 'true';
+
+    const sections = document.querySelectorAll('section.cat');
+    const hero = document.querySelector('.hero-banner-overlay');
+
+    if (!q) {
+      sections.forEach(s => s.hidden = false);
+      if (hero) hero.style.display = 'flex';
+      document.querySelectorAll('.card').forEach(c => c.hidden = false);
+    } else {
+      if (hero) {
+        hero.style.display = (hero.dataset.search || '').includes(q) ? 'flex' : 'none';
+      }
+      document.querySelectorAll('.card').forEach(c => {
+        c.hidden = !(c.dataset.search || '').includes(q);
+      });
+      sections.forEach(s => {
+        const visibleCards = s.querySelectorAll('.card:not([hidden])');
+        s.hidden = visibleCards.length === 0;
+      });
+    }
+    checkEmpty();
+  }
+
+  function checkEmpty() {
+    const visibleCards = document.querySelectorAll('.card:not([hidden])');
+    const hero = document.querySelector('.hero-banner-overlay');
+    const isHeroVisible = hero && hero.style.display !== 'none';
+    const emptyEl = document.getElementById('empty-state');
+    if (emptyEl) {
+      emptyEl.dataset.show = (visibleCards.length === 0 && !isHeroVisible) ? 'true' : 'false';
+    }
+  }
+</script>
+</body>
+</html>

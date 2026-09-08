@@ -1,0 +1,996 @@
+<!doctype html>
+<html lang="zh-Hant" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<title>心聞 · Heart News | 每一天，都值得銘記</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700;8..60,800;8..60,900&family=Inter:wght@500;600;700;800&family=Noto+Sans+TC:wght@500;600;700;900&family=Noto+Serif+TC:wght@500;600;700;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #fbf9f4; --bg-elev: #ffffff; --bg-card: #ffffff;
+    --border: #e0dbd0; --rule: #2a2824; --fg: #1f1d1a; --fg-mute: #6b655c;
+    --accent: #8b1a1a; --accent-soft: rgba(139, 26, 26, 0.03);
+    --good: #5a7d52;
+    --serif: "Source Serif 4", "Noto Serif TC", "Songti TC", "PMingLiU", Georgia, serif;
+    --sans: "Inter", "Noto Sans TC", "PingFang TC", -apple-system, sans-serif;
+  }
+  [data-theme="dark"] {
+    --bg: #111216; --bg-elev: #17181f; --bg-card: #1c1d26;
+    --border: #282a36; --rule: #b6b3ab; --fg: #d5d3ca; --fg-mute: #858177;
+    --accent: #e58b8b; --accent-soft: rgba(229, 139, 139, 0.06);
+    --good: #9bc198;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--bg); color: var(--fg); font: 600 17px/1.75 var(--sans); min-height: 100vh; transition: background .25s ease, color .25s ease; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 36px 24px 80px; }
+  a { color: inherit; text-decoration: none; }
+  .masthead h1 a:hover { color: var(--accent); }
+
+  .masthead { text-align: center; padding-bottom: 22px; border-bottom: 3px double var(--rule); position: relative; }
+  .masthead .dateline { display: flex; justify-content: center; align-items: center; gap: 12px; font-family: var(--sans); font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--fg-mute); padding: 0 4px 14px; }
+  .masthead h1 { font-family: var(--serif); font-weight: 900; font-size: 56px; line-height: 1.15; letter-spacing: -0.01em; margin: 4px 0 8px; }
+  .masthead .tagline { font-family: var(--sans); font-weight: 600; font-size: 16px; color: var(--fg-mute); margin: 0 0 6px; }
+  .masthead .meta-line { font-size: 12px; color: var(--fg-mute); letter-spacing: 0.04em; }
+  .masthead .theme-btn { position: absolute; top: 0; right: 0; background: transparent; border: 1px solid var(--border); color: var(--fg); width: 36px; height: 36px; border-radius: 4px; cursor: pointer; transition: .12s; }
+  @media(max-width:600px){.masthead .theme-btn{position:fixed;top:auto;bottom:20px;right:20px;width:36px;height:36px;border-radius:50%;z-index:100;box-shadow:0 2px 8px rgba(0,0,0,.15)}}
+  .daily-quote { background: var(--bg-elev); border-radius: 12px; padding: 24px 40px; margin: 32px auto 12px; max-width: 640px; font-family: var(--serif); font-size: 19px; line-height: 1.7; color: var(--accent); font-weight: 600; font-style: italic; text-align: center; position: relative; box-shadow: 0 4px 20px rgba(0,0,0,0.02); border: 1px solid var(--border); }
+  .daily-quote::before { content: "“"; font-family: Georgia, serif; font-size: 64px; color: var(--accent-soft); position: absolute; top: 10px; left: 18px; line-height: 1; }
+
+  .section-rule { display: flex; align-items: center; gap: 14px; margin: 36px 0 18px; font-family: var(--sans); font-weight: 600; font-size: 11.5px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--fg); }
+  .section-rule::after { content: ""; flex: 1; border-bottom: 1px solid var(--rule); }
+  .section-rule.cat-heading { color: var(--cat, var(--accent)); }
+  .section-rule.cat-heading::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--cat, var(--accent)); box-shadow: 0 0 0 3px color-mix(in srgb, var(--cat, var(--accent)) 16%, transparent); }
+  .accent { color: var(--accent); font-weight: 800; }
+
+  .briefing { margin: 24px 0 0; font-family: var(--serif); font-size: 18px; line-height: 1.85; color: var(--fg); display: grid; grid-template-columns: 1fr; gap: 20px; }
+  @media (min-width: 760px) {
+    .briefing {
+      grid-template-columns: 1fr 1fr;
+      column-gap: 28px;
+      row-gap: 20px;
+    }
+    .briefing-card.briefing-date-card {
+      grid-column: span 2;
+    }
+    .briefing-card:last-child {
+      grid-column: span 2;
+    }
+  }
+  
+  .briefing-card {
+    background: var(--bg-elev);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 22px 26px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.015);
+    transition: all 0.25s ease;
+    border-left: 4px solid var(--badge-color, var(--accent));
+  }
+  .briefing-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.03);
+    border-color: var(--badge-color, var(--accent));
+  }
+  
+  .briefing-card.briefing-date-card {
+    border-left: none;
+    background: var(--accent-soft);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px 24px;
+    border: 1px dashed color-mix(in srgb, var(--accent) 30%, transparent);
+  }
+  
+  .briefing-date-text {
+    margin: 0;
+    font-family: var(--serif);
+    font-weight: 800;
+    font-size: 24px;
+    color: var(--accent);
+    letter-spacing: 0.05em;
+  }
+  
+  .briefing-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 2px 10px;
+    font-size: 13px;
+    font-weight: 800;
+    font-family: var(--sans);
+    border-radius: 4px;
+    background: color-mix(in srgb, var(--badge-color, var(--accent)) 10%, transparent);
+    color: var(--badge-color, var(--accent));
+    border: 1px solid color-mix(in srgb, var(--badge-color, var(--accent)) 20%, transparent);
+    margin-bottom: 14px;
+    letter-spacing: 0.05em;
+  }
+  
+  .briefing-body-text {
+    margin: 0;
+    font-weight: 600;
+    text-align: justify;
+    line-height: 1.8;
+  }
+  
+  .briefing-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .briefing-list li {
+    position: relative;
+    padding-left: 18px;
+    font-size: 16.5px;
+    line-height: 1.7;
+    color: var(--fg);
+    margin-bottom: 8px;
+    font-weight: 600;
+    text-align: justify;
+  }
+  .briefing-list li:last-child {
+    margin-bottom: 0;
+  }
+  .briefing-list li::before {
+    content: "•";
+    color: var(--badge-color, var(--accent));
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: -1px;
+    font-size: 18px;
+  }
+
+  .audio-player-container { display: flex; align-items: center; gap: 20px; background: var(--bg-elev); border: 1px solid var(--border); border-radius: 12px; padding: 16px 24px; margin: 20px 0 32px; box-shadow: 0 4px 20px rgba(0,0,0,0.02); border-left: 4px solid var(--accent); transition: all 0.3s ease; }
+  .audio-player-container:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.04); }
+  .play-btn-circle { width: 44px; height: 44px; border-radius: 50%; background: var(--accent); color: #ffffff; border: none; cursor: pointer; display: flex; justify-content: center; align-items: center; transition: all 0.2s ease; box-shadow: 0 4px 10px rgba(139, 26, 26, 0.2); flex-shrink: 0; }
+  .play-btn-circle:hover { transform: scale(1.08); box-shadow: 0 6px 14px rgba(139, 26, 26, 0.3); }
+  .player-info-meta { display: flex; flex-direction: column; gap: 4px; }
+  .player-title-text { font-size: 15.5px; font-weight: 700; color: var(--fg); font-family: var(--sans); }
+  .player-status-subtitle { font-size: 12.5px; color: var(--fg-mute); font-family: var(--sans); }
+
+  .player-speed-controls {
+    margin-left: auto;
+    display: flex;
+    gap: 6px;
+    align-items: center;
+  }
+  .speed-chip {
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--fg-mute);
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  .speed-chip:hover {
+    color: var(--fg);
+    border-color: var(--fg-mute);
+  }
+  .speed-chip.active {
+    background: var(--accent);
+    color: #ffffff;
+    border-color: var(--accent);
+    box-shadow: 0 2px 6px rgba(139, 26, 26, 0.15);
+  }
+  @media (max-width: 600px) {
+    .audio-player-container {
+      flex-wrap: wrap;
+    }
+    .player-speed-controls {
+      margin-left: 0;
+      width: 100%;
+      justify-content: flex-start;
+      margin-top: 10px;
+      border-top: 1px dashed var(--border);
+      padding-top: 10px;
+    }
+  }
+
+  .toolbar { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; margin: 16px 0 0; padding: 10px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+  .search { flex: 1; min-width: 200px; background: transparent; border: none; border-bottom: 1px solid var(--border); color: var(--fg); padding: 6px 4px; font: inherit; font-size: 14.5px; outline: none; }
+  .search:focus { border-bottom-color: var(--rule); }
+  .search::placeholder { color: var(--fg-mute); }
+  .chip-row { display: flex; flex-wrap: wrap; gap: 4px; }
+  .chip { border: none; background: transparent; color: var(--fg-mute); padding: 6px 12px; border-radius: 0; font-family: var(--sans); font-size: 12px; letter-spacing: 0.10em; text-transform: uppercase; font-weight: 500; cursor: pointer; transition: color .12s ease; border-bottom: 2px solid transparent; }
+  .chip[data-active="true"] { color: var(--chip-color, var(--accent)); border-bottom-color: var(--chip-color, var(--accent)); }
+  .chip:hover { color: var(--fg); }
+  section.cat[hidden] { display: none; }
+  .empty { text-align: center; color: var(--fg-mute); padding: 48px 0; font-family: var(--serif); font-weight: 600; font-size: 15px; display: none; }
+  .empty[data-show="true"] { display: block; }
+
+  .trending ol { list-style: none; counter-reset: trend; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr; }
+  @media (min-width: 600px) { .trending ol { grid-template-columns: 1fr 1fr; column-gap: 28px; } }
+  .trending li { counter-increment: trend; display: flex; align-items: baseline; gap: 12px; padding: 10px 0; border-bottom: 1px dotted var(--border); font-family: var(--serif); font-size: 17px; }
+  .trending li::before { content: counter(trend, decimal-leading-zero); font-family: var(--sans); font-weight: 600; font-size: 13px; color: var(--fg-mute); min-width: 24px; }
+
+  .cards { display: grid; grid-template-columns: 1fr; gap: 0; }
+  @media (min-width: 760px) { .cards { grid-template-columns: 1fr 1fr; column-gap: 36px; } }
+  .card { padding: 24px 0; border-bottom: 1px solid var(--border); border-left: 3px solid color-mix(in srgb, var(--cat, var(--accent)) 12%, transparent); padding-left: 14px; transition: border-color .2s ease; }
+  .card:hover { border-left-color: var(--cat, var(--accent)); }
+  .card[hidden] { display: none; }
+  .card .kicker { font-family: var(--sans); font-size: 10.5px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--cat, var(--accent)); font-weight: 600; margin-bottom: 6px; }
+  .card .hook { display: inline-flex; align-items: center; gap: 10px; margin: 0 0 10px; font-family: var(--sans); font-weight: 700; font-size: 14px; color: var(--cat, var(--accent)); }
+  .card .hook .q { display: inline-flex; justify-content: center; align-items: center; width: 24px; height: 24px; border-radius: 50%; background: var(--cat, var(--accent)); color: var(--bg); font-size: 12px; font-weight: 800; }
+  .card .title { font-family: var(--serif); font-weight: 800; font-size: 24px; line-height: 1.4; letter-spacing: -0.005em; margin: 0 0 10px; }
+  .card .title a:hover { text-decoration: underline; }
+  .card .ai-takeaway { font-family: var(--serif); font-size: 15px; line-height: 1.65; color: var(--fg-mute); font-weight: 600; margin: 6px 0; }
+  .card .byline { display: flex; align-items: center; gap: 8px; font-family: var(--sans); font-size: 11.5px; color: var(--fg-mute); margin-top: 14px; }
+  .card .byline b { color: var(--fg); font-weight: 600; letter-spacing: 0.05em; }
+  .card .byline .score { font-weight: 800; color: var(--good); font-size: 13px; }
+  .card .terms { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+  .card .term { font-family: var(--sans); font-size: 11.5px; letter-spacing: 0.06em; color: var(--fg-mute); }
+  .card .term::before { content: "#"; color: var(--cat, var(--accent)); }
+
+  .hero { margin-top: 14px; padding-top: 4px; }
+  .hero .kicker { font-family: var(--sans); font-size: 11.5px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--cat, var(--accent)); margin-bottom: 10px; font-weight: 600; }
+  .hero .hook { display: inline-flex; align-items: center; gap: 10px; margin: 0 0 10px; font-family: var(--sans); font-weight: 700; font-size: 14px; color: var(--cat, var(--accent)); letter-spacing: 0.02em; }
+  .hero .hook .q { display: inline-flex; justify-content: center; align-items: center; width: 24px; height: 24px; border-radius: 50%; background: var(--cat, var(--accent)); color: var(--bg); font-size: 12px; font-weight: 800; }
+  .hero h2 { font-family: var(--serif); font-weight: 900; font-size: 42px; line-height: 1.3; letter-spacing: -0.01em; margin: 0 0 14px; }
+  .hero h2 a:hover { color: var(--cat, var(--accent)); }
+  .hero .takeaway { font-family: var(--serif); font-weight: 700; font-size: 17px; line-height: 1.65; color: var(--cat, var(--accent)); border-left: 4px solid var(--cat, var(--accent)); padding-left: 16px; margin: 14px 0; max-width: 60ch; }
+  .hero .byline { font-family: var(--sans); font-size: 12px; color: var(--fg-mute); letter-spacing: 0.04em; margin-top: 14px; }
+  .hero .byline b { color: var(--fg); font-weight: 600; }
+
+  /* Hero Banner Overlay styles */
+  .hero-banner-overlay { position: relative; min-height: 320px; overflow: hidden; border-radius: 12px; margin-top: 14px; display: flex; flex-direction: column; justify-content: flex-end; }
+  .hero-content { position: relative; z-index: 3; padding: 28px 24px 20px; color: #ffffff; }
+  .hero-backdrop { position: absolute; inset: 0; z-index: 0; background: linear-gradient(135deg, var(--cat, var(--accent)), color-mix(in srgb, var(--cat, var(--accent)) 60%, black)); }
+  [data-theme="dark"] .hero-backdrop { background: linear-gradient(135deg, var(--cat, var(--accent)), color-mix(in srgb, var(--cat, var(--accent)) 30%, #111216)); }
+  .hero-image-overlay { position: absolute; inset: 0; z-index: 1; width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease; display: none; }
+  .hero-banner-overlay:hover .hero-image-overlay { transform: scale(1.02); }
+  .hero-gradient-mask { position: absolute; inset: 0; z-index: 2; background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 60%, rgba(0,0,0,0.05) 100%); }
+  .hero-kicker { font-family: var(--sans); font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.85); margin-bottom: 6px; font-weight: 600; }
+  .hero-hook { display: inline-flex; align-items: center; gap: 8px; margin-bottom: 10px; font-family: var(--sans); font-weight: 700; font-size: 14px; color: #ffffff; }
+  .hero-q { display: inline-flex; justify-content: center; align-items: center; width: 22px; height: 22px; border-radius: 50%; background: #ffffff; color: var(--cat, var(--accent)); font-size: 11px; font-weight: 800; }
+  .hero-banner-overlay h2 { font-family: var(--serif); font-weight: 900; font-size: 32px; line-height: 1.35; color: #fff; margin: 0 0 8px; text-shadow: 0 2px 6px rgba(0,0,0,0.4); }
+  .hero-banner-overlay h2 a { color: #fff; }
+  .hero-banner-overlay h2 a:hover { color: rgba(255,255,255,0.9); text-decoration: underline; }
+  .hero-banner-overlay .takeaway { font-family: var(--serif); font-weight: 700; font-size: 15px; line-height: 1.6; color: rgba(255,255,255,0.92); border: none; margin: 6px 0; max-width: 55ch; background: rgba(255,255,255,0.15); border-radius: 6px; padding: 8px 12px; backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); }
+  .hero-banner-overlay .byline { font-family: var(--sans); font-size: 11px; color: rgba(255,255,255,0.65); margin-top: 10px; }
+  .hero-banner-overlay .byline b { color: rgba(255,255,255,0.85); font-weight: 600; }
+  @media (max-width: 760px) {
+    .hero-banner-overlay { min-height: 240px; }
+    .hero-content { padding: 16px 12px 12px; }
+    .hero-banner-overlay h2 { font-size: 22px; }
+  }
+
+  /* Card Thumbnails */
+  .card-inner { display: flex; gap: 16px; align-items: stretch; }
+  .card-body { flex: 1; min-width: 0; display: flex; flex-direction: column; justify-content: space-between; }
+  .card-thumb { width: 120px; flex-shrink: 0; height: 90px; border-radius: 6px; overflow: hidden; position: relative; display: flex; align-items: center; justify-content: center; background: var(--bg-elev); border: 1px solid var(--border); }
+  .card-thumb img { width: 100%; height: 100%; object-fit: cover; }
+  .card-thumb-label { display: none; }
+  .card-thumb.no-image { display: none !important; }
+  @media (max-width: 760px) {
+    .card-inner { flex-direction: column-reverse; align-items: stretch; gap: 12px; }
+    .card-thumb { width: 100%; height: 140px; }
+  }
+  footer { margin-top: 48px; padding-top: 22px; border-top: 3px double var(--rule); color: var(--fg-mute); font-family: var(--sans); font-size: 11.5px; letter-spacing: 0.10em; text-transform: uppercase; text-align: center; }
+
+  @media(max-width:600px){
+    body{font-size:18px;overflow-x:hidden}
+    .wrap{padding-left:18px;padding-right:18px;overflow-x:clip}
+    .masthead .dateline{flex-wrap:wrap;gap:6px 10px;line-height:1.7;letter-spacing:0.12em}
+    .masthead h1{font-size:clamp(32px,9vw,36px)}
+    .daily-quote{padding:22px 24px}
+    .briefing-card{padding:20px 22px}
+    .briefing-card,.briefing-list li,.briefing-body-text,.hero-banner-overlay h2,.hero-banner-overlay .takeaway,.card .title,.card .ai-takeaway,.card .kicker,.card .hook,.card .terms,.card .byline{overflow-wrap:anywhere;word-break:break-word}
+    .cards,.card,.card-inner,.card-body{min-width:0;max-width:100%}
+    .hero h2{font-size:28px}
+    .card .title{font-size:22px}
+    .toolbar{flex-direction:column;align-items:stretch}
+    .search{min-width:auto}
+    .audio-player-container{padding:16px 20px;gap:16px}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="masthead">
+    <div class="dateline"><span>2026年9月8日 星期二</span><span>Vol. 1 · No. 107</span><span>🏮 距離 中秋節 還有 17 天</span></div>
+    <h1><a href="/news-radar/">心聞 · Heart News</a></h1>
+    <p class="tagline">全自動 AI 新聞日報</p>
+    <p class="meta-line">收錄 24 篇 · <a href="/news-radar/archive.html">歷史過刊</a></p>
+    <button class="theme-btn" onclick="document.documentElement.dataset.theme = document.documentElement.dataset.theme==='light'?'dark':'light'">🌓</button>
+  </header>
+
+  <div class="daily-quote">成功是一段旅程，不是終點。</div>
+  <div class="section-rule"><span class="accent">總編輯的話</span> Briefing</div>
+  <div class="briefing">
+      <div class="briefing-card" style="--badge-color: #8b1a1a">
+        <span class="briefing-badge">科技</span>
+        <ul class="briefing-list"><li>AI技術加速走入製造業應用場景，工廠視覺檢測走向自動化根因分析</li><li>遊戲產業持續推出新作涵蓋動作冒險與模擬類型</li><li>台廠連接器單月營收穩健成長</li></ul>
+      </div>
+    
+      <div class="briefing-card" style="--badge-color: #4a5568">
+        <span class="briefing-badge">綜合</span>
+        <ul class="briefing-list"><li>美中關係在九月面臨建設性穩定的關鍵考驗，地緣政治風險持續升高</li><li>中國邊境災情資訊封鎖引發外界關注</li><li>日本企業加速轉向印度布局尋求新成長</li></ul>
+      </div>
+    
+      <div class="briefing-card" style="--badge-color: #1b4d3e">
+        <span class="briefing-badge">財經</span>
+        <ul class="briefing-list"><li>台股在外資大舉點火下強勢上攻，被動元件與先進封裝族群領軍衝鋒</li><li>俄黃金繞道香港大量流入中國規避制裁</li><li>矽谷AI新貴與金融業同步將AI技能視為未來競爭力核心</li></ul>
+      </div>
+    
+      <div class="briefing-card" style="--badge-color: #c25100">
+        <span class="briefing-badge">運動</span>
+        <p class="briefing-body-text">今日體育領域未有重大新聞，關注國際賽事接續登場，各國選手備戰進度持續推進</p>
+      </div>
+    
+      <div class="briefing-card" style="--badge-color: #0f766e">
+        <span class="briefing-badge">生活</span>
+        <ul class="briefing-list"><li>網路創意與實測內容當道，從AI生成的經典遊戲劇情影片到玻璃瓶承重挑戰皆引發熱議</li><li>版權侵權與監視器無所不在的隱私議題也成為討論焦點。</li></ul>
+      </div>
+    </div>
+
+  <div class="audio-player-container">
+    <button class="play-btn-circle" id="play-btn" onclick="toggleSpeech()">
+      <svg id="play-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+      <svg id="pause-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="display:none;"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+    </button>
+    <div class="player-info-meta">
+      <span class="player-title-text">聽總編輯說日報 (AI 語音播報)</span>
+      <span class="player-status-subtitle" id="player-status">點擊播放 · 總編輯男聲語音朗讀</span>
+    </div>
+    <div class="player-speed-controls">
+      <button class="speed-chip" data-speed="1" onclick="setSpeed(1)">1.0x</button>
+      <button class="speed-chip" data-speed="1.25" onclick="setSpeed(1.25)">1.25x</button>
+      <button class="speed-chip" data-speed="1.5" onclick="setSpeed(1.5)">1.5x</button>
+    </div>
+  </div>
+
+  <div class="section-rule"><span class="accent">熱門趨勢</span> Trending</div>
+  <div class="trending"><ol>
+  <li>
+    <span class="term">ign</span>
+    <span class="count">3 則相關</span>
+  </li>
+
+  <li>
+    <span class="term">營收</span>
+    <span class="count">2 則相關</span>
+  </li>
+
+  <li>
+    <span class="term">月增年增</span>
+    <span class="count">2 則相關</span>
+  </li>
+
+  <li>
+    <span class="term">中國</span>
+    <span class="count">2 則相關</span>
+  </li>
+
+  <li>
+    <span class="term">bbc</span>
+    <span class="count">2 則相關</span>
+  </li>
+
+  <li>
+    <span class="term">日本</span>
+    <span class="count">2 則相關</span>
+  </li>
+</ol></div>
+
+  <div class="toolbar">
+    <input type="text" class="search" placeholder="🔍 搜尋文章標題、摘要、標籤..." oninput="searchArticles(this.value)">
+    <div class="chip-row">
+      <button class="chip" data-filter="all" data-active="true" style="--chip-color: var(--accent)" onclick="filterTopic(this)">全部</button>
+      <button class="chip" data-filter="科技" style="--chip-color: #8b1a1a" onclick="filterTopic(this)">科技</button><button class="chip" data-filter="綜合" style="--chip-color: #4a5568" onclick="filterTopic(this)">每日</button><button class="chip" data-filter="財經" style="--chip-color: #1b4d3e" onclick="filterTopic(this)">財經</button><button class="chip" data-filter="生活" style="--chip-color: #0f766e" onclick="filterTopic(this)">生活</button>
+    </div>
+  </div>
+
+  <div class="empty" id="empty-state">找不到符合的文章，請嘗試其他關鍵字或主題。</div>
+
+  
+  <div class="section-rule cat-heading" style="--cat: #8b1a1a"><span class="accent">今日焦點推薦</span> Spotlight</div>
+  <div class="hero-banner-overlay" style="--cat: #8b1a1a" data-topic="科技" data-search="問 ai「這塊基板為什麼翹曲？」omron 導入視覺檢測代理，新手也問得出根因 omron 採用 nvidia metropolis vss 與 cosmos 技術打造視覺檢測 ai 代理，協助工廠檢測線自動化與根因分析。 omron nvidia 視覺檢測 ai 代理 工業自動化">
+    <div class="hero-backdrop"></div>
+    <img class="hero-image-overlay" src="https://techorange.com/app/uploads/2026/09/e65820fb6e6a8667-720x436.png" onerror="this.style.display='none'; this.parentElement.querySelector('.hero-backdrop').style.display='block';" onload="this.style.display='block'; this.parentElement.querySelector('.hero-backdrop').style.display='none';">
+    <div class="hero-gradient-mask"></div>
+    <div class="hero-content">
+      <div class="hero-kicker">TechOrange 科技報橘 [科技]</div>
+      <div class="hero-hook"><span class="hero-q">Q</span>在資深工程師短缺下，AI 視覺代理能否成為製造業的人才解方？</div>
+      <h2><a href="https://techorange.com/2026/09/04/omron-nvidia-are-creating-ai-skillless-inspection/?utm_source=rss&amp;amp;utm_medium=feed&amp;amp;utm_campaign=techorange_rss" target="_blank">問 AI「這塊基板為什麼翹曲？」OMRON 導入視覺檢測代理，新手也問得出根因</a></h2>
+      <div class="takeaway">OMRON 採用 NVIDIA Metropolis VSS 與 Cosmos 技術打造視覺檢測 AI 代理，協助工廠檢測線自動化與根因分析。</div>
+      <div class="byline">
+        <b>FOCUS SCORE</b> <span>8/10</span>
+      </div>
+    </div>
+  </div>
+  
+  <section class="cat" id="cat-科技" data-topic="科技">
+    <div class="section-rule cat-heading" style="--cat: #8b1a1a"><span class="accent">科技綜合精選</span> Tech Highlights</div>
+    <div class="cards" style="--cat: #8b1a1a">
+      
+      <article class="card" data-topic="科技" data-search="《怪物猎人 荒野：凌越》「盾斧」武器介绍视频 本作釋出盾斧武器介紹影片，啟動「增幅護腕」後將強化獵人動作性能並解鎖全新招式。 https://www.ign.com.cn/sm/ign_cn/screenshot/default/youtube-thumbnail-zui-gao-zhi-liang_a6dt.jpg 魔物獵人 荒野 盾斧 增幅護腕 2027">
+        <div class="card-inner">
+          <div class="card-body">
+            <div class="kicker">IGN 中文 [科技]</div>
+            <div class="hook"><span class="q">Q</span>2027 年才發售，這波提前曝光能否成功延續玩家對系列的期待感？</div>
+            <h3 class="title"><a href="https://www.ign.com.cn/monster-hunter-wilds/62604/guai-wu-xi-ren-huang-ye-ling-yue-dun-fu-wu-qi-jie-shao-shi-pin" target="_blank">《怪物猎人 荒野：凌越》「盾斧」武器介绍视频</a></h3>
+            <div class="ai-takeaway">本作釋出盾斧武器介紹影片，啟動「增幅護腕」後將強化獵人動作性能並解鎖全新招式。</div>
+            <div class="terms">
+              <span class="term">魔物獵人</span><span class="term">荒野</span><span class="term">盾斧</span><span class="term">增幅護腕</span><span class="term">2027</span>
+            </div>
+            <div class="byline">
+              <b>SCORE</b><span class="score">6/10</span>
+            </div>
+          </div>
+          <div class="card-thumb"><img src="https://wsrv.nl/?url=https%3A%2F%2Fwww.ign.com.cn%2Fsm%2Fign_cn%2Fscreenshot%2Fdefault%2Fyoutube-thumbnail-zui-gao-zhi-liang_a6dt.jpg" onerror="this.style.display='none'; this.parentElement.classList.add('no-image');" alt=""><span class="card-thumb-label">科技</span></div>
+        </div>
+      </article>
+    
+      <article class="card" data-topic="科技" data-search="致伸8月營收61.27 億元 台灣連接器廠商致伸（4915）公布 8 月合併營收達 61.27 億元，較 7 月成長 4.6%，年增率為正。  致伸 營收 月增年增 連接器">
+        <div class="card-inner">
+          <div class="card-body">
+            <div class="kicker">TechNews 科技新報 [科技]</div>
+            <div class="hook"><span class="q">Q</span>在 AI 與車用需求帶動下，致伸下半年營運能否持續成長？</div>
+            <h3 class="title"><a href="https://finance.technews.tw/2026/09/07/primax-4915-202608-financial-report/" target="_blank">致伸8月營收61.27 億元</a></h3>
+            <div class="ai-takeaway">台灣連接器廠商致伸（4915）公布 8 月合併營收達 61.27 億元，較 7 月成長 4.6%，年增率為正。</div>
+            <div class="terms">
+              <span class="term">致伸</span><span class="term">營收</span><span class="term">月增年增</span><span class="term">連接器</span>
+            </div>
+            <div class="byline">
+              <b>SCORE</b><span class="score">5/10</span>
+            </div>
+          </div>
+          
+        </div>
+      </article>
+    
+      <article class="card" data-topic="科技" data-search="《漫威金刚狼》开发商澄清：预告角色是死亡女 《漫威金剛狼》開發商出面澄清，預告中登場的角色為死亡女（lady deathstrike），並非先前猜測的靈蝶。 https://www.ign.com.cn/sm/ign_cn/screenshot/default/marvels-wolverine-lady-deathstrike-1788643655912_wmtc.jpg 漫威 金剛狼 死亡女 靈蝶 ign">
+        <div class="card-inner">
+          <div class="card-body">
+            <div class="kicker">IGN 中文 [科技]</div>
+            <div class="hook"><span class="q">Q</span>這次官方出面澄清，是否意味著遊戲劇情走向將有重大翻轉？</div>
+            <h3 class="title"><a href="https://www.ign.com.cn/marvels-wolverine/62591/man-wei-jin-gang-lang-kai-fa-shang-cheng-qing-yu-gao-jiao-se-shi-si-wang-nu" target="_blank">《漫威金刚狼》开发商澄清：预告角色是死亡女</a></h3>
+            <div class="ai-takeaway">《漫威金剛狼》開發商出面澄清，預告中登場的角色為死亡女（Lady Deathstrike），並非先前猜測的靈蝶。</div>
+            <div class="terms">
+              <span class="term">漫威</span><span class="term">金剛狼</span><span class="term">死亡女</span><span class="term">靈蝶</span><span class="term">IGN</span>
+            </div>
+            <div class="byline">
+              <b>SCORE</b><span class="score">5/10</span>
+            </div>
+          </div>
+          <div class="card-thumb"><img src="https://wsrv.nl/?url=https%3A%2F%2Fwww.ign.com.cn%2Fsm%2Fign_cn%2Fscreenshot%2Fdefault%2Fmarvels-wolverine-lady-deathstrike-1788643655912_wmtc.jpg" onerror="this.style.display='none'; this.parentElement.classList.add('no-image');" alt=""><span class="card-thumb-label">科技</span></div>
+        </div>
+      </article>
+    
+      <article class="card" data-topic="科技" data-search="《忍者》游戏概览预告 《忍者（ninja simulator）》是一款以封建時代日本為舞台的潛行動作冒險遊戲，玩家行動將影響氏族勢力消長。 https://www.ign.com.cn/sm/ign_cn/screenshot/default/ninjathumb-1788385434571_85cd.png 忍者 潛行 封建日本 動作冒險 ign">
+        <div class="card-inner">
+          <div class="card-body">
+            <div class="kicker">IGN 中文 [科技]</div>
+            <div class="hook"><span class="q">Q</span>這款主打「潛行」與「氏族爭霸」的作品，能否在競爭激烈的動作遊戲市場中脫穎而出？</div>
+            <h3 class="title"><a href="https://www.ign.com.cn/ninja-simulator/62575/ren-zhe-you-xi-gai-lan-yu-gao" target="_blank">《忍者》游戏概览预告</a></h3>
+            <div class="ai-takeaway">《忍者（Ninja Simulator）》是一款以封建時代日本為舞台的潛行動作冒險遊戲，玩家行動將影響氏族勢力消長。</div>
+            <div class="terms">
+              <span class="term">忍者</span><span class="term">潛行</span><span class="term">封建日本</span><span class="term">動作冒險</span><span class="term">IGN</span>
+            </div>
+            <div class="byline">
+              <b>SCORE</b><span class="score">5/10</span>
+            </div>
+          </div>
+          <div class="card-thumb"><img src="https://wsrv.nl/?url=https%3A%2F%2Fwww.ign.com.cn%2Fsm%2Fign_cn%2Fscreenshot%2Fdefault%2Fninjathumb-1788385434571_85cd.png" onerror="this.style.display='none'; this.parentElement.classList.add('no-image');" alt=""><span class="card-thumb-label">科技</span></div>
+        </div>
+      </article>
+    
+      <article class="card" data-topic="科技" data-search="《驾考模拟器》发售日预告 《駕考模擬器（driving test simulator）》主打測驗與提升駕駛技巧，支援實體方向盤遊玩。 https://www.ign.com.cn/sm/ign_cn/screenshot/default/dts-vcms-1788624051870_8crw.jpg 駕考模擬器 駕駛模擬 方向盤 模擬遊戲 ign">
+        <div class="card-inner">
+          <div class="card-body">
+            <div class="kicker">IGN 中文 [科技]</div>
+            <div class="hook"><span class="q">Q</span>把考駕照變成電玩，這款模擬器會成為新手駕駛的練習神器嗎？</div>
+            <h3 class="title"><a href="https://www.ign.com.cn/driving-test-simulator/62601/jia-kao-mo-ni-qi-fa-shou-ri-yu-gao" target="_blank">《驾考模拟器》发售日预告</a></h3>
+            <div class="ai-takeaway">《駕考模擬器（Driving Test Simulator）》主打測驗與提升駕駛技巧，支援實體方向盤遊玩。</div>
+            <div class="terms">
+              <span class="term">駕考模擬器</span><span class="term">駕駛模擬</span><span class="term">方向盤</span><span class="term">模擬遊戲</span><span class="term">IGN</span>
+            </div>
+            <div class="byline">
+              <b>SCORE</b><span class="score">4/10</span>
+            </div>
+          </div>
+          <div class="card-thumb"><img src="https://wsrv.nl/?url=https%3A%2F%2Fwww.ign.com.cn%2Fsm%2Fign_cn%2Fscreenshot%2Fdefault%2Fdts-vcms-1788624051870_8crw.jpg" onerror="this.style.display='none'; this.parentElement.classList.add('no-image');" alt=""><span class="card-thumb-label">科技</span></div>
+        </div>
+      </article>
+    
+    </div>
+  </section>
+  <section class="cat" id="cat-綜合" data-topic="綜合">
+    <div class="section-rule cat-heading" style="--cat: #4a5568"><span class="accent">每日綜合快訊</span> General News</div>
+    <div class="cards" style="--cat: #4a5568">
+      
+      <article class="card" data-topic="綜合" data-search="特習會後美中再現摩擦　「建設性穩定」能否撐到九月？ 關稅、台灣與安全議題接連升溫，外界關注美中關係在近期高層會晤後的「建設性穩定」還能持續多久。 https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/94d3/live/415a1170-4d20-11f1-894d-1b54d8c2d924.jpg 特習會 美中關係 關稅 台灣議題 建設性穩定">
+        <div class="card-inner">
+          <div class="card-body">
+            <div class="kicker">BBC 中文 [綜合]</div>
+            <div class="hook"><span class="q">Q</span>這場口水戰與經貿過招，會把美中關係推向新冷戰的邊緣嗎？</div>
+            <h3 class="title"><a href="https://www.bbc.com/zhongwen/articles/cqx7z51qvpgo/trad?at_medium=RSS&amp;amp;at_campaign=rss" target="_blank">特習會後美中再現摩擦　「建設性穩定」能否撐到九月？</a></h3>
+            <div class="ai-takeaway">關稅、台灣與安全議題接連升溫，外界關注美中關係在近期高層會晤後的「建設性穩定」還能持續多久。</div>
+            <div class="terms">
+              <span class="term">特習會</span><span class="term">美中關係</span><span class="term">關稅</span><span class="term">台灣議題</span><span class="term">建設性穩定</span>
+            </div>
+            <div class="byline">
+              <b>SCORE</b><span class="score">8/10</span>
+            </div>
+          </div>
+          <div class="card-thumb"><img src="https://wsrv.nl/?url=https%3A%2F%2Fichef.bbci.co.uk%2Face%2Fws%2F240%2Fcpsprodpb%2F94d3%2Flive%2F415a1170-4d20-11f1-894d-1b54d8c2d924.jpg" onerror="this.style.display='none'; this.parentElement.classList.add('no-image');" alt=""><span class="card-thumb-label">綜合</span></div>
+        </div>
+      </article>
+    
+      <article class="card" data-topic="綜合" data-search="親俄宣傳網絡內幕：利用烏克蘭女性遭強姦的假消息作引流「誘餌」 調查揭露俄羅斯 telegram 頻道利用虛構的烏克蘭女性遭強姦故事與照片，吸引數百萬用戶加入親戰宣傳網。 https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/e1c5/live/4c29ec60-a626-11f1-b384-1f35d0eeee9d.jpg 親俄宣傳 假訊息 telegram 烏克蘭 性侵謠言">
+        <div class="card-inner">
+          <div class="card-body">
+            <div class="kicker">BBC 中文 [綜合]</div>
+            <div class="hook"><span class="q">Q</span>這場假訊息「誘餌戰」背後，是如何精密操作社群認同與憤怒情緒？</div>
+            <h3 class="title"><a href="https://www.bbc.com/zhongwen/articles/c87v19vx721o/trad?at_medium=RSS&amp;amp;at_campaign=rss" target="_blank">親俄宣傳網絡內幕：利用烏克蘭女性遭強姦的假消息作引流「誘餌」</a></h3>
+            <div class="ai-takeaway">調查揭露俄羅斯 Telegram 頻道利用虛構的烏克蘭女性遭強姦故事與照片，吸引數百萬用戶加入親戰宣傳網。</div>
+            <div class="terms">
+              <span class="term">親俄宣傳</span><span class="term">假訊息</span><span class="term">Telegram</span><span class="term">烏克蘭</span><span class="term">性侵謠言</span>
+            </div>
+            <div class="byline">
+              <b>SCORE</b><span class="score">8/10</span>
+            </div>
+          </div>
+          <div class="card-thumb"><img src="https://wsrv.nl/?url=https%3A%2F%2Fichef.bbci.co.uk%2Face%2Fws%2F240%2Fcpsprodpb%2Fe1c5%2Flive%2F4c29ec60-a626-11f1-b384-1f35d0eeee9d.jpg" onerror="this.style.display='none'; this.parentElement.classList.add('no-image');" alt=""><span class="card-thumb-label">綜合</span></div>
+        </div>
+      </article>
+    
+      <article class="card" data-topic="綜合" data-search="中國審查西藏口岸遭洪災衝擊畫面，當地災民情況我們所知甚少 致命山洪爆發後，中國官方媒體對外封鎖最驚人的災情影像，外界難以得知受災實際情況。 https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/cb62/live/3f550e60-a46f-11f1-a291-b542ee92de7c.jpg 中國 西藏 洪災 審查 災情">
+        <div class="card-inner">
+          <div class="card-body">
+            <div class="kicker">BBC 中文 [綜合]</div>
+            <div class="hook"><span class="q">Q</span>在官方嚴密審查下，西藏洪災的真相還能被外界完整揭露嗎？</div>
+            <h3 class="title"><a href="https://www.bbc.com/zhongwen/articles/cnvl38dyyq0o/trad?at_medium=RSS&amp;amp;at_campaign=rss" target="_blank">中國審查西藏口岸遭洪災衝擊畫面，當地災民情況我們所知甚少</a></h3>
+            <div class="ai-takeaway">致命山洪爆發後，中國官方媒體對外封鎖最驚人的災情影像，外界難以得知受災實際情況。</div>
+            <div class="terms">
+              <span class="term">中國</span><span class="term">西藏</span><span class="term">洪災</span><span class="term">審查</span><span class="term">災情</span>
+            </div>
+            <div class="byline">
+              <b>SCORE</b><span class="score">7/10</span>
+            </div>
+          </div>
+          <div class="card-thumb"><img src="https://wsrv.nl/?url=https%3A%2F%2Fichef.bbci.co.uk%2Face%2Fws%2F240%2Fcpsprodpb%2Fcb62%2Flive%2F3f550e60-a46f-11f1-a291-b542ee92de7c.jpg" onerror="this.style.display='none'; this.parentElement.classList.add('no-image');" alt=""><span class="card-thumb-label">綜合</span></div>
+        </div>
+      </article>
+    
+      <article class="card" data-topic="綜合" data-search="行走在紐約：我發現監控攝像頭數量遠超想像 bbc 記者實地走訪紐約，發現公共與私人監控攝影機數量遠超想像，並介紹民眾自查監控密度的方法。 https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/b011/live/946bf610-a81c-11f1-ac3c-9d896728a67a.png 紐約 監控攝影機 隱私 城市監控 bbc">
+        <div class="card-inner">
+          <div class="card-body">
+            <div class="kicker">BBC 中文 [綜合]</div>
+            <div class="hook"><span class="q">Q</span>當城市變成「無死角監控場」，你的隱私還剩下多少？</div>
+            <h3 class="title"><a href="https://www.bbc.com/zhongwen/articles/cwyznp4qlg9o/trad?at_medium=RSS&amp;amp;at_campaign=rss" target="_blank">行走在紐約：我發現監控攝像頭數量遠超想像</a></h3>
+            <div class="ai-takeaway">BBC 記者實地走訪紐約，發現公共與私人監控攝影機數量遠超想像，並介紹民眾自查監控密度的方法。</div>
+            <div class="terms">
+              <span class="term">紐約</span><span class="term">監控攝影機</span><span class="term">隱私</span><span class="term">城市監控</span><span class="term">BBC</span>
+            </div>
+            <div class="byline">
+              <b>SCORE</b><span class="score">7/10</span>
+            </div>
+          </div>
+          <div class="card-thumb"><img src="https://wsrv.nl/?url=https%3A%2F%2Fichef.bbci.co.uk%2Face%2Fws%2F240%2Fcpsprodpb%2Fb011%2Flive%2F946bf610-a81c-11f1-ac3c-9d896728a67a.png" onerror="this.style.display='none'; this.parentElement.classList.add('no-image');" alt=""><span class="card-thumb-label">綜合</span></div>
+        </div>
+      </article>
+    
+      <article class="card" data-topic="綜合" data-search="日本企業大舉押注印度　中國風險加深之際尋求新成長 因應國內市場萎縮與中國地緣政治風險升高，日本企業正加速擴大在印度的投資布局。 https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/8857/live/1bc1a980-a605-11f1-83fc-0df57e6b3866.jpg 日本企業 印度投資 中國風險 產業布局 地緣政治">
+        <div class="card-inner">
+          <div class="card-body">
+            <div class="kicker">BBC 中文 [綜合]</div>
+            <div class="hook"><span class="q">Q</span>在中國市場風險升高之際，印度是否真能接棒成為日本企業的新成長重心？</div>
+            <h3 class="title"><a href="https://www.bbc.com/zhongwen/articles/czxzkex7nd1o/trad?at_medium=RSS&amp;amp;at_campaign=rss" target="_blank">日本企業大舉押注印度　中國風險加深之際尋求新成長</a></h3>
+            <div class="ai-takeaway">因應國內市場萎縮與中國地緣政治風險升高，日本企業正加速擴大在印度的投資布局。</div>
+            <div class="terms">
+              <span class="term">日本企業</span><span class="term">印度投資</span><span class="term">中國風險</span><span class="term">產業布局</span><span class="term">地緣政治</span>
+            </div>
+            <div class="byline">
+              <b>SCORE</b><span class="score">7/10</span>
+            </div>
+          </div>
+          <div class="card-thumb"><img src="https://wsrv.nl/?url=https%3A%2F%2Fichef.bbci.co.uk%2Face%2Fws%2F240%2Fcpsprodpb%2F8857%2Flive%2F1bc1a980-a605-11f1-83fc-0df57e6b3866.jpg" onerror="this.style.display='none'; this.parentElement.classList.add('no-image');" alt=""><span class="card-thumb-label">綜合</span></div>
+        </div>
+      </article>
+    
+      <article class="card" data-topic="綜合" data-search="不同版本的世界地圖有哪些正確及錯誤之處？ 聯合國將採用新版世界地圖以真實呈現非洲面積，bbc 比較各版本地圖的優缺點與常見誤區。 https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/e80e/live/d224a510-a92f-11f1-bb81-8fbd2d2d397c.jpg 世界地圖 非洲 聯合國 地圖投影 bbc">
+        <div class="card-inner">
+          <div class="card-body">
+            <div class="kicker">BBC 中文 [綜合]</div>
+            <div class="hook"><span class="q">Q</span>你每天看到的世界地圖，其實一直在「騙」你哪些地方？</div>
+            <h3 class="title"><a href="https://www.bbc.com/zhongwen/articles/crm9k8pggjvo/trad?at_medium=RSS&amp;amp;at_campaign=rss" target="_blank">不同版本的世界地圖有哪些正確及錯誤之處？</a></h3>
+            <div class="ai-takeaway">聯合國將採用新版世界地圖以真實呈現非洲面積，BBC 比較各版本地圖的優缺點與常見誤區。</div>
+            <div class="terms">
+              <span class="term">世界地圖</span><span class="term">非洲</span><span class="term">聯合國</span><span class="term">地圖投影</span><span class="term">BBC</span>
+            </div>
+            <div class="byline">
+              <b>SCORE</b><span class="score">6/10</span>
+            </div>
+          </div>
+          <div class="card-thumb"><img src="https://wsrv.nl/?url=https%3A%2F%2Fichef.bbci.co.uk%2Face%2Fws%2F240%2Fcpsprodpb%2Fe80e%2Flive%2Fd224a510-a92f-11f1-bb81-8fbd2d2d397c.jpg" onerror="this.style.display='none'; this.parentElement.classList.add('no-image');" alt=""><span class="card-thumb-label">綜合</span></div>
+        </div>
+      </article>
+    
+    </div>
+  </section>
+  <section class="cat" id="cat-財經" data-topic="財經">
+    <div class="section-rule cat-heading" style="--cat: #1b4d3e"><span class="accent">財經市場精選</span> Finance &amp; Markets</div>
+    <div class="cards" style="--cat: #1b4d3e">
+      
+      <article class="card" data-topic="財經" data-search="金融時報：俄黃金突破西方制裁，經香港大量流入中國 俄羅斯受西方制裁後轉向亞洲市場，香港成為俄金重要中轉站，大量黃金流入中國。  俄羅斯黃金 西方制裁 香港 中國 黃金交易">
+        <div class="card-inner">
+          <div class="card-body">
+            <div class="kicker">財經新報 [財經]</div>
+            <div class="hook"><span class="q">Q</span>俄羅斯如何突破制裁，讓黃金成功透過香港流入中國？</div>
+            <h3 class="title"><a href="https://finance.technews.tw/2026/09/07/russian-gold-floods-through-hong-kong-in-wake-of-western-sanctions/" target="_blank">金融時報：俄黃金突破西方制裁，經香港大量流入中國</a></h3>
+            <div class="ai-takeaway">俄羅斯受西方制裁後轉向亞洲市場，香港成為俄金重要中轉站，大量黃金流入中國。</div>
+            <div class="terms">
+              <span class="term">俄羅斯黃金</span><span class="term">西方制裁</span><span class="term">香港</span><span class="term">中國</span><span class="term">黃金交易</span>
+            </div>
+            <div class="byline">
+              <b>SCORE</b><span class="score">7/10</span>
+            </div>
+          </div>
+          
+        </div>
+      </article>
+    
+      <article class="card" data-topic="財經" data-search="外資狂掃 500 億點火電子股，被動元件與先進封裝族群迎來爆發 台股加權指數大漲1.51%，外資單日買超562億，被動元件與先進封裝族群領軍上攻。  台股 外資 電子股 被動元件 先進封裝">
+        <div class="card-inner">
+          <div class="card-body">
+            <div class="kicker">財經新報 [財經]</div>
+            <div class="hook"><span class="q">Q</span>外資為何突然大舉進場，點火台股電子族群？</div>
+            <h3 class="title"><a href="https://finance.technews.tw/2026/09/07/foreign-investors-50-billion-electronics-passive-components-advanced-packaging-boom/" target="_blank">外資狂掃 500 億點火電子股，被動元件與先進封裝族群迎來爆發</a></h3>
+            <div class="ai-takeaway">台股加權指數大漲1.51%，外資單日買超562億，被動元件與先進封裝族群領軍上攻。</div>
+            <div class="terms">
+              <span class="term">台股</span><span class="term">外資</span><span class="term">電子股</span><span class="term">被動元件</span><span class="term">先進封裝</span>
+            </div>
+            <div class="byline">
+              <b>SCORE</b><span class="score">7/10</span>
+            </div>
+          </div>
+          
+        </div>
+      </article>
+    
+      <article class="card" data-topic="財經" data-search="瑞銀開大型銀行先例，ai 技能成新進員工必備條件 瑞士銀行率先將ai能力納入人才招募評估，要求新進員工具備相關技能。  瑞銀 ai技能 銀行招募 金融業 新進員工">
+        <div class="card-inner">
+          <div class="card-body">
+            <div class="kicker">財經新報 [財經]</div>
+            <div class="hook"><span class="q">Q</span>瑞銀為何率先將AI技能列為銀行新人的必備門檻？</div>
+            <h3 class="title"><a href="https://finance.technews.tw/2026/09/07/ubs-recruitment-ai-skills/" target="_blank">瑞銀開大型銀行先例，AI 技能成新進員工必備條件</a></h3>
+            <div class="ai-takeaway">瑞士銀行率先將AI能力納入人才招募評估，要求新進員工具備相關技能。</div>
+            <div class="terms">
+              <span class="term">瑞銀</span><span class="term">AI技能</span><span class="term">銀行招募</span><span class="term">金融業</span><span class="term">新進員工</span>
+            </div>
+            <div class="byline">
+              <b>SCORE</b><span class="score">7/10</span>
+            </div>
+          </div>
+          
+        </div>
+      </article>
+    
+      <article class="card" data-topic="財經" data-search="從黑手到算力心臟，智伸科靠「三年打怪」心法跨界奪伺服器散熱大單 智伸科以傳產製造底盤成功跨界，憑藉三年研發心法切入伺服器散熱市場。  智伸科 伺服器散熱 傳產轉型 ai算力 跨界">
+        <div class="card-inner">
+          <div class="card-body">
+            <div class="kicker">財經新報 [財經]</div>
+            <div class="hook"><span class="q">Q</span>傳產黑手如何華麗轉身，成為AI算力心臟的關鍵供應商？</div>
+            <h3 class="title"><a href="https://finance.technews.tw/2026/09/07/global-pmx-ai-cooling/" target="_blank">從黑手到算力心臟，智伸科靠「三年打怪」心法跨界奪伺服器散熱大單</a></h3>
+            <div class="ai-takeaway">智伸科以傳產製造底盤成功跨界，憑藉三年研發心法切入伺服器散熱市場。</div>
+            <div class="terms">
+              <span class="term">智伸科</span><span class="term">伺服器散熱</span><span class="term">傳產轉型</span><span class="term">AI算力</span><span class="term">跨界</span>
+            </div>
+            <div class="byline">
+              <b>SCORE</b><span class="score">7/10</span>
+            </div>
+          </div>
+          
+        </div>
+      </article>
+    
+      <article class="card" data-topic="財經" data-search="ai 熱潮造就新富豪，財顧揭矽谷新貴套現避險的四大節稅招數 ai熱潮推升矽谷科技人才身價，財務顧問提出四種節稅方式協助新富階級套現避險。  ai 矽谷 新富豪 節稅 套現 財務規劃">
+        <div class="card-inner">
+          <div class="card-body">
+            <div class="kicker">財經新報 [財經]</div>
+            <div class="hook"><span class="q">Q</span>面對高估值與泡沫風險，矽谷新貴如何透過節稅策略安心套現？</div>
+            <h3 class="title"><a href="https://finance.technews.tw/2026/09/05/new-wealth-financial-strategies/" target="_blank">AI 熱潮造就新富豪，財顧揭矽谷新貴套現避險的四大節稅招數</a></h3>
+            <div class="ai-takeaway">AI熱潮推升矽谷科技人才身價，財務顧問提出四種節稅方式協助新富階級套現避險。</div>
+            <div class="terms">
+              <span class="term">AI</span><span class="term">矽谷</span><span class="term">新富豪</span><span class="term">節稅</span><span class="term">套現</span><span class="term">財務規劃</span>
+            </div>
+            <div class="byline">
+              <b>SCORE</b><span class="score">6/10</span>
+            </div>
+          </div>
+          
+        </div>
+      </article>
+    
+      <article class="card" data-topic="財經" data-search="通吃美台無人機大單！系統電 8 月營收年增 27.55% 續創新高 系統電公布8月合併營收3.28億元，連兩個月刷新紀錄，受惠無人機訂單挹注。  系統電 無人機 營收 月增年增 訂單">
+        <div class="card-inner">
+          <div class="card-body">
+            <div class="kicker">財經新報 [財經]</div>
+            <div class="hook"><span class="q">Q</span>系統電如何同時拿下美台無人機大單，締造營收新高？</div>
+            <h3 class="title"><a href="https://finance.technews.tw/2026/09/07/anduril-industries/" target="_blank">通吃美台無人機大單！系統電 8 月營收年增 27.55% 續創新高</a></h3>
+            <div class="ai-takeaway">系統電公布8月合併營收3.28億元，連兩個月刷新紀錄，受惠無人機訂單挹注。</div>
+            <div class="terms">
+              <span class="term">系統電</span><span class="term">無人機</span><span class="term">營收</span><span class="term">月增年增</span><span class="term">訂單</span>
+            </div>
+            <div class="byline">
+              <b>SCORE</b><span class="score">6/10</span>
+            </div>
+          </div>
+          
+        </div>
+      </article>
+    
+    </div>
+  </section>
+  <section class="cat" id="cat-生活" data-topic="生活">
+    <div class="section-rule cat-heading" style="--cat: #0f766e"><span class="accent">生活探索精選</span> Life Highlights</div>
+    <div class="cards" style="--cat: #0f766e">
+      
+      <article class="card" data-topic="生活" data-search="桃園機場背後的電力支柱！揭密國門供電幕後，順遊新竹經典不敗的老建築散策 台電福海變電所穩定供應桃機電力，下機後可順遊新竹城隍廟、青草湖與新月沙灣。 https://cdn-smiletaiwan.cw.com.tw/article/202609/article-6a96558ed0669.png 桃園機場 台電 供電 新竹 旅遊 老建築">
+        <div class="card-inner">
+          <div class="card-body">
+            <div class="kicker">微笑台灣 [生活]</div>
+            <div class="hook"><span class="q">Q</span>桃園機場的電力心臟藏在哪裡？又有哪些新竹老景點值得順遊？</div>
+            <h3 class="title"><a href="https://smiletaiwan.cw.com.tw/article/9387" target="_blank">桃園機場背後的電力支柱！揭密國門供電幕後，順遊新竹經典不敗的老建築散策</a></h3>
+            <div class="ai-takeaway">台電福海變電所穩定供應桃機電力，下機後可順遊新竹城隍廟、青草湖與新月沙灣。</div>
+            <div class="terms">
+              <span class="term">桃園機場</span><span class="term">台電</span><span class="term">供電</span><span class="term">新竹</span><span class="term">旅遊</span><span class="term">老建築</span>
+            </div>
+            <div class="byline">
+              <b>SCORE</b><span class="score">6/10</span>
+            </div>
+          </div>
+          <div class="card-thumb"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn-smiletaiwan.cw.com.tw%2Farticle%2F202609%2Farticle-6a96558ed0669.png" onerror="this.style.display='none'; this.parentElement.classList.add('no-image');" alt=""><span class="card-thumb-label">生活</span></div>
+        </div>
+      </article>
+    
+      <article class="card" data-topic="生活" data-search="日本綜藝節目嚴選《今夏５大實用生活雜貨》肯定有一個能夠解決你長年的困擾 日本綜藝節目推薦五款近期發售的生活雜貨，主打實用功能解決長年生活困擾。  日本 生活雜貨 綜藝節目 實用好物">
+        <div class="card-inner">
+          <div class="card-body">
+            <div class="kicker">遊戲基地 [生活]</div>
+            <div class="hook"><span class="q">Q</span>哪五款日本生活雜貨能一次解決你的日常煩惱？</div>
+            <h3 class="title"><a href="https://news.gamme.com.tw/1774762" target="_blank">日本綜藝節目嚴選《今夏５大實用生活雜貨》肯定有一個能夠解決你長年的困擾</a></h3>
+            <div class="ai-takeaway">日本綜藝節目推薦五款近期發售的生活雜貨，主打實用功能解決長年生活困擾。</div>
+            <div class="terms">
+              <span class="term">日本</span><span class="term">生活雜貨</span><span class="term">綜藝節目</span><span class="term">實用好物</span>
+            </div>
+            <div class="byline">
+              <b>SCORE</b><span class="score">5/10</span>
+            </div>
+          </div>
+          
+        </div>
+      </article>
+    
+      <article class="card" data-topic="生活" data-search="網友ai創作《惡靈古堡4》全劇情影片 接近43分鐘讓你完整體驗一遍四代的故事內容 網友運用ai技術製作長達43分鐘的《惡靈古堡4》完整劇情影片，引發關注。  ai創作 惡靈古堡4 遊戲改編 影片 網友">
+        <div class="card-inner">
+          <div class="card-body">
+            <div class="kicker">遊戲基地 [生活]</div>
+            <div class="hook"><span class="q">Q</span>AI生成的43分鐘影片，真的能完整重現《惡靈古堡4》經典故事嗎？</div>
+            <h3 class="title"><a href="https://news.gamme.com.tw/1774845" target="_blank">網友AI創作《惡靈古堡4》全劇情影片 接近43分鐘讓你完整體驗一遍四代的故事內容</a></h3>
+            <div class="ai-takeaway">網友運用AI技術製作長達43分鐘的《惡靈古堡4》完整劇情影片，引發關注。</div>
+            <div class="terms">
+              <span class="term">AI創作</span><span class="term">惡靈古堡4</span><span class="term">遊戲改編</span><span class="term">影片</span><span class="term">網友</span>
+            </div>
+            <div class="byline">
+              <b>SCORE</b><span class="score">5/10</span>
+            </div>
+          </div>
+          
+        </div>
+      </article>
+    
+      <article class="card" data-topic="生活" data-search="攝影師分享《看法兩極的照片》你覺得圖中的影子算成功還是失敗呢？ 一張攝影師自認成功的照片，因影子呈現方式在日本網路掀起正反兩極討論。  攝影 影子 藝術爭議 網路討論 日本">
+        <div class="card-inner">
+          <div class="card-body">
+            <div class="kicker">遊戲基地 [生活]</div>
+            <div class="hook"><span class="q">Q</span>照片中的影子究竟是神來一筆還是徹底失敗？</div>
+            <h3 class="title"><a href="https://news.gamme.com.tw/1774848" target="_blank">攝影師分享《看法兩極的照片》你覺得圖中的影子算成功還是失敗呢？</a></h3>
+            <div class="ai-takeaway">一張攝影師自認成功的照片，因影子呈現方式在日本網路掀起正反兩極討論。</div>
+            <div class="terms">
+              <span class="term">攝影</span><span class="term">影子</span><span class="term">藝術爭議</span><span class="term">網路討論</span><span class="term">日本</span>
+            </div>
+            <div class="byline">
+              <b>SCORE</b><span class="score">5/10</span>
+            </div>
+          </div>
+          
+        </div>
+      </article>
+    
+      <article class="card" data-topic="生活" data-search="網友測試《可口可樂玻璃瓶能承重幾公斤》想不到能承受的重量絕對比你想像中的要多很多！？ 網友針對可口可樂玻璃瓶進行承重實驗，發現其耐重程度遠超一般人想像。  可口可樂 玻璃瓶 承重實驗 網友測試">
+        <div class="card-inner">
+          <div class="card-body">
+            <div class="kicker">遊戲基地 [生活]</div>
+            <div class="hook"><span class="q">Q</span>可口可樂玻璃瓶到底能承受多重的壓力？</div>
+            <h3 class="title"><a href="https://news.gamme.com.tw/1774800" target="_blank">網友測試《可口可樂玻璃瓶能承重幾公斤》想不到能承受的重量絕對比你想像中的要多很多！？</a></h3>
+            <div class="ai-takeaway">網友針對可口可樂玻璃瓶進行承重實驗，發現其耐重程度遠超一般人想像。</div>
+            <div class="terms">
+              <span class="term">可口可樂</span><span class="term">玻璃瓶</span><span class="term">承重實驗</span><span class="term">網友測試</span>
+            </div>
+            <div class="byline">
+              <b>SCORE</b><span class="score">5/10</span>
+            </div>
+          </div>
+          
+        </div>
+      </article>
+    
+      <article class="card" data-topic="生活" data-search="日本繪師遊新加坡赫然發現《孤獨搖滾盜版商品》竟然用了自己的插畫 日本繪師「まよ」在新加坡發現《孤獨搖滾》盜版周邊，竟使用自己分享的插畫作品。  孤獨搖滾 盜版周邊 繪師 插畫 新加坡">
+        <div class="card-inner">
+          <div class="card-body">
+            <div class="kicker">遊戲基地 [生活]</div>
+            <div class="hook"><span class="q">Q</span>繪師的無償創作是如何被盜版商品盯上的？</div>
+            <h3 class="title"><a href="https://news.gamme.com.tw/1774834" target="_blank">日本繪師遊新加坡赫然發現《孤獨搖滾盜版商品》竟然用了自己的插畫</a></h3>
+            <div class="ai-takeaway">日本繪師「まよ」在新加坡發現《孤獨搖滾》盜版周邊，竟使用自己分享的插畫作品。</div>
+            <div class="terms">
+              <span class="term">孤獨搖滾</span><span class="term">盜版周邊</span><span class="term">繪師</span><span class="term">插畫</span><span class="term">新加坡</span>
+            </div>
+            <div class="byline">
+              <b>SCORE</b><span class="score">5/10</span>
+            </div>
+          </div>
+          
+        </div>
+      </article>
+    
+    </div>
+  </section>
+
+  <footer>© 2026 心聞 · Heart News. 智慧物聯架構實驗室.</footer>
+</div>
+
+<script>
+  let audio = null;
+  let isPlaying = false;
+  let currentSpeed = 1.0;
+  const playIcon = document.getElementById('play-icon');
+  const pauseIcon = document.getElementById('pause-icon');
+  const playerStatus = document.getElementById('player-status');
+
+  function initAudio() {
+    if (audio) return;
+    audio = new Audio("audio/briefing.mp3?v=" + new Date().getTime());
+    
+    audio.onplay = () => {
+      isPlaying = true;
+      playIcon.style.display = 'none';
+      pauseIcon.style.display = 'block';
+      playerStatus.innerText = '播放中 · 聆聽總編輯主播說日報';
+    };
+    
+    audio.onpause = () => {
+      isPlaying = false;
+      playIcon.style.display = 'block';
+      pauseIcon.style.display = 'none';
+      playerStatus.innerText = '已暫停';
+    };
+    
+    audio.onended = () => {
+      isPlaying = false;
+      playIcon.style.display = 'block';
+      pauseIcon.style.display = 'none';
+      playerStatus.innerText = '播放結束 · 重新收聽';
+    };
+    
+    audio.onerror = () => {
+      isPlaying = false;
+      playIcon.style.display = 'block';
+      pauseIcon.style.display = 'none';
+      playerStatus.innerText = '語音加載失敗或尚未生成，請稍後再試';
+    };
+  }
+
+  function toggleSpeech() {
+    initAudio();
+    if (isPlaying) {
+      audio.pause();
+    } else {
+      audio.playbackRate = currentSpeed;
+      audio.play().catch(err => {
+        console.error("播放失敗:", err);
+        playerStatus.innerText = '播放失敗，請檢查網路';
+      });
+    }
+  }
+
+  function setSpeed(rate) {
+    currentSpeed = rate;
+    if (audio) {
+      audio.playbackRate = rate;
+    }
+    
+    document.querySelectorAll('.speed-chip').forEach(chip => {
+      const chipSpeed = parseFloat(chip.getAttribute('data-speed'));
+      if (chipSpeed === rate) {
+        chip.classList.add('active');
+      } else {
+        chip.classList.remove('active');
+      }
+    });
+  }
+
+  // 設置初始狀態
+  setSpeed(1.0);
+
+  // Toolbar: 主題 Chip 過濾
+  function filterTopic(btn) {
+    document.querySelectorAll('.chip').forEach(c => c.dataset.active = 'false');
+    btn.dataset.active = 'true';
+    const filter = btn.dataset.filter;
+    const sections = document.querySelectorAll('section.cat');
+    const hero = document.querySelector('.hero-banner-overlay');
+    const searchInput = document.querySelector('.search');
+    if (searchInput) searchInput.value = '';
+
+    if (filter === 'all') {
+      sections.forEach(s => s.hidden = false);
+      if (hero) hero.style.display = 'flex';
+      document.querySelectorAll('.card').forEach(c => c.hidden = false);
+    } else {
+      sections.forEach(s => {
+        s.hidden = s.dataset.topic !== filter;
+      });
+      if (hero) {
+        hero.style.display = (hero.dataset.topic === filter) ? 'flex' : 'none';
+      }
+      document.querySelectorAll('.card').forEach(c => {
+        c.hidden = c.dataset.topic !== filter;
+      });
+    }
+    checkEmpty();
+  }
+
+  // Toolbar: 搜尋
+  function searchArticles(query) {
+    const q = query.toLowerCase().trim();
+    document.querySelectorAll('.chip').forEach(c => c.dataset.active = 'false');
+    document.querySelector('.chip[data-filter="all"]').dataset.active = 'true';
+
+    const sections = document.querySelectorAll('section.cat');
+    const hero = document.querySelector('.hero-banner-overlay');
+
+    if (!q) {
+      sections.forEach(s => s.hidden = false);
+      if (hero) hero.style.display = 'flex';
+      document.querySelectorAll('.card').forEach(c => c.hidden = false);
+    } else {
+      if (hero) {
+        hero.style.display = (hero.dataset.search || '').includes(q) ? 'flex' : 'none';
+      }
+      document.querySelectorAll('.card').forEach(c => {
+        c.hidden = !(c.dataset.search || '').includes(q);
+      });
+      sections.forEach(s => {
+        const visibleCards = s.querySelectorAll('.card:not([hidden])');
+        s.hidden = visibleCards.length === 0;
+      });
+    }
+    checkEmpty();
+  }
+
+  function checkEmpty() {
+    const visibleCards = document.querySelectorAll('.card:not([hidden])');
+    const hero = document.querySelector('.hero-banner-overlay');
+    const isHeroVisible = hero && hero.style.display !== 'none';
+    const emptyEl = document.getElementById('empty-state');
+    if (emptyEl) {
+      emptyEl.dataset.show = (visibleCards.length === 0 && !isHeroVisible) ? 'true' : 'false';
+    }
+  }
+</script>
+</body>
+</html>
